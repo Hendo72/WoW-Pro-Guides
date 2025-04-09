@@ -642,6 +642,6 @@ N The Ashenvale Hunt|AVAILABLE|-6383|N|This quest unlocks 3 drop loot item quest
 ;C Shadumbra's Head|QID|24|PRE|6383|Z|1440; Ashenvale|N|Kill the cat, Shadumbra, for its head.|
 ;C Sharptalon's Claw|QID|2|PRE|6383|Z|1440; Ashenvale|N|Kill the blue bird, Sharptalon, for its claw.|
 ;C Ursangous's Paw|QID|23|PRE|6383|Z|1440; Ashenvale|N|Kill the grey bear, Ursangous, for its paw.|
-F Sun Rock Retreat|QID|6421|M|73.18,61.59|N|Fly to Sun Rock Retreat to close out this guide.|Z|1440; Ashenvale|
+F Sun Rock Retreat|AVAILABLE|6421|M|73.18,61.59|N|Fly to Sun Rock Retreat to close out this guide.|Z|1440; Ashenvale|
 ]]
 end)
