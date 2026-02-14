@@ -233,6 +233,7 @@ function WoWPro:ClampBarsOnScreen()
         AnchorDebug("ClampBarsOnScreen: inhibited")
         return
     end
+    if WoWPro.IsMoving then return end
     if not WoWPro.ButtonBar or not WoWPro.ButtonBar:IsShown() then return end
     local ui = _G.UIParent
     local uiTop = ui and ui:GetTop() or (ui and ui:GetHeight())
@@ -325,6 +326,7 @@ end
 -- Keep side buttons (use/target) fully visible; adjust frame horizontally if needed
 function WoWPro:ClampSideButtonsOnScreen()
     if not WoWPro.rows then return end
+    if WoWPro.IsMoving then return end
     local ui = _G.UIParent
     if not ui then return end
     local screenRight = ui:GetWidth()
