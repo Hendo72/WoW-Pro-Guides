@@ -1121,14 +1121,14 @@ function WoWPro:RowUpdate(offset)
             tempK = tempK + 1
         else
             if WoWPro.sticky[tempK] then
-                WoWPro.IncrementActiveStickyCount()
+                WoWPro:IncrementActiveStickyCount()
             end
             tempK = WoWPro.NextStep(tempK, i)
             table.insert(allSteps, tempK)
             tempK = tempK + 1
         end
     end
-     WoWPro.SetActiveStickyCount(0)
+    WoWPro:SetActiveStickyCount(0)
 
     -- Now sort: stickies first, then regular
     local completion = WoWProCharDB.Guide[GID].completion
@@ -1202,7 +1202,7 @@ function WoWPro:RowUpdate(offset)
     WoWPro.RowLimit = #stepList
 
     -- Set ActiveStickyCount based on actual visible stickies
-    WoWPro.SetActiveStickyCount(#stickySteps)
+    WoWPro:SetActiveStickyCount(#stickySteps)
     for i = 1, 15 do
         -- WoWPro:dbp("WoWPro:RowUpdate(i=%d)", i)
         -- Use sorted step list with stickies first --
