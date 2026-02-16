@@ -1,3 +1,23 @@
+# Release 2026.02.16.A
+## Bug Fixes
+* Fixed some function calls misusing `:` .vs. `.`!
+* Limit OnUpdate processing while dragging
+* Fix infinite loop while Aura scanning in combat
+* Fixed ActiveStickyCount Management
+* Removed 120000 Interface entry
+* Fixed sticky step visibility and sorting with comprehensive qualifier gating
+* Auto-Contract Frame to Visible Rows on Resize
+* Fix window growth direction to respect expansion anchor
+* Limit action buttons to active/sticky steps and hide on row-limit
+* Encapsulate ActiveStickyCount to eliminate global mutable state taint risk
+* Window position: restore saved position on reload
+* Sticky steps: gate display until relevant
+* Fixed Window Position Restore Across UI Scales and Resolutions
+* Hide Blank Rows When Step Count Exceeds Available Steps
+## Guide Updates
+* TBC: Bloodmyst
+
+
 # Release 2026.02.06.A
 ## Bug Fixes
 * Ace3 Library Updated to Release-r1390
