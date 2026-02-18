@@ -323,7 +323,7 @@ T Looming Shadows|QID|91084|M|45.33,70.40|Z|2393;Silvermoon City|N|To Lor'themar
 
 
 
-; Everything needed for sojourn is below, just ran out of time to get it put in the guide. 
+; Everything needed for sojourn is below, just ran out of time to get it put in the guide.
 T Har'alnor, Village of Twilight|QID|93776|M|31.44,64.97|Z|2413; Harandar|N|To Hannan.|
 T The Silence at Fungara Village|QID|91375|M|43.90,71.75|Z|2413; Harandar|N|To Ghikal.|
 A Little Monsters|QID|91376|PRE|91375|M|43.90,71.75|Z|2413; Harandar|N|From Ghikal.|

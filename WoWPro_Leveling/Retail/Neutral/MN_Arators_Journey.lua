@@ -68,7 +68,7 @@ C A Humble Servant|QID|91000|M|68.73,33.69|Z|14; Arathi Highlands|QO|1|NC|N|Aid 
 C Resupplying Our Suppliers|QID|86846|M|68.14,37.61|Z|14; Arathi Highlands|QO|1|NC|N|Tailoring supplies for Jun'ha.|
 C Resupplying Our Suppliers|QID|86846|M|69.99,35.70|Z|14; Arathi Highlands|QO|3|NC|N|Leatherworking supplies for Tunkk.|
 C Resupplying Our Suppliers|QID|86846|M|69.19,34.97|Z|14; Arathi Highlands|QO|2|NC|N|Butcher supplies for Slagg.|
-C Resupplying Our Suppliers|QID|86846|M|68.42,31.99|Z|14; Arathi Highlands|QO|5|NC|N|Trade goods for Keena.| 
+C Resupplying Our Suppliers|QID|86846|M|68.42,31.99|Z|14; Arathi Highlands|QO|5|NC|N|Trade goods for Keena.|
 C Resupplying Our Suppliers|QID|86846|M|68.42,31.99|Z|14; Arathi Highlands|QO|4|NC|N|Bowyer supplies for Mu'uta.|
 C A Humble Servant|QID|91000|M|68.73,33.69|Z|14; Arathi Highlands|QO|1|NC|N|Aid Hammerfall.|US|
 T A Humble Servant|QID|91000|M|68.56,32.27|Z|14; Arathi Highlands|N|To Sunwalker Dezco.|

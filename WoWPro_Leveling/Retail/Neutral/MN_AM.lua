@@ -1,4 +1,4 @@
-local guide = WoWPro:RegisterGuide('Midnight Adventure Mode Hub', 'Leveling', 'Dornogal', 'WoWPro Team', 'Neutral')
+local guide = WoWPro:RegisterGuide('Midnight Adventure Mode Hub', 'Leveling', 'Silvermoon City', 'WoWPro Team', 'Neutral')
 WoWPro:GuideName(guide,"MN_AM")
 WoWPro:GuideSecret(guide)
 WoWPro:GuideContent(guide, 11)
