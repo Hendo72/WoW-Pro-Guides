@@ -4,31 +4,31 @@ WoWPro:GuideLevels(guide,1, 60)
 WoWPro:GuideNextGuide(guide, 'ChromieTime')
 WoWPro:GuideSteps(guide, function()
 return [[
-A Feeding the Flame|QID|90777|M|45.37,70.27|Z|2393|N|From Lor'themar Theron.|
-C Feeding the Flame|QID|90777|M|53.12,58.82|Z|2424|QO|1|NC|N|Check in with Liadrin at the Sunwell.|
-C Feeding the Flame|QID|90777|M|53.99,58.16|Z|2424|QO|4|NC|N|Spar with Commander Venel Lightblood.|
-C Feeding the Flame|QID|90777|M|51.63,56.45|Z|2424|QO|3|NC|N|Receive a blessing from War Chaplain Senn.|
-C Feeding the Flame|QID|90777|M|50.28,58.62|Z|2424|QO|2|CHAT|N|Speak with Commander Koruth Mountainfist.|
-T Feeding the Flame|QID|90777|M|53.00,58.69|Z|2424|N|To Lady Liadrin.|
-A The Devouring Citadel|QID|88696|PRE|90777|M|53.00,58.69|Z|2424|N|From Lady Liadrin.|
-C The Devouring Citadel|QID|88696|M|51.95,56.45|Z|2424|QO|1|NC|N|Take the Portal to Voidstorm Muster Point (Optional).|
-A Void From Above|QID|92549|PRE|90777|M|45.43,63.77|Z|2405|
-T The Devouring Citadel|QID|88696|M|45.40,63.12|Z|2405|N|To High Exarch Turalyon.|
-A Clarity of Purpose|QID|88697|PRE|88696|M|45.40,63.12|Z|2405|N|From High Exarch Turalyon.|
-C Clarity of Purpose|QID|88697|M|45.41,63.15|Z|2405|QO|1|CHAT|N|Speak to Umbric.|
-C Clarity of Purpose|QID|88697|M|45.36,63.17|Z|2405|QO|2|NC|N|Observing begun.|
-C Clarity of Purpose|QID|88697|M|45.51,63.03|Z|2405|QO|3|NC|N|Injured Allies observed.|
-C Clarity of Purpose|QID|88697|M|45.82,63.81|Z|2405|QO|4|NC|N|Stalker Patriarch observed.|
-C Clarity of Purpose|QID|88697|M|45.75,64.03|Z|2405|QO|5|NC|N|Trapped Void Elves observed.|
-T Clarity of Purpose|QID|88697|M|45.40,63.19|Z|2405|N|To Magister Umbric.|
-A Master of Mayhem|QID|88698|PRE|88697|M|45.40,63.19|Z|2405|N|From Magister Umbric.|
-A Powerless|QID|88699|PRE|88697|M|45.40,63.19|Z|2405|N|From Magister Umbric.|
-C Powerless|QID|88699|M|45.73,67.86|Z|2405|QO|1|NC|N|Leona Darkstrider freed.|
-C Master of Mayhem|QID|88698|M|47.76,68.81|Z|2405|QO|1|NC|N|Overcroft Forces Weakened (100%).|
-C Powerless|QID|88699|M|47.90,68.72|Z|2405|QO|2|NC|N|Lady Darkglen freed.|
-C Powerless|QID|88699|M|46.95,72.62|Z|2405|QO|3|NC|N|Riftblade Kelain freed.|
-T Master of Mayhem|QID|88698|M|45.38,63.20|Z|2405|N|To Magister Umbric.|
-T Powerless|QID|88699|M|45.38,63.20|Z|2405|N|To Magister Umbric.|
+A Feeding the Flame|QID|90777|M|45.37,70.27|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
+C Feeding the Flame|QID|90777|M|53.12,58.82|Z|2424; Isle of Quel'Danas|QO|1|NC|N|Check in with Liadrin at the Sunwell.|
+C Feeding the Flame|QID|90777|M|53.99,58.16|Z|2424; Isle of Quel'Danas|QO|4|NC|N|Spar with Commander Venel Lightblood.|
+C Feeding the Flame|QID|90777|M|51.63,56.45|Z|2424; Isle of Quel'Danas|QO|3|NC|N|Receive a blessing from War Chaplain Senn.|
+C Feeding the Flame|QID|90777|M|50.28,58.62|Z|2424; Isle of Quel'Danas|QO|2|CHAT|N|Speak with Commander Koruth Mountainfist.|
+T Feeding the Flame|QID|90777|M|53.00,58.69|Z|2424; Isle of Quel'Danas|N|To Lady Liadrin.|
+A The Devouring Citadel|QID|88696|PRE|90777|M|53.00,58.69|Z|2424; Isle of Quel'Danas|N|From Lady Liadrin.|
+C The Devouring Citadel|QID|88696|M|51.95,56.45|Z|2424; Isle of Quel'Danas|QO|1|NC|N|Take the Portal to Voidstorm Muster Point (Optional).|
+A Void From Above|QID|92549|PRE|90777|M|45.43,63.77|Z|2405; Voidstorm|
+T The Devouring Citadel|QID|88696|M|45.40,63.12|Z|2405; Voidstorm|N|To High Exarch Turalyon.|
+A Clarity of Purpose|QID|88697|PRE|88696|M|45.40,63.12|Z|2405; Voidstorm|N|From High Exarch Turalyon.|
+C Clarity of Purpose|QID|88697|M|45.41,63.15|Z|2405; Voidstorm|QO|1|CHAT|N|Speak to Umbric.|
+C Clarity of Purpose|QID|88697|M|45.36,63.17|Z|2405; Voidstorm|QO|2|NC|N|Observing begun.|
+C Clarity of Purpose|QID|88697|M|45.51,63.03|Z|2405; Voidstorm|QO|3|NC|N|Injured Allies observed.|
+C Clarity of Purpose|QID|88697|M|45.82,63.81|Z|2405; Voidstorm|QO|4|NC|N|Stalker Patriarch observed.|
+C Clarity of Purpose|QID|88697|M|45.75,64.03|Z|2405; Voidstorm|QO|5|NC|N|Trapped Void Elves observed.|
+T Clarity of Purpose|QID|88697|M|45.40,63.19|Z|2405; Voidstorm|N|To Magister Umbric.|
+A Master of Mayhem|QID|88698|PRE|88697|M|45.40,63.19|Z|2405; Voidstorm|N|From Magister Umbric.|
+A Powerless|QID|88699|PRE|88697|M|45.40,63.19|Z|2405; Voidstorm|N|From Magister Umbric.|
+C Powerless|QID|88699|M|45.73,67.86|Z|2405; Voidstorm|QO|1|NC|N|Leona Darkstrider freed.|
+C Master of Mayhem|QID|88698|M|47.76,68.81|Z|2405; Voidstorm|QO|1|NC|N|Overcroft Forces Weakened (100%).|
+C Powerless|QID|88699|M|47.90,68.72|Z|2405; Voidstorm|QO|2|NC|N|Lady Darkglen freed.|
+C Powerless|QID|88699|M|46.95,72.62|Z|2405; Voidstorm|QO|3|NC|N|Riftblade Kelain freed.|
+T Master of Mayhem|QID|88698|M|45.38,63.20|Z|2405; Voidstorm|N|To Magister Umbric.|
+T Powerless|QID|88699|M|45.38,63.20|Z|2405; Voidstorm|N|To Magister Umbric.|
 A Two Tons of Metal and Holy Fire|QID|88700|M|45.41,63.11|Z|2405;Voidstorm|N|From High Exarch Turalyon.|
 C Two Tons of Metal and Holy Fire|QID|88700|M|45.12,63.33|Z|2405;Voidstorm|QO|1|NC|N|Warframe Mounted.|
 C Two Tons of Metal and Holy Fire|QID|88700|M|45.12,63.33|Z|2405;Voidstorm|QO|2|NC|N|Voidspire Defenders Destroyed (100%).|
