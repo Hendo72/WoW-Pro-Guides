@@ -106,6 +106,7 @@ if WoWPro.CLASSIC then   --  Gets Profs to work in Classic doing this, not sure 
 	else
 	WoWPro.ProfessionSkillLines = {
 		[164] = { name = 'Blacksmithing' },
+			[2907] = { exp = 11, parent = 164, name = 'Midnight Blacksmithing' },
 			[2872] = { exp = 10, parent = 164, name = 'Khaz Algar Blacksmithing' },
 			[2822] = { exp = 9, parent = 164, name = 'Dragon Isles Blacksmithing' },
 			[2751] = { exp = 8, parent = 164, name = 'Shadowlands Blacksmithing' },
@@ -119,6 +120,7 @@ if WoWPro.CLASSIC then   --  Gets Profs to work in Classic doing this, not sure 
 			[2477] = { exp = 0, parent = 164, name = 'Blacksmithing' },
 
 		[165] = { name = 'Leatherworking' },
+			[2915] = { exp = 11, parent = 165, name = 'Midnight Leatherworking' },
 			[2880] = { exp = 10, parent = 165, name = 'Khaz Algar Leatherworking' },
 			[2830] = { exp = 9, parent = 165, name = 'Dragon Isles Leatherworking' },
 			[2758] = { exp = 8, parent = 165, name = 'Shadowlands Leatherworking' },
@@ -132,6 +134,7 @@ if WoWPro.CLASSIC then   --  Gets Profs to work in Classic doing this, not sure 
 			[2532] = { exp = 0, parent = 165, name = 'Leatherworking' },
 
 		[171] = { name = 'Alchemy' },
+			[2906] = { exp = 11, parent = 171, name = 'Midnight Alchemy' },
 			[2871] = { exp = 10, parent = 171, name = 'Khaz Algar Alchemy' },
 			[2823] = { exp = 9, parent = 171, name = 'Dragon Isles Alchemy' },
 			[2750] = { exp = 8, parent = 171, name = 'Shadowlands Alchemy' },
@@ -145,6 +148,7 @@ if WoWPro.CLASSIC then   --  Gets Profs to work in Classic doing this, not sure 
 			[2485] = { exp = 0, parent = 171, name = 'Alchemy' },
 
 		[182] = { name = 'Herbalism' },
+			[2912] = { exp = 11, parent = 182, name = 'Midnight Herbalism' },
 			[2877] = { exp = 10, parent = 182, name = 'Khaz Algar Herbalism' },
 			[2832] = { exp = 9, parent = 182, name = 'Dragon Isles Herbalism' },
 			[2760] = { exp = 8, parent = 182, name = 'Shadowlands Herbalism' },
@@ -159,6 +163,7 @@ if WoWPro.CLASSIC then   --  Gets Profs to work in Classic doing this, not sure 
 
 		-- Cooking is not included in GetTradeSkillLineInfoByID()
 		[185] = { name = 'Cooking' },
+			[2908] = { exp = 11, parent = 185, name = 'Midnight Cooking' },
 			[2873] = { exp = 10, parent = 185, name = 'Khaz Algar Cooking' },
 			[2824] = { exp = 9, parent = 185, name = 'Dragon Isles Cooking' },
 			[2752] = { exp = 8, parent = 185, name = 'Shadowlands Cooking' },
@@ -179,6 +184,7 @@ if WoWPro.CLASSIC then   --  Gets Profs to work in Classic doing this, not sure 
 			[2548] = { exp = 0, parent = 185, name = 'Cooking' },
 
 		[186] = { name = 'Mining' },
+			[2916] = { exp = 11, parent = 186, name = 'Midnight Mining' },
 			[2881] = { exp = 10, parent = 186, name = 'Khaz Algar Mining' },
 			[2833] = { exp = 9, parent = 186, name = 'Dragon Isles Mining' },
 			[2761] = { exp = 8, parent = 186, name = 'Shadowlands Mining' },
@@ -192,6 +198,7 @@ if WoWPro.CLASSIC then   --  Gets Profs to work in Classic doing this, not sure 
 			[2572] = { exp = 0, parent = 186, name = 'Mining' },
 
 		[197] = { name = 'Tailoring' },
+			[2918] = { exp = 11, parent = 197, name = 'Midnight Tailoring' },
 			[2883] = { exp = 10, parent = 197, name = 'Khaz Algar Tailoring' },
 			[2831] = { exp = 9, parent = 197, name = 'Dragon Isles Tailoring' },
 			[2759] = { exp = 8, parent = 197, name = 'Shadowlands Tailoring' },
@@ -205,6 +212,7 @@ if WoWPro.CLASSIC then   --  Gets Profs to work in Classic doing this, not sure 
 			[2540] = { exp = 0, parent = 197, name = 'Tailoring' },
 
 		[202] = { name = 'Engineering' },
+			[2910] = { exp = 11, parent = 202, name = 'Midnight Engineering' },
 			[2875] = { exp = 10, parent = 202, name = 'Khaz Algar Engineering' },
 			[2827] = { exp = 9, parent = 202, name = 'Dragon Isles Engineering' },
 			[2755] = { exp = 8, parent = 202, name = 'Shadowlands Engineering' },
@@ -218,7 +226,8 @@ if WoWPro.CLASSIC then   --  Gets Profs to work in Classic doing this, not sure 
 			[2506] = { exp = 0, parent = 202, name = 'Engineering' },
 
 		[333] = { name = 'Enchanting' },
-			[2874] = { exp = 10, parent = 202, name = 'Khaz Algar Enchanting' },
+			[2909] = { exp = 11, parent = 333, name = 'Midnight Enchanting' },
+			[2874] = { exp = 10, parent = 333, name = 'Khaz Algar Enchanting' },
 			[2825] = { exp = 9, parent = 333, name = 'Dragon Isles Enchanting' },
 			[2753] = { exp = 8, parent = 333, name = 'Shadowlands Enchanting' },
 			[2486] = { exp = 7, parent = 333, name = 'Battle for Azeroth Enchanting' },
@@ -232,7 +241,8 @@ if WoWPro.CLASSIC then   --  Gets Profs to work in Classic doing this, not sure 
 
 		-- Fishing is not included in GetTradeSkillLineInfoByID()
 		[356] = { name = 'Fishing' },
-			[2876] = { exp = 10, parent = 202, name = 'Khaz Algar Fishing' },
+			[2911] = { exp = 11, parent = 356, name = 'Midnight Fishing' },
+			[2876] = { exp = 10, parent = 356, name = 'Khaz Algar Fishing' },
 			[2826] = { exp = 9, parent = 356, name = 'Dragon Isles Fishing' },
 			[2754] = { exp = 8, parent = 356, name = 'Shadowlands Fishing' },
 			[2585] = { exp = 8, parent = 356, name = 'Battle for Azeroth Fishing' },
@@ -245,7 +255,8 @@ if WoWPro.CLASSIC then   --  Gets Profs to work in Classic doing this, not sure 
 			[2592] = { exp = 0, parent = 356, name = 'Fishing' },
 
 		[393] = { name = 'Skinning' },
-			[2882] = { exp = 10, parent = 202, name = 'Khaz Algar Skinning' },
+			[2917] = { exp = 11, parent = 393, name = 'Midnight Skinning' },
+			[2882] = { exp = 10, parent = 393, name = 'Khaz Algar Skinning' },
 			[2834] = { exp = 9, parent = 393, name = 'Dragon Isles Skinning' },
 			[2762] = { exp = 8, parent = 393, name = 'Shadowlands Skinning' },
 			[2557] = { exp = 7, parent = 393, name = 'Battle for Azeroth Skinning' },
@@ -258,7 +269,8 @@ if WoWPro.CLASSIC then   --  Gets Profs to work in Classic doing this, not sure 
 			[2564] = { exp = 0, parent = 393, name = 'Skinning' },
 
 		[755] = { name = 'Jewelcrafting' },
-			[2879] = { exp = 10, parent = 202, name = 'Khaz Algar Jewelcrafting' },
+			[2914] = { exp = 11, parent = 755, name = 'Midnight Jewelcrafting' },
+			[2879] = { exp = 10, parent = 755, name = 'Khaz Algar Jewelcrafting' },
 			[2829] = { exp = 9, parent = 755, name = 'Dragon Isles Jewelcrafting' },
 			[2757] = { exp = 8, parent = 755, name = 'Shadowlands Jewelcrafting' },
 			[2517] = { exp = 7, parent = 755, name = 'Battle for Azeroth Jewelcrafting' },
@@ -271,7 +283,8 @@ if WoWPro.CLASSIC then   --  Gets Profs to work in Classic doing this, not sure 
 			[2524] = { exp = 0, parent = 755, name = 'Jewelcrafting' },
 
 		[773] = { name = 'Inscription' },
-			[2878] = { exp = 10, parent = 202, name = 'Khaz Algar Inscription' },
+			[2913] = { exp = 11, parent = 773, name = 'Midnight Inscription' },
+			[2878] = { exp = 10, parent = 773, name = 'Khaz Algar Inscription' },
 			[2828] = { exp = 9, parent = 773, name = 'Dragon Isles Inscription' },
 			[2756] = { exp = 8, parent = 773, name = 'Shadowlands Inscription' },
 			[2507] = { exp = 7, parent = 773, name = 'Battle for Azeroth Inscription' },

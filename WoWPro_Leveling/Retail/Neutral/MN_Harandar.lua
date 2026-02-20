@@ -44,15 +44,16 @@ C Echoes and Memories|QID|86911|M|35.80,46.48|Z|2413; Harandar|QO|4|H|N|Iceberri
 T Echoes and Memories|QID|86911|M|36.14,44.24|Z|2413; Harandar|N|To Zur'ashar Kassameh.|
 A Echo of the Hunt|QID|90094|PRE|86911|M|36.14,44.24|Z|2413; Harandar|N|From Zur'ashar Kassameh.|
 C Echo of the Hunt|QID|90094|M|36.17,44.19|Z|2413; Harandar|QO|1|H|N|Second visionstone activated.|
+C Echo of the Hunt|QID|90094|M|37.72,46.55|Z|2413; Harandar|QO|2|N|Razorquill Remembrance slain.|S|
 C Echo of the Hunt|QID|90094|M|34.14,43.79|Z|2413; Harandar|QO|3|N|Pangquill Reminiscence slain.|
-C Echo of the Hunt|QID|90094|M|37.72,46.55|Z|2413; Harandar|QO|2|N|Razorquill Remembrance slain.|
+C Echo of the Hunt|QID|90094|M|37.72,46.55|Z|2413; Harandar|QO|2|N|Razorquill Remembrance slain.|US|
 T Echo of the Hunt|QID|90094|M|34.85,42.84|Z|2413; Harandar|N|To Zur'ashar Kassameh.|
 A Echo of the Call|QID|90095|PRE|90094|M|34.85,42.84|Z|2413; Harandar|N|From Zur'ashar Kassameh.|
 C Echo of the Call|QID|90095|M|34.84,42.77|Z|2413; Harandar|QO|1|H|N|Third visionstone activated.|
 C Echo of the Call|QID|90095|M|34.23,43.64|Z|2413; Harandar|QO|2|N|Observer Talos slain.|
 T Echo of the Call|QID|90095|M|33.94,44.80|Z|2413; Harandar|N|To Zur'ashar Kassameh.|
 A Down the Rootways|QID|86912|PRE|90095|M|33.94,44.80|Z|2413; Harandar|N|From Zur'ashar Kassameh.|
-C Down the Rootways|QID|86912|M|34.16,43.12|Z|2413; Harandar|N|Run The Gulf of Memory, dont forget to loot the Fragment, then speak with Orweyna.|CHAT|
+C Down the Rootways|QID|86912|M|36.73,49.64|Z|2413; Harandar|N|Run The Gulf of Memory, dont forget to loot the Fragment, then speak with Orweyna.|CHAT|
 T Down the Rootways|QID|86912|M|34.82,25.06|Z|2413; Harandar|N|To Hagar.|
 A A Hut in Har'mara|QID|86913|PRE|90095|M|34.83,25.10|Z|2413; Harandar|N|From Hagar.|
 T A Hut in Har'mara|QID|86913|M|34.92,24.96|Z|2413; Harandar|N|To Orweyna.|
@@ -90,32 +91,32 @@ C Seeds of the Rift|QID|86944|M|34.91,25.03|Z|2413; Harandar|QO|3|H|N|Deliver se
 T Seeds of the Rift|QID|86944|M|34.91,24.96|Z|2413; Harandar|N|To Orweyna.|
 A To Sow the Seed|QID|86930|PRE|86944|M|34.91,24.96|Z|2413; Harandar|N|From Orweyna.|
 T To Sow the Seed|QID|86930|M|50.87,53.14|Z|2413; Harandar|N|To Orweyna.|
-A Watch The Den|QID|86864|PRE|86930|M|50.87,53.14|Z|2413; Harandar|N|From Orweyna.|
-C Watch The Den|QID|86864|M|50.89,55.53|Z|2413; Harandar|QO|1|CHAT|N|Speak to the Innkeeper.|
+A Watch the Den|QID|86864|PRE|86930|M|50.87,53.14|Z|2413; Harandar|N|From Orweyna.|
+C Watch the Den|QID|86864|M|50.89,55.53|Z|2413; Harandar|QO|1|CHAT|N|Speak to the Innkeeper.|
 A Har'mara, Village of Balance|QID|93775|M|50.76,55.70|Z|2413; Harandar|N|From Ravi.|RANK|2|
-C Watch The Den|QID|86864|M|50.95,50.78|Z|2413; Harandar|QO|2|CHAT|N|Speak to the Quartermaster.|
+C Watch the Den|QID|86864|M|50.95,50.78|Z|2413; Harandar|QO|2|CHAT|N|Speak to the Quartermaster.|
 A Har'kuai, Village of Rain|QID|93771|M|51.02,50.88|Z|2413; Harandar|N|From Kaleo.|RANK|2|
 f The Den|ACTIVE|86864|M|70.87,53.04|Z|2576; The Den|N|From Doecha|
-C Watch The Den|QID|86864|M|54.09,53.17|Z|2413; Harandar|QO|3|CHAT|N|Speak to the Flight Master.|
+C Watch the Den|QID|86864|M|54.09,53.17|Z|2413; Harandar|QO|3|CHAT|N|Speak to the Flight Master.|
 A Har'athir, Village of Memory|QID|93745|M|71.23,53.95|Z|2576; The Den|N|From Orna.|RANK|2|
-C Watch The Den|QID|86864|M|54.24,55.70|Z|2413; Harandar|QO|4|CHAT|N|Speak to Ku'paal.|
-T Watch The Den|QID|86864|M|54.24,55.70|Z|2413; Harandar|N|To Orweyna.|
+C Watch the Den|QID|86864|M|54.24,55.70|Z|2413; Harandar|QO|4|CHAT|N|Speak to Ku'paal.|
+T Watch the Den|QID|86864|M|54.24,55.70|Z|2413; Harandar|N|To Orweyna.|
 A The Hunter Awaits|QID|86836|PRE|86864|M|54.24,55.70|Z|2413; Harandar|N|From Ku'paal.|
-A A Game of Silence and Shadow|QID|91550|M|48.74,44.35|Z|2413; Harandar|N|From Shao'mal.|
+A A Game of Silence and Shadow|QID|91550|M|48.74,44.35|Z|2413; Harandar|N|From Shao'mal.|RANK|2|
 C A Game of Silence and Shadow|QID|91550|M|48.74,44.35|Z|2413; Harandar|QO|1|CHAT|N|Talk to Shao'mal.|
 C A Game of Silence and Shadow|QID|91550|M|49.57,43.05|Z|2413; Harandar|QO|3<1|H|N|Wenalo found.|
 C A Game of Silence and Shadow|QID|91550|M|50.40,40.74|Z|2413; Harandar|QO|3<2|H|N|llomai found.|
 C A Game of Silence and Shadow|QID|91550|M|51.38,41.52|Z|2413; Harandar|QO|3<3|H|N|Shao'mal found.|
 C A Game of Silence and Shadow|QID|91550|M|51.73,39.50|Z|2413; Harandar|QO|3<4|H|N|Nayeli found.|
 T A Game of Silence and Shadow|QID|91550|M|53.87,41.26|Z|2413; Harandar|N|To Nayeli.|
-A De-nest-stration|QID|91551|M|53.87,41.26|Z|2413; Harandar|N|From Nayeli.|
-A Feathered Fury|QID|91552|M|53.87,41.26|Z|2413; Harandar|N|From Nayeli.|
+A De-nest-stration|QID|91551|M|53.87,41.26|Z|2413; Harandar|N|From Nayeli.|RANK|2|
+A Feathered Fury|QID|91552|M|53.87,41.26|Z|2413; Harandar|N|From Nayeli.|RANK|2|
 C Feathered Fury|QID|91552|M|55.36,47.42|Z|2413; Harandar|QO|1|N|Petalwings slain.|S|
 C De-nest-stration|QID|91551|M|55.27,47.51|Z|2413; Harandar|QO|1|H|N|Nests destroyed.|
 C Feathered Fury|QID|91552|M|55.36,47.42|Z|2413; Harandar|QO|1|N|Petalwings slain.|US|
 T De-nest-stration|QID|91551|M|57.27,48.96|Z|2413; Harandar|N|To Nayeli.|
 T Feathered Fury|QID|91552|M|57.27,48.96|Z|2413; Harandar|N|To Nayeli.|
-A Haranir Never Say Die!|QID|91553|M|57.27,48.96|Z|2413; Harandar|N|From Nayeli.|
+A Haranir Never Say Die!|QID|91553|M|57.27,48.96|Z|2413; Harandar|N|From Nayeli.|RANK|2|
 K Behemoth Petalwing|ACTIVE|91553|M|57.99,50.04|Z|2413; Harandar|QO|1|N|Behemoth Petalwing slain.|T|Behemoth Petalwing|
 T Haranir Never Say Die!|QID|91553|M|58.41,49.14|Z|2413; Harandar|N|To Shao'mal.|
 C The Hunter Awaits|QID|86836|M|61.86,54.45|Z|2413; Harandar|QO|1|NC|N|Find Orweyna in the Shrine of Mists.|
@@ -246,11 +247,13 @@ C Hues of Tomorrow|QID|92697|M|73.99,53.24|Z|2413; Harandar|QO|1|H|N|Paintings c
 T Hues of Tomorrow|QID|92697|M|73.19,52.22|Z|2413; Harandar|N|To Orn'shan.|
 A In Search of the Problem|QID|86865|PRE|86862|M|63.17,56.80|Z|2413; Harandar|N|From Orweyna.|
 T In Search of the Problem|QID|86865|M|31.39,64.88|Z|2413; Harandar|N|To Byarc.|
-A Can we Heal This?|QID|86866|PRE|86865|M|31.41,64.88|Z|2413; Harandar|N|From Orweyna.|
+A Can We Heal This?|QID|86866|PRE|86865|M|31.41,64.88|Z|2413; Harandar|N|From Orweyna.|
 A The Missing Rootwarden|QID|94677|PRE|86865|M|31.41,64.88|Z|2413; Harandar|N|From Orweyna.|
-C The Missing Rootwarden|QID|94677|M|30.95,64.74;30.44,67.46;32.97,65.06|CN|Z|2413; Harandar|QO|1|H|N|Ruia's notes found.|
-C Can we Heal This?|QID|86866|M|31.95,61.21|Z|2413; Harandar|QO|1|H|N|Alndust used on the afflicted rutaani.|
-T Can we Heal This?|QID|86866|M|32.02,61.42|Z|2413; Harandar|N|To Orweyna.|
+C The Missing Rootwarden|QID|94677|M|30.95,64.74|Z|2413; Harandar|QO|1<1|H|N|Ruia's notes found.|
+C The Missing Rootwarden|QID|94677|M|32.97,65.06|Z|2413; Harandar|QO|1<2|H|N|Ruia's notes found.|
+C The Missing Rootwarden|QID|94677|M|30.44,67.46|Z|2413; Harandar|QO|1<3|H|N|Ruia's notes found.|
+C Can We Heal This?|QID|86866|M|31.95,61.21|Z|2413; Harandar|QO|1|H|N|Alndust used on the afflicted rutaani.|
+T Can We Heal This?|QID|86866|M|32.02,61.42|Z|2413; Harandar|N|To Orweyna.|
 T The Missing Rootwarden|QID|94677|M|32.02,61.42|Z|2413; Harandar|N|To Orweyna.|
 A Alndust in Right Hands|QID|86882|PRE|86866&94677|M|32.02,61.42|Z|2413; Harandar|N|From Orweyna.|
 C Alndust in Right Hands|QID|86882|M|32.43,65.82|Z|2413; Harandar|QO|1|NC|N|Haranir innoculated.|
@@ -275,8 +278,8 @@ T At the Root|QID|86881|M|30.61,77.22|Z|2413; Harandar|N|To Orweyna.|
 T Our Beloved, Returned|QID|86880|M|30.61,77.22|Z|2413; Harandar|N|To Orweyna.|
 T Righteous Pruning|QID|86877|M|30.61,77.22|Z|2413; Harandar|N|To Orweyna.|
 A Tell the People What You Have Seen|QID|86890|PRE|86881&86880&86877|M|30.61,77.22|Z|2413; Harandar|N|From Orweyna.|
-A Har'alnor, Village of Twilight|QID|93776|PRE|86877|M|30.48,77.19|Z|2413; Harandar|N|From Hannan.|
-A The Silence at Fungara Village|QID|91375|M|33.38,66.66|Z|2413; Harandar|N|From Ghikal.|
+A Har'alnor, Village of Twilight|QID|93776|PRE|86877|M|30.48,77.19|Z|2413; Harandar|N|From Hannan.|RANK|2|
+A The Silence at Fungara Village|QID|91375|M|33.38,66.66|Z|2413; Harandar|N|From Ghikal.|RANK|2|
 C Tell the People What You Have Seen|QID|86890|M|50.06,54.18|Z|2413; Harandar|QO|1|NC|N|Return to the Den.|
 C Tell the People What You Have Seen|QID|86890|M|50.06,54.18|Z|2413; Harandar|QO|2|CHAT|N|Council addressed.|
 T Tell the People What You Have Seen|QID|86890|M|53.17,55.40|Z|2413; Harandar|N|To Orweyna.|
@@ -317,6 +320,7 @@ T Quelling the Frenzy|QID|86897|M|58.41,55.45|Z|2395; Eversong Woods|N|To Orweyn
 A Rise of the Haranir|QID|86898|PRE|86897|M|58.41,55.45|Z|2395; Eversong Woods|N|From Orweyna.|
 T Rise of the Haranir|QID|86898|M|36.62,68.68|Z|2393;Silvermoon City|N|To Orweyna.|
 A The Blinding Vale: Lightbloom Roots|QID|93651|PRE|86898|M|36.62,68.68|Z|2393;Silvermoon City|N|From Orweyna.|
+t The Blinding Vale: Lightbloom Roots|QID|93651|M|36.62,68.68|Z|2393;Silvermoon City|N|From Orweyna.|
 A Looming Shadows|QID|91084|PRE|86898|M|36.58,68.57|Z|2393;Silvermoon City|N|From Elder Hagar.|
 T Looming Shadows|QID|91084|M|45.33,70.40|Z|2393;Silvermoon City|N|To Lor'themar Theron.|
 
