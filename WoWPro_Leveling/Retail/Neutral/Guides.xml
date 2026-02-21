@@ -49,12 +49,13 @@
 	<Script file="LEGION_Suramar.lua"/>
 	<Script file="LEGION_Order_Hall_Evoker.lua"/>
 	<Script file="LEGION_Valsharah.lua"/>
-	<Script file="MN_PrePatchEvent.lua"/>
+	<Script file="MN_AM.lua"/>
 	<Script file="MN_Midnight_Intro.lua"/>
 	<Script file="MN_Eversong_Woods.lua"/>
 	<Script file="MN_ZulAman.lua"/>
-	<Script file="MN_Harandar.lua"/>
 	<Script file="MN_Arators_Journey.lua"/>
+	<Script file="MN_Harandar.lua"/>
+	<Script file="MN_Voidstorm.lua"/>
 	<Script file="MN_War_LS.lua"/>
 	<Script file="MOP_Dread_Wastes.lua"/>
 	<Script file="MOP_KunLai_Summit.lua"/>

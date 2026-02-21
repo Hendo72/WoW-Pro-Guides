@@ -20,12 +20,12 @@ T Last Bastion of the Light|QID|86769|M|46.07,44.42|Z|2432; Isle of Quel'Danas (
 A Champions of Quel'Danas|QID|86770|PRE|86769|M|46.07,44.42|Z|2432; Isle of Quel'Danas (Intro)|N|From Lady Liadrin.|
 A Where Heroes Hold|QID|86780|PRE|86769|M|46.05,44.48|Z|2432; Isle of Quel'Danas (Intro)|N|From High Exarch Turalyon.|
 A My Son|QID|89271|PRE|86769|M|46.05,44.48|Z|2432; Isle of Quel'Danas (Intro)|N|From High Exarch Turalyon.|
-C Where Heroes Hold|QID|86780|M|44.14,50.67|Z|2432; Isle of Quel'Danas (Intro)|QO|1|NC|N|Hinder the attacking Void forces.|S|
+C Where Heroes Hold|QID|86780|M|44.14,50.67|Z|2432; Isle of Quel'Danas (Intro)|QO|1|N|Hinder the attacking Void forces.|S|
 C Champions of Quel'Danas|QID|86770|M|45.18,38.28|Z|2432; Isle of Quel'Danas (Intro)|QO|1|CHAT|N|Recruit Faerin Lothar.|
+C Champions of Quel'Danas|QID|86770|M|41.58,44.45|Z|2432; Isle of Quel'Danas (Intro)|QO|3|CHAT|N|Recruit Lothraxion.|
 C My Son|QID|89271|M|44.32,51.63|Z|2432; Isle of Quel'Danas (Intro)|QO|1|CHAT|N|Gain Arator's assistance.|
 C Champions of Quel'Danas|QID|86770|M|42.28,50.83|Z|2432; Isle of Quel'Danas (Intro)|QO|2|CHAT|N|Recruit Alonsus Faol.|
-C Champions of Quel'Danas|QID|86770|M|41.58,44.45|Z|2432; Isle of Quel'Danas (Intro)|QO|3|CHAT|N|Recruit Lothraxion.|
-C Where Heroes Hold|QID|86780|M|44.14,50.67|Z|2432; Isle of Quel'Danas (Intro)|QO|1|NC|N|Hinder the attacking Void forces.|US|
+C Where Heroes Hold|QID|86780|M|44.14,50.67|Z|2432; Isle of Quel'Danas (Intro)|QO|1|N|Hinder the attacking Void forces.|US|
 T Champions of Quel'Danas|QID|86770|M|35.39,44.06|Z|2432; Isle of Quel'Danas (Intro)|N|To Lor'themar Theron.|
 T Where Heroes Hold|QID|86780|M|35.33,43.89|Z|2432; Isle of Quel'Danas (Intro)|N|To High Exarch Turalyon.|
 T My Son|QID|89271|M|35.33,43.89|Z|2432; Isle of Quel'Danas (Intro)|N|To High Exarch Turalyon.|
@@ -48,9 +48,9 @@ C The Gate|QID|86807|M|41.56,40.33|Z|2432; Isle of Quel'Danas (Intro)|QO|1|NC|N|
 T The Gate|QID|86807|M|41.29,39.38|Z|2432; Isle of Quel'Danas (Intro)|N|To High Exarch Turalyon.|
 A Severing the Void|QID|91274|PRE|86807|M|41.37,39.15|Z|2432; Isle of Quel'Danas (Intro)|N|From Arator.|
 A Voidborn Banishing|QID|86834|PRE|86807|M|41.37,39.15|Z|2432; Isle of Quel'Danas (Intro)|N|From Arator.|
-C Severing the Void|QID|91274|M|38.83,31.73|Z|2432; Isle of Quel'Danas (Intro)|QO|1|NC|N|Sentinels activated.|S|
-K The Wasting|ACTIVE|86834|QO|1|M|42.21,26.66|Z|2432; Isle of Quel'Danas (Intro)|N|The Wasting slain.|T|The Wasting|
+C Severing the Void|QID|91274|M|38.83,31.73;42.69,35.78;44.35,35.42;43.26,29.61|CN|Z|2432; Isle of Quel'Danas (Intro)|QO|1|NC|N|Sentinels activated.|S|
 K Blightclaw|ACTIVE|86834|QO|2|M|46.34,33.39|Z|2432; Isle of Quel'Danas (Intro)|N|Blightclaw slain.|T|Blightclaw|
+K The Wasting|ACTIVE|86834|QO|1|M|42.21,26.66|Z|2432; Isle of Quel'Danas (Intro)|N|The Wasting slain.|T|The Wasting|
 K Latrunculon|ACTIVE|86834|QO|3|M|38.59,29.13|Z|2432; Isle of Quel'Danas (Intro)|N|Latrunculon slain.|
 A Light Show|QID|90849|M|38.61,25.68|Z|2432; Isle of Quel'Danas (Intro)|N|Bonus Objective|RANK|3|
 C Light Show|QID|90849|M|38.92,25.17|Z|2432; Isle of Quel'Danas (Intro)|N|Clear the bonus objective for a huge chunk of EXP and Some gold.|
@@ -80,7 +80,21 @@ A Light's Last Stand|QID|86852|PRE|86850|M|52.71,50.12|Z|2432; Isle of Quel'Dana
 C Light's Last Stand|QID|86852|M|52.71,50.12|Z|2432; Isle of Quel'Danas (Intro)|QO|1|CHAT|N|Speak with Liadrin to begin the ritual.|
 C Light's Last Stand|QID|86852|M|50.17,48.34|Z|2432; Isle of Quel'Danas (Intro)|QO|2|NC|N|Void forces repelled.|
 K Imperatus|ACTIVE|86852|M|52.01,42.03|Z|2432; Isle of Quel'Danas (Intro)|QO|4|N|Imperatus slain.|T|Imperatus|
-T Light's Last Stand|QID|86852|M|52.62,88.23|Z|2424|N|To Lady Liadrin.|
+T Light's Last Stand|QID|86852|M|52.62,88.23|Z|2424; Isle of Quel'Danas|N|To Lady Liadrin.|
+A Silvermoon Negotiations|QID|86733|PRE|86852|M|52.62,88.23|Z|2424; Isle of Quel'Danas|N|From Lor'themar Theron.|
+
+
+
+
+
+
+
+
+
+;N Adventure Time|AVAILABLE|94871^83550^83551^83552|M|PLAYER|Z|2424; Isle of Quel'Danas|JUMP|Midnight Adventure Mode Hub|N|Congratulations on hitting level 80 and completing the Campaign.\n\nYou can now accept Adventure Mode. This will allow you to choose which Zone you want to level in.\n\n Click the guide button next to this frame to direct you to the zone you want to level in.|
+
+
+
 
 ]]
 end)
