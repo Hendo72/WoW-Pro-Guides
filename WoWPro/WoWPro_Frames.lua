@@ -1,5 +1,17 @@
 -- luacheck: globals ipairs unpack ceil max floor math C_Timer
 
+WoWPro.DebugAnchorStore = true -- Enables detailed AnchorStore debug logging
+WoWPro.DebugAnchor = true -- Enables debug logging for window anchor/position changes
+
+local function AnchorDebug(msg, ...)
+    -- AnchorDebug: Centralized function for anchor-related debug logging.
+    -- Only logs messages if anchor debugging is enabled and debug level is set.
+    if not (WoWPro.DebugAnchor and WoWPro.DebugLevel > 0) then
+        return
+    end
+    WoWPro:dbp(msg, ...)
+end
+
 local L = WoWPro_Locale
 
 local function GetUIScreenSize()
@@ -11,15 +23,6 @@ local function GetUIScreenSize()
     return screenW, screenH
 end
 
-local DEBUG_ANCHOR = false
-WoWPro.DebugAnchor = DEBUG_ANCHOR
-
-local function AnchorDebug(msg, ...)
-    if not DEBUG_ANCHOR then
-        return
-    end
-    WoWPro:Print(msg, ...)
-end
 
 -- Frame Update Functions --
 function WoWPro.GetSide(frame)
@@ -543,6 +546,8 @@ function WoWPro.RowSizeSet()
     -- Get current expansion anchor (default to TOPLEFT if not set)
     local expansionAnchor = WoWProDB.profile.expansionAnchor or "TOPLEFT"
     AnchorDebug("RowSizeSet: autoresize=%s exp=%s", _G.tostring(WoWProDB.profile.autoresize), expansionAnchor)
+    -- Only debug if anchor or position changes
+    local anchorChanged = false
 
     -- Calculate screen-limited bounds based on expansion anchor
     local screenW, screenH = GetUIScreenSize()
@@ -733,6 +738,8 @@ function WoWPro.RowSizeSet()
             end
             AnchorDebug("RowSizeSet: pt=%s exp=%s screen=(%.1f,%.1f)", _G.tostring(pt), expansionAnchor, screenW or 0, screenH or 0)
             if pt ~= expansionAnchor then
+                -- Update the saved anchor when it changes
+                WoWProDB.profile.expansionAnchor = expansionAnchor
                 -- Get frame's current screen position
                 local curLeft = WoWPro.MainFrame:GetLeft() or 0
                 local curRight = WoWPro.MainFrame:GetRight() or screenW
@@ -752,9 +759,16 @@ function WoWPro.RowSizeSet()
                 end
 
                 AnchorDebug("RowSizeSet: reanchor %s -> (%.1f,%.1f) cur=(L%.1f R%.1f T%.1f B%.1f)", expansionAnchor, newX or 0, newY or 0, curLeft, curRight, curTop, curBottom)
-
+                -- Only log to debug if anchor actually changes
+                WoWPro:dbp("[DEBUG] RowSizeSet: reanchor %s -> (%.1f,%.1f) cur=(L%.1f R%.1f T%.1f B%.1f)", tostring(expansionAnchor), newX or 0, newY or 0, curLeft, curRight, curTop, curBottom)
+                anchorChanged = true
                 WoWPro.MainFrame:ClearAllPoints()
                 WoWPro.MainFrame:SetPoint(expansionAnchor, _G.UIParent, expansionAnchor, newX, newY)
+            end
+            -- Only log these if anchor actually changed
+            if anchorChanged then
+                WoWPro:dbp("[DEBUG] RowSizeSet: autoresize=%s exp=%s", tostring(WoWProDB.profile.autoresize), tostring(expansionAnchor))
+                WoWPro:dbp("[DEBUG] RowSizeSet: pt=%s exp=%s screenW=%.1f screenH=%.1f", tostring(pt), tostring(expansionAnchor), screenW or 0, screenH or 0)
             end
 
             -- After re-anchoring, calculate maximum height before hitting screen edge in the growth direction
@@ -874,60 +888,73 @@ function WoWPro.SetMouseNotesPoints()
 end
 
 function WoWPro.AnchorStore(where)
-    -- Update the position when we are no longer in combat
-    -- For ResizeEnd, save immediately since we're definitely out of combat
-    if where == "ResizeEnd" then
-        -- Use the user's configured expansion anchor for consistent position storage
-        local expansionAnchor = WoWProDB.profile.expansionAnchor or "TOPLEFT"
-        local ui = _G.UIParent
-        local screenW = ui and ui:GetWidth() or 0
-        local screenH = ui and ui:GetHeight() or 0
-        if screenW <= 0 or screenH <= 0 then
-            screenW, screenH = GetUIScreenSize()
-        end
-        local left = WoWPro.MainFrame:GetLeft() or 0
-        local right = WoWPro.MainFrame:GetRight() or screenW
-        local top = WoWPro.MainFrame:GetTop() or screenH
-        local bottom = WoWPro.MainFrame:GetBottom() or 0
+    -- Save the current anchor and frame position to the profile
+    -- Handles persistence after resizing, moving, or anchor changes
+    local expansionAnchor = WoWProDB.profile.expansionAnchor or "TOPLEFT"
+    local ui = _G.UIParent
+    local screenW = ui and ui:GetWidth() or 0
+    local screenH = ui and ui:GetHeight() or 0
+    if screenW <= 0 or screenH <= 0 then
+        screenW, screenH = GetUIScreenSize()
+    end
+    local left = WoWPro.MainFrame:GetLeft() or 0
+    local right = WoWPro.MainFrame:GetRight() or screenW
+    local top = WoWPro.MainFrame:GetTop() or screenH
+    local bottom = WoWPro.MainFrame:GetBottom() or 0
 
-        -- Calculate offsets based on expansion anchor
-        local offsetX, offsetY
-        if expansionAnchor == "TOPLEFT" then
-            offsetX, offsetY = left, top - screenH
-        elseif expansionAnchor == "TOPRIGHT" then
-            offsetX, offsetY = right - screenW, top - screenH
-        elseif expansionAnchor == "BOTTOMLEFT" then
-            offsetX, offsetY = left, bottom
-        elseif expansionAnchor == "BOTTOMRIGHT" then
-            offsetX, offsetY = right - screenW, bottom
-        end
-
-        local pos = {expansionAnchor, "UIParent", expansionAnchor, offsetX, offsetY}
-        local scale = WoWPro.MainFrame:GetScale()
-        local storePercent = true
-
-        for i=4,5 do
-            pos[i] = pos[i] * scale
-        end
-
-        if storePercent and screenW > 0 and screenH > 0 then
-            pos[6] = "pct"
-            pos[7] = offsetX / screenW
-            pos[8] = offsetY / screenH
-            pos[9] = screenW
-            pos[10] = screenH
-        end
-
-        AnchorDebug("AnchorStore %s: anchor=%s offs=(%.1f,%.1f) screen=(%.1f,%.1f) scale=%.3f mode=%s", where, expansionAnchor, offsetX, offsetY, screenW, screenH, scale, pos[6] or "px")
-
-        WoWProDB.profile.position = pos
-        WoWProDB.profile.scale = scale
-        local size = {WoWPro.MainFrame:GetHeight(), WoWPro.MainFrame:GetWidth() }
-        WoWProDB.profile.size = size
-        WoWPro:dbp("AnchorStore(" .. where .. "): Saved position using " .. expansionAnchor .. " - Width: " .. size[2] .. " Height: " .. size[1])
-        return
+    -- Calculate offsets based on expansion anchor
+    local offsetX, offsetY
+    if expansionAnchor == "TOPLEFT" then
+        offsetX, offsetY = left, top - screenH
+    elseif expansionAnchor == "TOPRIGHT" then
+        offsetX, offsetY = right - screenW, top - screenH
+    elseif expansionAnchor == "BOTTOMLEFT" then
+        offsetX, offsetY = left, bottom
+    elseif expansionAnchor == "BOTTOMRIGHT" then
+        offsetX, offsetY = right - screenW, bottom
     end
 
+    local pos = {expansionAnchor, "UIParent", expansionAnchor, offsetX, offsetY}
+    local scale = WoWPro.MainFrame:GetScale()
+    local storePercent = true
+
+    for i=4,5 do
+        pos[i] = pos[i] * scale
+    end
+
+    if storePercent and screenW > 0 and screenH > 0 then
+        pos[6] = "pct"
+        pos[7] = offsetX / screenW
+        pos[8] = offsetY / screenH
+        pos[9] = screenW
+        pos[10] = screenH
+    end
+
+    AnchorDebug("AnchorStore %s: anchor=%s offs=(%.1f,%.1f) screen=(%.1f,%.1f) scale=%.3f mode=%s", where, expansionAnchor, offsetX, offsetY, screenW, screenH, scale, pos[6] or "px")
+
+    WoWProDB.profile.position = pos
+    WoWProDB.profile.scale = scale
+    local size = {WoWPro.MainFrame:GetHeight(), WoWPro.MainFrame:GetWidth() }
+    WoWProDB.profile.size = size
+    if WoWPro.DebugProfileWrite and WoWPro.DebugLevel > 0 then
+    end
+        WoWPro:dbp("AnchorStore(" .. where .. "): Saved position using " .. expansionAnchor .. " - Width: " .. size[2] .. " Height: " .. size[1])
+        -- AnchorStore debug log gate: Set WoWPro.DebugAnchorStore = true to enable detailed debug logging for this code.
+        if WoWPro.DebugAnchorStore and WoWPro.DebugLevel > 0 then
+            WoWPro:dbp("AnchorStore(" .. where .. "): " ..
+                "Anchor=" .. expansionAnchor ..
+                " | X=" .. string.format("%.1f", offsetX) ..
+                " | Y=" .. string.format("%.1f", offsetY) ..
+                " | Width=" .. string.format("%.1f", size[2]) ..
+                " | Height=" .. string.format("%.1f", size[1]) ..
+                " | Scale=" .. string.format("%.3f", scale) ..
+                " | ScreenW=" .. string.format("%.1f", screenW) ..
+                " | ScreenH=" .. string.format("%.1f", screenH) ..
+                " | Mode=" .. (pos[6] or "px") ..
+                " | pctX=" .. string.format("%.4f", pos[7] or 0) ..
+                " | pctY=" .. string.format("%.4f", pos[8] or 0))
+        end
+    if where == "ResizeEnd" then return end
     WoWPro.MainFrame:SetScript("OnUpdate", function()
         if not WoWPro.MaybeCombatLockdown() then
             -- Use the user's configured expansion anchor for consistent position storage
@@ -1004,6 +1031,9 @@ function WoWPro.AnchorRestore(reset_size)
     end
     local scale = WoWPro.MainFrame:GetScale()
     local posClone = {unpack(pos)}
+    -- Always use the current expansionAnchor from the profile
+    local expansionAnchor = WoWProDB.profile.expansionAnchor or posClone[1] or "TOPLEFT"
+    posClone[1] = expansionAnchor
     local restoreMode = "px"
     if posClone[6] == "pct" then
         local ui = _G.UIParent
@@ -1039,13 +1069,20 @@ function WoWPro.AnchorRestore(reset_size)
     if size and not reset_size then
         WoWPro.MainFrame:SetHeight(size[1])
         WoWPro.MainFrame:SetWidth(size[2])
-        WoWPro:dbp("AnchorRestore: Restored saved size - Width: " .. size[2] .. " Height: " .. size[1])
+        if WoWPro.DebugAnchor then
+                -- Debug: Log anchor restore details for troubleshooting frame position and size issues
+            WoWPro:dbp("AnchorRestore: Restored saved size - Width: " .. size[2] .. " Height: " .. size[1])
+        end
     elseif reset_size then
         size = {WoWPro.MainFrame:GetHeight(), WoWPro.MainFrame:GetWidth() }
         WoWProDB.profile.size = size
-        WoWPro:dbp("AnchorRestore: Reset size to current - Width: " .. size[2] .. " Height: " .. size[1])
+        if WoWPro.DebugAnchor then
+            WoWPro:dbp("AnchorRestore: Reset size to current - Width: " .. size[2] .. " Height: " .. size[1])
+        end
     else
-        WoWPro:dbp("AnchorRestore: No size to restore")
+        if WoWPro.DebugAnchor then
+            WoWPro:dbp("AnchorRestore: No size to restore")
+        end
     end
     -- Look up parent frame from saved name string
     local parentFrame = _G[posClone[2]] or _G.UIParent
