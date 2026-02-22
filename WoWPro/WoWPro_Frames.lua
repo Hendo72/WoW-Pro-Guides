@@ -1,6 +1,6 @@
 -- luacheck: globals ipairs unpack ceil max floor math C_Timer tostring string
-WoWPro.DebugAnchorStore = true -- Enables detailed AnchorStore debug logging
-WoWPro.DebugAnchor = true -- Enables debug logging for window anchor/position changes
+WoWPro.DebugAnchorStore = false -- Enables detailed AnchorStore debug logging
+WoWPro.DebugAnchor = false -- Enables debug logging for window anchor/position changes
 
 local function AnchorDebug(msg, ...)
     -- AnchorDebug: Centralized function for anchor-related debug logging.
