@@ -33,6 +33,7 @@ function WoWPro:IncrementActiveStickyCount()
     _activeStickyCount = _activeStickyCount + 1
 end
 
+
 local quids_debug = false
 
 local function QidMapReduce(list, default, or_string, and_string, func, why, debug, abs_quid)
@@ -872,7 +873,6 @@ end
 function WoWPro:CheckFunction(row, button, down)
     WoWPro:dbp("WoWPro:CheckFunction: row %d button %s UD %s rowChecked %s",row.index, button, tostring(down), tostring(row.check:GetChecked()))
     if button == "LeftButton" and row.check:GetChecked() then
-        WoWPro:dbp("WoWPro:CheckFunction: User marked step %d as skipped.", row.index)
         local steplist = WoWPro.SkipStep(row.index, true)
         if steplist ~= "" then
             WoWPro:SkipStepDialogCall(row.index, steplist, row.check)
@@ -1204,20 +1204,22 @@ function WoWPro:RowUpdate(offset)
         table.insert(stepList, v)
     end
     for _, v in ipairs(regularSteps) do
-        -- Suppress US steps until their S is complete
+        -- If this is a US step (unsticky and not sticky)
         if WoWPro.unsticky[v] and not WoWPro.sticky[v] then
+            -- Find the corresponding S step (same step text, questtext, lootitem, and sticky)
             local foundSticky = nil
             for idx = 1, WoWPro.stepcount do
                 if WoWPro.sticky[idx] and not WoWPro.unsticky[idx]
                     and WoWPro.step[idx] == WoWPro.step[v]
                     and WoWPro.questtext[idx] == WoWPro.questtext[v]
-                    and WoWPro.lootitem[idx] == WoWPro.lootitem[v] then
+                    and WoWPro.lootitem[idx] == WoWPro.lootitem[v]
+                    and not completion[idx] then
                     foundSticky = idx
                     break
                 end
             end
-            local S_complete = foundSticky and WoWProCharDB.Guide[GID].completion[foundSticky]
-            if S_complete then
+            -- Only show US step if its S step is completed
+            if not foundSticky then
                 table.insert(stepList, v)
             end
         else
@@ -2202,6 +2204,8 @@ Rep2IdAndClass = {
     ["good friend"] = {4,true},
     ["best friend"] = {5,true},
 }
+
+
 
 -- Next Step --
 -- Determines the next active step --
