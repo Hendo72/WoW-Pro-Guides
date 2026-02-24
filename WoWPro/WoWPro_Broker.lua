@@ -1195,10 +1195,35 @@ function WoWPro:RowUpdate(offset)
         end
     end
 
-    -- Merge: stickies first, then regular
+    -- Merge: stickies first, then regular.
+    -- US step visibility: US steps are only eligible to be shown after their corresponding S step is completed.
+    -- This means US steps are not added to the visible stepList until their S step is complete, regardless of US conditionals.
+    -- When a US step becomes the activestep, it completes its S step immediately (see NextStep logic).
     local stepList = {}
-    for _, v in ipairs(stickySteps) do table.insert(stepList, v) end
-    for _, v in ipairs(regularSteps) do table.insert(stepList, v) end
+    for _, v in ipairs(stickySteps) do
+        table.insert(stepList, v)
+    end
+    for _, v in ipairs(regularSteps) do
+        -- Suppress US steps until their S is complete
+        if WoWPro.unsticky[v] and not WoWPro.sticky[v] then
+            local foundSticky = nil
+            for idx = 1, WoWPro.stepcount do
+                if WoWPro.sticky[idx] and not WoWPro.unsticky[idx]
+                    and WoWPro.step[idx] == WoWPro.step[v]
+                    and WoWPro.questtext[idx] == WoWPro.questtext[v]
+                    and WoWPro.lootitem[idx] == WoWPro.lootitem[v] then
+                    foundSticky = idx
+                    break
+                end
+            end
+            local S_complete = foundSticky and WoWProCharDB.Guide[GID].completion[foundSticky]
+            if S_complete then
+                table.insert(stepList, v)
+            end
+        else
+            table.insert(stepList, v)
+        end
+    end
     WoWPro.RowLimit = #stepList
 
     -- Set ActiveStickyCount based on actual visible stickies
@@ -2178,10 +2203,16 @@ Rep2IdAndClass = {
     ["best friend"] = {5,true},
 }
 
-
 -- Next Step --
 -- Determines the next active step --
 function WoWPro.NextStep(guideIndex, rowIndex)
+    local qid = WoWPro.QID and WoWPro.QID[guideIndex]
+    local action = WoWPro.action and WoWPro.action[guideIndex]
+    local qid = WoWPro.QID and WoWPro.QID[guideIndex]
+    local step = WoWPro.step and WoWPro.step[guideIndex]
+    local sticky = WoWPro.sticky and WoWPro.sticky[guideIndex]
+    local unsticky = WoWPro.unsticky and WoWPro.unsticky[guideIndex]
+    local stickyStatus = (sticky and unsticky) and "S!US" or (sticky and "S") or (unsticky and "US") or "none"
     local GID = WoWProDB.char.currentguide
     local guide = WoWProCharDB.Guide[GID]
     if not guide then
@@ -2192,6 +2223,24 @@ function WoWPro.NextStep(guideIndex, rowIndex)
     if not guideIndex then guideIndex = 1 end --guideIndex is the position in the guide
     if not rowIndex then rowIndex = 1 end --rowIndex is the position on the rows
     local skip = true
+    -- US step completes S step only when it is the true activestep
+    if guideIndex == WoWPro.ActiveStep then
+        if WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex] then
+            local foundSticky = nil
+            for idx = 1, WoWPro.stepcount do
+                if WoWPro.sticky[idx] and not WoWPro.unsticky[idx]
+                    and WoWPro.step[idx] == WoWPro.step[guideIndex]
+                    and WoWPro.questtext[idx] == WoWPro.questtext[guideIndex]
+                    and WoWPro.lootitem[idx] == WoWPro.lootitem[guideIndex] then
+                    foundSticky = idx
+                    break
+                end
+            end
+            if foundSticky and not guide.completion[foundSticky] then
+                guide.completion[foundSticky] = true
+            end
+        end
+    end
     while skip do
         --[[ HACK
             "repeat ... break ... until true"
