@@ -10,11 +10,52 @@ return [[
 
 A Silvermoon Negotiations|QID|86733|PRE|86852|M|52.62,88.23|Z|2424; Isle of Quel'Danas|N|From Lor'themar Theron.|
 A Crafters Needed|QID|93723|PRE|86852|M|45.12,55.23|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|
-C Crafters Needed|QID|93723|M|45.12,55.60|Z|2393; Silvermoon City|QO|1|NC|N|Talk to Mar'nah.|
+C Crafters Needed|QID|93723|M|45.12,55.60|Z|2393; Silvermoon City|QO|1|CHAT|N|Talk to Mar'nah.|
 T Crafters Needed|QID|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|To Captain Flaresworn.|
-;A Crafting Orders: Tailoring|QID|93730|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|
-;C Crafting Orders: Tailoring|QID|93730|M|48.15,54.06|Z|2393; Silvermoon City|QO|1|NC|N|Use the Tailor's Work Table.|
-;T Crafting Orders: Tailoring|QID|93730|M|48.08,53.98|Z|2393; Silvermoon City|N|To Galana.|
+
+A Crafting Orders: Tailoring|QID|93730|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|P|Tailoring;197|
+C Crafting Orders: Tailoring|QID|93730|M|48.15,54.06|Z|2393; Silvermoon City|QO|1|NC|N|Use the Tailor's Work Table.|
+T Crafting Orders: Tailoring|QID|93730|M|48.08,53.98|Z|2393; Silvermoon City|N|To Galana.|
+= Train Tailoring|QID|99999|M|48.08,53.98|Z|2393; Silvermoon City|N|From Galana. Click this step off if you are done or dont care.|P|Tailoring;197|SPELL|Midnight Tailoring;471015|;Spell is for Unraveling
+
+A Crafting Orders: Blacksmithing|QID|93726|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|P|Blacksmithing;164|
+C Crafting Orders: Blacksmithing|QID|93726|M|43.78,51.20|Z|2393; Silvermoon City|QO|1|NC|N|Use the Blacksmithing Work Table.|
+T Crafting Orders: Blacksmithing|QID|93726|M|43.73,51.85|Z|2393; Silvermoon City|N|To Bemarrin.|
+= Train Blacksmithing|QID|99999|M|43.75,51.82|Z|2393; Silvermoon City|N|From Bemarrin. Click this step off if you are done or dont care.|P|Blacksmithing;164|SPELL|Midnight Blacksmithing;471004|
+
+A Crafting Orders: Jewelcrafting|QID|93729|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|P|Jewelcrafting;755|
+C Crafting Orders: Jewelcrafting|QID|93729|M|47.86,55.21|Z|2393; Silvermoon City|QO|1|NC|N|Use the Jewelcrafting Work Table.|
+T Crafting Orders: Jewelcrafting|QID|93729|M|47.86,55.21|Z|2393; Silvermoon City|N|To Amin.|
+= Train Jewelcrafting|QID|99999|M|48.12,55.05|Z|2393; Silvermoon City|N|From Amin. Click this step off if you are done or dont care.|P|Jewelcrafting;755|SPELL|Midnight Jewelcrafting;471011|
+
+A Crafting Orders: Inscription|QID|93728|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|P|Inscription;773|
+C Crafting Orders: Inscription|QID|93728|M|46.78,51.49|Z|2393; Silvermoon City|QO|1|NC|N|Use the Scribe's Drafting Table.|
+T Crafting Orders: Inscription|QID|93728|M|46.87,51.56|Z|2393; Silvermoon City|N|To Zantasia.|
+= Train Inscription|QID|99999|M|46.87,51.56|Z|2393; Silvermoon City|N|From Zantasia. Click this step off if you are done or dont care.|P|Inscription;773|SPELL|Midnight Inscription;471010|
+
+A Crafting Orders: Leatherworking|QID|93731|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|P|Leatherworking;165|
+C Crafting Orders: Leatherworking|QID|93731|M|43.17,55.82|Z|2393; Silvermoon City|QO|1|NC|N|Use the Leatherworker's Tool Bench.|
+T Crafting Orders: Leatherworking|QID|93731|M|43.17,55.82|Z|2393; Silvermoon City|N|To Talmar.|
+= Train Leatherworking|QID|99999|M|43.17,55.82|Z|2393; Silvermoon City|N|From Talmar. Click this step off if you are done or dont care.|P|Leatherworking;165|SPELL|Midnight Leatherworking;471012|
+
+A Crafting Orders: Engineering|QID|93727|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|P|Engineering;202|
+C Crafting Orders: Engineering|QID|93727|M|43.60,53.97|Z|2393; Silvermoon City|QO|1|NC|N|Use the Engineering Work Table.|
+T Crafting Orders: Engineering|QID|93727|M|43.53,53.86|Z|2393; Silvermoon City|N|To Danwe.|
+= Train Engineering|QID|99999|M|43.53,53.86|Z|2393; Silvermoon City|N|From Danwe. Click this step off if you are done or dont care.|P|Engineering;202|SPELL|Midnight Engineering;471007|
+
+A Crafting Orders: Alchemy|QID|93724|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|P|Alchemy;171|
+C Crafting Orders: Alchemy|QID|93724|M|46.99,52.01|Z|2393; Silvermoon City|QO|1|NC|N|Use the Alchemist's Lab Bench.|
+T Crafting Orders: Alchemy|QID|93724|M|46.99,52.01|Z|2393; Silvermoon City|N|To Camberon.|
+= Train Alchemy|QID|99999|M|46.99,52.01|Z|2393; Silvermoon City|N|From Camberon. Click this step off if you are done or dont care.|P|Alchemy;171|SPELL|Midnight Alchemy;471003|
+
+;Profession training block. Move it anywhere you think it needs to go.
+= Train Herbalism|QID|99999|M|48.22,51.58|Z|2393; Silvermoon City|N|From Botanist Nathera. Click this step off if you are done or dont care.|P|Herbalism;182|SPELL|Midnight Herbalism;471009|
+= Train Enchanting|QID|99999|M|47.98,53.81|Z|2393; Silvermoon City|N|From Dolothos. Click this step off if you are done or dont care.|P|Enchanting;333|SPELL|Midnight Enchanting;471006|
+= Train Mining|QID|99999|M|42.67,52.85|Z|2393; Silvermoon City|N|From Belil. Click this step off if you are done or dont care.|P|Mining;186|SPELL|Midnight Mining;471013|
+= Train Skinning|QID|99999|M|43.19,55.77|Z|2393; Silvermoon City|N|From Tyn. Click this step off if you are done or dont care.|P|Skinning;393|SPELL|Midnight Skinning;471014|
+= Train Cooking|QID|99999|M|56.33,69.85|Z|2393; Silvermoon City|N|From Sylann. Click this step off if you are done or dont care.|P|Cooking;185|SPELL|Midnight Cooking;471005|
+= Train Fishing|QID|99999|M|56.33,69.85|Z|2393; Silvermoon City|N|From Drathen. Click this step off if you are done or dont care.|P|Fishing;356|SPELL|Midnight Fishing;471008|
+
 C Silvermoon Negotiations|QID|86733|M|45.63,67.58|Z|2393; Silvermoon City|QO|1|NC|N|Arrive at Sanctum of Light.|
 T Silvermoon Negotiations|QID|86733|M|45.35,70.31|Z|2393; Silvermoon City|N|To Lor'themar Theron.|
 A Diplomacy|QID|86734|PRE|86733|M|45.35,70.31|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
@@ -35,9 +76,9 @@ T Paved in Ash|QID|86735|M|45.44,70.46|Z|2393; Silvermoon City|N|To Lor'themar T
 A Fair Breeze, Light Bloom|QID|86737|PRE|86735|M|45.44,70.46|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
 C Fair Breeze, Light Bloom|QID|86737|M|45.37,70.42|Z|2393; Silvermoon City|QO|1|H|N|Obtain the arcane projector from Rommath.|
 T Murder Row: Rumors Abound|QID|90835|M|51.71,64.47|Z|2393; Silvermoon City|N|To Belath Dawnblade.|
-A Murder Row: Loose Lips|QID|90818|PRE|90835|M|51.71,64.47|Z|2393; Silvermoon City|N|From Belath Dawnblade.|
-A Murder Row: Traces of Fel|QID|90837|PRE|90835|M|51.71,64.47|Z|2393; Silvermoon City|N|From Belath Dawnblade.|
-A Gold is Gold|QID|90669|PRE|90835|M|54.52,61.71|Z|2393; Silvermoon City|N|From Sarvi.|
+A Murder Row: Loose Lips|QID|90818|PRE|90835|M|51.71,64.47|Z|2393; Silvermoon City|N|From Belath Dawnblade.|RANK|2|
+A Murder Row: Traces of Fel|QID|90837|PRE|90835|M|51.71,64.47|Z|2393; Silvermoon City|N|From Belath Dawnblade.|RANK|2|
+A Gold is Gold|QID|90669|PRE|90835|M|54.52,61.71|Z|2393; Silvermoon City|N|From Sarvi.|RANK|2|
 C Murder Row: Traces of Fel|QID|90837|M|51.03,56.23|Z|2393; Silvermoon City|QO|1|H|N|Sources of fel magic discovered.|S|
 C Murder Row: Loose Lips|QID|90818|M|52.28,60.59|Z|2393; Silvermoon City|QO|1<1|N|Information gathered.|EAB|
 C Murder Row: Loose Lips|QID|90818|M|51.38,57.10|Z|2393; Silvermoon City|QO|1<2|N|Information gathered.|EAB|
@@ -45,7 +86,7 @@ C Murder Row: Loose Lips|QID|90818|M|52.41,63.56|Z|2393; Silvermoon City|QO|1<3|
 C Murder Row: Traces of Fel|QID|90837|M|51.03,56.23|Z|2393; Silvermoon City|QO|1|H|N|Sources of fel magic discovered.|US|
 T Murder Row: Loose Lips|QID|90818|M|55.99,56.56|Z|2393; Silvermoon City|N|To Belath Dawnblade.|
 T Murder Row: Traces of Fel|QID|90837|M|55.99,56.56|Z|2393; Silvermoon City|N|To Belath Dawnblade.|
-A Murder Row: Acting the Part|QID|90819|PRE|90818&90837|M|55.99,56.56|Z|2393; Silvermoon City|N|From Belath Dawnblade.|
+A Murder Row: Acting the Part|QID|90819|PRE|90818&90837|M|55.99,56.56|Z|2393; Silvermoon City|N|From Belath Dawnblade.|RANK|2|
 C Murder Row: Acting the Part|QID|90819|M|56.14,56.63|Z|2393; Silvermoon City|QO|1|H|N|Cracked Wyrm Core.|
 C Murder Row: Acting the Part|QID|90819|M|50.68,48.00|Z|2393; Silvermoon City|QO|2<1|CHAT|N|Murder Row merchants questioned.|
 C Murder Row: Acting the Part|QID|90819|M|53.13,52.84|Z|2393; Silvermoon City|QO|2<2|CHAT|N|Murder Row merchants questioned.|
@@ -55,13 +96,20 @@ C Murder Row: Acting the Part|QID|90819|M|57.36,52.03|Z|2393; Silvermoon City|QO
 C Murder Row: Acting the Part|QID|90819|M|57.57,52.06|Z|2393; Silvermoon City|QO|5|CHAT|N|Speak to Vira.|
 C Murder Row: Acting the Part|QID|90819|M|57.88,52.05|Z|2393; Silvermoon City|QO|6|H|N|Crate of Fel Artifacts inspected.|
 T Murder Row: Acting the Part|QID|90819|M|54.61,54.73|Z|2393; Silvermoon City|N|To Belath Dawnblade.|
-A Murder Row: Harbored Secrets|QID|90821|PRE|90819|M|54.61,54.73|Z|2393; Silvermoon City|N|From Belath Dawnblade.|
+A Murder Row: Harbored Secrets|QID|90821|PRE|90819|M|54.61,54.73|Z|2393; Silvermoon City|N|From Belath Dawnblade.|RANK|2|
 C Murder Row: Harbored Secrets|QID|90821|M|32.19,25.78|Z|2393; Silvermoon City|QO|1|NC|N|Meet Belath at the harbor.|
 C Murder Row: Harbored Secrets|QID|90821|M|33.94,26.46|Z|2393; Silvermoon City|QO|2|CHAT|N|Speak to the dockmaster.|
 C Murder Row: Harbored Secrets|QID|90821|M|33.85,26.47|Z|2393; Silvermoon City|QO|3|NC|N|Tarelin's body searched.|
 T Murder Row: Harbored Secrets|QID|90821|M|32.25,25.88|Z|2393; Silvermoon City|N|To Belath Dawnblade.|
-A Murder Row: One Fel Swoop|QID|90822|PRE|90821|M|32.25,25.88|Z|2393; Silvermoon City|N|From Belath Dawnblade.|
+A Murder Row: One Fel Swoop|QID|90822|PRE|90821|M|32.25,25.88|Z|2393; Silvermoon City|N|From Belath Dawnblade.|RANK|2|
 t Murder Row: One Fel Swoop|QID|90822|Z|2434|N|To Belath Dawnblade.|IZ|Silvermoon City|
+
+
+
+
+
+
+
 A Mad to Measure|QID|91386|M|48.33,54.56|Z|2393; Silvermoon City|N|From Solwin Brightstitch.|RANK|2|
 C Mad to Measure|QID|91386|M|48.66,54.48|Z|2393; Silvermoon City|QO|1|H|N|Fabric Shears fetched.|
 C Mad to Measure|QID|91386|M|48.92,54.15|Z|2393; Silvermoon City|QO|2|H|N|Plush Velour fetched.|

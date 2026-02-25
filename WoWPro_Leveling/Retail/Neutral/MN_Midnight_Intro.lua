@@ -83,14 +83,6 @@ K Imperatus|ACTIVE|86852|M|52.01,42.03|Z|2432; Isle of Quel'Danas (Intro)|QO|4|N
 T Light's Last Stand|QID|86852|M|52.62,88.23|Z|2424; Isle of Quel'Danas|N|To Lady Liadrin.|
 A Silvermoon Negotiations|QID|86733|PRE|86852|M|52.62,88.23|Z|2424; Isle of Quel'Danas|N|From Lor'themar Theron.|
 
-
-
-
-
-
-
-
-
 ;N Adventure Time|AVAILABLE|94871^83550^83551^83552|M|PLAYER|Z|2424; Isle of Quel'Danas|JUMP|Midnight Adventure Mode Hub|N|Congratulations on hitting level 80 and completing the Campaign.\n\nYou can now accept Adventure Mode. This will allow you to choose which Zone you want to level in.\n\n Click the guide button next to this frame to direct you to the zone you want to level in.|
 
 
