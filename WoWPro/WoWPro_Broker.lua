@@ -2221,7 +2221,7 @@ Rep2IdAndClass = {
 -- Next Step --
 -- Determines the next active step --
 function WoWPro.NextStep(guideIndex, rowIndex)
-    local qid = WoWPro.QID and WoWPro.QID[guideIndex]
+    -- Removed unused qid variable; use QID from WoWPro.QID[guideIndex] directly where needed
     local GID = WoWProDB.char.currentguide
     local guide = WoWProCharDB.Guide[GID]
     if not guide then
