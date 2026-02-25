@@ -2579,11 +2579,11 @@ function WoWPro.NextStep(guideIndex, rowIndex)
             if WoWPro.ccount[guideIndex] then
                 local targetCount = 0
                 local ccount = WoWPro.ccount[guideIndex]
-                for i,qid in ipairs({(";"):split(ccount)}) do
-                    if i == 1 then
-                        targetCount = tonumber(qid)
-                    elseif WoWPro:IsQuestFlaggedCompleted(qid, true) then
-                            targetCount = targetCount - 1
+                for ccountIdx, completedQuestID in ipairs({(";"):split(ccount)}) do
+                    if ccountIdx == 1 then
+                        targetCount = tonumber(completedQuestID)
+                    elseif WoWPro:IsQuestFlaggedCompleted(completedQuestID, true) then
+                        targetCount = targetCount - 1
                     end
                 end
                 if targetCount ~= 0 then
@@ -2627,20 +2627,20 @@ function WoWPro.NextStep(guideIndex, rowIndex)
 
             -- Partial Completion --
             if WoWPro:QIDsInTable(QID,WoWPro.QuestLog) and WoWPro.questtext[guideIndex] and not guide.completion[guideIndex] then
-                local qid = WoWPro:QIDInTable(QID,WoWPro.QuestLog)
-                -- WoWPro:Print("LFO: qid is %s",tostring(qid))
-                local numquesttext = select("#", (";"):split(WoWPro.questtext[guideIndex]))
-                local complete = true
-                for l=1,numquesttext do
-                    local lquesttext = select(numquesttext-l+1, (";"):split(WoWPro.questtext[guideIndex]))
-                    local lcomplete = false
-                    if WoWPro.ValidObjective(lquesttext) then
-                        lcomplete = WoWPro.QuestObjectiveStatus(qid, lquesttext)
+                local questLogQID = WoWPro:QIDInTable(QID,WoWPro.QuestLog)
+                -- WoWPro:Print("LFO: questLogQID is %s",tostring(questLogQID))
+                local numQuestObjectives = select("#", (";"):split(WoWPro.questtext[guideIndex]))
+                local allObjectivesComplete = true
+                for questObjIdx=1,numQuestObjectives do
+                    local questObjectiveText = select(numQuestObjectives-questObjIdx+1, (";"):split(WoWPro.questtext[guideIndex]))
+                    local isObjectiveComplete = false
+                    if WoWPro.ValidObjective(questObjectiveText) then
+                        isObjectiveComplete = WoWPro.QuestObjectiveStatus(questLogQID, questObjectiveText)
                     end
-                    if not lcomplete then complete = false end --if one of the listed objectives isn't complete, then the step is not complete.
+                    if not isObjectiveComplete then allObjectivesComplete = false end --if one of the listed objectives isn't complete, then the step is not complete.
                 end
                 --if the step has not been found to be incomplete, run the completion function
-                if complete then
+                if allObjectivesComplete then
                     WoWPro.CompleteStep(guideIndex,"Criteria met")
                     skip = true
                     break
