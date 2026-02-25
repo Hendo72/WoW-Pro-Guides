@@ -33,7 +33,6 @@ function WoWPro:IncrementActiveStickyCount()
     _activeStickyCount = _activeStickyCount + 1
 end
 
-
 local quids_debug = false
 
 local function QidMapReduce(list, default, or_string, and_string, func, why, debug, abs_quid)
@@ -1206,16 +1205,28 @@ function WoWPro:RowUpdate(offset)
     for _, v in ipairs(regularSteps) do
         -- If this is a US step (unsticky and not sticky)
         if WoWPro.unsticky[v] and not WoWPro.sticky[v] then
-            -- Find the corresponding S step (same step text, questtext, lootitem, and sticky)
+            -- Find the corresponding S step by QID, questtext (QO), and lootitem (L tag) if present
             local foundSticky = nil
+            local qidUS = WoWPro.QID[v]
+            local qtextUS = WoWPro.questtext and WoWPro.questtext[v]
+            local lootUS = WoWPro.lootitem and WoWPro.lootitem[v]
             for idx = 1, WoWPro.stepcount do
                 if WoWPro.sticky[idx] and not WoWPro.unsticky[idx]
-                    and WoWPro.step[idx] == WoWPro.step[v]
-                    and WoWPro.questtext[idx] == WoWPro.questtext[v]
-                    and WoWPro.lootitem[idx] == WoWPro.lootitem[v]
-                    and not completion[idx] then
-                    foundSticky = idx
-                    break
+                    and WoWPro.QID[idx] == qidUS then
+                    local qtextS = WoWPro.questtext and WoWPro.questtext[idx]
+                    local lootS = WoWPro.lootitem and WoWPro.lootitem[idx]
+                    if qtextUS == qtextS and lootUS == lootS then
+                        if not completion[idx] then
+                            foundSticky = idx
+                            break
+                        end
+                    elseif not qtextUS and not qtextS and not lootUS and not lootS then
+                        -- Both questtext and lootitem are nil, treat as match
+                        if not completion[idx] then
+                            foundSticky = idx
+                            break
+                        end
+                    end
                 end
             end
             -- Only show US step if its S step is completed
@@ -2211,12 +2222,6 @@ Rep2IdAndClass = {
 -- Determines the next active step --
 function WoWPro.NextStep(guideIndex, rowIndex)
     local qid = WoWPro.QID and WoWPro.QID[guideIndex]
-    local action = WoWPro.action and WoWPro.action[guideIndex]
-    local qid = WoWPro.QID and WoWPro.QID[guideIndex]
-    local step = WoWPro.step and WoWPro.step[guideIndex]
-    local sticky = WoWPro.sticky and WoWPro.sticky[guideIndex]
-    local unsticky = WoWPro.unsticky and WoWPro.unsticky[guideIndex]
-    local stickyStatus = (sticky and unsticky) and "S!US" or (sticky and "S") or (unsticky and "US") or "none"
     local GID = WoWProDB.char.currentguide
     local guide = WoWProCharDB.Guide[GID]
     if not guide then
