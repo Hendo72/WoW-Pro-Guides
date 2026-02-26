@@ -872,7 +872,6 @@ end
 function WoWPro:CheckFunction(row, button, down)
     WoWPro:dbp("WoWPro:CheckFunction: row %d button %s UD %s rowChecked %s",row.index, button, tostring(down), tostring(row.check:GetChecked()))
     if button == "LeftButton" and row.check:GetChecked() then
-        WoWPro:dbp("WoWPro:CheckFunction: User marked step %d as skipped.", row.index)
         local steplist = WoWPro.SkipStep(row.index, true)
         if steplist ~= "" then
             WoWPro:SkipStepDialogCall(row.index, steplist, row.check)
@@ -1195,10 +1194,49 @@ function WoWPro:RowUpdate(offset)
         end
     end
 
-    -- Merge: stickies first, then regular
+    -- Merge: stickies first, then regular.
+    -- US step visibility: US steps are only eligible to be shown after their corresponding S step is completed.
+    -- This means US steps are not added to the visible stepList until their S step is complete, regardless of US conditionals.
+    -- When a US step becomes the activestep, it completes its S step immediately (see NextStep logic).
     local stepList = {}
-    for _, v in ipairs(stickySteps) do table.insert(stepList, v) end
-    for _, v in ipairs(regularSteps) do table.insert(stepList, v) end
+    for _, v in ipairs(stickySteps) do
+        table.insert(stepList, v)
+    end
+    for _, v in ipairs(regularSteps) do
+        -- If this is a US step (unsticky and not sticky)
+        if WoWPro.unsticky[v] and not WoWPro.sticky[v] then
+            -- Find the corresponding S step by QID, questtext (QO), and lootitem (L tag) if present
+            local foundSticky = nil
+            local qidUS = WoWPro.QID[v]
+            local qtextUS = WoWPro.questtext and WoWPro.questtext[v]
+            local lootUS = WoWPro.lootitem and WoWPro.lootitem[v]
+            for idx = 1, WoWPro.stepcount do
+                if WoWPro.sticky[idx] and not WoWPro.unsticky[idx]
+                    and WoWPro.QID[idx] == qidUS then
+                    local qtextS = WoWPro.questtext and WoWPro.questtext[idx]
+                    local lootS = WoWPro.lootitem and WoWPro.lootitem[idx]
+                    if qtextUS == qtextS and lootUS == lootS then
+                        if not completion[idx] then
+                            foundSticky = idx
+                            break
+                        end
+                    elseif not qtextUS and not qtextS and not lootUS and not lootS then
+                        -- Both questtext and lootitem are nil, treat as match
+                        if not completion[idx] then
+                            foundSticky = idx
+                            break
+                        end
+                    end
+                end
+            end
+            -- Only show US step if its S step is completed
+            if not foundSticky then
+                table.insert(stepList, v)
+            end
+        else
+            table.insert(stepList, v)
+        end
+    end
     WoWPro.RowLimit = #stepList
 
     -- Set ActiveStickyCount based on actual visible stickies
@@ -2179,9 +2217,11 @@ Rep2IdAndClass = {
 }
 
 
+
 -- Next Step --
 -- Determines the next active step --
 function WoWPro.NextStep(guideIndex, rowIndex)
+    -- Removed unused qid variable; use QID from WoWPro.QID[guideIndex] directly where needed
     local GID = WoWProDB.char.currentguide
     local guide = WoWProCharDB.Guide[GID]
     if not guide then
@@ -2192,6 +2232,24 @@ function WoWPro.NextStep(guideIndex, rowIndex)
     if not guideIndex then guideIndex = 1 end --guideIndex is the position in the guide
     if not rowIndex then rowIndex = 1 end --rowIndex is the position on the rows
     local skip = true
+    -- US step completes S step only when it is the true activestep
+    if guideIndex == WoWPro.ActiveStep then
+        if WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex] then
+            local foundSticky = nil
+            for idx = 1, WoWPro.stepcount do
+                if WoWPro.sticky[idx] and not WoWPro.unsticky[idx]
+                    and WoWPro.step[idx] == WoWPro.step[guideIndex]
+                    and WoWPro.questtext[idx] == WoWPro.questtext[guideIndex]
+                    and WoWPro.lootitem[idx] == WoWPro.lootitem[guideIndex] then
+                    foundSticky = idx
+                    break
+                end
+            end
+            if foundSticky and not guide.completion[foundSticky] then
+                guide.completion[foundSticky] = true
+            end
+        end
+    end
     while skip do
         --[[ HACK
             "repeat ... break ... until true"
@@ -2521,11 +2579,11 @@ function WoWPro.NextStep(guideIndex, rowIndex)
             if WoWPro.ccount[guideIndex] then
                 local targetCount = 0
                 local ccount = WoWPro.ccount[guideIndex]
-                for i,qid in ipairs({(";"):split(ccount)}) do
-                    if i == 1 then
-                        targetCount = tonumber(qid)
-                    elseif WoWPro:IsQuestFlaggedCompleted(qid, true) then
-                            targetCount = targetCount - 1
+                for ccountIdx, completedQuestID in ipairs({(";"):split(ccount)}) do
+                    if ccountIdx == 1 then
+                        targetCount = tonumber(completedQuestID)
+                    elseif WoWPro:IsQuestFlaggedCompleted(completedQuestID, true) then
+                        targetCount = targetCount - 1
                     end
                 end
                 if targetCount ~= 0 then
@@ -2569,20 +2627,20 @@ function WoWPro.NextStep(guideIndex, rowIndex)
 
             -- Partial Completion --
             if WoWPro:QIDsInTable(QID,WoWPro.QuestLog) and WoWPro.questtext[guideIndex] and not guide.completion[guideIndex] then
-                local qid = WoWPro:QIDInTable(QID,WoWPro.QuestLog)
-                -- WoWPro:Print("LFO: qid is %s",tostring(qid))
-                local numquesttext = select("#", (";"):split(WoWPro.questtext[guideIndex]))
-                local complete = true
-                for l=1,numquesttext do
-                    local lquesttext = select(numquesttext-l+1, (";"):split(WoWPro.questtext[guideIndex]))
-                    local lcomplete = false
-                    if WoWPro.ValidObjective(lquesttext) then
-                        lcomplete = WoWPro.QuestObjectiveStatus(qid, lquesttext)
+                local questLogQID = WoWPro:QIDInTable(QID,WoWPro.QuestLog)
+                -- WoWPro:Print("LFO: questLogQID is %s",tostring(questLogQID))
+                local numQuestObjectives = select("#", (";"):split(WoWPro.questtext[guideIndex]))
+                local allObjectivesComplete = true
+                for questObjIdx=1,numQuestObjectives do
+                    local questObjectiveText = select(numQuestObjectives-questObjIdx+1, (";"):split(WoWPro.questtext[guideIndex]))
+                    local isObjectiveComplete = false
+                    if WoWPro.ValidObjective(questObjectiveText) then
+                        isObjectiveComplete = WoWPro.QuestObjectiveStatus(questLogQID, questObjectiveText)
                     end
-                    if not lcomplete then complete = false end --if one of the listed objectives isn't complete, then the step is not complete.
+                    if not isObjectiveComplete then allObjectivesComplete = false end --if one of the listed objectives isn't complete, then the step is not complete.
                 end
                 --if the step has not been found to be incomplete, run the completion function
-                if complete then
+                if allObjectivesComplete then
                     WoWPro.CompleteStep(guideIndex,"Criteria met")
                     skip = true
                     break
