@@ -1,2 +1,7 @@
+boto3
 ipython
 retry
+pandas
+numpy
+matplotlib
+Jupyter

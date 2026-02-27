@@ -1,3 +1,15 @@
+# Release 2026.02.26.A
+## Bug Fixes
+* Fix Unsticky Step Display in Guide Window
+* Fix S/US Step Completion and UI Display Logic
+* Improved anchor persistence and debug logging
+* Midnight Professions added
+## Guide Updates
+* Midnight Leveling: Adventure Mode, Arators Journey, Eversong Woods, Harandar, Intro, Void Storm, War of Light and Shadow, Zul Aman
+
+
+
+
 # Release 2026.02.16.A
 ## Bug Fixes
 * Fixed some function calls misusing `:` .vs. `.`!
