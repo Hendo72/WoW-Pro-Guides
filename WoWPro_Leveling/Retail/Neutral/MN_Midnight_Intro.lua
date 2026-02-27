@@ -22,16 +22,16 @@ A Where Heroes Hold|QID|86780|PRE|86769|M|46.05,44.48|Z|2432; Isle of Quel'Danas
 A My Son|QID|89271|PRE|86769|M|46.05,44.48|Z|2432; Isle of Quel'Danas (Intro)|N|From High Exarch Turalyon.|
 C Where Heroes Hold|QID|86780|M|44.14,50.67|Z|2432; Isle of Quel'Danas (Intro)|QO|1|N|Hinder the attacking Void forces.|S|
 C Champions of Quel'Danas|QID|86770|M|45.18,38.28|Z|2432; Isle of Quel'Danas (Intro)|QO|1|CHAT|N|Recruit Faerin Lothar.|
-C Champions of Quel'Danas|QID|86770|M|41.58,44.45|Z|2432; Isle of Quel'Danas (Intro)|QO|3|CHAT|N|Recruit Lothraxion.|
-C My Son|QID|89271|M|44.32,51.63|Z|2432; Isle of Quel'Danas (Intro)|QO|1|CHAT|N|Gain Arator's assistance.|
+C My Son|QID|89271|M|44.32,51.63|Z|2432; Isle of Quel'Danas (Intro)|QO|1|CHAT|N|Stay on this level to find Arator. |
 C Champions of Quel'Danas|QID|86770|M|42.28,50.83|Z|2432; Isle of Quel'Danas (Intro)|QO|2|CHAT|N|Recruit Alonsus Faol.|
+C Champions of Quel'Danas|QID|86770|M|41.58,44.45|Z|2432; Isle of Quel'Danas (Intro)|QO|3|CHAT|N|Back to the middle platform to find Lothraxion.|
 C Where Heroes Hold|QID|86780|M|44.14,50.67|Z|2432; Isle of Quel'Danas (Intro)|QO|1|N|Hinder the attacking Void forces.|US|
-T Champions of Quel'Danas|QID|86770|M|35.39,44.06|Z|2432; Isle of Quel'Danas (Intro)|N|To Lor'themar Theron.|
 T Where Heroes Hold|QID|86780|M|35.33,43.89|Z|2432; Isle of Quel'Danas (Intro)|N|To High Exarch Turalyon.|
 T My Son|QID|89271|M|35.33,43.89|Z|2432; Isle of Quel'Danas (Intro)|N|To High Exarch Turalyon.|
+T Champions of Quel'Danas|QID|86770|M|35.39,44.06|Z|2432; Isle of Quel'Danas (Intro)|N|To Lor'themar Theron.|
 A The Hour of Need|QID|86805|PRE|86770&86780&89271|M|35.33,43.89|Z|2432; Isle of Quel'Danas (Intro)|N|From Lor'themar Theron.|
 A A Safe Path|QID|89012|PRE|86770&86780&89271|M|35.39,43.96|Z|2432; Isle of Quel'Danas (Intro)|N|From Arator.|
-C The Hour of Need|QID|86805|M|41.68,47.21|Z|2432; Isle of Quel'Danas (Intro)|QO|1|NC|U|248239|N|Civilian Rescued.|S|
+C The Hour of Need|QID|86805|M|41.68,47.21|Z|2432; Isle of Quel'Danas (Intro)|QO|1|NC|U|248239|N|Use the provided [color=33fff9] Healing Flask [/color] on the downed civilians and talk to the ones upright to rescued them.|S|
 K Gloomstress|ACTIVE|89012|M|39.97,49.24|Z|2432; Isle of Quel'Danas (Intro)|QO|1|N|Gloomstress slain.|T|Gloomstress|
 C The Hour of Need|QID|86805|M|41.68,47.21|Z|2432; Isle of Quel'Danas (Intro)|QO|1|NC|U|248239|N|Civilian Rescued.|US|
 C The Hour of Need|QID|86805|M|41.18,51.24|Z|2432; Isle of Quel'Danas (Intro)|QO|2|NC|N|Proceed to the Silver Landing.|
@@ -39,8 +39,8 @@ T The Hour of Need|QID|86805|M|41.25,56.86|Z|2432; Isle of Quel'Danas (Intro)|N|
 T A Safe Path|QID|89012|M|41.25,56.86|Z|2432; Isle of Quel'Danas (Intro)|N|To Lor'themar Theron.|
 A Luminous Wings|QID|86806|PRE|86805&89012|M|41.25,56.86|Z|2432; Isle of Quel'Danas (Intro)|N|From Lor'themar Theron.|
 C Luminous Wings|QID|86806|M|41.02,58.17|Z|2432; Isle of Quel'Danas (Intro)|QO|1|V|N|Mount Empowered Dragonhawk.|
-C Luminous Wings|QID|86806|M|28.41,74.44|Z|2432; Isle of Quel'Danas (Intro)|QO|3|NC|N|Distressed Civilian rescued.|S|
-C Luminous Wings|QID|86806|M|35.66,67.81|Z|2432; Isle of Quel'Danas (Intro)|QO|2|N|Void Invaders slain.|
+C Luminous Wings|QID|86806|M|28.41,74.44|Z|2432; Isle of Quel'Danas (Intro)|QO|3|NC|N|Use the Vehicle UI (default '2') to rescue distressed civilian. This seems to have a pretty short range.|S|
+C Luminous Wings|QID|86806|M|35.66,67.81|Z|2432; Isle of Quel'Danas (Intro)|QO|2|N|Shoot down the Void Invaders also from Vehich UI.|
 C Luminous Wings|QID|86806|M|28.41,74.44|Z|2432; Isle of Quel'Danas (Intro)|QO|3|NC|N|Distressed Civilian rescued.|US|
 T Luminous Wings|QID|86806|M|41.32,56.81|Z|2432; Isle of Quel'Danas (Intro)|N|To Lor'themar Theron.|
 A The Gate|QID|86807|PRE|86806|M|41.32,56.81|Z|2432; Isle of Quel'Danas (Intro)|N|From Arator.|
@@ -48,45 +48,40 @@ C The Gate|QID|86807|M|41.56,40.33|Z|2432; Isle of Quel'Danas (Intro)|QO|1|NC|N|
 T The Gate|QID|86807|M|41.29,39.38|Z|2432; Isle of Quel'Danas (Intro)|N|To High Exarch Turalyon.|
 A Severing the Void|QID|91274|PRE|86807|M|41.37,39.15|Z|2432; Isle of Quel'Danas (Intro)|N|From Arator.|
 A Voidborn Banishing|QID|86834|PRE|86807|M|41.37,39.15|Z|2432; Isle of Quel'Danas (Intro)|N|From Arator.|
-C Severing the Void|QID|91274|M|38.83,31.73;42.69,35.78;44.35,35.42;43.26,29.61|CN|Z|2432; Isle of Quel'Danas (Intro)|QO|1|NC|N|Sentinels activated.|S|
+C Severing the Void|QID|91274|M|Z|2432; Isle of Quel'Danas (Intro)|QO|1|NC|N|Sentinels activated.|S|
 K Blightclaw|ACTIVE|86834|QO|2|M|46.34,33.39|Z|2432; Isle of Quel'Danas (Intro)|N|Blightclaw slain.|T|Blightclaw|
 K The Wasting|ACTIVE|86834|QO|1|M|42.21,26.66|Z|2432; Isle of Quel'Danas (Intro)|N|The Wasting slain.|T|The Wasting|
-K Latrunculon|ACTIVE|86834|QO|3|M|38.59,29.13|Z|2432; Isle of Quel'Danas (Intro)|N|Latrunculon slain.|
+K Latrunculon|ACTIVE|86834|QO|3|M|37.10,30.13|Z|2432; Isle of Quel'Danas (Intro)|N|Latrunculon slain.|
 A Light Show|QID|90849|M|38.61,25.68|Z|2432; Isle of Quel'Danas (Intro)|N|Bonus Objective|RANK|3|
-C Light Show|QID|90849|M|38.92,25.17|Z|2432; Isle of Quel'Danas (Intro)|N|Clear the bonus objective for a huge chunk of EXP and Some gold.|
+C Light Show|QID|90849|M|38.92,25.17|Z|2432; Isle of Quel'Danas (Intro)|N|Clear the bonus objective for a huge chunk of EXP and some gold.|
 t Light Show|QID|90849|M|38.60,22.74|Z|2432; Isle of Quel'Danas (Intro)|N|To Twilight Saboteur.|
-C Severing the Void|QID|91274|M|38.83,31.73|Z|2432; Isle of Quel'Danas (Intro)|QO|1|NC|N|Sentinels activated.|US|
+C Severing the Void|QID|91274|M|38.83,31.73;42.69,35.78;44.35,35.42;43.26,29.61|CN||Z|2432; Isle of Quel'Danas (Intro)|QO|1|NC|N|Sentinels activated.|US|
 T Severing the Void|QID|91274|M|45.51,27.03|Z|2432; Isle of Quel'Danas (Intro)|N|To High Exarch Turalyon.|
 T Voidborn Banishing|QID|86834|M|45.51,27.03|Z|2432; Isle of Quel'Danas (Intro)|N|To High Exarch Turalyon.|
 A Ethereal Eradication|QID|86811|PRE|91274&86834|M|45.51,27.03|Z|2432; Isle of Quel'Danas (Intro)|N|From High Exarch Turalyon.|
 A Light's Arsenal|QID|86848|PRE|91274&86834|M|45.31,26.95|Z|2432; Isle of Quel'Danas (Intro)|N|From Lady Liadrin.|
 C Light's Arsenal|QID|86848|QO|1|M|49.17,23.30;49.08,23.28;47.94,28.72;47.73,28.87;48.09,28.98;47.30,28.70;44.83,21.11;45.08,23.49|CN|Z|2432; Isle of Quel'Danas (Intro)|H|N|Weapons collected.|S|EAB
 C Ethereal Eradication|QID|86811|QO|1|M|49.90,19.50|Z|2432; Isle of Quel'Danas (Intro)|N|Shadowguard forces slain.|S|
-C Ethereal Eradication|QID|86811|QO|2|M|48.91,22.14|Z|2432; Isle of Quel'Danas (Intro)|N|Norkonahl the Looter slain.|
+C Ethereal Eradication|QID|86811|QO|2|M|48.91,22.14|Z|2432; Isle of Quel'Danas (Intro)|N|Slay Norkonahl the Looter.|T|Norkonahl the Looter|
 C Light's Arsenal|QID|86848|QO|1|M|49.17,23.30;49.08,23.28;47.94,28.72;47.73,28.87;48.09,28.98;47.30,28.70;44.83,21.11;45.08,23.49|CN|Z|2432; Isle of Quel'Danas (Intro)|EAB|H|N|Weapons collected.|US|
 C Ethereal Eradication|QID|86811|M|49.90,19.50|Z|2432; Isle of Quel'Danas (Intro)|QO|1|N|Shadowguard forces slain.|US|
-T Ethereal Eradication|QID|86811|M|45.46,26.87|Z|2432; Isle of Quel'Danas (Intro)|N|To High Exarch Turalyon.|
 T Light's Arsenal|QID|86848|M|45.27,26.83|Z|2432; Isle of Quel'Danas (Intro)|N|To Lady Liadrin.|
+T Ethereal Eradication|QID|86811|M|45.46,26.87|Z|2432; Isle of Quel'Danas (Intro)|N|To High Exarch Turalyon.|
 A Wrath Unleashed|QID|86849|PRE|86811&86848|M|45.27,26.83|Z|2432; Isle of Quel'Danas (Intro)|N|From High Exarch Turalyon.|
-C Wrath Unleashed|QID|86849|M|45.62,11.37|Z|2432; Isle of Quel'Danas (Intro)|QO|1|CHAT|N|Aid Turalyon in attacking the Voidwake Behemoth.|
+C Wrath Unleashed|QID|86849|M|45.62,11.37|Z|2432; Isle of Quel'Danas (Intro)|QO|1|CHAT|N|Let Turalyon know you are ready to attack the Voidwake Behemoth.|
 C Wrath Unleashed|QID|86849|M|45.77,11.36|Z|2432; Isle of Quel'Danas (Intro)|QO|2|NC|N|Channel the Light against the Voidwake Behemoth.|EAB|
-C Wrath Unleashed|QID|86849|M|45.77,11.36|Z|2432; Isle of Quel'Danas (Intro)|QO|3|NC|N|Drive back Vorasius.|
 T Wrath Unleashed|QID|86849|M|45.83,11.46|Z|2432; Isle of Quel'Danas (Intro)|N|To Lady Liadrin.|
 A Broken Sun|QID|86850|PRE|86849|M|45.83,11.46|Z|2432; Isle of Quel'Danas (Intro)|N|From Lady Liadrin.|
 C Broken Sun|QID|86850|M|39.71,16.44|Z|2432; Isle of Quel'Danas (Intro)|QO|1|N|Escape on the Dragonhawk.|V|
-C Broken Sun|QID|86850|M|51.57,56.40|Z|2432; Isle of Quel'Danas (Intro)|QO|2|NC|N|Arrive at the Sunwell.|
 T Broken Sun|QID|86850|M|52.71,50.12|Z|2432; Isle of Quel'Danas (Intro)|N|To Lady Liadrin.|
 A Light's Last Stand|QID|86852|PRE|86850|M|52.71,50.12|Z|2432; Isle of Quel'Danas (Intro)|N|From Lady Liadrin.|
 C Light's Last Stand|QID|86852|M|52.71,50.12|Z|2432; Isle of Quel'Danas (Intro)|QO|1|CHAT|N|Speak with Liadrin to begin the ritual.|
-C Light's Last Stand|QID|86852|M|50.17,48.34|Z|2432; Isle of Quel'Danas (Intro)|QO|2|NC|N|Void forces repelled.|
+C Light's Last Stand|QID|86852|M|50.17,48.34|Z|2432; Isle of Quel'Danas (Intro)|QO|2|NC|N|Void forces repelled. You can run thru the small orange glowing orbs for a small buff.|
 K Imperatus|ACTIVE|86852|M|52.01,42.03|Z|2432; Isle of Quel'Danas (Intro)|QO|4|N|Imperatus slain.|T|Imperatus|
 T Light's Last Stand|QID|86852|M|52.62,88.23|Z|2424; Isle of Quel'Danas|N|To Lady Liadrin.|
 A Silvermoon Negotiations|QID|86733|PRE|86852|M|52.62,88.23|Z|2424; Isle of Quel'Danas|N|From Lor'themar Theron.|
 
-;N Adventure Time|AVAILABLE|94871^83550^83551^83552|M|PLAYER|Z|2424; Isle of Quel'Danas|JUMP|Midnight Adventure Mode Hub|N|Congratulations on hitting level 80 and completing the Campaign.\n\nYou can now accept Adventure Mode. This will allow you to choose which Zone you want to level in.\n\n Click the guide button next to this frame to direct you to the zone you want to level in.|
-
-
-
+;N Adventure Time|AVAILABLE|94871^83550^83551^83552|M|PLAYER|Z|2424; Isle of Quel'Danas|JUMP|Midnight Adventure Mode Hub|N|Congratulations on hitting level 90 and completing the Campaign.\n\nYou can now accept Adventure Mode. This will allow you to choose which Zone you want to level in.\n\n Click the guide button next to this frame to direct you to the zone you want to level in.|
 
 ]]
 end)
