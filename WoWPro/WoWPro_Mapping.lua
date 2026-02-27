@@ -375,6 +375,11 @@ function WoWPro:MapPoint(row)
     local stepIndex
     if row then
         stepIndex = WoWPro.rows[row].index
+        -- Prevent mapping sticky steps unless explicitly allowed by user click
+        if WoWPro.sticky and WoWPro.sticky[stepIndex] and not WoWPro.UserClicked then
+            WoWPro:dbp("MapPoint: Prevented mapping sticky step %d without user click", stepIndex)
+            return
+        end
     else
         stepIndex = WoWPro.NextStepNotSticky(WoWPro.ActiveStep)
     end

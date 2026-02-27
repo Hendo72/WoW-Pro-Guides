@@ -1430,8 +1430,10 @@ if step then
     if coord then
         tinsert(dropdown,
             {text = "Map Coordinates", func = function()
+                WoWPro.UserClicked = true
                 WoWPro:RemoveMapPoint()
                 WoWPro:MapPoint(currentRow.num)
+                WoWPro.UserClicked = nil
             end}
         )
     end
