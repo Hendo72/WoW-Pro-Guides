@@ -446,12 +446,12 @@ A Suspicious Sundries|QID|92023|PRE|92021&92022|M|37.53,72.54|Z|2395; Eversong W
 T The Past Keeps Watch|QID|86634|M|36.98,74.13|Z|2395; Eversong Woods|N|To Arator.|
 A Comprehend the Void|QID|86633|PRE|86634|M|37.01,74.02|Z|2395; Eversong Woods|N|From Magister Umbric.|
 C Comprehend the Void|QID|86633|QO|1|M|37.37,74.66|Z|2395; Eversong Woods|N|Meet Umbric at the ritual site.|NC|
-C Comprehend the Void|QID|86633|QO|3|M|37.39,74.72|Z|2395; Eversong Woods|N|Void Shards subsumed.|H|
+C Comprehend the Void|QID|86633|QO|3|M|37.39,74.72|Z|2395; Eversong Woods|N|Click the Void Shard and then bring it to the center, one at a time.|H|
 T Comprehend the Void|QID|86633|M|37.36,74.69|Z|2395; Eversong Woods|N|To Magister Umbric.|
 A To Deatholme|QID|86635|PRE|86633|M|37.36,74.69|Z|2395; Eversong Woods|N|From Magister Umbric.|
-C Suspicious Sundries|QID|92023|M|39.26,61.07|Z|2395; Eversong Woods|QO|1|NC|N|Vial of Quicksilver.|
-C Suspicious Sundries|QID|92023|M|39.58,60.60|Z|2395; Eversong Woods|QO|2|NC|N|Flask of Dragon's Blood.|
-C Suspicious Sundries|QID|92023|M|40.69,60.12|Z|2395; Eversong Woods|QO|3|NC|N|Bottle of Magister's Reserve.|
+B Vial of Quicksilver|QID|92023|M|39.26,61.07|Z|2395; Eversong Woods|QO|1|N|Purchased from Vehn Sorrelstride.|
+B Flask of Dragon's Blood|QID|92023|M|39.58,60.60|Z|2395; Eversong Woods|QO|2|N|Purchased from Nara Fadebranch.|
+B Bottle of Magister's Reserve|QID|92023|M|40.69,60.12|Z|2395; Eversong Woods|QO|3|NC|N|Purchased from Limien Bountcask.|
 T Suspicious Sundries|QID|92023|M|40.69,60.12|Z|2395; Eversong Woods|N|To Limien Bountcask.|
 A House Call|QID|92024|PRE|92023|M|40.69,60.12|Z|2395; Eversong Woods|N|From Limien Bountcask.|RANK|2|
 C House Call|QID|92024|M|37.60,72.16|Z|2395; Eversong Woods|QO|1|CHAT|N|First clue found.|
@@ -466,10 +466,10 @@ C Flowers for Amalthea|QID|92025|M|32.86,78.72|Z|2395; Eversong Woods|QO|4|NC|N|
 T Flowers for Amalthea|QID|92025|M|32.85,78.73|Z|2395; Eversong Woods|N|To Talandra Dawnsprite.|
 A Windrunner Spire: Haunting Melodies|QID|93850|M|35.52,79.16|Z|2395; Eversong Woods|N|From Restless Spirit.|RANK|2|
 t Windrunner Spire: Haunting Melodies|QID|93850|M|35.53,79.12|Z|2395; Eversong Woods|N|To Restless Spirit.|
-C To Deatholme|QID|86635|QO|1|M|44.71,85.20|Z|2395; Eversong Woods|N|Journey to the Ruins of Deatholme.|NC|
-C To Deatholme|QID|86635|QO|2|M|44.71,85.21|Z|2395; Eversong Woods|N|Speak to Valeera Sanguinar.|CHAT|
-T To Deatholme|QID|86635|M|44.71,85.21|Z|2395; Eversong Woods|N|To Magister Umbric.|
-A Void Walk With Me|QID|86636|PRE|86635|M|44.71,85.21|Z|2395; Eversong Woods|N|From Magister Umbric.|
+C To Deatholme|QID|86635|QO|1|M|44.34,85.70|Z|2395; Eversong Woods|N|Journey to the Ruins of Deatholme.|NC|
+C To Deatholme|QID|86635|QO|2|M|44.34,85.70|Z|2395; Eversong Woods|N|Speak to Valeera Sanguinar.|CHAT|
+T To Deatholme|QID|86635|M|44.34,84.70|Z|2395; Eversong Woods|N|To Magister Umbric.|
+A Void Walk With Me|QID|86636|PRE|86635|M|44.34,84.70|Z|2395; Eversong Woods|N|From Magister Umbric.|
 C Void Walk With Me|QID|86636|QO|1|M|45.48,86.18|Z|2395; Eversong Woods|N|Deathholme Delve entered.|NC|
 C Void Walk With Me|QID|86636|QO|2|M|63.55,33.49|Z|2395; Eversong Woods|N|Lord Antenorian slain.|
 C Void Walk With Me|QID|86636|QO|3|M|63.44,29.21|Z|2395; Eversong Woods|N|Stolen Knowledge reclaimed.|NC|
@@ -512,14 +512,15 @@ C Following the Root|QID|86643|QO|4|M|55.13,65.45|Z|2395; Eversong Woods|N|Speak
 T Following the Root|QID|86643|M|54.80,65.50|Z|2395; Eversong Woods|N|To Arator.|
 A Gods Before Us|QID|86644|PRE|86643|M|54.80,65.50|Z|2395; Eversong Woods|N|From Arator.|
 C Gods Before Us|QID|86644|QO|2|M|54.59,65.49|Z|2395; Eversong Woods|N|Amani Riddle inspected.|H|
-C Gods Before Us|QID|86644|QO|3|M|54.61,65.44|Z|2395; Eversong Woods|N|Amani Riddle solved.|NC|
+C Gods Before Us|QID|86644|QO|3|M|54.61,65.44|Z|2395; Eversong Woods|N|Kill Child of Shadra, then Child of Hireek. Click the vases on each side to deposit the remains.|NC|
 C Gods Before Us|QID|86644|QO|4|M|53.95,65.54|Z|2395; Eversong Woods|N|Venture deeper into the crypt.|NC|
-C Gods Before Us|QID|86644|QO|5|M|53.70,65.88|Z|2395; Eversong Woods|N|Carved Tiles matched.|NC|
+C Gods Before Us|QID|86644|QO|5|M|53.70,65.88|Z|2395; Eversong Woods|N|Match pairs of Carved Tiles.|NC|
 T Gods Before Us|QID|86644|M|53.70,65.88|Z|2395; Eversong Woods|N|To Arator.|
 A An Impasse|QID|86646|PRE|86644|M|53.70,65.88|Z|2395; Eversong Woods|N|From Arator.|
 C An Impasse|QID|86646|M|53.88,66.90|Z|2395; Eversong Woods|N|Vanatha confronted.|NC|
 T An Impasse|QID|86646|M|54.77,68.17|Z|2395; Eversong Woods|N|To Arator.|
 A Beat of Blood|QID|86647|PRE|86646|M|54.77,68.17|Z|2395; Eversong Woods|N|From Arator.|
+;perhaps this section should be moved earlier. it feels wrong with Arator tells you to meet up with him to just stop and fish for a bit -- I know the quest is available earlier but choose not to move it until I saw where was better on another run
 A A Fish!|QID|91271|M|48.72,76.72|Z|2395; Eversong Woods|N|From Valdekar Solaar.|RANK|2|
 C A Fish!|QID|91271|QO|1|M|49.79,75.19|Z|2395; Eversong Woods|N|Fish in the dirty water node.|
 C A Fish!|QID|91271|QO|2|M|48.75,76.67|Z|2395; Eversong Woods|N|Show the fish to Valdekar.|
@@ -536,8 +537,8 @@ C Pesky Pests|QID|91090|QO|1|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|Scare off
 C Pesky Pests|QID|91090|QO|2|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|Kill the grubs.|
 C Pesky Pests|QID|91090|QO|1|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|Scare off the butterflys.|US|
 C Secret Ingredients|QID|91328|M|48.75,76.71|Z|2395; Eversong Woods|N|Collect the berries from the bushes.|US|H|
-T Pesky Pests|QID|91090|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|To Kaliel Solaar.|
 T Secret Ingredients|QID|91328|M|48.75,76.71|Z|2395; Eversong Woods|N|To Valdekar Solaar.|
+T Pesky Pests|QID|91090|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|To Kaliel Solaar.|
 A Lost in Light|QID|91137|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|From Kaliel Solaar.|RANK|2|
 K Liya Waterbloom|ACTIVE|91137|QO|1|M|50.00,74.07|Z|2395; Eversong Woods|N|Kill Liya Waterbloom.|T|Liya Waterbloom|
 T Lost in Light|QID|91137|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|To Kaliel Solaar.|
@@ -552,7 +553,7 @@ C Scattered in Sunbeams|QID|87400|M|52.36,74.86;53.20,73.93;51.54,73.52|CN|Z|239
 T Scattered in Sunbeams|QID|87400|M|50.57,78.14|Z|2395; Eversong Woods|N|To Farstrider Sedi.|
 T Gardener Mishap|QID|87401|M|50.51,78.13|Z|2395; Eversong Woods|N|To Harris Lightsbreath.|
 A The Light Provides|QID|87402|M|50.53,78.13|Z|2395; Eversong Woods|N|From Harris Lightsbreath.|RANK|2|
-C The Light Provides|QID|87402|QO|1|M|51.24,76.83|Z|2395; Eversong Woods|N|Open the door.|U|246441|
+C The Light Provides|QID|87402|QO|1|M|51.24,76.83|Z|2395; Eversong Woods|N|Use the [color=33fff9] Humming Core [/color]to open the door.|U|246441|
 C Hungering Lightroot|ACTIVE|87402|QO|2|M|51.24,76.83|Z|2395; Eversong Woods|N|Kill Hungering Lightroot.|T|Hungering Lightroot|
 T The Light Provides|QID|87402|M|50.53,78.13|Z|2395; Eversong Woods|N|From Harris Lightsbreath.|
 T A Real Assignment|QID|91350|M|59.37,68.86|Z|2395; Eversong Woods|N|To Captain Dawnrunner.|
@@ -584,8 +585,8 @@ A Past Redemption|QID|86649|PRE|86648|M|60.22,81.45|Z|2395; Eversong Woods|N|Fro
 C Past Redemption|QID|86649|M|60.22,81.45|Z|2395; Eversong Woods|N|Speak to Turalyon.|CHAT|
 T Past Redemption|QID|86649|M|60.56,81.48|Z|2395; Eversong Woods|N|To Lor'themar Theron.|
 A Fractured|QID|86650|PRE|86649|M|60.56,81.48|Z|2395; Eversong Woods|N|From Lor'themar Theron.|
+T Pet Wranglin'|QID|93965|M|41.75,76.41|Z|2393; Silvermoon City|N|To Hawkrancher Saman.|
 C Fractured|QID|86650|M|45.44,70.36|Z|2393; Silvermoon City|N|Speak to Lor'themar.|CHAT|
 T Fractured|QID|86650|M|45.44,70.36|Z|2393; Silvermoon City|N|To Lor'themar Theron.|
-
 ]]
 end)
