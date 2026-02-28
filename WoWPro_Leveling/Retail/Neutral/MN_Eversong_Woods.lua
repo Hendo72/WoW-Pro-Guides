@@ -23,6 +23,7 @@ C Crafting Orders: Blacksmithing|QID|93726|M|43.78,51.20|Z|2393; Silvermoon City
 T Crafting Orders: Blacksmithing|QID|93726|M|43.73,51.85|Z|2393; Silvermoon City|N|To Bemarrin.|
 = Train Blacksmithing|QID|99999|M|43.75,51.82|Z|2393; Silvermoon City|N|From Bemarrin. Click this step off if you are done or dont care.|P|Blacksmithing;164|SPELL|Midnight Blacksmithing;471004|
 = Train Mining|QID|99999|M|42.67,52.85|Z|2393; Silvermoon City|N|From Belil. Click this step off if you are done or dont care.|P|Mining;186|SPELL|Midnight Mining;471013|
+$ Sin'dorei Master's Forgemace|QID|89183|M|49.16,61.36|Z|2393; Silvermoon City|N|Pick up and use the forgemace on the table for a bit of profession knowledge.|
 
 A Crafting Orders: Jewelcrafting|QID|93729|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|P|Jewelcrafting;755|
 C Crafting Orders: Jewelcrafting|QID|93729|M|47.86,55.21|Z|2393; Silvermoon City|QO|1|NC|N|Use the Jewelcrafting Work Table.|
@@ -35,12 +36,12 @@ T Crafting Orders: Inscription|QID|93728|M|46.87,51.56|Z|2393; Silvermoon City|N
 = Train Inscription|QID|99999|M|46.87,51.56|Z|2393; Silvermoon City|N|From Zantasia. Click this step off if you are done or dont care.|P|Inscription;773|SPELL|Midnight Inscription;471010|
 
 A Crafting Orders: Leatherworking|QID|93731|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|P|Leatherworking;165|
-A Artisan's Considered Order|QID|89096|M|44.77,56.28|Z|2393; Silvermoon City|U|238595|N|Pick up and use the scroll at the back of his booth.|P|Leatherworking;165|;may need to be moved until after you have trained profession?
 C Crafting Orders: Leatherworking|QID|93731|M|43.17,55.82|Z|2393; Silvermoon City|QO|1|NC|N|Use the Leatherworker's Tool Bench.|
 T Crafting Orders: Leatherworking|QID|93731|M|43.17,55.82|Z|2393; Silvermoon City|N|To Talmar.|
 = Train Leatherworking|QID|99999|M|43.17,55.82|Z|2393; Silvermoon City|N|From Talmar. Click this step off if you are done or dont care.|P|Leatherworking;165|SPELL|Midnight Leatherworking;471012|
 = Train Skinning|QID|99999|M|43.19,55.77|Z|2393; Silvermoon City|N|From Tyn. Click this step off if you are done or dont care.|P|Skinning;393|SPELL|Midnight Skinning;471014|
-A Sin'dorei Tanning Oil|QID|89171|M|43.18,55.65|Z|2393; Silvermoon City|U|238633|N|Pick up and then use the item behind the skinning trainer.|P|Skinning;393|
+$ Sin'dorei Tanning Oil|QID|89171|M|43.18,55.65|Z|2393; Silvermoon City|U|238633|N|Pick up and then use the item behind the skinning trainer.|P|Skinning;393|
+$ Artisan's Considered Order|QID|89096|M|44.77,56.28|Z|2393; Silvermoon City|U|238595|N|Pick up and use the scroll at the back of his booth.|P|Leatherworking;165|;may need to be moved until after you have trained profession?
 
 A Crafting Orders: Engineering|QID|93727|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|P|Engineering;202|
 C Crafting Orders: Engineering|QID|93727|M|43.60,53.97|Z|2393; Silvermoon City|QO|1|NC|N|Use the Engineering Work Table.|
@@ -63,19 +64,20 @@ T Silvermoon Negotiations|QID|86733|M|45.35,70.31|Z|2393; Silvermoon City|N|To L
 A Diplomacy|QID|86734|PRE|86733|M|45.35,70.31|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
 C Diplomacy|QID|86734|M|45.35,70.31|Z|2393; Silvermoon City|QO|1|NC|N|Listen to the discussion.|
 T Diplomacy|QID|86734|M|45.35,70.31|Z|2393; Silvermoon City|N|To Lor'themar Theron.|
-A Paved in Ash|QID|86735|PRE|86734|M|45.35,70.31|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
-C Paved in Ash|QID|86735|M|45.64,63.03|Z|2393; Silvermoon City|QO|7|CHAT|N|Greet Vanguard of the Light.|
-C Paved in Ash|QID|86735|M|50.79,65.18|Z|2393; Silvermoon City|QO|4|CHAT|N|Check in with the head bank teller.|
+A Paved in Ash|QID|86735^86736|PRE|86734|M|45.35,70.31|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
+C Paved in Ash|QID|86735^86736|M|45.64,63.03|Z|2393; Silvermoon City|QO|7|CHAT|N|Greet Vanguard of the Light.|
+C Paved in Ash|QID|86735^86736|M|50.79,65.18|Z|2393; Silvermoon City|QO|4|CHAT|N|Check in with the head bank teller.|
 f Sanctum of Light|ACTIVE|86735|M|50.99,71.09|Z|2393; Silvermoon City|N|From Skymaster Skyies.|
-C Paved in Ash|QID|86735|M|51.06,71.07|Z|2393; Silvermoon City|QO|3|CHAT|N|Speak with the Skymaster of Silvermoon.|
+C Paved in Ash|QID|86735^86736|M|51.06,71.07|Z|2393; Silvermoon City|QO|3|CHAT|N|Speak with the Skymaster of Silvermoon.|
 ;A Missing Paladins|QID|90546|PRE|86734|M|53.14,69.40|Z|2393; Silvermoon City|N|From Taelia Fordragon.|;was here on first run through, couldnt find it again.
-C Paved in Ash|QID|86735|M|52.65,65.34|Z|2393; Silvermoon City|QO|2|CHAT|N|Talk to Magistrix Narinth to check on the portal network.|
+C Paved in Ash|QID|86735^86736|M|52.65,65.34|Z|2393; Silvermoon City|QO|2|CHAT|N|Talk to Magistrix Narinth to check on the portal network.|
 A Murder Row: Rumors Abound|QID|90835|PRE|86734|M|55.90,63.79|Z|2393; Silvermoon City|N|From Avara.|RANK|2|
 C Paved in Ash|QID|86735|M|60.05,70.16|Z|2393; Silvermoon City|QO|6|CHAT|N|Check in with Guard Captain Goldblade.|
-C Paved in Ash|QID|86735|M|56.29,70.35|Z|2393; Silvermoon City|QO|1|CHAT|N|Talk to the innkeeper to check in at Wayfarer's Rest.|
-C Paved in Ash|QID|86735|M|52.48,78.10|Z|2393; Silvermoon City|QO|5|CHAT|N|Talk to Valeera Sanguinar to check in with the Reliquary.|
-T Paved in Ash|QID|86735|M|45.44,70.46|Z|2393; Silvermoon City|N|To Lor'themar Theron.|
-A Fair Breeze, Light Bloom|QID|86737|PRE|86735|M|45.44,70.46|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
+C Paved in Ash|QID|86736|M|69.11,67.51|Z|2393; Silvermoon City|QO|6|CHAT|N|Check in with Magistrix Nizara.|
+C Paved in Ash|QID|86735^86736|M|56.29,70.35|Z|2393; Silvermoon City|QO|1|CHAT|N|Talk to the innkeeper to check in at Wayfarer's Rest.|
+C Paved in Ash|QID|86735^86736|M|52.48,78.10|Z|2393; Silvermoon City|QO|5|CHAT|N|Talk to Valeera Sanguinar to check in with the Reliquary.|
+T Paved in Ash|QID|86735^86736|M|45.44,70.46|Z|2393; Silvermoon City|N|To Lor'themar Theron.|
+A Fair Breeze, Light Bloom|QID|86737|PRE|86735^86736|M|45.44,70.46|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
 C Fair Breeze, Light Bloom|QID|86737|M|45.37,70.42|Z|2393; Silvermoon City|QO|1|H|N|Obtain the arcane projector from Rommath.|
 T Murder Row: Rumors Abound|QID|90835|M|51.71,64.47|Z|2393; Silvermoon City|N|Fly up to the platform to find Belath Dawnblade.|
 A Murder Row: Loose Lips|QID|90818|PRE|90835|M|51.71,64.47|Z|2393; Silvermoon City|N|From Belath Dawnblade.|RANK|2|
@@ -588,5 +590,6 @@ A Fractured|QID|86650|PRE|86649|M|60.56,81.48|Z|2395; Eversong Woods|N|From Lor'
 T Pet Wranglin'|QID|93965|M|41.75,76.41|Z|2393; Silvermoon City|N|To Hawkrancher Saman.|
 C Fractured|QID|86650|M|45.44,70.36|Z|2393; Silvermoon City|N|Speak to Lor'themar.|CHAT|
 T Fractured|QID|86650|M|45.44,70.36|Z|2393; Silvermoon City|N|To Lor'themar Theron.|
+
 ]]
 end)
