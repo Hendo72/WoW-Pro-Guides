@@ -2098,7 +2098,7 @@ function WoWPro.UpdateGuideReal(From)
     -- Finding the active step in the guide --
     WoWPro.ActiveStep = WoWPro.NextStepNotSticky(1)
     WoWPro:print("UpdateGuideReal(%d): ActiveStep=%s", WoWPro.ActiveStep, WoWPro.EmitSafeStep(WoWPro.ActiveStep))
-    
+
     -- If the active step is a US step, mark its paired S step complete now
     if WoWPro.ActiveStep and WoWPro.unsticky[WoWPro.ActiveStep] and not WoWPro.sticky[WoWPro.ActiveStep] then
         local guide = WoWProCharDB.Guide[GID]
@@ -2122,7 +2122,7 @@ function WoWPro.UpdateGuideReal(From)
             end
         end
     end
-    
+
     if WoWPro.Recorder then
         WoWPro.ActiveStep = WoWPro.Recorder.SelectedStep or WoWPro.ActiveStep
     end
@@ -4076,7 +4076,7 @@ function WoWPro.NextStep(guideIndex, rowIndex)
 
         if skip then
             guideIndex = guideIndex + 1
-        else 
+        else
             if WoWPro.DEBUG_LOOTITEM_BROKER and (WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex]) then
                 print(string.format("[Broker] NextStep: US step %d NOT skipped, returning as active", guideIndex))
             end
@@ -4084,7 +4084,7 @@ function WoWPro.NextStep(guideIndex, rowIndex)
     end
     WoWPro.why[guideIndex] = "NextStep(): Step active."
     WoWPro:dbp("%s=WoWPro.NextStep()",tostring(guideIndex))
-    
+
     return guideIndex
 end
 
