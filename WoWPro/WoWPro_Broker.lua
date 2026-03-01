@@ -33,6 +33,22 @@ function WoWPro:IncrementActiveStickyCount()
     _activeStickyCount = _activeStickyCount + 1
 end
 
+-- Debug toggle for lootitem output in Broker
+WoWPro.DEBUG_STICKY_PAIRING = false -- Set to true to enable sticky pairing debug output
+
+-- Deep table comparison for lootitem matching
+local function deepTableEqual(t1, t2)
+    if t1 == t2 then return true end
+    if type(t1) ~= "table" or type(t2) ~= "table" then return false end
+    for k, v in pairs(t1) do
+        if t2[k] ~= v then return false end
+    end
+    for k, v in pairs(t2) do
+        if t1[k] ~= v then return false end
+    end
+    return true
+end
+
 local quids_debug = false
 
 local function QidMapReduce(list, default, or_string, and_string, func, why, debug, abs_quid)
@@ -1095,7 +1111,7 @@ function WoWPro:RowUpdate(offset)
     WoWPro:dbp("Running: WoWPro:RowUpdate()")
     WoWPro:SetActiveStickyCount(0)
     local reload = false
-    local k = offset or WoWPro.ActiveStep
+    local k = offset or WoWPro.NextStep(1)
     local itemkb = false
     local targetkb = false
 	local eakb = false
@@ -1131,13 +1147,14 @@ function WoWPro:RowUpdate(offset)
 
     -- Now sort: stickies first, then regular
     local completion = WoWProCharDB.Guide[GID].completion
+    local stickyBoundary = WoWPro.ActiveStep or k
     local stickySteps = {}
     local regularSteps = {}
-    local seenRegularStep = false
     for _, stepIdx in ipairs(allSteps) do
         if stepIdx then
-            if WoWPro.sticky[stepIdx] and not completion[stepIdx] then
-                -- Only show sticky step if it's ready to be displayed
+            if WoWPro.sticky[stepIdx] then
+                -- Show sticky step if it's ready to be displayed (regardless of completion status)
+                -- Completed stickies still show, just with a checkmark
                 local showSticky = false
                 local action = WoWPro.action[stepIdx]
                 local QID = WoWPro.QID[stepIdx]
@@ -1145,14 +1162,22 @@ function WoWPro:RowUpdate(offset)
                 local available = WoWPro.available and WoWPro.available[stepIdx]
                 local activeReq = WoWPro.active and WoWPro.active[stepIdx]
 
+                -- Never show sticky steps that are beyond current progression
+                if stepIdx > stickyBoundary then
+                    showSticky = false
+
                 -- Respect AVAILABLE/ACTIVE tags for sticky visibility (filters, not triggers)
-                if available and not WoWPro.QuestAvailable(available, false, "AVAILABLE") then
+                elseif available and not WoWPro.QuestAvailable(available, false, "AVAILABLE") then
                     showSticky = false
                 elseif activeReq and not WoWPro:QIDsInTableLogical(activeReq, WoWPro.QuestLog) then
                     showSticky = false
                 -- For C steps with QID and QO, check if specific objective is incomplete
                 elseif action == "C" and QID and questtext then
-                    if WoWPro:QIDsInTable(QID, WoWPro.QuestLog) then
+                    if stepIdx == k then
+                        -- Active sticky step - always show
+                        showSticky = true
+                    elseif not completion[stepIdx] and WoWPro:QIDsInTable(QID, WoWPro.QuestLog) then
+                        -- Only show while S phase is active (not yet marked complete)
                         local qid = WoWPro:QIDInTable(QID, WoWPro.QuestLog)
                         -- Check all QO objectives; sticky shows only if any is incomplete
                         local anyIncomplete = false
@@ -1165,11 +1190,15 @@ function WoWPro:RowUpdate(offset)
                                 end
                             end
                         end
-                        showSticky = anyIncomplete
+                        showSticky = anyIncomplete  -- Show only if objectives are incomplete (S phase still active)
                     end
-                -- For C steps with QID (no QO), only show if quest is in log
+                -- For C steps with QID (no QO), show if quest is in log and not yet completed
                 elseif action == "C" and QID then
-                    if WoWPro:QIDsInTable(QID, WoWPro.QuestLog) then
+                    if stepIdx == k then
+                        -- Active sticky step - always show
+                        showSticky = true
+                    elseif not completion[stepIdx] and WoWPro:QIDsInTable(QID, WoWPro.QuestLog) then
+                        -- Show if not yet marked complete and quest is in log (S phase is active)
                         showSticky = true
                     end
                 -- For C steps without QID (loot collection), only show if we've reached that step
@@ -1184,12 +1213,11 @@ function WoWPro:RowUpdate(offset)
                     end
                 end
 
-                if showSticky and not seenRegularStep then
+                if showSticky then
                     table.insert(stickySteps, stepIdx)
                 end
             else
                 table.insert(regularSteps, stepIdx)
-                seenRegularStep = true
             end
         end
     end
@@ -1220,6 +1248,11 @@ function WoWPro:RowUpdate(offset)
                             foundSticky = idx
                             break
                         end
+                    elseif qtextUS == qtextS and type(lootUS) == "table" and type(lootS) == "table" and deepTableEqual(lootUS, lootS) then
+                        if not completion[idx] then
+                            foundSticky = idx
+                            break
+                        end
                     elseif not qtextUS and not qtextS and not lootUS and not lootS then
                         -- Both questtext and lootitem are nil, treat as match
                         if not completion[idx] then
@@ -1229,8 +1262,8 @@ function WoWPro:RowUpdate(offset)
                     end
                 end
             end
-            -- Only show US step if its S step is completed
-            if not foundSticky then
+            -- Only show US step if its S step is completed (or no S step exists)
+            if not foundSticky or completion[foundSticky] then
                 table.insert(stepList, v)
             end
         else
@@ -1430,8 +1463,10 @@ if step then
     if coord then
         tinsert(dropdown,
             {text = "Map Coordinates", func = function()
+                WoWPro.UserClicked = true
                 WoWPro:RemoveMapPoint()
                 WoWPro:MapPoint(currentRow.num)
+                WoWPro.UserClicked = nil
             end}
         )
     end
@@ -2051,8 +2086,33 @@ function WoWPro.UpdateGuideReal(From)
     if not module or not module:IsEnabled() then return end
 
     -- Finding the active step in the guide --
-    WoWPro.ActiveStep = WoWPro.NextStep(1)
+    WoWPro.ActiveStep = WoWPro.NextStepNotSticky(1)
     WoWPro:print("UpdateGuideReal(%d): ActiveStep=%s", WoWPro.ActiveStep, WoWPro.EmitSafeStep(WoWPro.ActiveStep))
+
+    -- If the active step is a US step, mark its paired S step complete now
+    if WoWPro.ActiveStep and WoWPro.unsticky[WoWPro.ActiveStep] and not WoWPro.sticky[WoWPro.ActiveStep] then
+        local guide = WoWProCharDB.Guide[GID]
+        local foundSticky = nil
+        for idx = 1, WoWPro.stepcount do
+            if WoWPro.sticky[idx] and not WoWPro.unsticky[idx]
+                and WoWPro.step[idx] == WoWPro.step[WoWPro.ActiveStep]
+                and WoWPro.questtext[idx] == WoWPro.questtext[WoWPro.ActiveStep] then
+                local lootS = WoWPro.lootitem[idx]
+                local lootUS = WoWPro.lootitem[WoWPro.ActiveStep]
+                if lootS == lootUS or (type(lootS) == "table" and type(lootUS) == "table" and deepTableEqual(lootS, lootUS)) then
+                    foundSticky = idx
+                    break
+                end
+            end
+        end
+        if foundSticky and not guide.completion[foundSticky] then
+            guide.completion[foundSticky] = true
+            if WoWPro.DEBUG_STICKY_PAIRING then
+                WoWPro:dbp("[Broker] ActiveStep is US step %d: Marked paired S step %d complete", WoWPro.ActiveStep, foundSticky)
+            end
+        end
+    end
+
     if WoWPro.Recorder then
         WoWPro.ActiveStep = WoWPro.Recorder.SelectedStep or WoWPro.ActiveStep
     end
@@ -2232,24 +2292,7 @@ function WoWPro.NextStep(guideIndex, rowIndex)
     if not guideIndex then guideIndex = 1 end --guideIndex is the position in the guide
     if not rowIndex then rowIndex = 1 end --rowIndex is the position on the rows
     local skip = true
-    -- US step completes S step only when it is the true activestep
-    if guideIndex == WoWPro.ActiveStep then
-        if WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex] then
-            local foundSticky = nil
-            for idx = 1, WoWPro.stepcount do
-                if WoWPro.sticky[idx] and not WoWPro.unsticky[idx]
-                    and WoWPro.step[idx] == WoWPro.step[guideIndex]
-                    and WoWPro.questtext[idx] == WoWPro.questtext[guideIndex]
-                    and WoWPro.lootitem[idx] == WoWPro.lootitem[guideIndex] then
-                    foundSticky = idx
-                    break
-                end
-            end
-            if foundSticky and not guide.completion[foundSticky] then
-                guide.completion[foundSticky] = true
-            end
-        end
-    end
+
     while skip do
         --[[ HACK
             "repeat ... break ... until true"
@@ -2279,12 +2322,18 @@ function WoWPro.NextStep(guideIndex, rowIndex)
             if guide.skipped[guideIndex] then
                 WoWPro:dbp("SkippedStep(%d, %s [%s])", guideIndex, tostring(stepAction), tostring(step))
                 WoWPro.why[guideIndex] = "NextStep(): SkippedStep."
+                if WoWPro.DEBUG_STICKY_PAIRING and (WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex]) then
+                    WoWPro:dbp("[Broker] NextStep: Skipping US step %d: manually skipped", guideIndex)
+                end
                 skip = true
                 break
             elseif WoWPro:QIDsInTable(QID,WoWProCharDB.skippedQIDs, true) then
                 guide.skipped[guideIndex] = true
                 WoWPro.why[guideIndex] = "NextStep(): SkippedQID."
                 WoWPro:dbp("SkippedQID(%d, qid=%s, %s [%s])", guideIndex, QID, tostring(stepAction), tostring(step))
+                if WoWPro.DEBUG_STICKY_PAIRING and (WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex]) then
+                    WoWPro:dbp("[Broker] NextStep: Skipping US step %d: QID in skippedQIDs", guideIndex)
+                end
                 skip = true
                 break
             end
@@ -2297,6 +2346,9 @@ function WoWPro.NextStep(guideIndex, rowIndex)
                     skip = true -- If quest complete, step is skipped.
                     WoWPro.why[guideIndex] = "NextStep(): QID is complete: " .. tostring(QID)
                     guide.completion[guideIndex] = jqid
+                    if WoWPro.DEBUG_STICKY_PAIRING and (WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex]) then
+                        WoWPro:dbp("[Broker] NextStep: Skipping US step %d: QID %s completed", guideIndex, QID)
+                    end
                     break
                 end
             end
@@ -2733,13 +2785,13 @@ function WoWPro.NextStep(guideIndex, rowIndex)
             if (stepAction == "C" or stepAction == "T") and QID then
                 -- WoWPro:Print("LFO: %s [%s/%s] step %s",stepAction,step,QID,guideIndex)
                 if not WoWPro:QIDsInTableLogical(QID, WoWPro.QuestLog) then
-					-- Check if a groupmate is working on it.
-					if not WoWPro.mygroupsteps[guideIndex]  or (WoWPro.mygroupsteps[guideIndex] and stepAction == "T") then
-						skip = true -- If the quest is not in the quest log, the step is skipped --
-						WoWPro:dbp("Step %s [%s/%s] skipped as not in QuestLog",stepAction,step,tostring(QID))
-						WoWPro.why[guideIndex] = "NextStep(): Skipping C/T step because quest is not in QuestLog."
-						break
-					end
+                    -- Check if a groupmate is working on it.
+                    if not WoWPro.mygroupsteps[guideIndex]  or (WoWPro.mygroupsteps[guideIndex] and stepAction == "T") then
+                        skip = true -- If the quest is not in the quest log, the step is skipped --
+                        WoWPro:dbp("Step %s [%s/%s] skipped as not in QuestLog",stepAction,step,tostring(QID))
+                        WoWPro.why[guideIndex] = "NextStep(): Skipping C/T step because quest is not in QuestLog."
+                        break
+                    end
                 elseif stepAction == "T" and QidMapReduce(QID,false,"^","&",function (qid) return WoWPro.QuestLog[qid] and WoWPro.QuestLog[qid].leaderBoard end, "Skip-CT1") then
                     -- For turnins, make sure we have completed the criteria
                     if WoWPro.conditional[guideIndex] and not QidMapReduce(QID,false,"^","&",function (qid) return WoWPro.QuestLog[qid] and WoWPro.QuestLog[qid].complete end, "Skip-CT2") then
@@ -3920,10 +3972,9 @@ function WoWPro.NextStep(guideIndex, rowIndex)
                 end
             end
 
-            -- Skipping any unstickies until it's time for them to display --
-            if WoWPro.unsticky[guideIndex] and (not WoWPro.sticky[guideIndex]) and rowIndex > WoWPro:GetActiveStickyCount()+1 then
-                skip = true
-            end
+            -- Note: Unsticky (US) step display filtering is handled in the UI rendering logic, not here.
+            -- US steps must be allowed to become ActiveStep in NextStep so they can complete their paired S steps.
+            -- Display ordering is controlled separately in the frame rendering code.
 
             -- PETS!!  There are two classses of pet steps:  Selection and Strategy
             -- Selection steps check have PET{123} tags to pick pets and a STRATEGY step to set the strategy
@@ -4015,10 +4066,15 @@ function WoWPro.NextStep(guideIndex, rowIndex)
 
         if skip then
             guideIndex = guideIndex + 1
+        else
+            if WoWPro.DEBUG_STICKY_PAIRING and (WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex]) then
+                WoWPro:dbp("[Broker] NextStep: US step %d NOT skipped, returning as active", guideIndex)
+            end
         end
     end
     WoWPro.why[guideIndex] = "NextStep(): Step active."
     WoWPro:dbp("%s=WoWPro.NextStep()",tostring(guideIndex))
+
     return guideIndex
 end
 
