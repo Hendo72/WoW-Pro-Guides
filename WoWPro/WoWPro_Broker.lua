@@ -34,17 +34,7 @@ function WoWPro:IncrementActiveStickyCount()
 end
 
 -- Debug toggle for lootitem output in Broker
-WoWPro.DEBUG_LOOTITEM_BROKER = false -- Set to true to enable lootitem debug output in Broker
-
--- Helper to stringify lootitem table for debug output
-local function lootitemTableToString(tbl)
-    if type(tbl) ~= "table" then return tostring(tbl) end
-    local t = {}
-    for k, v in pairs(tbl) do
-        table.insert(t, string.format("[%s]=%s", tostring(k), tostring(v)))
-    end
-    return "{" .. table.concat(t, ", ") .. "}"
-end
+WoWPro.DEBUG_STICKY_PAIRING = false -- Set to true to enable sticky pairing debug output
 
 -- Deep table comparison for lootitem matching
 local function deepTableEqual(t1, t2)
@@ -2117,8 +2107,8 @@ function WoWPro.UpdateGuideReal(From)
         end
         if foundSticky and not guide.completion[foundSticky] then
             guide.completion[foundSticky] = true
-            if WoWPro.DEBUG_LOOTITEM_BROKER then
-                print(string.format("[Broker] ActiveStep is US step %d: Marked paired S step %d complete", WoWPro.ActiveStep, foundSticky))
+            if WoWPro.DEBUG_STICKY_PAIRING then
+                WoWPro:dbp("[Broker] ActiveStep is US step %d: Marked paired S step %d complete", WoWPro.ActiveStep, foundSticky)
             end
         end
     end
@@ -2332,8 +2322,8 @@ function WoWPro.NextStep(guideIndex, rowIndex)
             if guide.skipped[guideIndex] then
                 WoWPro:dbp("SkippedStep(%d, %s [%s])", guideIndex, tostring(stepAction), tostring(step))
                 WoWPro.why[guideIndex] = "NextStep(): SkippedStep."
-                if WoWPro.DEBUG_LOOTITEM_BROKER and (WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex]) then
-                    print(string.format("[Broker] NextStep: Skipping US step %d: manually skipped", guideIndex))
+                if WoWPro.DEBUG_STICKY_PAIRING and (WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex]) then
+                    WoWPro:dbp("[Broker] NextStep: Skipping US step %d: manually skipped", guideIndex)
                 end
                 skip = true
                 break
@@ -2341,8 +2331,8 @@ function WoWPro.NextStep(guideIndex, rowIndex)
                 guide.skipped[guideIndex] = true
                 WoWPro.why[guideIndex] = "NextStep(): SkippedQID."
                 WoWPro:dbp("SkippedQID(%d, qid=%s, %s [%s])", guideIndex, QID, tostring(stepAction), tostring(step))
-                if WoWPro.DEBUG_LOOTITEM_BROKER and (WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex]) then
-                    print(string.format("[Broker] NextStep: Skipping US step %d: QID in skippedQIDs", guideIndex))
+                if WoWPro.DEBUG_STICKY_PAIRING and (WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex]) then
+                    WoWPro:dbp("[Broker] NextStep: Skipping US step %d: QID in skippedQIDs", guideIndex)
                 end
                 skip = true
                 break
@@ -2356,8 +2346,8 @@ function WoWPro.NextStep(guideIndex, rowIndex)
                     skip = true -- If quest complete, step is skipped.
                     WoWPro.why[guideIndex] = "NextStep(): QID is complete: " .. tostring(QID)
                     guide.completion[guideIndex] = jqid
-                    if WoWPro.DEBUG_LOOTITEM_BROKER and (WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex]) then
-                        print(string.format("[Broker] NextStep: Skipping US step %d: QID %s completed", guideIndex, QID))
+                    if WoWPro.DEBUG_STICKY_PAIRING and (WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex]) then
+                        WoWPro:dbp("[Broker] NextStep: Skipping US step %d: QID %s completed", guideIndex, QID)
                     end
                     break
                 end
@@ -4077,8 +4067,8 @@ function WoWPro.NextStep(guideIndex, rowIndex)
         if skip then
             guideIndex = guideIndex + 1
         else
-            if WoWPro.DEBUG_LOOTITEM_BROKER and (WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex]) then
-                print(string.format("[Broker] NextStep: US step %d NOT skipped, returning as active", guideIndex))
+            if WoWPro.DEBUG_STICKY_PAIRING and (WoWPro.unsticky[guideIndex] and not WoWPro.sticky[guideIndex]) then
+                WoWPro:dbp("[Broker] NextStep: US step %d NOT skipped, returning as active", guideIndex)
             end
         end
     end

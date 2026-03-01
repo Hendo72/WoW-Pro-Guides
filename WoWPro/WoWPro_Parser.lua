@@ -1,3 +1,6 @@
+-- luacheck: globals tostring tonumber type pairs
+-- luacheck: globals max min abs select string tinsert tremove
+
 -- Debug toggle for lootitem parsing
 WoWPro.DEBUG_LOOTITEM_PARSE = false
 
@@ -9,9 +12,6 @@ local function lootitemTableToString(tbl)
     end
     return s .. '}'
 end
--- luacheck: globals tostring tonumber
--- luacheck: globals max min abs type
--- luacheck: globals pairs select string tinsert tremove
 
 -----------------------------
 --      WoWPro_Parser      --
