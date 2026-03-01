@@ -1,3 +1,14 @@
+-- Debug toggle for lootitem parsing
+WoWPro.DEBUG_LOOTITEM_PARSE = false
+
+local function lootitemTableToString(tbl)
+    if type(tbl) ~= 'table' then return tostring(tbl) end
+    local s = '{'
+    for k,v in pairs(tbl) do
+        s = s .. tostring(k) .. '=' .. tostring(v) .. ', '
+    end
+    return s .. '}'
+end
 -- luacheck: globals tostring tonumber
 -- luacheck: globals max min abs type
 -- luacheck: globals pairs select string tinsert tremove
@@ -387,6 +398,12 @@ DefineTag("L","lootitem","string",nil,function(text,i)
             qty = qty and tonumber(qty) or 1
             WoWPro.lootitem[i][itemID] = qty
         end
+    end
+    if WoWPro.DEBUG_LOOTITEM_PARSE then
+        local msg = string.format("[DEBUG_LOOTITEM_PARSE] Step %d QID=%s lootitem=%s", i, tostring(WoWPro.QID and WoWPro.QID[i] or 'nil'), lootitemTableToString(WoWPro.lootitem[i]))
+        WoWPro:dbp(msg)
+        -- Uncomment the next line to also print to chat when needed
+        -- if _G.DEFAULT_CHAT_FRAME then _G.DEFAULT_CHAT_FRAME:AddMessage(msg) end
     end
 end)
 
