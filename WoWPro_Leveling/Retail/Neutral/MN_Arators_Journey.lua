@@ -33,7 +33,7 @@ C Relics of Paladins Past|QID|86841|M|75.84,32.56|Z|24; Light's Hope Chapel|QO|5
 C Relics of Paladins Past|QID|86841|M|78.62,24.66|Z|24; Light's Hope Chapel|QO|6|NC|N|Mara Fordragon's Prayer Book.|
 T Relics of Paladins Past|QID|86841|M|73.98,53.53|Z|23; Eastern Plaguelands!Eastern Kingdoms|N|To Lord Maxwell Tyrosus.|
 A Scarlet Power|QID|86842|PRE|86841|M|73.88,53.46|Z|23; Eastern Plaguelands!Eastern Kingdoms|N|From Alonsus Faol.|
-C Scarlet Power|QID|86842|M|77.71,54.21|Z|19; Scarlet Monastery Entrance|QO|3|NC|N|Meet Faol inside the Monastery.|
+C Scarlet Power|QID|86842|M|19.33,75.15;77.71,54.21|CS|Z|19; Scarlet Monastery Entrance|QO|3|NC|N|Meet Faol inside the Monastery.|
 C Scarlet Power|QID|86842|M|79.83,61.83|Z|19; Scarlet Monastery Entrance|QO|4|NC|N|Enter Scarlet Halls.|
 T Scarlet Power|QID|86842|M|47.75,89.63|Z|2438; Scarlet Halls!Dungeon2438|N|To Arator.|
 A Light Miswielded|QID|86843|PRE|86842|M|47.69,89.96|Z|2438; Scarlet Halls!Dungeon2438|N|From Alonsus Faol.|
@@ -68,7 +68,7 @@ C A Humble Servant|QID|91000|M|68.73,33.69|Z|14; Arathi Highlands|QO|1|NC|N|Aid 
 C Resupplying Our Suppliers|QID|86846|M|68.14,37.61|Z|14; Arathi Highlands|QO|1|NC|N|Tailoring supplies for Jun'ha.|
 C Resupplying Our Suppliers|QID|86846|M|69.99,35.70|Z|14; Arathi Highlands|QO|3|NC|N|Leatherworking supplies for Tunkk.|
 C Resupplying Our Suppliers|QID|86846|M|69.19,34.97|Z|14; Arathi Highlands|QO|2|NC|N|Butcher supplies for Slagg.|
-C Resupplying Our Suppliers|QID|86846|M|68.42,31.99|Z|14; Arathi Highlands|QO|5|NC|N|Trade goods for Keena.|
+C Resupplying Our Suppliers|QID|86846|M|69.28,33.38|Z|14; Arathi Highlands|QO|5|NC|N|Trade goods for Keena.|
 C Resupplying Our Suppliers|QID|86846|M|68.42,31.99|Z|14; Arathi Highlands|QO|4|NC|N|Bowyer supplies for Mu'uta.|
 C A Humble Servant|QID|91000|M|68.73,33.69|Z|14; Arathi Highlands|QO|1|NC|N|Aid Hammerfall.|US|
 T A Humble Servant|QID|91000|M|68.56,32.27|Z|14; Arathi Highlands|N|To Sunwalker Dezco.|

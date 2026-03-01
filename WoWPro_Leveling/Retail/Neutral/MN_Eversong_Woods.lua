@@ -22,6 +22,8 @@ A Crafting Orders: Blacksmithing|QID|93726|PRE|93723|M|45.12,55.19|Z|2393; Silve
 C Crafting Orders: Blacksmithing|QID|93726|M|43.78,51.20|Z|2393; Silvermoon City|QO|1|NC|N|Use the Blacksmithing Work Table.|
 T Crafting Orders: Blacksmithing|QID|93726|M|43.73,51.85|Z|2393; Silvermoon City|N|To Bemarrin.|
 = Train Blacksmithing|QID|99999|M|43.75,51.82|Z|2393; Silvermoon City|N|From Bemarrin. Click this step off if you are done or dont care.|P|Blacksmithing;164|SPELL|Midnight Blacksmithing;471004|
+= Train Mining|QID|99999|M|42.67,52.85|Z|2393; Silvermoon City|N|From Belil. Click this step off if you are done or dont care.|P|Mining;186|SPELL|Midnight Mining;471013|
+$ Sin'dorei Master's Forgemace|QID|89183|M|49.16,61.36|Z|2393; Silvermoon City|N|Pick up and use the forgemace on the table for a bit of profession knowledge.|
 
 A Crafting Orders: Jewelcrafting|QID|93729|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|P|Jewelcrafting;755|
 C Crafting Orders: Jewelcrafting|QID|93729|M|47.86,55.21|Z|2393; Silvermoon City|QO|1|NC|N|Use the Jewelcrafting Work Table.|
@@ -37,6 +39,9 @@ A Crafting Orders: Leatherworking|QID|93731|PRE|93723|M|45.12,55.19|Z|2393; Silv
 C Crafting Orders: Leatherworking|QID|93731|M|43.17,55.82|Z|2393; Silvermoon City|QO|1|NC|N|Use the Leatherworker's Tool Bench.|
 T Crafting Orders: Leatherworking|QID|93731|M|43.17,55.82|Z|2393; Silvermoon City|N|To Talmar.|
 = Train Leatherworking|QID|99999|M|43.17,55.82|Z|2393; Silvermoon City|N|From Talmar. Click this step off if you are done or dont care.|P|Leatherworking;165|SPELL|Midnight Leatherworking;471012|
+= Train Skinning|QID|99999|M|43.19,55.77|Z|2393; Silvermoon City|N|From Tyn. Click this step off if you are done or dont care.|P|Skinning;393|SPELL|Midnight Skinning;471014|
+$ Sin'dorei Tanning Oil|QID|89171|M|43.18,55.65|Z|2393; Silvermoon City|U|238633|N|Pick up and then use the item behind the skinning trainer.|P|Skinning;393|
+$ Artisan's Considered Order|QID|89096|M|44.77,56.28|Z|2393; Silvermoon City|U|238595|N|Pick up and use the scroll at the back of his booth.|P|Leatherworking;165|;may need to be moved until after you have trained profession?
 
 A Crafting Orders: Engineering|QID|93727|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon City|N|From Captain Flaresworn.|RANK|2|P|Engineering;202|
 C Crafting Orders: Engineering|QID|93727|M|43.60,53.97|Z|2393; Silvermoon City|QO|1|NC|N|Use the Engineering Work Table.|
@@ -47,54 +52,53 @@ A Crafting Orders: Alchemy|QID|93724|PRE|93723|M|45.12,55.19|Z|2393; Silvermoon 
 C Crafting Orders: Alchemy|QID|93724|M|46.99,52.01|Z|2393; Silvermoon City|QO|1|NC|N|Use the Alchemist's Lab Bench.|
 T Crafting Orders: Alchemy|QID|93724|M|46.99,52.01|Z|2393; Silvermoon City|N|To Camberon.|
 = Train Alchemy|QID|99999|M|46.99,52.01|Z|2393; Silvermoon City|N|From Camberon. Click this step off if you are done or dont care.|P|Alchemy;171|SPELL|Midnight Alchemy;471003|
+= Train Herbalism|QID|99999|M|48.22,51.58|Z|2393; Silvermoon City|N|From Botanist Nathera. Click this step off if you are done or dont care.|P|Herbalism;182|SPELL|Midnight Herbalism;471009|
 
 ;Profession training block. Move it anywhere you think it needs to go.
-= Train Herbalism|QID|99999|M|48.22,51.58|Z|2393; Silvermoon City|N|From Botanist Nathera. Click this step off if you are done or dont care.|P|Herbalism;182|SPELL|Midnight Herbalism;471009|
 = Train Enchanting|QID|99999|M|47.98,53.81|Z|2393; Silvermoon City|N|From Dolothos. Click this step off if you are done or dont care.|P|Enchanting;333|SPELL|Midnight Enchanting;471006|
-= Train Mining|QID|99999|M|42.67,52.85|Z|2393; Silvermoon City|N|From Belil. Click this step off if you are done or dont care.|P|Mining;186|SPELL|Midnight Mining;471013|
-= Train Skinning|QID|99999|M|43.19,55.77|Z|2393; Silvermoon City|N|From Tyn. Click this step off if you are done or dont care.|P|Skinning;393|SPELL|Midnight Skinning;471014|
 = Train Cooking|QID|99999|M|56.33,69.85|Z|2393; Silvermoon City|N|From Sylann. Click this step off if you are done or dont care.|P|Cooking;185|SPELL|Midnight Cooking;471005|
-= Train Fishing|QID|99999|M|56.33,69.85|Z|2393; Silvermoon City|N|From Drathen. Click this step off if you are done or dont care.|P|Fishing;356|SPELL|Midnight Fishing;471008|
+= Train Fishing|QID|99999|M|44.84,60.37|Z|2393; Silvermoon City|N|From Drathen. Click this step off if you are done or dont care.|P|Fishing;356|SPELL|Midnight Fishing;471008|
 
 C Silvermoon Negotiations|QID|86733|M|45.63,67.58|Z|2393; Silvermoon City|QO|1|NC|N|Arrive at Sanctum of Light.|
 T Silvermoon Negotiations|QID|86733|M|45.35,70.31|Z|2393; Silvermoon City|N|To Lor'themar Theron.|
 A Diplomacy|QID|86734|PRE|86733|M|45.35,70.31|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
 C Diplomacy|QID|86734|M|45.35,70.31|Z|2393; Silvermoon City|QO|1|NC|N|Listen to the discussion.|
 T Diplomacy|QID|86734|M|45.35,70.31|Z|2393; Silvermoon City|N|To Lor'themar Theron.|
-A Paved in Ash|QID|86735|PRE|86734|M|45.35,70.31|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
-C Paved in Ash|QID|86735|M|45.64,63.03|Z|2393; Silvermoon City|QO|7|CHAT|N|Vanguard of the Light greeted.|
-C Paved in Ash|QID|86735|M|50.79,65.18|Z|2393; Silvermoon City|QO|4|CHAT|N|Check in with the head bank teller.|
+A Paved in Ash|QID|86735^86736|PRE|86734|M|45.35,70.31|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
+C Paved in Ash|QID|86735^86736|M|45.64,63.03|Z|2393; Silvermoon City|QO|7|CHAT|N|Greet Vanguard of the Light.|
+C Paved in Ash|QID|86735^86736|M|50.79,65.18|Z|2393; Silvermoon City|QO|4|CHAT|N|Check in with the head bank teller.|
 f Sanctum of Light|ACTIVE|86735|M|50.99,71.09|Z|2393; Silvermoon City|N|From Skymaster Skyies.|
-C Paved in Ash|QID|86735|M|51.06,71.07|Z|2393; Silvermoon City|QO|3|CHAT|N|Speak with the Skymaster of Silvermoon.|
+C Paved in Ash|QID|86735^86736|M|51.06,71.07|Z|2393; Silvermoon City|QO|3|CHAT|N|Speak with the Skymaster of Silvermoon.|
 ;A Missing Paladins|QID|90546|PRE|86734|M|53.14,69.40|Z|2393; Silvermoon City|N|From Taelia Fordragon.|;was here on first run through, couldnt find it again.
-C Paved in Ash|QID|86735|M|52.65,65.34|Z|2393; Silvermoon City|QO|2|CHAT|N|Check on the portal network.|
+C Paved in Ash|QID|86735^86736|M|52.65,65.34|Z|2393; Silvermoon City|QO|2|CHAT|N|Talk to Magistrix Narinth to check on the portal network.|
 A Murder Row: Rumors Abound|QID|90835|PRE|86734|M|55.90,63.79|Z|2393; Silvermoon City|N|From Avara.|RANK|2|
 C Paved in Ash|QID|86735|M|60.05,70.16|Z|2393; Silvermoon City|QO|6|CHAT|N|Check in with Guard Captain Goldblade.|
-C Paved in Ash|QID|86735|M|56.29,70.35|Z|2393; Silvermoon City|QO|1|CHAT|N|Check in at Wayfarer's Rest.|
-C Paved in Ash|QID|86735|M|52.48,78.10|Z|2393; Silvermoon City|QO|5|CHAT|N|Check in with the Reliquary.|
-T Paved in Ash|QID|86735|M|45.44,70.46|Z|2393; Silvermoon City|N|To Lor'themar Theron.|
-A Fair Breeze, Light Bloom|QID|86737|PRE|86735|M|45.44,70.46|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
+C Paved in Ash|QID|86736|M|69.11,67.51|Z|2393; Silvermoon City|QO|6|CHAT|N|Check in with Magistrix Nizara.|
+C Paved in Ash|QID|86735^86736|M|56.29,70.35|Z|2393; Silvermoon City|QO|1|CHAT|N|Talk to the innkeeper to check in at Wayfarer's Rest.|
+C Paved in Ash|QID|86735^86736|M|52.48,78.10|Z|2393; Silvermoon City|QO|5|CHAT|N|Talk to Valeera Sanguinar to check in with the Reliquary.|
+T Paved in Ash|QID|86735^86736|M|45.44,70.46|Z|2393; Silvermoon City|N|To Lor'themar Theron.|
+A Fair Breeze, Light Bloom|QID|86737|PRE|86735^86736|M|45.44,70.46|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
 C Fair Breeze, Light Bloom|QID|86737|M|45.37,70.42|Z|2393; Silvermoon City|QO|1|H|N|Obtain the arcane projector from Rommath.|
-T Murder Row: Rumors Abound|QID|90835|M|51.71,64.47|Z|2393; Silvermoon City|N|To Belath Dawnblade.|
+T Murder Row: Rumors Abound|QID|90835|M|51.71,64.47|Z|2393; Silvermoon City|N|Fly up to the platform to find Belath Dawnblade.|
 A Murder Row: Loose Lips|QID|90818|PRE|90835|M|51.71,64.47|Z|2393; Silvermoon City|N|From Belath Dawnblade.|RANK|2|
 A Murder Row: Traces of Fel|QID|90837|PRE|90835|M|51.71,64.47|Z|2393; Silvermoon City|N|From Belath Dawnblade.|RANK|2|
 A Gold is Gold|QID|90669|PRE|90835|M|54.52,61.71|Z|2393; Silvermoon City|N|From Sarvi.|RANK|2|
-C Murder Row: Traces of Fel|QID|90837|M|51.03,56.23|Z|2393; Silvermoon City|QO|1|H|N|Sources of fel magic discovered.|S|
-C Murder Row: Loose Lips|QID|90818|M|52.28,60.59|Z|2393; Silvermoon City|QO|1<1|N|Information gathered.|EAB|
-C Murder Row: Loose Lips|QID|90818|M|51.38,57.10|Z|2393; Silvermoon City|QO|1<2|N|Information gathered.|EAB|
-C Murder Row: Loose Lips|QID|90818|M|52.41,63.56|Z|2393; Silvermoon City|QO|1<3|N|Information gathered.|EAB|
+C Murder Row: Traces of Fel|QID|90837|M|51.03,56.23|Z|2393; Silvermoon City|QO|1|H|N|Find the sources of fel magic discovered scattered around.|S|
+C Murder Row: Loose Lips|QID|90818|M|52.28,60.59|Z|2393; Silvermoon City|QO|1<1|N|Use [color=33fff9] Extra Action Button [/color] pretend to browse while gathering information.|EAB|
+C Murder Row: Loose Lips|QID|90818|M|51.38,57.10|Z|2393; Silvermoon City|QO|1<2|N|Use [color=33fff9] Extra Action Button [/color] to take a sip of wine while  gathering information.|EAB|
+C Murder Row: Loose Lips|QID|90818|M|52.41,63.56|Z|2393; Silvermoon City|QO|1<3|N|Use [color=33fff9] Extra Action Button [/color] to study your map while gathering information.|EAB|
 C Murder Row: Traces of Fel|QID|90837|M|51.03,56.23|Z|2393; Silvermoon City|QO|1|H|N|Sources of fel magic discovered.|US|
 T Murder Row: Loose Lips|QID|90818|M|55.99,56.56|Z|2393; Silvermoon City|N|To Belath Dawnblade.|
 T Murder Row: Traces of Fel|QID|90837|M|55.99,56.56|Z|2393; Silvermoon City|N|To Belath Dawnblade.|
 A Murder Row: Acting the Part|QID|90819|PRE|90818&90837|M|55.99,56.56|Z|2393; Silvermoon City|N|From Belath Dawnblade.|RANK|2|
-C Murder Row: Acting the Part|QID|90819|M|56.14,56.63|Z|2393; Silvermoon City|QO|1|H|N|Cracked Wyrm Core.|
-C Murder Row: Acting the Part|QID|90819|M|50.68,48.00|Z|2393; Silvermoon City|QO|2<1|CHAT|N|Murder Row merchants questioned.|
-C Murder Row: Acting the Part|QID|90819|M|53.13,52.84|Z|2393; Silvermoon City|QO|2<2|CHAT|N|Murder Row merchants questioned.|
-C Murder Row: Acting the Part|QID|90819|M|56.42,48.62|Z|2393; Silvermoon City|QO|2<3|CHAT|N|Murder Row merchants questioned.|
-C Murder Row: Acting the Part|QID|90819|M|56.18,54.23|Z|2393; Silvermoon City|QO|3|NC|N|Den of Indulgence located.|
-C Murder Row: Acting the Part|QID|90819|M|57.36,52.03|Z|2393; Silvermoon City|QO|4|NC|N|Vira found.|
+C Murder Row: Acting the Part|QID|90819|M|56.14,56.63|Z|2393; Silvermoon City|QO|1|H|N|Pick up the Cracked Wyrm Core.|
+C Murder Row: Acting the Part|QID|90819|M|50.68,48.00|Z|2393; Silvermoon City|QO|2<1|CHAT|N|Ask the Shady Dealer in the Cloak and Dagger where to find more.|
+C Murder Row: Acting the Part|QID|90819|M|53.13,52.84|Z|2393; Silvermoon City|QO|2<2|CHAT|N|Ask Miss Len'dali at the streetside stall for some special reagents.|
+C Murder Row: Acting the Part|QID|90819|M|56.42,48.62|Z|2393; Silvermoon City|QO|2<3|CHAT|N|Ask the Animal Smuggler in Denorin's Emporium if he has any mana wyrms in stock.|
+C Murder Row: Acting the Part|QID|90819|M|56.18,54.23|Z|2393; Silvermoon City|QO|3|NC|N|Look for the green fel braziers flanking the doors of the Den of Indulgence.|
+C Murder Row: Acting the Part|QID|90819|M|57.36,52.03|Z|2393; Silvermoon City|QO|4|NC|N|Go up the ramp to the platform to find Vira.|
 C Murder Row: Acting the Part|QID|90819|M|57.57,52.06|Z|2393; Silvermoon City|QO|5|CHAT|N|Speak to Vira.|
-C Murder Row: Acting the Part|QID|90819|M|57.88,52.05|Z|2393; Silvermoon City|QO|6|H|N|Crate of Fel Artifacts inspected.|
+C Murder Row: Acting the Part|QID|90819|M|57.88,52.05|Z|2393; Silvermoon City|QO|6|H|N|Inspect the Crate beside the door.|
 T Murder Row: Acting the Part|QID|90819|M|54.61,54.73|Z|2393; Silvermoon City|N|To Belath Dawnblade.|
 A Murder Row: Harbored Secrets|QID|90821|PRE|90819|M|54.61,54.73|Z|2393; Silvermoon City|N|From Belath Dawnblade.|RANK|2|
 C Murder Row: Harbored Secrets|QID|90821|M|32.19,25.78|Z|2393; Silvermoon City|QO|1|NC|N|Meet Belath at the harbor.|
@@ -156,11 +160,22 @@ T Career Counseling|QID|94393|M|42.62,14.61|Z|2395; Eversong Woods|N|To Kyltus B
 A A Path Not Yet Chosen|QID|91284|PRE|94393|M|42.62,14.61|Z|2395; Eversong Woods|N|From Kyltus Bloodburn.|
 A A Test of the Arcane|QID|91292|PRE|94393|M|43.19,14.62|Z|2395; Eversong Woods|N|From Magister Jaronis.|
 A A Test of Blood|QID|91291|PRE|94393|M|42.93,13.79|Z|2395; Eversong Woods|N|From Jesthenis Sunstriker.|
-A A Test of the Hunt|QID|91288|PRE|94393|M|42.21,13.29|Z|2395; Eversong Woods|N|From Ranger Hannovia.|
-C A Test of Blood|QID|91291|M|43.40,14.55|Z|2395; Eversong Woods|QO|2|NC|N|Jesthenis Sunstriker sparred.|
+C A Test of Blood|QID|91291|M|43.40,14.55|Z|2395; Eversong Woods|QO|2|NC|N|Run up the ramp, use the translocation orb and spar with Jesthenis Sunstriker at the top of the tower.|
 T A Test of Blood|QID|91291|M|42.96,13.79|Z|2395; Eversong Woods|N|To Jesthenis Sunstriker.|
-C A Test of the Hunt|QID|91288|M|42.02,16.04|Z|2395; Eversong Woods|QO|1|NC|N|Invasive Lynx Pelt.|
+A A Test of the Hunt|QID|91288|PRE|94393|M|42.21,13.29|Z|2395; Eversong Woods|N|From Ranger Hannovia.|
+C A Test of the Hunt|QID|91288|M|42.02,16.04|Z|2395; Eversong Woods|QO|1|S|N|Kill and loot the Invasive Lynx'.|
+T Down a Peg|QID|94396|M|39.43,17.47|Z|2395; Eversong Woods|N|To Tytalor Goldenblade.|
+A Spellbook Scuffle|QID|86997|PRE|94396|M|39.43,17.47|Z|2395; Eversong Woods|N|From Tytalor Goldenblade.|
+C Spellbook Scuffle|QID|86997|M|39.09,19.73|Z|2395; Eversong Woods|QO|1|N|Fight the Fiendish Inkboud Codex's and loot the Torn Spellbook Pages or just pick Sedates Spellbooks up.|
+T Spellbook Scuffle|QID|86997|M|37.45,18.72|Z|2395; Eversong Woods|N|To Tytalor Goldenblade.|
+A Training Arc|QID|86998|PRE|86997|M|37.45,18.72|Z|2395; Eversong Woods|N|From Tytalor Goldenblade.|
+C Training Arc|QID|86998|M|38.40,18.50|Z|2395; Eversong Woods|QO|1|NC|N|Mages bested.|
+T Training Arc|QID|86998|M|38.49,18.73|Z|2395; Eversong Woods|N|To Tytalor Goldenblade.|
+A Academic Aspirations|QID|87002|PRE|86998|M|38.49,18.73|Z|2395; Eversong Woods|N|From Tytalor Goldenblade.|
+C Academic Aspirations|QID|87002|M|38.09,18.08|Z|2395; Eversong Woods|QO|2|N|Tytalor Goldenblade defeated.|
+T Academic Aspirations|QID|87002|M|39.34,17.26|Z|2395; Eversong Woods|N|To Tytalor Goldenblade.|
 C A Test of the Arcane|QID|91292|M|41.83,20.27|Z|2395; Eversong Woods|QO|1|NC|N|Charge Staff.|
+C A Test of the Hunt|QID|91288|M|42.02,16.04|Z|2395; Eversong Woods|QO|1|S|N|Finish up collecting the Invasive Lynx pelts.|
 T A Test of the Arcane|QID|91292|M|43.20,14.64|Z|2395; Eversong Woods|N|To Magister Jaronis.|
 C A Path Not Yet Chosen|QID|91284|M|43.20,14.64|Z|2395; Eversong Woods|QO|3|NC|N|Magister Recommendation.|
 T A Test of the Hunt|QID|91288|M|42.20,13.31|Z|2395; Eversong Woods|N|To Ranger Hannovia.|
@@ -169,27 +184,17 @@ T A Path Not Yet Chosen|QID|91284|M|42.57,14.57|Z|2395; Eversong Woods|N|To Kylt
 A How to Train Your Protege|QID|91301|PRE|91291&91292&91288&91284|M|42.57,14.57|Z|2395; Eversong Woods|N|From Kyltus Bloodburn.|
 C How to Train Your Protege|QID|91301|M|42.57,14.57|Z|2395; Eversong Woods|QO|1|NC|N|Kyltus assisted.|
 C How to Train Your Protege|QID|91301|M|33.20,74.31|Z|2393; Silvermoon City|QO|2|NC|N|Recommendation submitted.|
-T Down a Peg|QID|94396|M|39.43,17.47|Z|2395; Eversong Woods|N|To Tytalor Goldenblade.|
-A Spellbook Scuffle|QID|86997|PRE|94396|M|39.43,17.47|Z|2395; Eversong Woods|N|From Tytalor Goldenblade.|
-C Spellbook Scuffle|QID|86997|M|39.09,19.73|Z|2395; Eversong Woods|QO|1|NC|N|Torn Spellbook Page.|
-T Spellbook Scuffle|QID|86997|M|37.45,18.72|Z|2395; Eversong Woods|N|To Tytalor Goldenblade.|
-A Training Arc|QID|86998|PRE|86997|M|37.45,18.72|Z|2395; Eversong Woods|N|From Tytalor Goldenblade.|
-C Training Arc|QID|86998|M|38.40,18.50|Z|2395; Eversong Woods|QO|1|NC|N|Mages bested.|
-T Training Arc|QID|86998|M|38.49,18.73|Z|2395; Eversong Woods|N|To Tytalor Goldenblade.|
-A Academic Aspirations|QID|87002|PRE|86998|M|38.49,18.73|Z|2395; Eversong Woods|N|From Tytalor Goldenblade.|
-C Academic Aspirations|QID|87002|M|38.09,18.08|Z|2395; Eversong Woods|QO|2|N|Tytalor Goldenblade defeated.|
-T Academic Aspirations|QID|87002|M|39.34,17.26|Z|2395; Eversong Woods|N|To Tytalor Goldenblade.|
 T How to Train Your Protege|QID|91301|M|33.20,74.31|Z|2393; Silvermoon City|N|To Instructor Thalendir.|
 T Gold is Gold|QID|90669|M|54.02,34.03|Z|2393; Silvermoon City|N|To Magister Aradis.|
 A A Small Task|QID|89199|PRE|87002&90669|M|54.02,34.03|Z|2393; Silvermoon City|N|From Magister Aradis.|
-C A Small Task|QID|89199|M|54.02,34.03|Z|2393; Silvermoon City|QO|1|NC|N|Depleted Wardbreaker.|
-C A Small Task|QID|89199|M|53.96,33.06|Z|2393; Silvermoon City|QO|2|NC|N|Wardbreaker charged.|
+C A Small Task|QID|89199|M|54.02,34.03|Z|2393; Silvermoon City|QO|1|NC|N|Pick up the Depleted Wardbreaker leaning against the table.|
+C A Small Task|QID|89199|M|53.96,33.06|Z|2393; Silvermoon City|QO|2|NC|N|Click on the Arcane Resevoirs floating around the edges of the room.|
 T A Small Task|QID|89199|M|54.04,33.72|Z|2393; Silvermoon City|N|To Magister Aradis.|
 A Unraveling Wards|QID|89200|PRE|89199|M|54.04,33.72|Z|2393; Silvermoon City|N|From Magister Aradis.|
 C Unraveling Wards|QID|89200|M|53.64,33.80|Z|2393; Silvermoon City|QO|1|NC|N|Click the purple orb to sabotage, then click it again to get transported to the next, keep doing it till all are done.|
 T Unraveling Wards|QID|89200|M|37.25,74.20|Z|2393; Silvermoon City|N|To Magister Aradis.|
 A Outschemed|QID|89201|PRE|89200|M|37.25,74.20|Z|2393; Silvermoon City|N|From Magister Aradis.|
-C Outschemed|QID|89201|M|37.90,75.20|Z|2393; Silvermoon City|QO|1|NC|N|Dawnblaze's ward destroyed.|EAB|
+C Outschemed|QID|89201|M|37.90,75.20|Z|2393; Silvermoon City|QO|1|NC|N|Use the staff to destroy Dawnblaze's ward.|EAB|
 C Outschemed|QID|89201|M|38.81,75.53|Z|2393; Silvermoon City|QO|2|NC|N|Incriminating Documents.|
 T Outschemed|QID|89201|M|38.81,75.53|Z|2393; Silvermoon City|N|To Magister Dawnblaze.|
 A Stir the Nest|QID|89202|PRE|89201|M|38.81,75.53|Z|2393; Silvermoon City|N|From Magister Dawnblaze.|
@@ -225,7 +230,7 @@ C What We're Owed|QID|89208|M|37.44,74.74|Z|2393; Silvermoon City|QO|1|NC|N|Info
 T What We're Owed|QID|89208|M|37.44,74.74|Z|2393; Silvermoon City|N|To Magister Dawnblaze.|
 T Material Gains|QID|92408|M|46.90,35.52|Z|2395; Eversong Woods|N|To Solwin Brightstitch.|
 A Uncommon Threads|QID|91388|PRE|89208&92408|M|46.90,35.52|Z|2395; Eversong Woods|N|From Solwin Brightstitch.|
-C Uncommon Threads|QID|91388|M|46.90,34.33|Z|2395; Eversong Woods|QO|1|NC|U|250919|N|Full Bobbin of Manasilk.|
+C Uncommon Threads|QID|91388|M|46.90,34.33|Z|2395; Eversong Woods|QO|1|NC|U|250919|N|Kill the wyrms, then use the provided Empty Bobbin of Manasilk.|
 T Uncommon Threads|QID|91388|M|46.94,35.54|Z|2395; Eversong Woods|N|To Solwin Brightstitch.|
 A Clothes Make the Man|QID|91389|PRE|91388|M|46.94,35.54|Z|2395; Eversong Woods|N|From Solwin Brightstitch.|
 C Clothes Make the Man|QID|91389|M|46.40,34.65|Z|2395; Eversong Woods|QO|2|NC|N|Arcanoweave Cloak repaired.|
@@ -248,13 +253,13 @@ C Thief at Bark|QID|90544|M|38.93,38.62|Z|2395; Eversong Woods|QO|1|CHAT|N|Follo
 T Thief at Bark|QID|90544|M|38.93,38.62|Z|2395; Eversong Woods|N|To Luma.|
 A Range of Knowledge|QID|91452|M|57.38,39.95|Z|2395; Eversong Woods|N|From Arcanist Taemin.|RANK|2|
 A If You Want It Done Right|QID|91342|M|57.38,39.95|Z|2395; Eversong Woods|N|From Arcanist Taemin.|RANK|2|
-C If You Want It Done Right|QID|91342|M|57.04,41.52|Z|2395; Eversong Woods|QO|1|N|Ornery Sweeper slain.|S|
-C Range of Knowledge|QID|91452|M|56.52,40.61|Z|2395; Eversong Woods|QO|2|NC|N|Index of Ranger Corps Recipes Vol. VII.|
-C Range of Knowledge|QID|91452|M|57.20,42.16|Z|2395; Eversong Woods|QO|1|NC|N|Herbalist's Handbook: Eversong Medicinals.|
-C Range of Knowledge|QID|91452|M|56.91,43.04|Z|2395; Eversong Woods|QO|3|NC|N|Songs for the Silver Streams.|
-C Range of Knowledge|QID|91452|M|56.69,40.97|Z|2395; Eversong Woods|QO|4|NC|N|Return books to the Farstrider Library.|EAB|
-C Range of Knowledge|QID|91452|M|56.68,40.93|Z|2395; Eversong Woods|QO|5|NC|N|Examine Taemin's favorite book.|
+C If You Want It Done Right|QID|91342|M|57.04,41.52|Z|2395; Eversong Woods|QO|1|N|Unalive the Ornery Sweepers.|S|
+C Range of Knowledge|QID|91452|M|56.52,40.61|Z|2395; Eversong Woods|QO|2|NC|N|Pick up Index of Ranger Corps Recipes Vol. VII.|
+C Range of Knowledge|QID|91452|M|57.20,42.16|Z|2395; Eversong Woods|QO|1|NC|N|Pick up Herbalist's Handbook: Eversong Medicinals.|
+C Range of Knowledge|QID|91452|M|56.91,43.04|Z|2395; Eversong Woods|QO|3|NC|N|Pick up Songs for the Silver Streams.|
 C If You Want It Done Right|QID|91342|M|57.04,41.52|Z|2395; Eversong Woods|QO|1|N|Ornery Sweeper slain.|US|
+C Range of Knowledge|QID|91452|M|56.69,40.97|Z|2395; Eversong Woods|QO|4|NC|N|Use your use [color=33fff9] Extra Action Button [/color] to Return books to the Farstrider Library.|EAB|
+C Range of Knowledge|QID|91452|M|56.68,40.93|Z|2395; Eversong Woods|QO|5|NC|N|Examine Taemin's favorite book on the ground beside him.|
 T Range of Knowledge|QID|91452|M|56.68,40.93|Z|2395; Eversong Woods|N|To Arcanist Taemin.|
 T If You Want It Done Right|QID|91342|M|56.68,40.93|Z|2395; Eversong Woods|N|To Arcanist Taemin.|
 A To the North Tower|QID|91345|M|56.70,40.83|Z|2395; Eversong Woods|N|From Captain Dawnrunner.|RANK|2|
@@ -272,15 +277,15 @@ C Sharpmaw|QID|86738|QO|2|M|45.80,47.83|Z|2395; Eversong Woods|N|Examine Sharpma
 C Cargo Conspiracy|QID|87392|M|46.26,44.12|Z|2395; Eversong Woods|QO|1|NC|N|Find a place to eavesdrop on Sunrun Salvage.|
 C Cargo Conspiracy|QID|87392|M|45.91,45.11|Z|2395; Eversong Woods|QO|2|NC|N|Find a place to eavesdrop on Duskflight Exports.|
 C Cargo Conspiracy|QID|87392|M|46.94,46.01|Z|2395; Eversong Woods|QO|3|NC|N|Find a place to eavesdrop on Tideborne Freight.|
-C Cargo Conspiracy|QID|87392|M|46.98,46.23|Z|2395; Eversong Woods|QO|4|NC|N|Abandoned Note.|
+C Cargo Conspiracy|QID|87392|M|46.98,46.23|Z|2395; Eversong Woods|QO|4|NC|N|Pick up the Abandoned Note from the chaise.|
+T Cargo Conspiracy|QID|87392|M|46.93,45.24|Z|2395; Eversong Woods|N|To Lyssara Duskmourne.|
+A Warranted Search|QID|87393|PRE|87392|M|46.93,45.24|Z|2395; Eversong Woods|N|From Lyssara Duskmourne.|RANK|2|
+A Supplier Surveillance|QID|87394|PRE|87392|M|46.93,45.24|Z|2395; Eversong Woods|N|From Lyssara Duskmourne.|RANK|2|
 C Fairbreeze Favors|QID|86739|M|46.52,45.83|Z|2395; Eversong Woods|N|Finish up anything you have left.|EAB|US|H|
 C Displaced Denizens|QID|86740|M|47.17,46.22|Z|2395; Eversong Woods|N|Finish up anything you have left.|H|US|
 T Sharpmaw|QID|86738|M|46.72,45.72|Z|2395; Eversong Woods|N|To Magistrix Landra Dawnstrider.|
 T Fairbreeze Favors|QID|86739|M|46.72,45.72|Z|2395; Eversong Woods|N|To Magistrix Landra Dawnstrider.|
 T Displaced Denizens|QID|86740|M|46.69,45.69|Z|2395; Eversong Woods|N|To Orweyna.|
-T Cargo Conspiracy|QID|87392|M|46.93,45.24|Z|2395; Eversong Woods|N|To Lyssara Duskmourne.|
-A Warranted Search|QID|87393|PRE|87392|M|46.93,45.24|Z|2395; Eversong Woods|N|From Lyssara Duskmourne.|RANK|2|
-A Supplier Surveillance|QID|87394|PRE|87392|M|46.93,45.24|Z|2395; Eversong Woods|N|From Lyssara Duskmourne.|RANK|2|
 A Lightbloom Looming|QID|86741|PRE|86738&86739&86740|M|46.69,45.69|Z|2395; Eversong Woods|N|From Orweyna.|
 C Lightbloom Looming|QID|86741|QO|1|M|46.69,45.69|Z|2395; Eversong Woods|N|Speak with Orweyna.|CHAT|
 C Lightbloom Looming|QID|86741|QO|2|M|41.74,47.15|Z|2395; Eversong Woods|N|Trail followed out of Fairbreeze.|NC|
@@ -309,6 +314,7 @@ A Silvermoon Must Know|QID|86745|PRE|86744|M|47.36,55.34|Z|2395; Eversong Woods|
 C Silvermoon Must Know|QID|86745|M|47.36,55.34|Z|2395; Eversong Woods|N|Contact Silvermoon.|NC|
 T Silvermoon Must Know|QID|86745|M|47.36,55.34|Z|2395; Eversong Woods|N|To Arator.|
 A The Wayward Magister|QID|86621|PRE|86745|M|47.36,55.34|Z|2395; Eversong Woods|N|From Arator.|
+
 C Warranted Search|QID|87393|M|39.83,45.00|Z|2395; Eversong Woods|QO|1|NC|N|Tideborne Freight sailors "interrogated".|S|
 C Supplier Surveillance|QID|87394|M|40.54,44.26|Z|2395; Eversong Woods|QO|1|NC|N|Side View Recorder placed.|
 C Supplier Surveillance|QID|87394|M|39.43,45.30|Z|2395; Eversong Woods|QO|2|NC|N|Upper View Recorder placed.|
@@ -356,12 +362,12 @@ C Rational Explanation|QID|86624|QO|2|M|49.39,67.57|Z|2395; Eversong Woods|N|Clu
 C Rational Explanation|QID|86624|QO|1|M|48.85,69.63;49.39,67.57;47.69,65.24;48.91,66.58|CN|Z|2395; Eversong Woods|N|Talk to the Townsfolks.|CHAT|
 C Rational Explanation|QID|86624|QO|2|M|49.39,67.57|Z|2395; Eversong Woods|N|Clues found in Tranquillien.|NC|US|
 C Rational Explanation|QID|86624|QO|3|M|48.95,68.63|Z|2395; Eversong Woods|N|Speak with Innkeeper Kalarin.|CHAT|
-C Rational Explanation|QID|86624|QO|4|M|48.98,68.60|Z|2395; Eversong Woods|N|Kasiea's Journal found.|I|
+C Rational Explanation|QID|86624|QO|4|M|48.98,68.60|Z|2395; Eversong Woods|N|Go upstairs to find Kasiea's.|I|
 C Appeal to the Void|QID|86623|QO|1|M|48.75,72.61|Z|2395; Eversong Woods|H|N|Eastern ritual completed.|
 C Appeal to the Void|QID|86623|QO|2|M|46.81,71.63|Z|2395; Eversong Woods|H|N|Western ritual completed.|
 C Appeal to the Void|QID|86623|QO|3|M|45.36,67.49|Z|2395; Eversong Woods|H|N|Northern ritual completed.|
-T Appeal to the Void|QID|86623|M|47.71,69.76|Z|2395; Eversong Woods|N|To Magister Umbric.|
 T Rational Explanation|QID|86624|M|47.67,69.76|Z|2395; Eversong Woods|N|To Arator.|
+T Appeal to the Void|QID|86623|M|47.71,69.76|Z|2395; Eversong Woods|N|To Magister Umbric.|
 A The First to Know|QID|90907|PRE|86624&86623|M|47.71,69.76|Z|2395; Eversong Woods|N|From Magister Umbric.|
 C The First to Know|QID|90907|QO|1|M|47.27,68.31|Z|2395; Eversong Woods|N|Meet at Lord Antenorian's office.|NC|
 C The First to Know|QID|90907|QO|2|M|47.20,68.34|Z|2395; Eversong Woods|N|Secretary Faloria Questioned.|CHAT|
@@ -442,12 +448,12 @@ A Suspicious Sundries|QID|92023|PRE|92021&92022|M|37.53,72.54|Z|2395; Eversong W
 T The Past Keeps Watch|QID|86634|M|36.98,74.13|Z|2395; Eversong Woods|N|To Arator.|
 A Comprehend the Void|QID|86633|PRE|86634|M|37.01,74.02|Z|2395; Eversong Woods|N|From Magister Umbric.|
 C Comprehend the Void|QID|86633|QO|1|M|37.37,74.66|Z|2395; Eversong Woods|N|Meet Umbric at the ritual site.|NC|
-C Comprehend the Void|QID|86633|QO|3|M|37.39,74.72|Z|2395; Eversong Woods|N|Void Shards subsumed.|H|
+C Comprehend the Void|QID|86633|QO|3|M|37.39,74.72|Z|2395; Eversong Woods|N|Click the Void Shard and then bring it to the center, one at a time.|H|
 T Comprehend the Void|QID|86633|M|37.36,74.69|Z|2395; Eversong Woods|N|To Magister Umbric.|
 A To Deatholme|QID|86635|PRE|86633|M|37.36,74.69|Z|2395; Eversong Woods|N|From Magister Umbric.|
-C Suspicious Sundries|QID|92023|M|39.26,61.07|Z|2395; Eversong Woods|QO|1|NC|N|Vial of Quicksilver.|
-C Suspicious Sundries|QID|92023|M|39.58,60.60|Z|2395; Eversong Woods|QO|2|NC|N|Flask of Dragon's Blood.|
-C Suspicious Sundries|QID|92023|M|40.69,60.12|Z|2395; Eversong Woods|QO|3|NC|N|Bottle of Magister's Reserve.|
+B Vial of Quicksilver|QID|92023|M|39.26,61.07|Z|2395; Eversong Woods|QO|1|N|Purchased from Vehn Sorrelstride.|
+B Flask of Dragon's Blood|QID|92023|M|39.58,60.60|Z|2395; Eversong Woods|QO|2|N|Purchased from Nara Fadebranch.|
+B Bottle of Magister's Reserve|QID|92023|M|40.69,60.12|Z|2395; Eversong Woods|QO|3|NC|N|Purchased from Limien Bountcask.|
 T Suspicious Sundries|QID|92023|M|40.69,60.12|Z|2395; Eversong Woods|N|To Limien Bountcask.|
 A House Call|QID|92024|PRE|92023|M|40.69,60.12|Z|2395; Eversong Woods|N|From Limien Bountcask.|RANK|2|
 C House Call|QID|92024|M|37.60,72.16|Z|2395; Eversong Woods|QO|1|CHAT|N|First clue found.|
@@ -462,10 +468,10 @@ C Flowers for Amalthea|QID|92025|M|32.86,78.72|Z|2395; Eversong Woods|QO|4|NC|N|
 T Flowers for Amalthea|QID|92025|M|32.85,78.73|Z|2395; Eversong Woods|N|To Talandra Dawnsprite.|
 A Windrunner Spire: Haunting Melodies|QID|93850|M|35.52,79.16|Z|2395; Eversong Woods|N|From Restless Spirit.|RANK|2|
 t Windrunner Spire: Haunting Melodies|QID|93850|M|35.53,79.12|Z|2395; Eversong Woods|N|To Restless Spirit.|
-C To Deatholme|QID|86635|QO|1|M|44.71,85.20|Z|2395; Eversong Woods|N|Journey to the Ruins of Deatholme.|NC|
-C To Deatholme|QID|86635|QO|2|M|44.71,85.21|Z|2395; Eversong Woods|N|Speak to Valeera Sanguinar.|CHAT|
-T To Deatholme|QID|86635|M|44.71,85.21|Z|2395; Eversong Woods|N|To Magister Umbric.|
-A Void Walk With Me|QID|86636|PRE|86635|M|44.71,85.21|Z|2395; Eversong Woods|N|From Magister Umbric.|
+C To Deatholme|QID|86635|QO|1|M|44.34,85.70|Z|2395; Eversong Woods|N|Journey to the Ruins of Deatholme.|NC|
+C To Deatholme|QID|86635|QO|2|M|44.34,85.70|Z|2395; Eversong Woods|N|Speak to Valeera Sanguinar.|CHAT|
+T To Deatholme|QID|86635|M|44.34,84.70|Z|2395; Eversong Woods|N|To Magister Umbric.|
+A Void Walk With Me|QID|86636|PRE|86635|M|44.34,84.70|Z|2395; Eversong Woods|N|From Magister Umbric.|
 C Void Walk With Me|QID|86636|QO|1|M|45.48,86.18|Z|2395; Eversong Woods|N|Deathholme Delve entered.|NC|
 C Void Walk With Me|QID|86636|QO|2|M|63.55,33.49|Z|2395; Eversong Woods|N|Lord Antenorian slain.|
 C Void Walk With Me|QID|86636|QO|3|M|63.44,29.21|Z|2395; Eversong Woods|N|Stolen Knowledge reclaimed.|NC|
@@ -508,14 +514,15 @@ C Following the Root|QID|86643|QO|4|M|55.13,65.45|Z|2395; Eversong Woods|N|Speak
 T Following the Root|QID|86643|M|54.80,65.50|Z|2395; Eversong Woods|N|To Arator.|
 A Gods Before Us|QID|86644|PRE|86643|M|54.80,65.50|Z|2395; Eversong Woods|N|From Arator.|
 C Gods Before Us|QID|86644|QO|2|M|54.59,65.49|Z|2395; Eversong Woods|N|Amani Riddle inspected.|H|
-C Gods Before Us|QID|86644|QO|3|M|54.61,65.44|Z|2395; Eversong Woods|N|Amani Riddle solved.|NC|
+C Gods Before Us|QID|86644|QO|3|M|54.61,65.44|Z|2395; Eversong Woods|N|Kill Child of Shadra, then Child of Hireek. Click the vases on each side to deposit the remains.|NC|
 C Gods Before Us|QID|86644|QO|4|M|53.95,65.54|Z|2395; Eversong Woods|N|Venture deeper into the crypt.|NC|
-C Gods Before Us|QID|86644|QO|5|M|53.70,65.88|Z|2395; Eversong Woods|N|Carved Tiles matched.|NC|
+C Gods Before Us|QID|86644|QO|5|M|53.70,65.88|Z|2395; Eversong Woods|N|Match pairs of Carved Tiles.|NC|
 T Gods Before Us|QID|86644|M|53.70,65.88|Z|2395; Eversong Woods|N|To Arator.|
 A An Impasse|QID|86646|PRE|86644|M|53.70,65.88|Z|2395; Eversong Woods|N|From Arator.|
 C An Impasse|QID|86646|M|53.88,66.90|Z|2395; Eversong Woods|N|Vanatha confronted.|NC|
 T An Impasse|QID|86646|M|54.77,68.17|Z|2395; Eversong Woods|N|To Arator.|
 A Beat of Blood|QID|86647|PRE|86646|M|54.77,68.17|Z|2395; Eversong Woods|N|From Arator.|
+;perhaps this section should be moved earlier. it feels wrong with Arator tells you to meet up with him to just stop and fish for a bit -- I know the quest is available earlier but choose not to move it until I saw where was better on another run
 A A Fish!|QID|91271|M|48.72,76.72|Z|2395; Eversong Woods|N|From Valdekar Solaar.|RANK|2|
 C A Fish!|QID|91271|QO|1|M|49.79,75.19|Z|2395; Eversong Woods|N|Fish in the dirty water node.|
 C A Fish!|QID|91271|QO|2|M|48.75,76.67|Z|2395; Eversong Woods|N|Show the fish to Valdekar.|
@@ -532,8 +539,8 @@ C Pesky Pests|QID|91090|QO|1|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|Scare off
 C Pesky Pests|QID|91090|QO|2|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|Kill the grubs.|
 C Pesky Pests|QID|91090|QO|1|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|Scare off the butterflys.|US|
 C Secret Ingredients|QID|91328|M|48.75,76.71|Z|2395; Eversong Woods|N|Collect the berries from the bushes.|US|H|
-T Pesky Pests|QID|91090|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|To Kaliel Solaar.|
 T Secret Ingredients|QID|91328|M|48.75,76.71|Z|2395; Eversong Woods|N|To Valdekar Solaar.|
+T Pesky Pests|QID|91090|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|To Kaliel Solaar.|
 A Lost in Light|QID|91137|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|From Kaliel Solaar.|RANK|2|
 K Liya Waterbloom|ACTIVE|91137|QO|1|M|50.00,74.07|Z|2395; Eversong Woods|N|Kill Liya Waterbloom.|T|Liya Waterbloom|
 T Lost in Light|QID|91137|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|To Kaliel Solaar.|
@@ -548,7 +555,7 @@ C Scattered in Sunbeams|QID|87400|M|52.36,74.86;53.20,73.93;51.54,73.52|CN|Z|239
 T Scattered in Sunbeams|QID|87400|M|50.57,78.14|Z|2395; Eversong Woods|N|To Farstrider Sedi.|
 T Gardener Mishap|QID|87401|M|50.51,78.13|Z|2395; Eversong Woods|N|To Harris Lightsbreath.|
 A The Light Provides|QID|87402|M|50.53,78.13|Z|2395; Eversong Woods|N|From Harris Lightsbreath.|RANK|2|
-C The Light Provides|QID|87402|QO|1|M|51.24,76.83|Z|2395; Eversong Woods|N|Open the door.|U|246441|
+C The Light Provides|QID|87402|QO|1|M|51.24,76.83|Z|2395; Eversong Woods|N|Use the [color=33fff9] Humming Core [/color]to open the door.|U|246441|
 C Hungering Lightroot|ACTIVE|87402|QO|2|M|51.24,76.83|Z|2395; Eversong Woods|N|Kill Hungering Lightroot.|T|Hungering Lightroot|
 T The Light Provides|QID|87402|M|50.53,78.13|Z|2395; Eversong Woods|N|From Harris Lightsbreath.|
 T A Real Assignment|QID|91350|M|59.37,68.86|Z|2395; Eversong Woods|N|To Captain Dawnrunner.|
@@ -580,6 +587,7 @@ A Past Redemption|QID|86649|PRE|86648|M|60.22,81.45|Z|2395; Eversong Woods|N|Fro
 C Past Redemption|QID|86649|M|60.22,81.45|Z|2395; Eversong Woods|N|Speak to Turalyon.|CHAT|
 T Past Redemption|QID|86649|M|60.56,81.48|Z|2395; Eversong Woods|N|To Lor'themar Theron.|
 A Fractured|QID|86650|PRE|86649|M|60.56,81.48|Z|2395; Eversong Woods|N|From Lor'themar Theron.|
+T Pet Wranglin'|QID|93965|M|41.75,76.41|Z|2393; Silvermoon City|N|To Hawkrancher Saman.|
 C Fractured|QID|86650|M|45.44,70.36|Z|2393; Silvermoon City|N|Speak to Lor'themar.|CHAT|
 T Fractured|QID|86650|M|45.44,70.36|Z|2393; Silvermoon City|N|To Lor'themar Theron.|
 
