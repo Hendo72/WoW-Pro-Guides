@@ -1,5 +1,5 @@
-local guide = WoWPro:RegisterGuide('Mindight Pre Patch Event', 'Leveling', 'Stormwind City', 'WoWPro Team', 'Neutral',12)
-WoWPro:GuideName(guide,"Mindight Pre Patch Event")
+local guide = WoWPro:RegisterGuide('Midnight Pre Patch Event', 'Leveling', 'Stormwind City', 'WoWPro Team', 'Neutral',12)
+WoWPro:GuideName(guide,"Midnight Pre Patch Event")
 WoWPro:GuideContent(guide, 11)
 WoWPro:GuideLevels(guide,80, 80)
 WoWPro:GuideSort(guide, 0)
