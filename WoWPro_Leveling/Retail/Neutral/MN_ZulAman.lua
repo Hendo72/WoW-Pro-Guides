@@ -55,12 +55,12 @@ C Rituals Cut Short|QID|86715|M|41.41,72.04|Z|2536; Atal'Aman|N|Twilight slain.|
 C Benvis Bladespatter|ACTIVE|86718|QO|1|M|35.20,78.84|Z|2536; Atal'Aman|N|Benvis Bladespatter slain.|T|Benvis Bladespatter|
 C The Amani Stand Strong|QID|86712|M|35.74,72.00|Z|2536; Atal'Aman|QO|1|H|U|237501|N|Demoralized Defender armed.|US|
 C Rituals Cut Short|QID|86715|M|41.41,72.04|Z|2536; Atal'Aman|N|Twilight slain.|US|
+T The Amani Stand Strong|QID|86712|M|48.84,46.64|Z|2536; Atal'Aman|N|To Zul'jan.|
 T Rituals Cut Short|QID|86715|M|47.36,47.13|Z|2536; Atal'Aman|N|To Lady Liadrin.|
 T Twilight Bled|QID|86718|M|47.36,46.91|Z|2536; Atal'Aman|N|To Zul'jarra.|
-T The Amani Stand Strong|QID|86712|M|48.84,46.64|Z|2536; Atal'Aman|N|To Zul'jan.|
 A Break the Blade|QID|86720|PRE|86715&86718&86712|M|47.54,46.47|Z|2536; Atal'Aman|N|From Zul'jarra.|
-C Break the Blade|QID|86720|M|49.07,46.92|Z|2536; Atal'Aman|QO|1|V|N|Lightwood Ballista used.|
-C Break the Blade|QID|86720|M|49.07,46.92|Z|2536; Atal'Aman|QO|2|NC|N|Mor'duun's Scrying Focus destroyed.|
+C Break the Blade|QID|86720|M|49.07,46.92|Z|2536; Atal'Aman|QO|1|V|N|Use Lightwood Ballista.|
+C Break the Blade|QID|86720|M|49.07,46.92|Z|2536; Atal'Aman|QO|2|NC|N|Aim at the purple void guys.|
 T Break the Blade|QID|86720|M|47.82,47.56|Z|2536; Atal'Aman|N|To Zul'jarra.|
 A Heart of the Amani|QID|86722|PRE|86720|M|47.82,47.56|Z|2536; Atal'Aman|N|From Zul'jarra.|
 T Heart of the Amani|QID|86722|M|42.63,66.89|Z|2437; Zul'Aman|N|To Zul'jarra.|
@@ -68,7 +68,10 @@ A Isolation|QID|86723|PRE|86722|M|42.63,66.89|Z|2437; Zul'Aman|N|From Zul'jarra.
 C Isolation|QID|86723|M|45.76,65.56|Z|2437; Zul'Aman|QO|1|CHAT|N|Speak with Zul'jarra at the Village Hall.|
 T Isolation|QID|86723|M|45.76,65.56|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A Left in the Shadows|QID|86652|PRE|86723|M|45.76,65.56|Z|2437; Zul'Aman|N|From Zul'jarra.|
+f Amani'Zar Village|ACTIVE|86652|M|44.83,65.47|Z|2437; Zul'Aman|N|Pick up the flight path from Eagletender Vikovu.|
 C Left in the Shadows|QID|86652|M|46.84,67.27|Z|2437; Zul'Aman|QO|1|H|N|Prepare meals with Torundo for the Atal'Aman refugees.|
+A Homework Support|QID|93049|PRE|93048|M|46.63,68.00|Z|2437; Zul'Aman|N|From An'jali.|RANK|2|
+C Homework Support|QID|93049|M|45.08,69.80|Z|2437; Zul'Aman|H|N|Pick the Fern Fronds and Shadeflowers as you go about other quests in Amari'Zar.|S|
 C Left in the Shadows|QID|86652|M|45.17,67.72|Z|2437; Zul'Aman|QO|2|CHAT|N|Get a report on the Lightwood from Lilaju.|
 C Left in the Shadows|QID|86652|M|43.97,65.14|Z|2437; Zul'Aman|QO|3|CHAT|N|Request Shadowpine Shamans from Tak'lejo.|
 C Left in the Shadows|QID|86652|M|43.78,68.37|Z|2437; Zul'Aman|QO|4|CHAT|N|Speak with Kinduru.|
@@ -76,19 +79,22 @@ T Left in the Shadows|QID|86652|M|43.78,68.37|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A The Path of the Amani|QID|86653|PRE|86652|M|43.78,68.37|Z|2437; Zul'Aman|N|From Zul'jarra.|
 A Recuperating Returns|QID|88985|PRE|86652|M|45.70,65.49|Z|2437; Zul'Aman|N|From Torundo the Grizzled.|RANK|2|;This is a breadcrumb
 A The Final Exam|QID|93051|PRE|86652|M|43.19,67.11|Z|2437; Zul'Aman|N|From Recruit Dar'rak.|RANK|2|
+C The Final Exam|QID|93051|M|43.86,64.78|Z|2437; Zul'Aman|QO|1|NC|N|Tell Ri'kari you're ready to begin.|
+C The Final Exam|QID|93051|M|43.86,64.78|Z|2437; Zul'Aman|QO|2|N|Recruit Dar'rak slain.|
+T The Final Exam|QID|93051|M|43.87,64.78|Z|2437; Zul'Aman|N|To Ri'kari.|
 A Lost in Atal'Abasi|QID|94867|PRE|86652|M|45.04,68.33|Z|2437; Zul'Aman|N|From Vakala.|RANK|2|
 A Butchery Basics|QID|93047|PRE|86652|M|45.53,69.38|Z|2437; Zul'Aman|N|From Gijaniji.|RANK|2|
 A The Path of Mourning|QID|89565|PRE|86652|M|45.34,69.70|Z|2437; Zul'Aman|N|From Chana.|RANK|2|
 A Growing Up is Hard|QID|92450|PRE|86652|M|45.21,69.73|Z|2437; Zul'Aman|N|From Ani.|RANK|2|
 A Got No Rhythm|QID|93048|M|46.79,66.28|Z|2437; Zul'Aman|N|From Iklani.|RANK|2|
-C Got No Rhythm|QID|93048|M|46.89,66.79|Z|2437; Zul'Aman|QO|1|NC|N|Demonstrate how to /dance for Kovu.|
+C Got No Rhythm|QID|93048|M|46.89,66.79|Z|2437; Zul'Aman|QO|1|NC|N|Demonstrate how to /dance for Kovu.|T|Kovu,dance|
 C Got No Rhythm|QID|93048|M|46.89,66.79|Z|2437; Zul'Aman|QO|2|CHAT|N|Talk to Kovu.|
-C Got No Rhythm|QID|93048|M|46.84,66.36|Z|2437; Zul'Aman|QO|3|NC|N|Dance with Kovu.|
+C Got No Rhythm|QID|93048|M|46.84,66.36|Z|2437; Zul'Aman|QO|3|NC|N|Dance with Kovu.|T|Kovu,dance|
 T Got No Rhythm|QID|93048|M|46.81,66.24|Z|2437; Zul'Aman|N|To Iklani.|
-A Homework Support|QID|93049|PRE|93048|M|46.63,68.00|Z|2437; Zul'Aman|N|From An'jali.|RANK|2|
-C Homework Support|QID|93049|M|45.08,69.80|Z|2437; Zul'Aman|H|N|Dragonhawk Fern Frond.|
+C Homework Support|QID|93049|M|45.08,69.80|Z|2437; Zul'Aman|H|N|Finish gathering the Dragonhawk snacks.|US|
 T Homework Support|QID|93049|M|46.64,68.01|Z|2437; Zul'Aman|N|To An'jali.|
 A Revantusk at Risk|QID|93257|M|45.87,70.74|Z|2437; Zul'Aman|N|From Jak'zari.|RANK|2|
+T The Path of Mourning|QID|89565|M|45.85,72.41|Z|2437; Zul'Aman|N|To Chana.|
 A Somber Siblings|QID|89503|PRE|89565|M|45.85,72.41|Z|2437; Zul'Aman|N|From Chana.|RANK|2|
 C Somber Siblings|QID|89503|M|45.99,72.67|Z|2437; Zul'Aman|QO|1|H|N|Weeping Spores.|S|
 C Butchery Basics|QID|93047|QO|1|M|45.85,72.50|Z|2437; Zul'Aman|N|Boar carcasses.|
@@ -110,8 +116,6 @@ C A Quiet Farewell|QID|89560|M|46.29,91.21|Z|2437; Zul'Aman|QO|3|H|N|Branches pl
 C A Quiet Farewell|QID|89560|M|46.29,91.17|Z|2437; Zul'Aman|QO|4|H|N|Fire lit.|
 C A Quiet Farewell|QID|89560|M|46.29,91.17|Z|2437; Zul'Aman|QO|5|H|N|Pay your respects.|
 T A Quiet Farewell|QID|89560|M|PLAYER|Z|2437; Zul'Aman|N|To Chana.|
-C Butchery Basics|QID|93047|QO|2|M|45.52,69.48|Z|2437; Zul'Aman|N|Boar carcass placed.|H|
-T Butchery Basics|QID|93047|M|45.53,69.38|Z|2437; Zul'Aman|N|To Gijaniji.|
 T Revantusk at Risk|QID|93257|M|40.24,79.09|Z|2437; Zul'Aman|N|To Kahanea.|
 A Crab Clues|QID|93258|PRE|93257|M|40.24,79.09|Z|2437; Zul'Aman|N|From Kahanea.|RANK|2|
 C Crab Clues|QID|93258|M|39.61,80.02|Z|2437; Zul'Aman|QO|1|H|N|Suspicious Debris investigated.|
@@ -127,7 +131,23 @@ T Caging Crawlers|QID|93260|M|32.23,83.88|Z|2437; Zul'Aman|N|To Kahanea.|
 T Clobbering Crawlers|QID|93259|M|32.23,83.88|Z|2437; Zul'Aman|N|To Kahanea.|
 A A Crab of Unusual Size|QID|93261|PRE|93260&93259|M|32.23,83.88|Z|2437; Zul'Aman|N|From Kahanea.|RANK|2|
 C A Crab of Unusual Size|QID|93261|M|33.54,85.87|Z|2437; Zul'Aman|QO|1|NC|N|Uncover the Void-Crazed Crawler's corruption.|
+f Torntusk Overlook|ACTIVE|93261|M|33.88,78.34|Z|2437; Zul'Aman|N|At Eagletender Tha'mon.|
 T A Crab of Unusual Size|QID|93261|M|33.14,78.98|Z|2437; Zul'Aman|N|To Kahanea.|
+C Butchery Basics|QID|93047|QO|2|M|45.52,69.48|Z|2437; Zul'Aman|N|Boar carcass placed.|H|
+T Butchery Basics|QID|93047|M|45.53,69.38|Z|2437; Zul'Aman|N|To Gijaniji.|
+C Growing Up is Hard|QID|92450|M|48.07,67.64|Z|2437; Zul'Aman|QO|1|CHAT|N|Speak to Ani at the waterfall.|
+T Growing Up is Hard|QID|92450|M|48.08,67.63|Z|2437; Zul'Aman|N|To Ani.|
+A I Think I Can|QID|92451|PRE|92450|M|48.08,67.63|Z|2437; Zul'Aman|N|From Ani.|RANK|2|
+C I Think I Can|QID|92451|M|48.14,67.57|Z|2437; Zul'Aman|QO|1|EAB|N|Ani cheered on.|
+C I Think I Can|QID|92451|M|48.14,67.57|Z|2437; Zul'Aman|QO|2|EAB|N|Ani cheered on... again.|
+C I Think I Can|QID|92451|M|48.14,67.57|Z|2437; Zul'Aman|QO|3|NC|N|Ani's jump observed.|
+T I Think I Can|QID|92451|M|48.70,66.09|Z|2437; Zul'Aman|N|To Ani's Trinket Bag.|
+A Not According to Plan|QID|92452|PRE|92451|M|48.70,66.09|Z|2437; Zul'Aman|N|Ani's Trinket Bag.|RANK|2|
+C Not According to Plan|QID|92452|M|47.47,63.45;46.00,30.02;45.30,61.12|CS|Z|2437; Zul'Aman|QO|1|NC|N|Ani's belongings recovered.|
+T Not According to Plan|QID|92452|M|44.64,60.51|Z|2437; Zul'Aman|N|To Ani.|
+A Fearless|QID|92453|PRE|92452|M|44.64,60.51|Z|2437; Zul'Aman|N|From Ani.|RANK|2|
+C Fearless|QID|92453|M|45.17,69.68|Z|2437; Zul'Aman|QO|1|NC|N|Meet Ani at Amani'Zar Village.|
+T Fearless|QID|92453|M|45.18,69.71|Z|2437; Zul'Aman|N|To Ani.|
 T Lost in Atal'Abasi|QID|94867|M|53.08,62.81|Z|2437; Zul'Aman|N|To Jehnira.|
 A Reclaim the Goods|QID|91070|PRE|94867|M|53.10,62.87|Z|2437; Zul'Aman|N|From Jehnira.|RANK|2|
 A Vengeance for Tolbani|QID|91069|PRE|94867|M|53.10,62.87|Z|2437; Zul'Aman|N|From Jehnira.|RANK|2|
@@ -163,22 +183,6 @@ C There Can Be Only One|QID|92167|M|52.91,60.19|Z|2437; Zul'Aman|QO|1|NC|U|26344
 C There Can Be Only One|QID|92167|M|57.37,59.64|Z|2437; Zul'Aman|QO|2|I|U|263446|N|Tribute offered.|
 K Deepfin leader|ACTIVE|92167|M|57.36,59.59|Z|2437; Zul'Aman|QO|3|N|Deepfin leader slain.|T|Deepfin leader|
 T There Can Be Only One|QID|92167|M|52.88,60.21|Z|2437; Zul'Aman|N|To King Mrgl-Mrgl.|
-C Growing Up is Hard|QID|92450|M|48.07,67.64|Z|2437; Zul'Aman|QO|1|CHAT|N|Speak to Ani at the waterfall.|
-T Growing Up is Hard|QID|92450|M|48.08,67.63|Z|2437; Zul'Aman|N|To Ani.|
-A I Think I Can|QID|92451|PRE|92450|M|48.08,67.63|Z|2437; Zul'Aman|N|From Ani.|RANK|2|
-C I Think I Can|QID|92451|M|48.14,67.57|Z|2437; Zul'Aman|QO|1|EAB|N|Ani cheered on.|
-C I Think I Can|QID|92451|M|48.14,67.57|Z|2437; Zul'Aman|QO|2|EAB|N|Ani cheered on... again.|
-C I Think I Can|QID|92451|M|48.14,67.57|Z|2437; Zul'Aman|QO|3|NC|N|Ani's jump observed.|
-T I Think I Can|QID|92451|M|48.70,66.09|Z|2437; Zul'Aman|N|To Ani's Trinket Bag.|
-A Not According to Plan|QID|92452|PRE|92451|M|48.70,66.09|Z|2437; Zul'Aman|N|Ani's Trinket Bag.|RANK|2|
-C Not According to Plan|QID|92452|M|45.30,61.12|Z|2437; Zul'Aman|QO|1|NC|N|Ani's belongings recovered.|
-T Not According to Plan|QID|92452|M|44.64,60.51|Z|2437; Zul'Aman|N|To Ani.|
-A Fearless|QID|92453|PRE|92452|M|44.64,60.51|Z|2437; Zul'Aman|N|From Ani.|RANK|2|
-C Fearless|QID|92453|M|45.17,69.68|Z|2437; Zul'Aman|QO|1|NC|N|Meet Ani at Amani'Zar Village.|
-T Fearless|QID|92453|M|45.18,69.71|Z|2437; Zul'Aman|N|To Ani.|
-C The Final Exam|QID|93051|M|43.86,64.78|Z|2437; Zul'Aman|QO|1|NC|N|Tell Ri'kari you're ready to begin.|
-C The Final Exam|QID|93051|M|43.86,64.78|Z|2437; Zul'Aman|QO|2|N|Recruit Dar'rak slain.|
-T The Final Exam|QID|93051|M|43.87,64.78|Z|2437; Zul'Aman|N|To Ri'kari.|
 C The Path of the Amani|QID|86653|M|51.60,70.67|Z|2437; Zul'Aman|QO|1|NC|N|Meet Zul'jarra at Akil'zon's Reach.|
 T The Path of the Amani|QID|86653|M|51.66,70.77|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A De Ancient Path|QID|86655|PRE|86653|M|51.66,70.77|Z|2437; Zul'Aman|N|From Zul'jarra.|
@@ -198,7 +202,7 @@ T Ahead of the Issue|QID|89334|M|51.94,75.96|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A Brutal Feast|QID|86656|PRE|86654&86655&89334|M|51.94,75.96|Z|2437; Zul'Aman|N|From Zul'jarra.|
 C Brutal Feast|QID|86656|M|52.59,81.31|Z|2437; Zul'Aman|QO|1|NC|N|Meet Zul'jarra at the Temple of Akil'zon.|
 C Brutal Feast|QID|86656|M|52.37,81.02|Z|2437; Zul'Aman|QO|2|NC|N|Retrieve Gnarldin heads from the sack.|
-C Brutal Feast|QID|86656|M|52.39,82.31|Z|2437; Zul'Aman|QO|4|NC|N|Gnarldin Heads placed.|
+C Brutal Feast|QID|86656|M|53.23,80.66;53.19,81.06;52.39,82.31|CS|Z|2437; Zul'Aman|QO|4|NC|N|Place 2 heads on the ground on one side of the temple and one on the other.|
 T Brutal Feast|QID|86656|M|52.34,81.08|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A Test of Conviction|QID|86809|PRE|86656|M|52.34,81.08|Z|2437; Zul'Aman|N|From Unknown.|
 C Test of Conviction|QID|86809|M|51.31,79.44|Z|2437; Zul'Aman|QO|1|NC|N|Temple Ledge reached.|
@@ -220,8 +224,8 @@ K Ritulist Zongha|ACTIVE|86658|M|37.57,35.96|Z|2437; Zul'Aman|QO|3|N|Ritulist Zo
 T The Crypt in the Mist|QID|86658|M|36.79,34.93|Z|2437; Zul'Aman|N|To Zul'jarra.|
 T Rescue from the Shadows|QID|86660|M|36.79,34.93|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A Breaching the Mist|QID|86659|PRE|86658&86660|M|36.79,34.93|Z|2437; Zul'Aman|N|From Zul'jarra.|
-A Vexatious Vilebranch|QID|91040|PRE|86658&86660|M|36.11,35.62|Z|2437; Zul'Aman|N|From Zul'jarra.|RANK|3|
-t Vexatious Vilebranch|QID|91040|M|32.48,33.87|Z|2437; Zul'Aman|
+;A Vexatious Vilebranch|QID|91040|PRE|86658&86660|M|36.11,35.62|Z|2437; Zul'Aman|N|Bonus Objective if you choose to stick around and do it.|RANK|3|--currently of the mind people can figure out bonus objectives on thier own. Leaving this in if you disagree you can uncomment it out
+;t Vexatious Vilebranch|QID|91040|M|32.48,33.87|Z|2437; Zul'Aman|
 C Breaching the Mist|QID|86659|M|35.47,36.13|Z|2437; Zul'Aman|QO|1|H|N|First Hash'ey Shrine found.|
 C Breaching the Mist|QID|86659|M|33.42,34.47;34.82,30.95;33.95,32.02|CN|Z|2437; Zul'Aman|QO|2|H|N|Lynx Hash'ey Shrine activated.|
 C Breaching the Mist|QID|86659|M|32.84,32.66|Z|2437; Zul'Aman|QO|3|H|N|Final Lynx Hash'ey Shrine activated.|
@@ -231,11 +235,11 @@ C Halazzi's Guile|QID|92084|M|32.29,31.56|Z|2437; Zul'Aman|QO|1|CHAT|N|Speak to 
 T Halazzi's Guile|QID|92084|M|32.37,31.64|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A Coals of a Dead Loa|QID|86661|PRE|92084|M|32.37,31.64|Z|2437; Zul'Aman|N|From Zul'jarra.|
 A A Quiet Walk Interrupted|QID|93178|M|36.74,25.11|Z|2437; Zul'Aman|N|From Nerunda.|RANK|2|
-C A Quiet Walk Interrupted|QID|93178|M|38.37,26.62|Z|2437; Zul'Aman|QO|1|CHAT|N|Speak to Haz'kel.|
-C A Quiet Walk Interrupted|QID|93178|M|40.84,29.83|Z|2437; Zul'Aman|QO|2|NC|N|Log Bridge found.|
-C A Quiet Walk Interrupted|QID|93178|M|41.46,31.61|Z|2437; Zul'Aman|QO|3|I|N|First Clue found.|
-C A Quiet Walk Interrupted|QID|93178|M|43.18,32.40|Z|2437; Zul'Aman|QO|4|I|N|Second Clue found.|
-C A Quiet Walk Interrupted|QID|93178|M|45.81,33.92|Z|2437; Zul'Aman|QO|5|I|N|Third Clue found.|
+C A Quiet Walk Interrupted|QID|93178|M|38.37,26.62|Z|2437; Zul'Aman|QO|1|CHAT|N|Speak to Haz'kel, sitting on top of the pillar.|
+C A Quiet Walk Interrupted|QID|93178|M|40.84,29.83|Z|2437; Zul'Aman|QO|2|NC|N|Find the Log Bridge.|
+C A Quiet Walk Interrupted|QID|93178|M|41.46,31.61|Z|2437; Zul'Aman|QO|3|I|N|Examine the dagger and the dead Frog near it.|
+C A Quiet Walk Interrupted|QID|93178|M|43.18,32.40|Z|2437; Zul'Aman|QO|4|I|N|Examine the picnic basket surrounded by Kapara.|
+C A Quiet Walk Interrupted|QID|93178|M|45.81,33.92|Z|2437; Zul'Aman|QO|5|I|N|Examine the teapot also surrounded by Kapara.|
 T A Quiet Walk Interrupted|QID|93178|M|36.75,25.14|Z|2437; Zul'Aman|N|To Nerunda.|
 A Childlike Devotion|QID|93179|PRE|93178|M|36.75,25.14|Z|2437; Zul'Aman|N|From Nerunda.|RANK|2|
 C Childlike Devotion|QID|93179|M|52.27,32.17|Z|2437; Zul'Aman|QO|2|CHAT|N|Kanza found.|
@@ -248,9 +252,9 @@ C Shrine Preparations|QID|93180|M|51.74,30.61|Z|2437; Zul'Aman|QO|5|H|N|Thorncap
 C Shrine Preparations|QID|93180|M|51.23,32.70|Z|2437; Zul'Aman|QO|3;4|N|Stinger Hatchling slain.|US|
 T Shrine Preparations|QID|93180|M|51.46,30.62|Z|2437; Zul'Aman|N|To Kanza.|
 A Temple and a Teapot|QID|93181|PRE|93180|M|51.46,30.62|Z|2437; Zul'Aman|N|From Kanza.|RANK|2|
-C Temple and a Teapot|QID|93181|M|47.21,24.50|Z|2437; Zul'Aman|QO|1|NC|N|Teapot bought from Honnu.|
+B Temple and a Teapot|QID|93181|M|47.21,24.50|Z|2437; Zul'Aman|QO|1|N|Go buy a Teapot from Honnu.|
 C Temple and a Teapot|QID|93181|M|52.30,32.16|Z|2437; Zul'Aman|QO|2|CHAT|N|Speak to Kanza.|
-C Temple and a Teapot|QID|93181|M|52.27,32.12|Z|2437; Zul'Aman|QO|3|H|N|Teapot Placed.|
+C Temple and a Teapot|QID|93181|M|52.27,32.12|Z|2437; Zul'Aman|QO|3|H|N|Place Teapot.|
 T Temple and a Teapot|QID|93181|M|52.30,32.16|Z|2437; Zul'Aman|N|To Kanza.|
 A Healing Homeward|QID|93182|PRE|93181|M|52.30,32.16|Z|2437; Zul'Aman|N|From Kanza.|RANK|2|
 C Healing Homeward|QID|93182|M|36.70,25.10|Z|2437; Zul'Aman|QO|1|CHAT|N|Speak to Nerunda.|
@@ -260,52 +264,102 @@ T Coals of a Dead Loa|QID|86661|M|38.53,22.42|Z|2437; Zul'Aman|N|To Zul'jarra.|
 C I Have a Permit|QID|90481|M|38.26,20.98|Z|2437; Zul'Aman|N|Talk to Elder Ren'zen.|CHAT|
 T I Have a Permit|QID|90481|M|46.27,26.14|Z|2437; Zul'Aman|N|To Seeker Crikkash.|
 A Sightseeing Stegadon|QID|90484|PRE|90481|M|47.30,26.08|Z|2437; Zul'Aman|N|From Trishe.|RANK|2|
+f Camp Stonewash|ACTIVE|90484|M|47.32,25.52|Z|2437; Zul'Aman|N|From Scroll of Flight.|
 A Cuisine Connection|QID|90482|PRE|90481|M|47.18,24.66|Z|2437; Zul'Aman|N|From Amaxi.|RANK|2|
 A A Witherbark Story|QID|90483|PRE|90481|M|47.25,24.52|Z|2437; Zul'Aman|N|From Seeker Cikkash.|RANK|2|
 A Afterthought Artifacts|QID|90485|PRE|90481|M|47.25,24.52|Z|2437; Zul'Aman|N|From Seeker Cikkash.|RANK|2|
-C A Witherbark Story|QID|90483|M|47.25,24.52|Z|2437; Zul'Aman|N|Storys renacted.|
+C A Witherbark Story|QID|90483|M|47.25,24.52|Z|2437; Zul'Aman|N|Ask the Witherbark Visitors in the area to tell you a story.|
 K Hidegorger the Everburning|ACTIVE|90484|QO|1|M|45.65,23.73|Z|2437; Zul'Aman|N|Kill Hidegorger the Everburning.|T|Hidegorger the Everburning|
 C Sightseeing Stegadon|QID|90484|QO|2|M|45.37,23.94|Z|2437; Zul'Aman|N|Reassure Steggy.|H|
-C Cuisine Connection|QID|90482|M|49.51,27.77|Z|2437; Zul'Aman|N|From Amaxi.|S|H|
+C Cuisine Connection|QID|90482|M|49.51,27.77|Z|2437; Zul'Aman|N|Head into the water and collect all the stuff.|S|H|
 C Afterthought Artifacts|QID|90485|QO|2|M|48.37,28.33|Z|2437; Zul'Aman|N|Lost Amani Oar.|H|
 C Afterthought Artifacts|QID|90485|QO|1|M|48.84,28.41|Z|2437; Zul'Aman|N|Lost Amani Bolt.|H|
 C Afterthought Artifacts|QID|90485|QO|3|M|49.51,27.77|Z|2437; Zul'Aman|N|Lost Amani Trinket.|H|
 C Afterthought Artifacts|QID|90485|QO|4|M|48.71,28.67|Z|2437; Zul'Aman|N|Rubble Cleared.|H|
 C Afterthought Artifacts|QID|90485|QO|5|M|48.71,28.67|Z|2437; Zul'Aman|N|Old Amani Pot.|H|
-C Cuisine Connection|QID|90482|M|49.51,27.77|Z|2437; Zul'Aman|N|From Amaxi.|US|H|
+C Cuisine Connection|QID|90482|M|49.51,27.77|Z|2437; Zul'Aman|N|Finish up collecting eels and kelp.|US|H|
 T Sightseeing Stegadon|QID|90484|M|47.30,26.08|Z|2437; Zul'Aman|N|To Trishe.|
 T Cuisine Connection|QID|90482|M|47.18,24.66|Z|2437; Zul'Aman|N|To Amaxi.|
-T A Witherbark Story|QID|90483|M|47.25,24.52|Z|2437; Zul'Aman|N|To Seeker Cikkash.|
-T Afterthought Artifacts|QID|90485|M|47.25,24.52|Z|2437; Zul'Aman|N|To Seeker Cikkash.|
-A Dangerous Delicacies|QID|90486|PRE|90485|M|47.21,24.61|Z|2437; Zul'Aman|N|From Amaxi.|RANK|2|
+A Dangerous Delicacies|QID|90486|PRE|90482|M|47.21,24.61|Z|2437; Zul'Aman|N|From Amaxi.|RANK|2|
 C Dangerous Delicacies|QID|90486|QO|1|M|47.11,24.54|Z|2437; Zul'Aman|N|Grab da Eel.|H|
 C Dangerous Delicacies|QID|90486|QO|2|M|47.03,24.63|Z|2437; Zul'Aman|N|Jump on the red kelp.|
 C Dangerous Delicacies|QID|90486|QO|3|M|47.13,24.76|Z|2437; Zul'Aman|N|Click on da boars.|H|
 C Dangerous Delicacies|QID|90486|QO|4|M|47.15,24.70|Z|2437; Zul'Aman|N|Roast the Skewer, its leaning against the fire.|H|
 T Dangerous Delicacies|QID|90486|M|47.21,24.61|Z|2437; Zul'Aman|N|To Gushu.|
+T A Witherbark Story|QID|90483|M|47.25,24.52|Z|2437; Zul'Aman|N|To Seeker Cikkash.|
+T Afterthought Artifacts|QID|90485|M|47.25,24.52|Z|2437; Zul'Aman|N|To Seeker Cikkash.|
 A Unlikely Friends|QID|90568|M|47.25,24.46|Z|2437; Zul'Aman|N|From Seeker Crikkash.|RANK|2|
 A The Riddled Speaker|QID|86808|PRE|86661|M|38.53,22.42|Z|2437; Zul'Aman|N|From Zul'jarra.|
 C The Riddled Speaker|QID|86808|M|54.91,18.47|Z|2437; Zul'Aman|QO|1|NC|N|Meet Zul'jarra at the Temple of Jan'alai.|
 T The Riddled Speaker|QID|86808|M|54.98,18.30|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A Embers to a Flame|QID|86663|PRE|86808|M|54.98,18.30|Z|2437; Zul'Aman|N|From Zul'jarra.|
 C Embers to a Flame|QID|86663|M|55.06,18.22|Z|2437; Zul'Aman|QO|2|H|N|Take the Coal of Jan'alai.|
-C Embers to a Flame|QID|86663|M|52.31,21.43|Z|2437; Zul'Aman|QO|3||N|Coal of Jan'alai empowered.|
-C Embers to a Flame|QID|86663|M|55.05,18.22|Z|2437; Zul'Aman|QO|4|H|N|Empowered Coal placed.|
+C Embers to a Flame|QID|86663|M|52.31,21.43|Z|2437; Zul'Aman|QO|3||N|Go kill Amazard's to empower the Coal of Jan'alai.|
+C Embers to a Flame|QID|86663|M|55.05,18.22|Z|2437; Zul'Aman|QO|4|H|N|Place the Empowered Coal.|
 T Embers to a Flame|QID|86663|M|54.99,18.32|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A Seer or Sear|QID|86664|PRE|86663|M|54.99,18.32|Z|2437; Zul'Aman|N|From Zul'jarra.|
-C Seer or Sear|QID|86664|M|54.85,21.47|Z|2437; Zul'Aman|QO|1|H|N|First Hash'ey Shrine lit.|
-C Seer or Sear|QID|86664|M|53.02,18.60|Z|2437; Zul'Aman|QO|2|H|N|Second Hash'ey Shrine lit.|
-C Seer or Sear|QID|86664|M|55.05,18.21|Z|2437; Zul'Aman|QO|3|H|N|Coalesced Flame placed.|
+C Seer or Sear|QID|86664|M|54.85,21.47|Z|2437; Zul'Aman|QO|1|H|N|Light the First Hash'ey Shrine.|
+C Seer or Sear|QID|86664|M|53.02,18.60|Z|2437; Zul'Aman|QO|2|H|N|Light Second Hash'ey Shrine.|
+C Seer or Sear|QID|86664|M|55.05,18.21|Z|2437; Zul'Aman|QO|3|H|N|Place Coalesced Flame.|
 T Seer or Sear|QID|86664|M|54.98,18.32|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A Face in the Fire|QID|86665|PRE|86664|M|54.98,18.32|Z|2437; Zul'Aman|N|From Zul'jarra.|
-C Face in the Fire|QID|86665|M|55.09,18.20|Z|2437; Zul'Aman|QO|1|H|N|Coal touched.|
-K Manifestation of Zul'jarra|ACTIVE|86665|M|55.03,18.20|Z|2437; Zul'Aman|QO|2|N|Manifestation of Zul'jarra slain.|
+C Face in the Fire|QID|86665|M|55.09,18.20|Z|2437; Zul'Aman|QO|1|H|N|Touch the Coal.|
+K Manifestation of Zul'jarra|ACTIVE|86665|M|55.03,18.20|Z|2437; Zul'Aman|QO|2|N|Slay Manifestation of Zul'jarra.|
 T Face in the Fire|QID|86665|M|54.97,18.32|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A The Flames Rise Higher|QID|90772|PRE|86665|M|54.97,18.32|Z|2437; Zul'Aman|N|From Zul'jarra.|
 C The Flames Rise Higher|QID|90772|M|55.10,18.37|Z|2437; Zul'Aman|QO|1|CHAT|N|Speak with Loa Speaker Brek.|
 T The Flames Rise Higher|QID|90772|M|55.01,18.36|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A In the Shadow of Rebirth|QID|86666|PRE|90772|M|55.01,18.36|Z|2437; Zul'Aman|N|From Zul'jarra.|
 T Unlikely Friends|QID|90568|M|38.28,20.95|Z|2437; Zul'Aman|N|To Elder Ren'zen.|
+A Far from the Hinterlands|QID|91406|M|36.12,24.83|Z|2437|N|From Nija Torntusk.|RANK|2|
+C Far from the Hinterlands|QID|91406|M|37.16,23.52|Z|2437|QO|1<1|NC|N|The first bit of evidence is found on a table on the 2nd floor of the hut.|
+C Far from the Hinterlands|QID|91406|M|38.08,24.09|Z|2437; Zul'Aman|QO|1<2|NC|N|The next bit in on a set of shelves near Headhunter Og'beh.|
+C Far from the Hinterlands|QID|91406|M|37.14,26.25|Z|2437; Zul'Aman|QO|1<3|NC|N|The last bit is found on a table in Rajom Swiftspear's hut.|
+T Far from the Hinterlands|QID|91406|M|36.08,24.79|Z|2437|N|To Nija Torntusk.|
+A The Eye of the Loa|QID|91407|PRE|91406|M|36.08,24.79|Z|2437|N|From Nija Torntusk.|RANK|2|
+C The Eye of the Loa|QID|91407|M|35.97,24.76|Z|2437|QO|1|NC|N|Stand in front of the shrine and use [color=33fff9] Extra Action Button [/color] to request Halazzi's.|EAB|
+C The Eye of the Loa|QID|91407|M|38.80,23.15|Z|2437|QO|2|NC|N|Spiders scared away.|
+T The Eye of the Loa|QID|91407|M|36.11,24.83|Z|2437|N|To Nija Torntusk.|
+A Halazzi's Hunt|QID|91563|M|36.11,24.83|Z|2437|N|From Nija Torntusk.|RANK|2|
+T Halazzi's Hunt|QID|91563|M|32.28,31.59|Z|2437|N|To Loa Speaker Tobui.|
+A Probable Paralytic|QID|91403|PRE|91563|M|32.28,31.59|Z|2437|N|From Loa Speaker Tobui.|RANK|2|
+A A Most Vile Venom|QID|91404|PRE|91563|M|32.28,31.59|Z|2437|N|From Loa Speaker Tobui.|RANK|2|
+C Probable Paralytic|QID|91403|M|37.72,32.40|Z|2437|QO|1|NC|N|Kill Horned Toads to loot Venomous Horn.|S|
+K Venomhexxer Raxxis|ACTIVE|91404|M|40.15,35.57|Z|2437|QO|1|N|Venomhexxer Raxxis slain.|T|Venomhexxer Raxxis|
+C A Most Vile Venom|QID|91404|M|40.40,35.98|Z|2437|QO|2|H|N|Open the box of ritual supplies in Venomhexxer's house.|
+C Probable Paralytic|QID|91403|M|37.72,32.40|Z|2437|QO|1|NC|N|Finish collecting the requisite amount of Venomous Horns.|US|
+T Probable Paralytic|QID|91403|M|32.26,31.61|Z|2437|N|To Loa Speaker Tobui.|
+T A Most Vile Venom|QID|91404|M|32.26,31.61|Z|2437|N|To Loa Speaker Tobui.|
+A Validating the Venom|QID|91405|PRE|91403&91404|M|32.26,31.61|Z|2437|N|From Loa Speaker Tobui.|RANK|2|
+C Validating the Venom|QID|91405|M|38.55,22.45|Z|2437|QO|1|CHAT|N|Speak to Chief Vun'zarah.|
+C Validating the Venom|QID|91405|M|37.22,23.47|Z|2437|QO|2|CHAT|N|Speak to Mixer Jamanga (upstairs).|
+C Validating the Venom|QID|91405|M|36.22,25.05|Z|2437|QO|3|NC|N|Send Daki to Mixer Jamanga.|
+T Validating the Venom|QID|91405|M|36.11,24.84|Z|2437|N|To Nija Torntusk.|
+A Seeking Shadra|QID|91408|PRE|91405|M|36.11,24.84|Z|2437|N|From Nija Torntusk.|RANK|2|
+C Seeking Shadra|QID|91408|M|39.64,23.04|Z|2437|QO|1|NC|N|Follow the spiders.|
+C Seeking Shadra|QID|91408|M|59.55,57.44|Z|2583; Wit'Kalar Crypt|QO|2|CHAT|N|Speak to Mixer Jamanga.|
+T Seeking Shadra|QID|91408|M|60.69,56.77|Z|2583; Wit'Kalar Crypt|N|To Nija Torntusk.|
+A Stolen Sight|QID|91630|PRE|91408|M|59.85,57.25|Z|2583; Wit'Kalar Crypt|N|From Mixer Jamanga.|RANK|2|
+C Stolen Sight|QID|91630|M|54.49,35.38|Z|2583; Wit'Kalar Crypt|N|Kill Venomhexxer Iki to get the Eye of Shadra.|
+T Stolen Sight|QID|91630|M|59.55,57.44|Z|2583; Wit'Kalar Crypt|N|To Mixer Jamanga.|
+A Dreaming of Spiders|QID|91409|PRE|91630|M|59.55,57.44|Z|2583; Wit'Kalar Crypt|N|From Mixer Jamanga.|RANK|2|
+C Dreaming of Spiders|QID|91409|M|37.53,65.63|Z|2583; Wit'Kalar Crypt|QO|1|NC|N|Go down deeper into the temple and place the Fang of Shadra where indicated.|
+C Dreaming of Spiders|QID|91409|M|40.40,61.16|Z|2583; Wit'Kalar Crypt|QO|2|NC|N|Place Eye of Shadra on the other side of the doorway as indicated.|
+T Dreaming of Spiders|QID|91409|M|42.93,71.89|Z|2583; Wit'Kalar Crypt|N|To Mixer Jamanga.|
+A Maisara Caverns: Deep in Maisara|QID|91411|PRE|91409|M|46.57,71.83|Z|2583; Wit'Kalar Crypt|N|From Nija Torntusk.|RANK|2|
+f Witherbark Bluffs|ACTIVE|91411|M|38.90,23.21|Z|2437; Zul'Aman|N|At Eagletender Do'nac.|
+C Maisara Caverns|QID|91411|S!US|M|44.01,33.60|Z|2437; Zul'Aman|N|You need to run thru Maisara Caverns to advance the storyline, follower dungeon works fine if you are avoiding your fellow players. You may want to go to the entrance as there is another quest for the dungeon near there, (but it isn't required for storyline progression)|
+A Maisara Caverns: Maisara Hungers|QID|93575|ACTIVE|91411|M|44.15,34.42|Z|2437; Zul'Aman|N|To Kul'amara the Fierce.|IZ|Shadebasin Watch|
+f Shadebasin Watch|ACTIVE|91411|M|44.01,33.60|Z|2437; Zul'Aman|N|At Eagletender Ful'nac|IZ|Shadebasin Watch|
+t Maisara Caverns: Maisara Hungers|QID|93575|M|44.15,34.42|Z|2437; Zul'Aman|N|To Kul'amara the Fierce.|
+t Maisara Caverns: Deep in Maisara|QID|91411|M|46.40,72.25|Z|2583; Wit'Kalar Crypt|N|To Nija Torntusk still in the crypt underneath Witherbark Bluffs.|
+A Return of the Venom Queen|QID|91412|PRE|91411|M|43.02,71.89|Z|2583; Wit'Kalar Crypt|N|From Mixer Jamanga.|
+C Return of the Venom Queen|QID|91412|M|38.63,22.60|Z|2437; Zul'Aman|QO|1|NC|N|Stand in the middle of the room and use [color=33fff9] Extra Action Button [/color] to complete the Shadra Ritual.|EAB|RANK|2|
+C Return of the Venom Queen|QID|91412|M|46.20,71.98|Z|2583; Wit'Kalar Crypt|QO|2|H|N|Click the Egg of Shadra.|
+T Return of the Venom Queen|QID|91412|M|46.20,71.98|Z|2583; Wit'Kalar Crypt|N|To Nija Torntusk.|
+A Shared Loa|QID|91410|PRE|91412|M|42.92,71.80|Z|2583; Wit'Kalar Crypt|N|From Mixer Jamanga.|RANK|2|
+T Shared Loa|QID|91410|M|38.54,22.41|Z|2437; Zul'Aman|N|To Vun'zarah back above in the village.|
+
 T Recuperating Returns|QID|88985|PRE|86652|M|28.37,27.24|Z|2437; Zul'Aman|N|To Woodcrafter Azai.|
 A Salvaged Sabotage|QID|88987|PRE|88985|M|28.41,27.31|Z|2437; Zul'Aman|N|From Woodcrafter Azai.|
 A Blind the Bandits|QID|88986|PRE|88985|M|28.41,27.31|Z|2437; Zul'Aman|N|From Woodcrafter Azai.|
@@ -322,7 +376,7 @@ C The Artisan's Apprentice|QID|88988|M|28.49,27.47|Z|2437; Zul'Aman|QO|4|EAB|N|L
 T The Artisan's Apprentice|QID|88988|M|28.46,27.48|Z|2437; Zul'Aman|N|To Woodcrafter Azai.|
 A Another One Bites the Sawdust|QID|88989|PRE|88988|M|28.46,27.48|Z|2437; Zul'Aman|N|From Woodcrafter Azai.|
 C Another One Bites the Sawdust|QID|88989|M|28.47,27.49|Z|2437; Zul'Aman|QO|1|H|N|Retrieve Lightwood Javelin.|
-K Covert Commander Tofir|ACTIVE|88989|M|31.72,29.85|Z|2437; Zul'Aman|QO|3|N|Covert Commander Tofir slain.|T|Covert Commander Tofir|EAB|
+K Covert Commander Tofir|ACTIVE|88989|M|31.72,29.85|Z|2437; Zul'Aman|QO|3|N|Don't forget to use the Javelin when killing Covert Commander Tofir.|T|Covert Commander Tofir|EAB|
 T Another One Bites the Sawdust|QID|88989|M|28.43,27.47|Z|2437; Zul'Aman|N|To Woodcrafter Azai.|
 A Gnarldin Trophies|QID|93093|PRE|92453|M|28.91,33.49|Z|2437; Zul'Aman|N|From Kel'venko.|
 A Scavenged Victory|QID|93094|PRE|92453|M|28.91,33.49|Z|2437; Zul'Aman|N|From Kel'venko.|
@@ -335,18 +389,19 @@ A Bitter Fury|QID|93095|PRE|93093&93094|M|28.97,33.52|Z|2437; Zul'Aman|N|From Ke
 K Tusk Taker|ACTIVE|93095|M|25.72,37.57|Z|2437; Zul'Aman|QO|2|N|Tusk Taker slain.|T|Tusk Taker|
 T Bitter Fury|QID|93095|M|28.92,33.45|Z|2437; Zul'Aman|N|To Kel'venko.|
 A Amani Honor|QID|93096|PRE|93095|M|28.92,33.45|Z|2437; Zul'Aman|N|From Kel'venko.|
-C Amani Honor|QID|93096|M|29.25,41.30|Z|2437; Zul'Aman|QO|2|NC|N|Amani reward received.|
+C Amani Honor|QID|93096|M|29.25,41.30|Z|2437; Zul'Aman|QO|2|CHAT|N|As you probably expected Kel'venko doesn't want to share.|
+f Atul'Aman|ACTIVE|93096|M|39.83,40.97|Z|2536; Atal'Aman|N|Stop and grab the flightpath as you are flying over...At Eagletender Po'vari.|
 T Amani Honor|QID|93096|M|44.24,66.54|Z|2437; Zul'Aman|N|To Huntmaster Jinki.|
 T In the Shadow of Rebirth|QID|86666|M|43.82,68.32|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A Den of Nalorakk: A Taste of Vengeance|QID|86681|PRE|86666|M|43.82,68.32|Z|2437; Zul'Aman|N|From Zul'jarra.|
 C Den of Nalorakk: A Taste of Vengeance|QID|86681|M|43.60,68.34|Z|2437; Zul'Aman|QO|1|H|N|Use Kinduru's Mortar to grind Bog Herbs.|
-C Den of Nalorakk: A Taste of Vengeance|QID|86681|M|43.60,68.24|Z|2437; Zul'Aman|QO|2|EAB|N|Pour Death Rites Mixture into the fires.|
+C Den of Nalorakk: A Taste of Vengeance|QID|86681|M|43.60,68.24|Z|2437; Zul'Aman|QO|2|EAB|N|Stand in the gold circles near each of the three fires and use [color=33fff9] Extra Action Button [/color] to pour Death Rites Mixture into the fires.|
 T Den of Nalorakk: A Taste of Vengeance|QID|86681|M|43.80,68.27|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A Den of Nalorakk: Waking de Bear|QID|86682|PRE|86681|M|43.80,68.27|Z|2437; Zul'Aman|N|From Zul'jarra.|
 C Den of Nalorakk: Waking de Bear|QID|86682|M|33.56,78.79|Z|2437; Zul'Aman|QO|1|CHAT|N|Speak with Lilaju.|
 T Den of Nalorakk: Waking de Bear|QID|86682|M|33.58,78.76|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A Den of Nalorakk: Unforgiven|QID|91958|PRE|86682|M|33.58,78.76|Z|2437; Zul'Aman|N|From Zul'jarra.|
-C Den of Nalorakk: Unforgiven|QID|91958|M|33.58,78.76|Z|2437; Zul'Aman|QO|2|NC|N|Talk to Zul'jarra to begin a follower dungeon.|
+C Den of Nalorakk: Unforgiven|QID|91958|M|33.58,78.76|Z|2437; Zul'Aman|QO|2|CHAT|N|Talk to Zul'jarra to begin a follower dungeon.|
 C Den of Nalorakk: Unforgiven|QID|91958|M|31.54,83.89|Z|2437; Zul'Aman|QO|4|NC|N|Talk to Zul'jarra outside the dungeon.|
 T Den of Nalorakk: Unforgiven|QID|91958|M|31.55,83.88|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A Hash'ey Away|QID|86683|PRE|91958|M|31.55,83.88|Z|2437; Zul'Aman|N|From Zul'jarra.|
@@ -360,16 +415,17 @@ C Not Quite Nalorakk|QID|91747|M|42.41,80.31|Z|2437; Zul'Aman|QO|1|NC|N|Nalorakk
 T Too Much Twilight|QID|91748|M|41.29,80.08|Z|2437; Zul'Aman|N|To Fleeg.|
 T Not Quite Nalorakk|QID|91747|M|41.37,80.05|Z|2437; Zul'Aman|N|To Furgh.|
 A It's Just Not Right|QID|91749|PRE|91748&91747|M|41.37,80.05|Z|2437; Zul'Aman|N|From Furgh.|
-K Groffa the Guzzler|ACTIVE|91749|M|44.32,79.50|Z|2437; Zul'Aman|QO|1|N|Groffa the Guzzler slain.|T|Groffa the Guzzler|
-C It's Just Not Right|QID|91749|M|44.48,79.36|Z|2437; Zul'Aman|QO|2|H|N|Groffa's Treasures.|
+K Groffa the Guzzler|ACTIVE|91749|M|44.32,79.50|Z|2437; Zul'Aman|QO|1|N|Slay Groffa the Guzzler.|T|Groffa the Guzzler|
+C It's Just Not Right|QID|91749|M|44.48,79.36|Z|2437; Zul'Aman|QO|2|H|N|Get Groffa's Treasures from the box behind him.|
 T It's Just Not Right|QID|91749|M|41.36,80.05|Z|2437; Zul'Aman|N|To Furgh.|
-A Precious Trinkets|QID|93734|PRE|91749|M|41.36,80.05|Z|2437; Zul'Aman|N|From Unknown.|
-C Precious Trinkets|QID|93734|M|41.32,79.92|Z|2437; Zul'Aman|QO|1|NC|N|Carefully observe Furgh.|
-C Precious Trinkets|QID|93734|M|41.32,79.92|Z|2437; Zul'Aman|QO|2|NC|N|Burn Groffa's Treasure in the fire.|
+A Precious Trinkets|QID|93734|PRE|91749|M|41.36,80.05|Z|2437; Zul'Aman|N|From Fleeg.|
+C Precious Trinkets|QID|93734|M|41.32,79.92|Z|2437; Zul'Aman|QO|1|I|N|Carefully observe Furgh.|
+C Precious Trinkets|QID|93734|M|41.32,79.92|Z|2437; Zul'Aman|QO|2|H|N|Click the treasure bag to throw it in the fire.|
 T Precious Trinkets|QID|93734|M|41.35,80.05|Z|2437; Zul'Aman|N|To Furgh.|
 A Perils of Trust|QID|91750|PRE|93734|M|41.33,80.09|Z|2437; Zul'Aman|N|From Fleeg.|
 K Fake Voice of Nalorakk|ACTIVE|91750|M|43.84,82.10|Z|2437; Zul'Aman|QO|1|N|Fake Voice of Nalorakk slain.|T|Fake Voice of Nalorakk|
-T Perils of Trust|QID|91750|M|41.29,80.07|Z|2437; Zul'Aman|N|To Fleeg.|
+T Perils of Trust|QID|91750|M|41.29,80.07|Z|2437; Zul'Aman|N|To Fleeg. Stay and watch a short vignette if you like that sort of thing.|
+
 C Hash'ey Away|QID|86683|M|43.87,68.97|Z|2437; Zul'Aman|QO|1|NC|N|Arrived in Amani'Zar Village.|
 C Hash'ey Away|QID|86683|M|43.49,68.88|Z|2437; Zul'Aman|QO|2|CHAT|N|Speak with Zul'jarra.|
 T Hash'ey Away|QID|86683|M|43.49,68.88|Z|2437; Zul'Aman|N|To Zul'jarra.|
@@ -398,40 +454,74 @@ C Blade Shattered|QID|86692|M|22.55,77.41|Z|2437; Zul'Aman|QO|1|CHAT|N|Speak to 
 K Mor'duun|ACTIVE|86692|M|21.40,77.42|Z|2437; Zul'Aman|QO|2|NC|N|Kill Mor'duun.|T|Mor'duun|
 T Blade Shattered|QID|86692|M|21.44,77.38|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A De Legend of de Hash'ey|QID|86693|PRE|86692|M|21.44,77.38|Z|2437; Zul'Aman|N|From Zul'jarra.|
-C De Legend of de Hash'ey|QID|86693|M|45.67,65.62|Z|2437; Zul'Aman|QO|1|CHAT|N|Talk to Zul'jarra at Amani'Zar Village.|
+C De Legend of de Hash'ey|QID|86693|M|45.28,66.20|Z|2437; Zul'Aman|QO|1|CHAT|N|Talk to Zul'jarra at Amani'Zar Village.|
 T De Legend of de Hash'ey|QID|86693|M|45.76,65.53|Z|2437; Zul'Aman|N|To Zul'jarra.|
 A Broken Bridges|QID|91062|PRE|86693|M|45.76,65.53|Z|2437; Zul'Aman|N|From Zul'jarra.|
 C Broken Bridges|QID|91062|M|51.22,54.37|Z|2437; Zul'Aman|QO|2|CHAT|N|Check on Zul'jan.|
 T Broken Bridges|QID|91062|M|50.76,54.47|Z|2437; Zul'Aman|N|To Lady Liadrin.|
 A Reports Returned|QID|91087|PRE|91062|M|50.76,54.47|Z|2437; Zul'Aman|N|From Lady Liadrin.|
 
-; EVERYTHING BELOW HERE NEEDS TO BE SLOTTED INTO THE GUIDE ABOVE. THESE WERE FOUND AFTER I FINISHED THE GUIDE CUZ I WAS MISSING SOJOURNER
-A Loa Disturbance|QID|91206|M|43.16,67.90|Z|2437; Zul'Aman|N|From Elder Doru.|RANK|2|
-A Altar History|QID|93050|M|43.50,68.84|Z|2437; Zul'Aman|N|From Rakan.|RANK|2|
-A A Lover Not a Fighter|QID|89230|PRE|88989|M|44.06,66.20|Z|2437; Zul'Aman|N|From Kagara.|RANK|2|
-A A Fighter Not a Lover|QID|89231|M|43.92,65.96|Z|2437; Zul'Aman|N|From Zak'kash.|RANK|2|
-A Personal History|QID|93440|PRE|93261|M|45.76,65.54|Z|2437; Zul'Aman|N|From Zul'jarra.|RANK|2|
-C Altar History|QID|93050|QO|1|M|43.90,69.25|Z|2437; Zul'Aman|N|Recharge Nalorakk's Altar.|EAB|
-C Altar History|QID|93050|QO|4|M|43.35,69.00|Z|2437; Zul'Aman|N|Recharge Akil'zon's Altar.|EAB|
-C Altar History|QID|93050|QO|3|M|43.14,68.39|Z|2437; Zul'Aman|N|Recharge Halazzi's Altar.|EAB|
-C Altar History|QID|93050|QO|2|M|43.15,68.01|Z|2437; Zul'Aman|N|Recharge Jan'alai's Altar.|EAB|
+
+; These quests don't become available until the main campaign is done, so can not be put earlier in the guide.;amani'zar - after completing 86652(left in the Shadows -  line 82);91958 (Den of Nalorakk-line 409); 86666 (In the Shadow of Rebirth line 398) and 91062 (Broken Bridges) - line 462
+A Loa Disturbance|QID|91206|PRE|86652&91958&86666&91062|M|43.16,67.90|Z|2437; Zul'Aman|N|From Elder Doru.|RANK|2|
+A Altar History|QID|93050|PRE|86652&91958&86666&91062|M|43.50,68.84|Z|2437; Zul'Aman|N|From Rakan.|RANK|2|
+C Altar History|QID|93050|QO|4|M|43.35,69.00|Z|2437; Zul'Aman|N|Stand in front of Akil'zon's Altar and use [color=33fff9] Extra Action Button [/color].|EAB|
+C Altar History|QID|93050|QO|1|M|43.90,69.25|Z|2437; Zul'Aman|N|Stand in front of Nalorakk's alter and use [color=33fff9] Extra Action Button [/color].|EAB|
+C Altar History|QID|93050|QO|3|M|43.14,68.39|Z|2437; Zul'Aman|N|Stand in front of Halazzi's Altar and use [color=33fff9] Extra Action Button [/color].|EAB|
+C Altar History|QID|93050|QO|2|M|43.15,68.01|Z|2437; Zul'Aman|N|Stand in front of Jan'alai's Altar and use [color=33fff9] Extra Action Button [/color].|EAB|
 T Altar History|QID|93050|M|43.38,69.03|Z|2437; Zul'Aman|N|To Rakan.|
-C A Lover Not a Fighter|QID|89230|M|54.17,72.95|Z|2437; Zul'Aman|QO|1|N|Threshadon Tooth Necklace.|S|
-C A Fighter Not a Lover|QID|89231|M|52.47,70.79|Z|2437; Zul'Aman|QO|1|H|N|Eagle Feather.|
-C A Fighter Not a Lover|QID|89231|M|52.47,70.79|Z|2437; Zul'Aman|QO|2|NC|U|249231|N|Amani Headdress.|
-C A Lover Not a Fighter|QID|89230|M|54.17,72.95|Z|2437; Zul'Aman|QO|1|N|Threshadon Tooth Necklace.|US|
+A A Lover Not a Fighter|QID|89230|PRE|86652&91958&86666&91062|M|44.06,66.20|Z|2437; Zul'Aman|N|From Kagara.|RANK|2|
+A A Fighter Not a Lover|QID|89231|PRE|86652&91958&86666&91062|M|43.92,65.96|Z|2437; Zul'Aman|N|From Zak'kash.|RANK|2|
+A Personal History|QID|93440|PRE|91062|M|45.76,65.54|Z|2437; Zul'Aman|N|From Zul'jarra.|RANK|2|
+C A Lover Not a Fighter|QID|89230|M|54.17,72.95|Z|2437; Zul'Aman|QO|1|N|Kill Gnarldin mobs until the Threshadon Tooth Necklace drops.|S|
+C A Fighter Not a Lover|QID|89231|M|52.47,70.79|Z|2437; Zul'Aman|QO|1|H|N|Pick up Eagle Feathers from the ground.|
+C A Fighter Not a Lover|QID|89231|M|52.47,70.79|Z|2437; Zul'Aman|QO|2|NC|U|249231|N|Now that you have 8 feathers, click them to make the Amani Headdress.|
+C A Lover Not a Fighter|QID|89230|M|54.17,72.95|Z|2437; Zul'Aman|QO|1|N|Keep killing Gnarldin till you get that Threshadon Tooth Necklace.|US|
 T A Lover Not a Fighter|QID|89230|M|44.41,65.71|Z|2437; Zul'Aman|N|To Namaji.|
 T A Fighter Not a Lover|QID|89231|M|44.42,65.71|Z|2437; Zul'Aman|N|To Namaji.|
-A Love Triangle|QID|89233|PRE|89231|M|44.42,65.71|Z|2437; Zul'Aman|N|From Namaji.|RANK|2|
+A Love Triangle|QID|89233|PRE|89230&89231|M|44.42,65.71|Z|2437; Zul'Aman|N|From Namaji.|RANK|2|
 C Love Triangle|QID|89233|M|44.42,65.71|Z|2437; Zul'Aman|QO|1|NC|N|Help Namaji decide.|
 T Love Triangle|QID|89233|M|44.42,65.71|Z|2437; Zul'Aman|N|To Namaji.|
+
+T Personal History|QID|93440|M|46.14,47.86|Z|2536; Atal'Aman|N|To Torundo the Grizzled.|
+A Swords to Plowshares|QID|93432|PRE|93440|M|46.14,47.86|Z|2536; Atal'Aman|N|From Torundo the Grizzled.|RANK|2|
+A Shrine, Sealed, Delivered|QID|93433|PRE|93440|M|46.03,47.24|Z|2536; Atal'Aman|N|From Elder Doru.|RANK|2|
+C Swords to Plowshares|QID|93432|M|23.40,20.19|Z|2536; Atal'Aman|QO|1|NC|N|Kill the Raiders and loot for Ash Remains.|S|
+C Shrine, Sealed, Delivered|QID|93433|M|34.42,66.67|Z|2536; Atal'Aman|QO|3|CHAT|N|Elder Vu'lona spoken with.|
+C Shrine, Sealed, Delivered|QID|93433|M|25.76,67.30|Z|2536; Atal'Aman|QO|2|CHAT|N|Elder Thak spoken with.|
+C Shrine, Sealed, Delivered|QID|93433|M|34.50,23.64|Z|2536; Atal'Aman|QO|4|CHAT|N|Elder Shimarra spoken with.|
+C Shrine, Sealed, Delivered|QID|93433|M|20.52,13.87|Z|2536; Atal'Aman|QO|1|CHAT|N|Eagletender Rhyd spoken with.|
+C Swords to Plowshares|QID|93432|M|23.40,20.19|Z|2536; Atal'Aman|QO|1|NC|N|Finsih collecting Raider Ash Remains.|US|
+T Shrine, Sealed, Delivered|QID|93433|M|45.22,44.93|Z|2536; Atal'Aman|N|To Elder Doru.|
+T Swords to Plowshares|QID|93432|M|45.41,44.74|Z|2536; Atal'Aman|N|To Torundo the Grizzled.|
+A Four Instigators|QID|93435|PRE|93433&93432|M|45.41,44.74|Z|2536; Atal'Aman|N|From Torundo the Grizzled.|RANK|2|
+A Hex the Innocent, Disrupt the Guilty|QID|93436|PRE|93433&93432|M|45.20,44.90|Z|2536; Atal'Aman|N|From Elder Doru.|RANK|2|
+C Hex the Innocent|QID|93436|M|37.58,79.91|Z|2536; Atal'Aman|QO|2|H|U|259967|N|Click the Civilians to hex them. Bliz has conveniently given you yellow dots to find them.|S|
+C Disrupt the Guilty|QID|93436|M|52.10,19.29|Z|2536; Atal'Aman|QO|1<1|H|N|Click the Feast to poison it.|
+K Zungam|ACTIVE|93435|M|43.58,31.78|Z|2536; Atal'Aman|QO|2|N|Slay Zungam.|T|Zungam|
+C Disrupt the Guilty|QID|93436|M|67.23,47.47|Z|2536; Atal'Aman|QO|3|H|N|Click the Warlord's Chest.|
+K Prigmon|ACTIVE|93435|M|34.43,80.11|Z|2536; Atal'Aman|QO|1|N|Slay Prigmon.|T|Prigmon|
+C Disrupt the Guilty|QID|93436|QO|1<2|M|52.10,19.29|Z|2536; Atal'Aman|H|N|Click the feast.|
+K Harrison Jones|ACTIVE|93435|M|8.47,40.77|Z|2536; Atal'Aman|QO|4|N|Slay Harrison Jones. (I know you have wanted to for awhile.|T|Harrison Jones|
+K Budd Nedreck|ACTIVE|93435|M|10.59,27.38|Z|2536; Atal'Aman|QO|3|N|Slay Budd Nedreck.|T|Budd Nedreck|
+C Disrupt the Guilty|QID|93436|M|7.66,8.84|Z|2536; Atal'Aman|QO|1<3|H|N|And the last one way out on the edge of the battlefield.|
+C Hex the Innocent|QID|93436|M|37.58,79.91|Z|2536; Atal'Aman|QO|2|H|U|259967|N|Finish hexxing Civilians.|US|
+T Hex the Innocent, Disrupt the Guilty|QID|93436|M|45.79,47.33|Z|2536; Atal'Aman|N|To Elder Doru.|
+T Four Instigators|QID|93435|M|45.79,47.33|Z|2536; Atal'Aman|N|To Torundo the Grizzled.|
+A In Their Own Blood|QID|93437|PRE|93436&93435|M|45.79,47.33|Z|2536; Atal'Aman|N|From Torundo the Grizzled.|RANK|2|
+C In Their Own Blood|QID|93437|M|34.49,25.46;16.80,21.34;22.19,66.96;34.49,65.25|CN|Z|2536; Atal'Aman|QO|1|NC|N|Inhabit a Loa Avatar. Any of the 4 works. Stand in the highlighted sigil, and use [color=33fff9] Extra Action Button [/color].|
+C In Their Own Blood|QID|93437|M|38.29,72.68|Z|2536; Atal'Aman|QO|2|NC|N|Slay Echoes.|
+C In Their Own Blood|QID|93437|M|38.62,70.42|Z|2536; Atal'Aman|QO|3|NC|N|Use Time Flies ability to travel (Optional).|
+C In Their Own Blood|QID|93437|M|63.55,47.43|Z|2536; Atal'Aman|QO|4|N|Slay the Raid Leader. The rightmost button on your Vehicle UI is a teleport to the raid leader.|
+T In Their Own Blood|QID|93437|M|45.90,47.45|Z|2536; Atal'Aman|N|To Torundo the Grizzled.|
+
 T Loa Disturbance|QID|91206|M|40.47,49.46|Z|2437; Zul'Aman|N|To Loa Speaker Sij'ta.|
 A Curse Cleanse|QID|87254|PRE|91206|M|40.47,49.46|Z|2437; Zul'Aman|N|From Loa Speaker Sij'ta.|RANK|2|
 A Alternative Medicine|QID|87256|PRE|91206|M|40.47,49.46|Z|2437; Zul'Aman|N|From Loa Speaker Sij'ta.|RANK|2|
 C Alternative Medicine|QID|87256|M|40.35,51.22|Z|2437; Zul'Aman|QO|1|H|N|Bloodclot Branch.|S|
 C Curse Cleanse|QID|87254|M|40.16,50.74|Z|2437; Zul'Aman|QO|1|N|Large Pango Liver.|
 C Alternative Medicine|QID|87256|M|40.35,51.22|Z|2437; Zul'Aman|QO|1|H|N|Bloodclot Branch.|US|
-C Curse Cleanse|QID|87254|M|40.48,49.38|Z|2437; Zul'Aman|QO|2|CHAT|N|Give liver to Warlord Akutu.|
+C Curse Cleanse|QID|87254|M|40.45,49.31|Z|2437; Zul'Aman|QO|2|CHAT|N|Give liver to Warlord Akutu.|
 T Curse Cleanse|QID|87254|M|40.48,49.38|Z|2437; Zul'Aman|N|To Loa Speaker Sij'ta.|
 T Alternative Medicine|QID|87256|M|40.48,49.38|Z|2437; Zul'Aman|N|To Loa Speaker Sij'ta.|
 A Demands Unmet|QID|87267|PRE|87254&87256|M|40.48,49.38|Z|2437; Zul'Aman|N|From Loa Speaker Sij'ta.|RANK|2|
@@ -449,104 +539,31 @@ C Denial Denied|QID|87317|M|38.91,44.73|Z|2437; Zul'Aman|QO|3|CHAT|N|Give staff 
 T Denial Denied|QID|87317|M|38.84,44.90|Z|2437; Zul'Aman|N|To Warlord Akutu.|
 A The Medicine Loa's Shrine|QID|92531|PRE|87317|M|38.81,44.85|Z|2437; Zul'Aman|N|From Kulzi.|RANK|2|
 T The Medicine Loa's Shrine|QID|92531|M|43.15,67.95|Z|2437; Zul'Aman|N|To Elder Doru.|
-T Personal History|QID|93440|M|46.14,47.86|Z|2536; Atal'Aman|N|To Torundo the Grizzled.|
-A Swords to Plowshares|QID|93432|PRE|93440|M|46.14,47.86|Z|2536; Atal'Aman|N|From Torundo the Grizzled.|RANK|2|
-A Shrine, Sealed, Delivered|QID|93433|PRE|93440|M|46.03,47.24|Z|2536; Atal'Aman|N|From Elder Doru.|RANK|2|
-C Swords to Plowshares|QID|93432|M|23.40,20.19|Z|2536; Atal'Aman|QO|1|NC|N|Raider Ash Remains.|S|
-C Shrine, Sealed, Delivered|QID|93433|M|34.42,66.67|Z|2536; Atal'Aman|QO|3|CHAT|N|Elder Vu'lona spoken with.|
-C Shrine, Sealed, Delivered|QID|93433|M|25.76,67.30|Z|2536; Atal'Aman|QO|2|CHAT|N|Elder Thak spoken with.|
-C Shrine, Sealed, Delivered|QID|93433|M|34.50,23.64|Z|2536; Atal'Aman|QO|4|CHAT|N|Elder Shimarra spoken with.|
-C Shrine, Sealed, Delivered|QID|93433|M|20.52,13.87|Z|2536; Atal'Aman|QO|1|CHAT|N|Eagletender Rhyd spoken with.|
-C Swords to Plowshares|QID|93432|M|23.40,20.19|Z|2536; Atal'Aman|QO|1|NC|N|Raider Ash Remains.|US|
-T Shrine, Sealed, Delivered|QID|93433|M|45.76,47.28|Z|2536; Atal'Aman|N|To Elder Doru.|
-T Swords to Plowshares|QID|93432|M|45.76,47.28|Z|2536; Atal'Aman|N|To Torundo the Grizzled.|
-A Four Instigators|QID|93435|PRE|93433&93432|M|45.76,47.28|Z|2536; Atal'Aman|N|From Torundo the Grizzled.|RANK|2|
-A Hex the Innocent, Disrupt the Guilty|QID|93436|PRE|93433&93432|M|45.76,47.28|Z|2536; Atal'Aman|N|From Elder Doru.|RANK|2|
-C Hex the Innocent, Disrupt the Guilty|QID|93436|M|37.58,79.91|Z|2536; Atal'Aman|QO|2|NC|U|259967|N|Civilians hexxed.|S|
-C Hex the Innocent, Disrupt the Guilty|QID|93436|M|7.66,8.84|Z|2536; Atal'Aman|QO|1|H|N|Feasts poisoned.|S|
-K Zungam|ACTIVE|93435|M|43.58,31.78|Z|2536; Atal'Aman|QO|2|N|Zungam slain.|T|Zungam|
-C Hex the Innocent, Disrupt the Guilty|QID|93436|M|67.23,47.47|Z|2536; Atal'Aman|QO|3|H|N|Warlord's Chest sabotaged.|
-K Prigmon|ACTIVE|93435|M|34.43,80.11|Z|2536; Atal'Aman|QO|1|N|Prigmon slain.|T|Prigmon|
-K Harrison Jones|ACTIVE|93435|M|8.47,40.77|Z|2536; Atal'Aman|QO|4|N|Harrison Jones slain.|T|Harrison Jones|
-T Budd Nedreck|ACTIVE|93435|M|10.59,27.38|Z|2536; Atal'Aman|QO|3|N|Budd Nedreck slain.|T|Budd Nedreck|
-C Hex the Innocent, Disrupt the Guilty|QID|93436|M|37.58,79.91|Z|2536; Atal'Aman|QO|2|NC|U|259967|N|Civilians hexxed.|US|
-C Hex the Innocent, Disrupt the Guilty|QID|93436|M|7.66,8.84|Z|2536; Atal'Aman|QO|1|H|N|Feasts poisoned.|US|
-T Hex the Innocent, Disrupt the Guilty|QID|93436|M|45.79,47.33|Z|2536; Atal'Aman|N|To Elder Doru.|
-T Four Instigators|QID|93435|M|45.79,47.33|Z|2536; Atal'Aman|N|To Torundo the Grizzled.|
-A In Their Own Blood|QID|93437|PRE|93436&93435|M|45.79,47.33|Z|2536; Atal'Aman|N|From Torundo the Grizzled.|RANK|2|
-C In Their Own Blood|QID|93437|M|22.19,66.96|Z|2536; Atal'Aman|QO|1|NC|N|Inhabit a Loa Avatar.|
-C In Their Own Blood|QID|93437|M|38.29,72.68|Z|2536; Atal'Aman|QO|2|NC|N|Slay Echoes.|
-C In Their Own Blood|QID|93437|M|38.62,70.42|Z|2536; Atal'Aman|QO|3|NC|N|Use Time Flies ability to travel (Optional).|
-C In Their Own Blood|QID|93437|M|63.55,47.43|Z|2536; Atal'Aman|QO|4|N|Raid Leade
-T In Their Own Blood|QID|93437|M|45.76,47.43|Z|2536; Atal'Aman|N|To Torundo the Grizzled.|
-A Honorin' de Sacrifice|QID|92492|PRE|91750|M|33.59,78.78|Z|2437; Zul'Aman|N|From Lilaju.|RANK|2|
+
+A Honorin' de Sacrifice|QID|92492|PRE|86652&91958&86666&91062|M|33.59,78.78|Z|2437; Zul'Aman|N|From Lilaju.|RANK|2|
 T Honorin' de Sacrifice|QID|92492|M|26.06,64.50|Z|2437; Zul'Aman|N|To Lilaju.|
 A What Remains of Idago|QID|92493|PRE|92492|M|26.06,64.50|Z|2437; Zul'Aman|N|From Lilaju.|RANK|2|
 A Disruptin' de Blade|QID|92495|PRE|92492|M|26.06,64.50|Z|2437; Zul'Aman|N|From Lilaju.|RANK|2|
 C Disruptin' de Blade|QID|92495|M|23.91,61.33|Z|2437; Zul'Aman|N|Monsters slain.|S|
 C What Remains of Idago|QID|92493|M|24.98,63.22|Z|2437; Zul'Aman|QO|1|H|N|Idago's Warspear.|
-C What Remains of Idago|QID|92493|M|23.32,60.41|Z|2437; Zul'Aman|QO|2|H|N|Idago's Banner.|
-C What Remains of Idago|QID|92493|M|24.10,59.69|Z|2437; Zul'Aman|QO|3|H|N|Idago's Letter.|
+C What Remains of Idago|QID|92493|M|23.32,60.41|Z|2437; Zul'Aman|QO|2|H|N|Idago's Banner in on the upper level.|
+C What Remains of Idago|QID|92493|M|24.10,59.69|Z|2437; Zul'Aman|QO|3|H|N|Idago's Letter is buried in a mound of dirt.|
 C Disruptin' de Blade|QID|92495|M|23.91,61.33|Z|2437; Zul'Aman|N|Monsters slain.|US|
 T What Remains of Idago|QID|92493|M|22.56,63.93|Z|2437; Zul'Aman|N|To Lilaju.|
 T Disruptin' de Blade|QID|92495|M|22.56,63.93|Z|2437; Zul'Aman|N|To Lilaju.|
 A Spears Against de Shadow|QID|92496|PRE|92493&92495|M|22.56,63.93|Z|2437; Zul'Aman|N|From Lilaju.|RANK|2|
-A Simply Magical|QID|92497|PRE|92493&92495|M|21.21,63.41|Z|2437; Zul'Aman|N|From Idago.|RANK|2|
-C Simply Magical|QID|92497|M|20.54,63.37|Z|2437; Zul'Aman|QO|2|H|N|Page of Pain.|
-K Deathchanter Mish'mosh|ACTIVE|92496|M|20.74,64.19|Z|2437; Zul'Aman|QO|1|N|Deathchanter Mish'mosh slain.|T|Deathchanter Mish'mosh|
-C Simply Magical|QID|92497|M|20.80,64.35|Z|2437; Zul'Aman|QO|1|H|N|Page of Binding.|
-C Simply Magical|QID|92497|M|21.17,63.47|Z|2437; Zul'Aman|QO|3|H|N|Magical Bindings released.|
+A Simply Magical|QID|92497|PRE|92493&92495|M|60.93,39.74|Z|2584; Revantusk Sedge|N|From Idago.|RANK|2|
+C Simply Magical|QID|92497|M|35.86,38.81|Z|2584; Revantusk Sedge|QO|2|H|N|Go down the right side stairs to find the Page of Pain.|
+K Deathchanter Mish'mosh|ACTIVE|92496|M|55.21,69.08|Z|2584; Revantusk Sedge|QO|1|N|Deathchanter Mish'mosh slain.|T|Deathchanter Mish'mosh|
+C Simply Magical|QID|92497|M|46.87,75.76|Z|2584; Revantusk Sedge|QO|1|H|N|Page of Binding (in same room with Mish'mosh).|
+C Simply Magical|QID|92497|M|61.28,39.12|Z|2584; Revantusk Sedge|QO|3|H|N|Back up the the crypt entrance to release Idago.|
 T Simply Magical|QID|92497|M|22.57,63.99|Z|2437; Zul'Aman|N|To Idago.|
 T Spears Against de Shadow|QID|92496|M|22.59,63.97|Z|2437; Zul'Aman|N|To Lilaju.|
 A The Wisest Leaders Follow|QID|92499|PRE|92497&92496|M|22.59,63.97|Z|2437; Zul'Aman|N|From Lilaju.|RANK|2|
 T The Wisest Leaders Follow|QID|92499|M|33.59,78.76|Z|2437; Zul'Aman|N|To Lilaju.|
-A Maisara Caverns: Maisara Hungers|QID|93575|M|44.15,34.42|Z|2437; Zul'Aman|N|From Kul'amara the Fierce.|RANK|2|
-t Maisara Caverns: Maisara Hungers|QID|93575|M|44.15,34.42|Z|2437; Zul'Aman|N|To Kul'amara the Fierce.|
-A Far from the Hinterlands|QID|91406|PRE|93575|M|36.12,24.83|Z|2437|N|From Nija Torntusk.|RANK|2|
-C Far from the Hinterlands|QID|91406|M|37.16,23.52|Z|2437|QO|1|NC|N|Hinterlands evidence found.|
-T Far from the Hinterlands|QID|91406|M|36.08,24.79|Z|2437|N|To Nija Torntusk.|
-A The Eye of the Loa|QID|91407|PRE|91406|M|36.08,24.79|Z|2437|N|From Nija Torntusk.|RANK|2|
-C The Eye of the Loa|QID|91407|M|35.97,24.76|Z|2437|QO|1|NC|N|Halazzi's aid requested.|EAB|
-C The Eye of the Loa|QID|91407|M|38.80,23.15|Z|2437|QO|2|NC|N|Spiders scared away.|
-T The Eye of the Loa|QID|91407|M|36.11,24.83|Z|2437|N|To Nija Torntusk.|
-A Halazzi's Hunt|QID|91563|M|36.11,24.83|Z|2437|N|From Nija Torntusk.|RANK|2|
-T Halazzi's Hunt|QID|91563|M|32.28,31.59|Z|2437|N|To Loa Speaker Tobui.|
-A Probable Paralytic|QID|91403|PRE|91563|M|32.28,31.59|Z|2437|N|From Loa Speaker Tobui.|RANK|2|
-A A Most Vile Venom|QID|91404|PRE|91563|M|32.28,31.59|Z|2437|N|From Loa Speaker Tobui.|RANK|2|
-C Probable Paralytic|QID|91403|M|37.72,32.40|Z|2437|QO|1|NC|N|Venomous Horn.|S|
-K Venomhexxer Raxxis|ACTIVE|91404|M|40.15,35.57|Z|2437|QO|1|N|Venomhexxer Raxxis slain.|T|Venomhexxer Raxxis|
-C A Most Vile Venom|QID|91404|M|40.40,35.98|Z|2437|QO|2|H|N|Ritual Fang.|
-C Probable Paralytic|QID|91403|M|37.72,32.40|Z|2437|QO|1|NC|N|Venomous Horn.|US|
-T Probable Paralytic|QID|91403|M|32.26,31.61|Z|2437|N|To Loa Speaker Tobui.|
-T A Most Vile Venom|QID|91404|M|32.26,31.61|Z|2437|N|To Loa Speaker Tobui.|
-A Validating the Venom|QID|91405|PRE|91403&91404|M|32.26,31.61|Z|2437|N|From Loa Speaker Tobui.|RANK|2|
-C Validating the Venom|QID|91405|M|38.55,22.45|Z|2437|QO|1|CHAT|N|Speak to Chief Vun'zarah.|
-C Validating the Venom|QID|91405|M|37.22,23.47|Z|2437|QO|2|CHAT|N|Speak to Mixer Jamanga.|
-C Validating the Venom|QID|91405|M|36.22,25.05|Z|2437|QO|3|NC|N|Send Daki to Mixer Jamanga.|
-T Validating the Venom|QID|91405|M|36.11,24.84|Z|2437|N|To Nija Torntusk.|
-A Seeking Shadra|QID|91408|PRE|91405|M|36.11,24.84|Z|2437|N|From Unknown.|RANK|2|
-C Seeking Shadra|QID|91408|M|39.64,23.04|Z|2437|QO|1|NC|N|Follow the spiders.|
-C Seeking Shadra|QID|91408|M|39.16,22.33|Z|2437|QO|2|CHAT|N|Speak to Mixer Jamanga.|
-T Seeking Shadra|QID|91408|M|39.16,22.33|Z|2437|N|To Nija Torntusk.|
-A Stolen Sight|QID|91630|PRE|91408|M|39.16,22.33|Z|2437|N|From Mixer Jamanga.|RANK|2|
-C Stolen Sight|QID|91630|M|39.09,21.84|Z|2437|QO|1|NC|N|Eye of Shadra.|
-T Stolen Sight|QID|91630|M|39.18,22.34|Z|2437|N|To Mixer Jamanga.|
-A Dreaming of Spiders|QID|91409|PRE|91630|M|39.18,22.34|Z|2437|N|From Mixer Jamanga.|RANK|2|
-C Dreaming of Spiders|QID|91409|M|38.53,22.55|Z|2437|QO|1|NC|N|Fang of Shadra placed.|
-C Dreaming of Spiders|QID|91409|M|38.61,22.43|Z|2437|QO|2|NC|N|Eye of Shadra placed.|
-T Dreaming of Spiders|QID|91409|M|38.70,22.69|Z|2437|N|To Mixer Jamanga.|
-A Maisara Caverns: Deep in Maisara|QID|91411|PRE|91409|M|38.72,22.70|Z|2437|N|From Nija Torntusk.|RANK|2|
-t Maisara Caverns: Deep in Maisara|QID|91411|M|38.74,22.76|Z|2437; Zul'Aman|N|To Nija Torntusk.|
-A Return of the Venom Queen|QID|91412|PRE|91411|M|38.67,22.69|Z|2437; Zul'Aman|N|From Mixer Jamanga.|
-C Return of the Venom Queen|QID|91412|M|38.63,22.60|Z|2437; Zul'Aman|QO|1|NC|N|Shadra Ritual completed.|RANK|2|
-C Return of the Venom Queen|QID|91412|M|38.63,22.60|Z|2437; Zul'Aman|QO|2|NC|N|Egg of Shadra hatched.|
-T Return of the Venom Queen|QID|91412|M|38.75,22.77|Z|2437; Zul'Aman|N|To Nija Torntusk.|
-A Shared Loa|QID|91410|PRE|91412|M|38.69,22.72|Z|2437; Zul'Aman|N|From Mixer Jamanga.|RANK|2|
-T Shared Loa|QID|91410|M|38.54,22.41|Z|2437; Zul'Aman|N|To Vun'zarah.|
-T Reports Returned|QID|91087|M|45.43,70.49|Z|2393;Silvermoon City|N|To Lor'themar Theron.|
 
-N The last part of the Sojourner for Zul Aman requiers level 90, hit 90 and come back.|LVL|-90|
-A Dirty Deeps|QID|91833|PRE|93051|M|38.53,22.45|Z|2437; Zul'Aman|N|From Vun'zarah.|LVL|90|RANK|2|;I assume this quest line starts at 90. I am 89 and cant see it.
+N Zul'Aman Sojourner|N|The last part of the Sojourner for Zul Aman requires level 90, hit 90 and come back.|S!US|LVL|-90|
+A Dirty Deeps|QID|91833|PRE|93051|M|38.53,22.45|Z|2437; Zul'Aman|N|From Vun'zarah.|LVL|90|RANK|2|
 T Dirty Deeps|QID|91833|M|44.87,36.53|Z|2437; Zul'Aman|N|To Dak'zor.|
 A Send Dem Home|QID|91835|PRE|91833|M|44.87,36.53|Z|2437; Zul'Aman|N|From Dak'zor.|RANK|2|
 A Respect De Totem|QID|91836|PRE|91833|M|44.87,36.53|Z|2437; Zul'Aman|N|From Dak'zor.|RANK|2|
@@ -561,10 +578,6 @@ A One Will Not Rise|QID|91840|PRE|91835&91836&91838|M|47.15,41.28|Z|2437; Zul'Am
 C One Will Not Rise|QID|91840|M|48.39,43.04|Z|2437; Zul'Aman|QO|1|NC|N|Knife Priestess Hezzia's Head.|
 T One Will Not Rise|QID|91840|M|38.53,22.44|Z|2437; Zul'Aman|N|To Vun'zarah.|
 
-
-
-
-
-
+T Reports Returned|QID|91087|M|45.43,70.49|Z|2393;Silvermoon City|N|To Lor'themar Theron.|
 ]]
 end)
