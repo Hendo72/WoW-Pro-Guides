@@ -11,6 +11,22 @@ T Elekks Are Serious Business|QID|9625|M|63.03,87.90|Z|1950;Bloodmyst Isle|N|To 
 T Hero's Call: Bloodmyst Isle!|QID|28559|M|63.03,87.90|Z|1950;Bloodmyst Isle|N|To Vorkhan the Elekk Herder.|
 A Alien Predators|QID|9634|M|63.03,87.90|Z|1950;Bloodmyst Isle|N|From Vorkhan the Elekk Herder.| ;Non-Draenei
 A A Favorite Treat|QID|9624|M|63.43,88.78|Z|1950;Bloodmyst Isle|N|From Aonar.| ;Non-Draenei
+C Redemption|QID|9600|M|65.29,77.54|Z|1950;Bloodmyst Isle|N|Target the Young Furbolg Shaman and use the Symbol of Life.\n[color=FF0000]NOTE: [/color]Do this before you accept Kessel's quest.|T|Young Furbolg Shaman|U|6866|
+A The Kessel Run|QID|9663|M|62.99,87.52|Z|1950;Bloodmyst Isle|N|From Kessel (manually accept it).\n[color=FF0000]NOTE: [/color]You have 15 minutes to hand in this quest.\nThe mount you're given can't be resummoned if you lose it.\nIt can be done without the mount, but it'll take substantially longer.|NA| ;Non-Draenei
+C The Kessel Run|QID|9663|QO|1|M|46.68,20.63|Z|1943;Azuremyst Isle|N|Talk to High Chief Stillpine outside Stillpine Hold.|CHAT|
+C The Kessel Run|QID|9663|QO|2|M|47.13,50.61|Z|1943;Azuremyst Isle|N|Talk to Exarch Menelaous in Azure Watch.\n[color=FF0000]NOTE: [/color]You cannot resummon the mount if you get dismounted; avoid situations that could dismount you.|CHAT|
+C The Kessel Run|QID|9663|QO|3|M|47.04,70.22|Z|1943 ;Azuremyst Isle|N|Talk to Admiral Odyseus in Odesyus' Landing.\n[color=FF0000]NOTE: [/color]You cannot resummon the mount if you get dismounted; avoid situations that could dismount you.|CHAT|
+; Shaman lv 10 quest cont.
+R The Exodar|ACTIVE|9663&9461|M|24.51,48.72|Z|1950;Bloodmyst Isle|N|Head northeast to the backdoor into The Exodar.\n[color=FF0000]NOTE: [/color]It leads directly into the Vault of Lights and you won't lose your mount.|
+T Call of Fire|QID|9461|M|32.87,54.48|Z|1947; The Exodar|N|To Prophet Velen on the upper tier in the Vault of Lights.|
+A Call of Fire|QID|9555|PRE|9461|M|32.87,54.48|Z|1947; The Exodar|N|From Prophet Velen.|
+T Call of Fire|QID|9555|M|29.76,33.27|Z|1947; The Exodar|N|To Farseer Nobundo on the upper tier in the Crystal Hall.|
+;
+; Paladin lv 12 quest completion
+R The Exodar|ACTIVE|9663&9600|M|24.51,48.72|Z|1950;Bloodmyst Isle|N|Head northeast to the backdoor into The Exodar.\n[color=FF0000]NOTE: [/color]It leads directly into the Vault of Lights and you won't lose your mount.|
+T Redemption|QID|9600|M|38.39,82.52|Z|1947;The Exodar|N|To Jol in the Vault of Lights.|
+;
+T The Kessel Run|QID|9663|M|62.99,87.52|Z|1950;Bloodmyst Isle|N|To Kessel at Kessel's Crossing.\n[color=FF0000]NOTE: [/color]The timer doesn't stop until you turn it in.|
 C A Favorite Treat|QID|9624|M|66.62,83.48|Z|1950;Bloodmyst Isle|L|23927 10|N|Loot them from the ground near the tree groves surrounding the Bristlelimb camps all over the island.|S|
 ; ** Irradiated Crystal Shards = I think it's better to have it here altogether. - Hendo72
 N Irradiated Crystal Shards|AVAILABLE|9641&9666|N|Throughout Bloodmyst Isle, mobs may drop Irradiated Crystal Shards. Save these, as you'll need 10 for a future quest from Vindicator Boros that grants reputation with Exodar and an item to boost your Intellect/Attack Power/Stamina (depending on which item you choose).\n[color=FF0000]NOTE: [/color]Manually check this step off to continue.|
@@ -19,16 +35,6 @@ t Irradiated Crystal Shards|QID|9641|M|55.43,55.27|Z|1950;Bloodmyst Isle|N|To Vi
 a More Irradiated Crystal Shards|QID|9642|PRE|9641|M|55.43,55.27|Z|1950;Bloodmyst Isle|L|23984 10|N|From Vindicator Boros.|LVL|13|IZ|Blood Watch|O| ;Non-Draenei
 t More Irradiated Crystal Shards|QID|9642|M|55.43,55.27|Z|1950;Bloodmyst Isle|N|To Vindicator Boros.|
 ;
-C Redemption|QID|9600|M|65.29,77.54|Z|1950;Bloodmyst Isle|N|Target the Young Furbolg Shaman and use the Symbol of Life.\n[color=FF0000]NOTE: [/color]Do this before you accept Kessel's quest.|T|Young Furbolg Shaman|U|6866|
-A The Kessel Run|QID|9663|M|62.99,87.52|Z|1950;Bloodmyst Isle|N|From Kessel (manually accept it).\n[color=FF0000]NOTE: [/color]You have 15 minutes to hand in this quest.\nThe mount you're given can't be resummoned if you lose it.\nIt can be done without the mount, but it'll take substantially longer.|NA| ;Non-Draenei
-C The Kessel Run|QID|9663|QO|1|M|46.68,20.63|Z|1943;Azuremyst Isle|N|Talk to High Chief Stillpine outside Stillpine Hold.|CHAT|
-C The Kessel Run|QID|9663|QO|2|M|47.13,50.61|Z|1943;Azuremyst Isle|N|Talk to Exarch Menelaous in Azure Watch.\n[color=FF0000]NOTE: [/color]You cannot resummon the mount if you get dismounted; avoid situations that could dismount you.|CHAT|
-C The Kessel Run|QID|9663|QO|3|M|47.04,70.22|Z|1943 ;Azuremyst Isle|N|Talk to Admiral Odyseus in Odesyus' Landing.\n[color=FF0000]NOTE: [/color]You cannot resummon the mount if you get dismounted; avoid situations that could dismount you.|CHAT|
-; Paladin lv 12 quest completion
-R The Exodar|ACTIVE|9663|M|24.51,48.72|Z|1950;Bloodmyst Isle|N|Head northeast to the backdoor into The Exodar.NOTE It leads directly into the Vault of Lights and you won't lose your mount.|
-T Redemption|QID|9600|M|38.39,82.52|Z|1947;The Exodar|N|To Jol in the Vault of Lights.|
-;
-T The Kessel Run|QID|9663|M|62.99,87.52|Z|1950;Bloodmyst Isle|N|To Kessel at Kessel's Crossing.\n[color=FF0000]NOTE: [/color]The timer doesn't stop until you turn it in.|
 A Declaration of Power|QID|9666|PRE|9663|M|62.99,87.52|Z|1950;Bloodmyst Isle|N|From Kessel.| ;Non-Draenei
 R Blood Watch|AVAILABLE|9629|M|55.84,59.80|Z|1950;Bloodmyst Isle|N|Follow the road north into Blood Watch.|
 h Blood Watch|AVAILABLE|9629|M|55.84,59.80|Z|1950;Bloodmyst Isle|N|Speak with Caregiver Topher Loaal to set your hearthstone to Blood Watch.|
@@ -59,7 +65,7 @@ C Maatparm Mushroom Menagerie|QID|9648|M|63.75,62.90|Z|1950;Bloodmyst Isle|L|240
 C Maatparm Mushroom Menagerie|QID|9648|M|67.91,66.47|Z|1950;Bloodmyst Isle|L|24042|N|Loot a Ruinous Polyspore.\n[color=FF0000]NOTE: [/color]They are black/grey/tan in color and found on the ground near the walls of Wrathscale Lair.|
 C Declaration of Power|QID|9666|QO|1|M|68.86,68.09|Z|1950;Bloodmyst Isle|N|Kill Lord Xiz in Wrathscale Lair.\n[color=FF0000]NOTE: [/color]Clear any potential unwanted guests before starting.|
 C Declaration of Power|QID|9666|M|PLAYER|CC|N|Plant the banner at the corpse of Lord Xiz.|U|24084|NC| ; QO|2| is not used because the Broker doesn't recognize it as one. - Hendo72
-A Saving Princess Stillpine|QID|9667|PRE|9559|M|68.28,80.88|Z|1950;Bloodmyst Isle|N|From Princess Stillpine inside the locked cage in Bristlelimb Enclave.NOTE You may have to clear the area first.| ;Non-Draenei
+A Saving Princess Stillpine|QID|9667|PRE|9559|M|68.28,80.88|Z|1950;Bloodmyst Isle|N|From Princess Stillpine inside the locked cage in Bristlelimb Enclave.\n[color=FF0000]NOTE: [/color]You may have to clear the area first.| ;Non-Draenei
 C Saving Princess Stillpine|QID|9667|M|64.41,76.64|Z|1950;Bloodmyst Isle|L|24099|ITEM|24099|N|High Chief Bristlelimb in the small camp to the northwest of you.\n[color=FF0000]NOTE: [/color]Killing Furbolgs will cause High Chief Bristlelimb to spawn and yell, 'Face the wrath of Bristlelimb!'.|T|High Chief Bristlelimb|
 C Saving Princess Stillpine|QID|9667|M|68.28,80.88|Z|1950;Bloodmyst Isle|N|Open Princess Stillpine's cage.\n[color=FF0000]NOTE: [/color]You may have to clear your way in to make it easier.|NC|
 C Alien Predators|QID|9634|M|58.30,86.28|Z|1950;Bloodmyst Isle|N|Kill Bloodmyst Hatchlings.|S|
@@ -108,6 +114,7 @@ C Signs of the Legion|QID|9594|M|65.54,77.43|Z|1950;Bloodmyst Isle|N|Kill Satyrs
 C Know Thine Enemy|QID|9567|M|36.49,71.36|Z|1950;Bloodmyst Isle|L|23859|N|Loot the Nazzivus Monument Glyph.|
 C Signs of the Legion|QID|9594|M|35.54,77.43|Z|1950;Bloodmyst Isle|N|Finish killing Satyrs and Felsworns.|US|
 C Victims of Corruption|QID|9574|M|60.55,61.55|Z|1950;Bloodmyst Isle|L|23869 6|ITEM|23869|N|Corrupted Treants.|US|
+
 H Blood Watch|QID|9567|M|55.84,59.80|Z|1950;Bloodmyst Isle|N|Depending on how close you are, hearth to Blood Watch or run back.|
 T Know Thine Enemy|QID|9567|M|55.08,58.00|Z|1950;Bloodmyst Isle|N|To Vindicator Aalesia.|
 T Signs of the Legion|QID|9594|M|55.08,58.00|Z|1950;Bloodmyst Isle|N|To Vindicator Aalesia, after a brief dialog.|
