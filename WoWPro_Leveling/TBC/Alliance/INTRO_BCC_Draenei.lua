@@ -83,7 +83,7 @@ A Blood Elf Spy|QID|9311|PRE|10303|M|72.01,60.84|Z|1943; Azuremyst Isle|N|From T
 C Blood Elf Spy|QID|9311|M|69.80,65.32|Z|1943; Azuremyst Isle|N|Kill Surveyor Candress at the tent on top of Shadow Ridge.\n[color=FF0000]NOTE: [/color]She's not alone and attacking either one will draw the other too.|T|Surveyor Candress|
 L Level 6|ACTIVE|9798|M|PLAYER|CC|N|Grind until you're within 7 bubbles of level 6.|LVL|5;-1235|
 L Level 6|AVAILABLE|9798|M|PLAYER|CC|N|Grind until you're within 4.5 bubbles of level 6.|LVL|5;-785|
-T Blood Elf Spy|QID|9311|M|79.48,51.61|Z|1943; Azuremyst Isle|N|To Vindicator Aldar.| ;675 exp
+T Blood Elf Spy|QID|9311|M|79.48,51.61|Z|1943; Azuremyst Isle|N|To Vindicator Aldar back at the Crash Site.| ;675 exp
 T Blood Elf Plans|QID|9798|M|79.48,51.61|Z|1943; Azuremyst Isle|N|To Vindicator Aldar.| ;450 exp
 A The Emitter|QID|9312|PRE|9305|M|79.48,51.61|Z|1943; Azuremyst Isle|N|From Vindicator Aldar.| ;Non-Draenei
 T The Emitter|QID|9312|M|79.42,51.24|Z|1943; Azuremyst Isle|N|To Technician Zhanaa.| ;110 exp
@@ -102,10 +102,10 @@ T Travel to Azure Watch|QID|9313|M|48.65,50.22|Z|1943; Azuremyst Isle|N|To Techn
 h Azure Watch|ACTIVE|9314|M|48.34,49.14|Z|1943; Azuremyst Isle|N|Set your hearth to Azure Watch with Caregiver Chellan.|
 T Word from Azure Watch|QID|9314|M|48.34,49.14|Z|1943; Azuremyst Isle|N|To Caregiver Chellan.|
 A Help Tavara|QID|9586|M|48.59,49.29|Z|1943; Azuremyst Isle|N|From Guvan.|R|-Night Elf|C|Priest|
-= Professions|AVAILABLE|9463|M|PLAYER|CC|N|Learn your primary professions from the various trainers around Azure Watch.\n[color=FF0000]NOTE: [/color]There is no cooking trainer here, only First Aid.\n[color=FF0000]NOTE: [/color]Manually check this step off to continue.|
+= Professions|AVAILABLE|9463|M|PLAYER|CC|N|Learn your primary professions from the various trainers around Azure Watch.\n[color=FF0000]NOTE: [/color]There's no cooking trainer here; only First Aid.\n \nManually check this step off to continue.|
 = First Aid|AVAILABLE|9463|M|48.39,51.77|Z|1943; Azuremyst Isle|N|Learn Apprentice First Aid from Anchorite Fateema for 95c.\n[color=FF0000]NOTE: [/color]Skip this step if you're not interested, or you can't afford it.|SPELL|First Aid;3273|IZ|Azure Watch|
+N Draenei Youngling|AVAILABLE|9612&9463|N|Keep an eye out for a wandering Draenei Youngling. They are elusive, but have a hidden quest for you should you happen upon them.\n \nCast [color=33fff9]Gift of the Naaru[/color] on them after they have taken damage in a fight and they'll offer you the quest once the fight is over.\n[color=FF0000]NOTE: [/color]You can either follow them until they get into a fight, or bring the fight to them by aggroing a mob and kiting it towards them. Do not attack the mob, or they won't be able to pull aggro from you.\nOnce they thank you, feel free to end the fight for them.\n \nManually check this step off to continue.|LVL|5|R|Draenei|
 A Medicinal Purpose|QID|9463|M|48.39,51.77|Z|1943; Azuremyst Isle|N|From Anchorite Fateema, the First Aid Trainer.|R|Draenei|
-N Draenei Youngling|AVAILABLE|9612|N|Keep an eye out for a wandering Draenei Youngling. They are elusive, but have a hidden quest for you should you happen upon them.\n \nCast [color=33fff9]Gift of the Naaru[/color] on them after they have taken damage in a fight and they'll offer you the quest once the fight is over.\n[color=FF0000]NOTE: [/color]You can either follow them until they get into a fight, or bring the fight to them by aggroing a mob and kiting it towards them. Do not attack the mob, or they won't be able to pull aggro from you.\nOnce they thank you, feel free to end the fight for them.\n \nManually check this step off to continue.|LVL|5|R|Draenei|
 t A Hearty Thanks!|QID|9612|M|47.10,50.59|Z|1943; Azuremyst|N|To Menelaous.|IZ|Azure Watch|
 l Blood Elf Communication|AVAILABLE|9616|PRE|-9625|LEAD|9623|M|PLAYER|CC|L|23910|ITEM|23910|N|Blood Elf Bandit.\n[color=FF0000]NOTE:[/color]They randomly spawn in various locations throughout Azuremyst Isle, but only 1 location at a time.|S!US|
 A Bandits!|QID|9616|M|PLAYER|CC|N|From the Blood Elf Communication.|U|23910|O| ;Non-Draenei
@@ -138,18 +138,18 @@ A Precious and Fragile Things Need Special Handling|QID|9523|PRE|9506|M|47.24,69
 T Cookie's Jumbo Gumbo|QID|9512|M|46.68,70.54|Z|1943; Azuremyst Isle|N|To "Cookie" McWeaksauce.|
 r Sell junk and repair|ACTIVE|9530|M|46.35,71.19|Z|1943; Azuremyst Isle|N|At Blacksmith Calypso.|IZ|Odesyus' Landing|
 C I've Got a Plant|QID|9530|M|38.67,70.38|Z|1943; Azuremyst Isle|L|23791 5;23790|N|Loot the 'purple' piles of leaves to the north and west of Odesyus' Landing.\nThe tree trunk can be found on either side of the road just to the north.|S|
-C Reclaiming the Ruins|QID|9513|M|39.18,78.15|Z|1943; Azuremyst Isle|N|Kill the required Nagas.|S|
+C Precious and Fragile Things Need Special Handling|QID|9523|M|27.76,78.10|Z|1943; Azuremyst Isle|L|23779 8|N|Collect the Relics from around Wrathscale Point.\n[color=FF0000]NOTE: [/color]They have static spawn points.|S|
 l Rune Covered Tablet|AVAILABLE|9514|M|39.18,78.15|Z|1943; Azuremyst Isle|L|23759|ITEM|23759|N|any Wrathscale Naga around the area.|S|IZ|Wrathscale Point^Tides' Hollow|
 A Rune Covered Tablet|QID|9514|M|PLAYER|CC|N|From the Rune Covered Tablet.|U|23759|O| ;Non-Draenei
-C Precious and Fragile Things Need Special Handling|QID|9523|M|27.76,78.10|Z|1943; Azuremyst Isle|L|23779 8|N|Collect the Relics from around Wrathscale Point.\n[color=FF0000]NOTE: [/color]They have static spawn points.\nIf required, you can find more inside Tides' Hollow.|
-C Reclaiming the Ruins|QID|9513|M|39.18,78.15|Z|1943; Azuremyst Isle|N|Kill the required Nagas.|US|
+C Reclaiming the Ruins|QID|9513|M|26.99,76.86|Z|1943; Azuremyst Isle|N|Kill the required Nagas.|
+C Precious and Fragile Things Need Special Handling|QID|9523|M|27.76,78.10|Z|1943; Azuremyst Isle|L|23779 8|N|Collect the Relics from around Wrathscale Point.\n[color=FF0000]NOTE: [/color]They have static spawn points.\nIf required, you can find more inside Tides' Hollow.|US|
 C I've Got a Plant|QID|9530|M|47.31,61.83|Z|1943; Azuremyst Isle|L|23791 5;23790|N|Finish collecting what you need.\n[color=FF0000]NOTE: [/color]They have static spawn points.|US|
-L Level 8|AVAILABLE|9531|M|PLAYER|CC|N|Grind until you're level 8.|LVL|8|
-T Precious and Fragile Things Need Special Handling|QID|9523|M|47.24,69.99|Z|1943; Azuremyst Isle|N|To Archaeologist Adamant Ironheart.|
-T I've Got a Plant|QID|9530|M|47.04,70.22|Z|1943; Azuremyst Isle|N|To Admiral Odesyus.|
+L Level 8|AVAILABLE|9531|M|PLAYER|CC|N|Grind until you're within 7.5 bubbles of level 8.|LVL|7;-1670|
+T Precious and Fragile Things Need Special Handling|QID|9523|M|47.24,69.99|Z|1943; Azuremyst Isle|N|To Archaeologist Adamant Ironheart.| ; 700 exp
+T I've Got a Plant|QID|9530|M|47.04,70.22|Z|1943; Azuremyst Isle|N|To Admiral Odesyus.| ; 200 exp
 A Tree's Company|QID|9531|PRE|9530|M|47.04,70.22|Z|1943; Azuremyst Isle|N|From Admiral Odesyus.| ;Non-Draenei
-T Reclaiming the Ruins|QID|9513|M|47.13,70.27|Z|1943; Azuremyst Isle|N|To Priestess Kyleen Il'dinare.\n[color=FF0000]NOTE: [/color]You may not be able to interact with her while someone else is turning the quest in.|
-T Rune Covered Tablet|QID|9514|M|47.13,70.27|Z|1943; Azuremyst Isle|N|To Priestess Kyleen Il'dinare.|
+T Reclaiming the Ruins|QID|9513|M|47.13,70.27|Z|1943; Azuremyst Isle|N|To Priestess Kyleen Il'dinare.\n[color=FF0000]NOTE: [/color]You may not be able to interact with her while someone else is turning the quest in.| ; 700 exp
+T Rune Covered Tablet|QID|9514|M|47.13,70.27|Z|1943; Azuremyst Isle|N|To Priestess Kyleen Il'dinare.| ; 70 exp
 A Warlord Sriss'tiz|QID|9515|PRE|9514|M|47.13,70.27|Z|1943; Azuremyst Isle|N|From Priestess Kyleen Il'dinare once they finish their dialog.| ;Non-Draenei
 R Azure Watch|AVAILABLE|10428|M|48.34,49.14|Z|1943; Azuremyst Isle|N|Run to Azure Watch.\n[color=FF0000]NOTE: [/color]Using your hearth at this point in time is not advised as you're going to need it shortly and it may still be on cooldown when you do.|
 = Level 8 Training|AVAILABLE|10428|M|PLAYER|CC|N|Do your level 8 training.\n[color=FF0000]NOTE: [/color]Manually check this step off to continue.|LVL|8|IZ|Azure Watch|
@@ -170,7 +170,7 @@ T Totem of Coo|QID|9539|M|55.23,41.64|Z|1943; Azuremyst Isle|N|To the Totem of C
 A Totem of Tikti|QID|9540|PRE|9539|M|55.23,41.64|Z|1943; Azuremyst Isle|N|From the Totem of Coo.| ;Non-Draenei
 T Totem of Tikti|QID|9540|M|64.47,39.79|Z|1943; Azuremyst Isle|N|To the Totem of Tikti.\n[color=FF0000]NOTE: [/color]AFTER you receive the "Ghost Walk" buff, jump off the cliff to the east side and continue running east until you cross the river (you can walk on water).|
 A Totem of Yor|QID|9541|PRE|9540|M|64.47,39.79|Z|1943; Azuremyst Isle|N|From the Totem of Tikti.| ;Non-Draenei
-T Totem of Yor|QID|9541|M|63.13,67.88|Z|1943; Azuremyst Isle|N|To the Totem of Yor.\n[color=FF0000]NOTE: [/color]AFTER you receive the "Embrace of the Serpent" buff, walk into the water and swim south to the southern estuary.|
+T Totem of Yor|QID|9541|M|63.13,67.88|Z|1943; Azuremyst Isle|N|To the Totem of Yor.\n[color=FF0000]NOTE: [/color]AFTER you receive the "Embrace of the Serpent" buff, walk into the water and swim south to the bay.|
 A Totem of Vark|QID|9542|PRE|9541|M|63.13,67.88|Z|1943; Azuremyst Isle|N|From the Totem of Yor.| ;Non-Draenei
 R Shadow of the Forest Buff|ACTIVE|9542|M|61.04,69.45|Z|1943; Azuremyst Isle|N|Follow Stillpine Ancestor Yor out of the water and wait for him to cast it on you.\n[color=FF0000]NOTE: [/color]If, for whatever reason, you cannot get the buff, manually check this step off to continue.|BUFF|30448|
 R Nightstalker Clean Up, Isle 2...|ACTIVE|9542&9456|M|34.96,58.29|CC|Z|1943; Azuremyst Isle|N|AFTER you get the 3 minute buff, immediately run straight to the waypoint.\n[color=FF0000]NOTE: [/color]You don't need the buff to do this; it just makes the run faster and a lot less eventful.|
@@ -181,7 +181,7 @@ A The Prophecy of Akida|QID|9544|PRE|9542|M|28.11,62.39|Z|1943; Azuremyst Isle|N
 l Bristlelimb Key|ACTIVE|9544|QO|1|M|26.90,65.55|Z|1943; Azuremyst Isle|L|23801 8|ITEM|23801|N|Bristlelimb Furbolgs in the camp near the Totem.\n[color=FF0000]NOTE: [/color]If you wish, you can open the cages as you collect these; this step will auto-complete if you finish.|T|Bristlelimb|S!US|
 C The Prophecy of Akida|QID|9544|M|26.90,65.55|Z|1943; Azuremyst Isle|N|Open the cages to free the Captives.\n[color=FF0000]NOTE: [/color]You need 1 key per cage.|
 C Warlord Sriss'tiz|QID|9515|M|27.02,76.55;26.34,73.90;25.12,74.19|CS|Z|1943; Azuremyst Isle|N|Kill Warlord Sriss'Tiz inside Tides' Hollow, the cave in Wrathscale Point.\n[color=FF0000]NOTE: [/color]To take a shortcut, drop down the hole just inside the cave.|
-R Wrathscale Point|AVAILABLE|9528|M|26.11,77.63|Z|1943; Azuremyst Isle|N|Work your way out of Tides' Hollow.\n[color=FF0000]NOTE: [/color]The shortcut is a one way trip.|IZ|Tides' Hollow|
+R Exit Tides' Hollow Cave|AVAILABLE|9528|M|26.11,77.63|Z|1943; Azuremyst Isle|N|Work your way out of Tides' Hollow.\n[color=FF0000]NOTE: [/color]The shortcut is a one way trip down.|IZ|Tides' Hollow|
 R Silvermyst Isle|AVAILABLE|9528|M|18.48,84.33|Z|1943; Azuremyst Isle|N|Swim across to Silvermyst Isle.|TZ|Traitor's Cove|
 C Tree's Company|QID|9531|M|18.48,84.33|Z|1943; Azuremyst Isle|N|While standing beside the Naga Flag in Traitor's Cove, use your Tree Disguise Kit and wait for the complete message.\n[color=FF0000]NOTE: [/color]Only one person can do it at a time!|U|23792|
 N Buff: Tree Disguise|ACTIVE|9528|M|PLAYER|CC|N|Dismiss your Tree Disguise if you don't want to wait for it to expire.|BUFF|30298|
@@ -205,6 +205,7 @@ A Coming of Age|QID|9623|M|47.12,50.61|Z|1943; Azuremyst Isle|N|From Exarch Mene
 ; Priest
 ;
 ; Mage
+A Control|QID|9595|M|49.87,49.96|Z|1943; Azuremyst Isle|N|From Semid.|C|Mage|LVL|10|
 ;
 ; Paladin
 ;
@@ -240,9 +241,8 @@ A Deliver Them From Evil...|QID|9602|PRE|9537|M|47.04,70.22|Z|1943; Azuremyst Is
 H Azure Watch|ACTIVE|9602|M|48.34,49.14|Z|1943; Azuremyst Isle|N|Use your Hearthstone, or run if it's on cooldown.|C|-Shaman|
 ; Shaman Level 10 Quest
 R The Exodar|AVAILABLE|9462|LEAD|9464|M|87.45,65.01|Z|1943; Azuremyst Isle|N|Run to the Exodar to pick up your level 10 quest.\n[color=FF0000]NOTE: [/color]This is only a breadcrumb worth ~200 exp.\nSkip this step if you don't want to bother with it.|R|Draenei|C|Shaman|LVL|10|
-H Azure Watch|ACTIVE|9602&9462|M|48.34,49.14|Z|1943; Azuremyst Isle|N|Use your Hearthstone, or run if it's on cooldown.|C|Shaman|
-H Azure Watch|ACTIVE|9602|AVAILABLE|9462|M|48.34,49.14|Z|1943; Azuremyst Isle|N|Use your Hearthstone, or run if it's on cooldown.|C|Shaman|
 A Call of Fire|QID|9462|LEAD|9464|M|32.46,23.99|Z|1947; The Exodar|N|From Sulaa in The Crystal Hall.|R|Draenei|C|Shaman|LVL|10|IZ|1947; The Exodar|
+H Azure Watch|ACTIVE|9602|M|48.34,49.14|Z|1943; Azuremyst Isle|N|Use your Hearthstone, or run if it's on cooldown.|C|Shaman|
 T Call of Fire|QID|9462|M|48.06,50.44|Z|1943; Azuremyst Isle|N|To Tuluun.|
 A Call of Fire|QID|9464|M|48.06,50.44|Z|1943; Azuremyst Isle|N|From Tuluun.|C|Shaman|LVL|10|
 ;
@@ -265,9 +265,13 @@ C Strength of One|QID|9582|M|54.06,9.84|Z|1943; Azuremyst Isle|N|Kill Death Rava
 C Beasts of the Apocalypse!|QID|9560|M|54.24,19.36|Z|1943; Azuremyst Isle|L|23845 8|ITEM|23845|N|Ravagers at the Menagerie Wreckage.|T|Ravager|US|
 T Beasts of the Apocalypse!|QID|9560|M|44.77,23.90|Z|1943; Azuremyst Isle|N|To Moordo.|
 C Murlocs... Why Here? Why Now?|QID|9562|M|34.36,14.24|Z|1943; Azuremyst Isle|L|23849 5|ITEM|23849|N|Siltfin Murlocs along Silting Shore.\n[color=FF0000]NOTE: [/color]You can also loot from around the Murloc huts.|S|
+C Control|QID|9595|M|34.16,18.52|Z|1943; Azuremyst Isle|N|Summon (by killing Siltfin Murlocs)and kill a Quel'dorei Magewraith.NOTE Clear the area or draw it away from the beach.|S|
 l Gurf's Dignity|AVAILABLE|9564|M|33.45,27.04;35.80,11.40|CN|Z|1943; Azuremyst Isle|L|23850|ITEM|23850|N|Murgurgula between the two waypoints.\n[color=FF0000]NOTE: [/color]Watch for potential adds.|T|Murgurgula|
 A Gurf's Dignity|QID|9564|M|PLAYER|CC|N|From Gurf's Dignity.|U|23850|O| ;Non-Draenei
-C Murlocs... Why Here? Why Now?|QID|9562|M|34.36,14.24|Z|1943; Azuremyst Isle|L|23849 5|ITEM|23849|N|Siltfin Murlocs along Silting Shore.\n[color=FF0000]NOTE: [/color]You can also loot from around the Murloc huts.|US|
+C Control|QID|9595|M|34.16,18.52|Z|1943; Azuremyst Isle|N|Summon (by killing Siltfin Murlocs) and kill a Quel'dorei Magewraith.NOTE Clear the area or draw it away from the beach.|US|
+C Murlocs... Why Here? Why Now?|QID|9562|ACTIVE|9595|M|34.36,14.24|Z|1943; Azuremyst Isle|L|23849 5|ITEM|23849|N|Siltfin Murlocs along Silting Shore.\n[color=FF0000]NOTE: [/color]You can also loot from around the Murloc huts.\n \nDespite being finished, the Magewraths will continue to spawn.|C|Mage|US|
+C Murlocs... Why Here? Why Now?|QID|9562|M|34.36,14.24|Z|1943; Azuremyst Isle|L|23849 5|ITEM|23849|N|Siltfin Murlocs along Silting Shore.\n[color=FF0000]NOTE: [/color]You can also loot from around the Murloc huts.|C|-Mage|US|
+
 T Murlocs... Why Here? Why Now?|QID|9562|M|44.63,23.48|Z|1943; Azuremyst Isle|N|To Gurf.|
 T Gurf's Dignity|QID|9564|M|44.63,23.48|Z|1943; Azuremyst Isle|N|To Gurf.|
 A Search Stillpine Hold|QID|9565|PRE|9560&9562|M|46.68,20.63|Z|1943; Azuremyst Isle|N|From High Chief Stillpine.| ;Non-Draenei
