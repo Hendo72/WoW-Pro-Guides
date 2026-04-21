@@ -54,7 +54,8 @@ C Echo of the Call|QID|90095|M|34.84,42.77|Z|2413; Harandar|QO|1|H|N|Activate Th
 C Echo of the Call|QID|90095|M|34.23,43.64|Z|2413; Harandar|QO|2|N|Slay Observer Talos.|
 T Echo of the Call|QID|90095|M|33.94,44.80|Z|2413; Harandar|N|To Zur'ashar Kassameh.|
 A Down the Rootways|QID|86912|PRE|90095|M|33.94,44.80|Z|2413; Harandar|N|From Zur'ashar Kassameh.|
-C Down the Rootways|QID|86912|QO|1;2|M|36.73,49.64|Z|2413; Harandar|N|Run The Gulf of Memory, dont forget to loot the Fragment from the final boss.|
+C Down the Rootways|QID|86912|QO|1|M|36.73,49.64|Z|2413; Harandar|N|Enter The Gulf of Memory.|
+C Down the Rootways|QID|86912|QO|2|M|36.73,49.64|Z|2413; Harandar|N|Run The Gulf of Memory, dont forget to loot the Fragment from the final boss.|
 C Down the Rootways|QID|86912|QO|3|M|34.16,43.11|Z|2413; Harandar|N|After you leave the delve, go speak with Orweyna.|CHAT|
 T Down the Rootways|QID|86912|M|34.82,25.06|Z|2413; Harandar|N|To Hagar.|
 A A Hut in Har'mara|QID|86913|PRE|90095|M|34.83,25.10|Z|2413; Harandar|N|From Hagar.|
@@ -109,7 +110,7 @@ A The Hunter Awaits|QID|86836|PRE|86864|M|54.24,55.70|Z|2413; Harandar|N|From Ku
 ;The Legend of Aln'sharan - In Har'kuai
 T Har'kuai, Village of Rain|QID|93771|M|65.24,26.39|Z|2413; Harandar|N|To Kamari.|;picked up 2nd time to The Den line ~100 -- keep these next 3 chains together at Village of Rain
 A Tales of the Sky|QID|90467|M|67.74,27.49|Z|2413; Harandar|N|From Kuri.|RANK|2|
-A Ugh, Chores!|QID|90468|M|67.74,27.49|Z|2413; Harandar|N|From Kuri.|
+A Ugh, Chores!|QID|90468|M|67.74,27.49|Z|2413; Harandar|N|From Kuri.|RANK|2|
 C Ugh, Chores!|QID|90468|M|69.99,32.10|Z|2413; Harandar|N|Kill Saptors to loot the Intact Saptor Fronds.|S|
 C Tales of the Sky|QID|90467|M|70.20,32.01|Z|2413; Harandar|H|N|Pick up the glittering Skyshards.|
 C Ugh, Chores!|QID|90468|M|69.99,32.10|Z|2413; Harandar|N|Keep killing Saptor's until you have enough fronds.|US|
@@ -241,7 +242,7 @@ C A Hunter's Weapon|QID|92884|M|70.43,50.73|Z|2413; Harandar|QO|4|CHAT|N|Ka'dani
 T A Hunter's Weapon|QID|92884|M|70.43,50.73|Z|2413; Harandar|N|To Akazi.|
 A A Hunter's Prey|QID|92885|PRE|92884|M|70.43,50.73|Z|2413; Harandar|N|From Akazi.|
 C A Hunter's Prey|QID|92885|M|68.97,54.91|Z|2413; Harandar|QO|1|NC|N|Find Ketan outside of Har'athir.|
-K Radooni|ACTIVE|92885|M|68.88,54.72|Z|2413; Harandar|QO|2|N|Radooni slain.|T|Radooni|
+K Radooni|ACTIVE|92885|M|68.60,54.11|Z|2413; Harandar|QO|2|N|Radooni slain.|T|Radooni|
 T A Hunter's Prey|QID|92885|M|70.44,50.71|Z|2413; Harandar|N|To Akazi.|
 C Re-Hydra-ted|QID|92866|M|69.92,45.37|Z|2413; Harandar|QO|4|H|N|T'omm released.|
 C Re-Hydra-ted|QID|92866|M|68.96,42.10|Z|2413; Harandar|QO|2|H|N|Grumpy released.|
@@ -390,7 +391,7 @@ t The Blinding Vale: Lightbloom Roots|QID|93651|M|36.62,68.68|Z|2393;Silvermoon 
 A Looming Shadows|QID|91084|PRE|86898|M|36.58,68.57|Z|2393;Silvermoon City|N|From Elder Hagar.|
 T Looming Shadows|QID|91084|M|45.33,70.40|Z|2393;Silvermoon City|N|To Lor'themar Theron.|
 
-P The Den|ACTIVE|93775|M|36.94,67.99|Z|2393; Silvermoon City|N|Take the portal back to Harandar if you want to finish up the sojourner achievement.|
+P The Den|AVAILABLE|90537|M|36.94,67.99|Z|2393; Silvermoon City|N|Take the portal back to Harandar if you want to finish up the sojourner achievement.|RANK|2|
 ;verified all the rest of the quests chain starters are available at this point - almost for sure there is room for efficiency in routing still -- it appears none of the quest chains requires the dungeon to have been run before they are available.
 
 ;Late Bloomers  - In Har'mara
@@ -420,8 +421,8 @@ T Gomphusta|QID|90602|M|49.68,23.34|Z|2413; Harandar|N|To Ney'leia.|
 
 ;Harandar's Kitchen  - In Har'mara
 A Fresh from the Garden|QID|91585|M|40.89,23.24|Z|2413; Harandar|N|From Yu'relen.|RANK|2|
-A Soil-Based Alternatives|QID|91586|PRE|91553|M|40.89,23.24|Z|2413; Harandar|N|From Yu'relen.|
-A Carcass Cuisine|QID|91587|PRE|91553|M|40.89,23.24|Z|2413; Harandar|N|From Yu'relen.|
+A Soil-Based Alternatives|QID|91586|PRE|90602|M|40.89,23.24|Z|2413; Harandar|N|From Yu'relen.|RANK|2|
+A Carcass Cuisine|QID|91587|PRE|90602|M|40.89,23.24|Z|2413; Harandar|N|From Yu'relen.|RANK|2|
 C Fresh from the Garden|QID|91585|M|40.84,23.19|Z|2413; Harandar|QO|3|H|N|Drink Yu'relen's Elixir.|
 C Fresh from the Garden|QID|91585|M|40.04,23.96|Z|2413; Harandar|QO|1;2|N|Kill and loot Frillfish and Drifters.|S|
 C Soil-Based Alternatives|QID|91586|M|40.38,25.38|Z|2413; Harandar|H|N|Click the mounds of Nutrient-Rich Soil.|S|
@@ -445,8 +446,7 @@ C Root Dash Delivery|QID|91589|M|36.58,26.82|Z|2413; Harandar|QO|3|H|N|Serve the
 T Root Dash Delivery|QID|91589|M|36.67,26.79|Z|2413; Harandar|N|To Yu'relen.|
 
 ;Cultivating Hope
-T Har'mara, Village of Balance|QID|93775|M|50.75,55.73|Z|2413; Harandar|N|To Hagar.|RANK|2|
-A The Former Rootwarden|QID|91872|PRE|86930|M|34.91,25.02|Z|2413; Harandar|N|From Hagar.|RANK|2|
+A The Former Rootwarden|QID|91872|PRE|86898&86890&86956|M|34.91,25.02|Z|2413; Harandar|N|From Hagar.|RANK|2|
 T The Former Rootwarden|QID|91872|M|42.54,34.07|Z|2413; Harandar|N|To Hagar.|
 A Buffer Zone|QID|91873|PRE|91872|M|42.54,34.07|Z|2413; Harandar|N|From Hagar.|
 C Buffer Zone|QID|91873|M|40.57,31.40|Z|2413; Harandar|N|Kill the hostile mobs around the island.|
@@ -479,9 +479,10 @@ T Feathered Fury|QID|91552|M|57.27,48.96|Z|2413; Harandar|N|To Nayeli.|
 A Haranir Never Say Die!|QID|91553|PRE|91552|M|57.27,48.96|Z|2413; Harandar|N|From Nayeli.|RANK|2|
 K Behemoth Petalwing|ACTIVE|91553|M|57.99,50.04|Z|2413; Harandar|QO|1|N|Kill the Behemoth Petalwing.|T|Behemoth Petalwing|
 T Haranir Never Say Die!|QID|91553|M|58.41,49.14|Z|2413; Harandar|N|To Shao'mal.|
+T Har'mara, Village of Balance|QID|93775|M|50.75,55.73|Z|2413; Harandar|N|To Hagar.|
 
 ;A Goblin in Harandar
-A Go Get Orweyna!|QID|90533|M|47.12,45.76|Z|2413; Harandar|N|From Monte Gazlowe.|RANK|2|
+A Go Get Orweyna!|QID|90533|PRE|86898&86890&86956|M|47.12,45.76|Z|2413; Harandar|N|From Monte Gazlowe.|RANK|2|
 C Go Get Orweyna!|QID|90533|M|54.17,55.24|Z|2413; Harandar|QO|1|CHAT|N|Tell Orwenya about Gazlowe's situation.|RANK|2|
 B Hand Crafted Plushie|ACTIVE|90533|M|53.89,55.17|Z|2413; Harandar|QO|2|L|241125|N|Acquire Handcrafted Plush from the nearby Toymaker.|;maybe pick up <My Brother's Alive> here
 C Go Get Orweyna!|QID|90533|M|47.14,45.84|Z|2413; Harandar|QO|3|H|U|241125|N|Offer Handcrafted Plush to Nahuut.|
@@ -536,7 +537,7 @@ T From This Point Forward|QID|90834|M|63.83,54.71|Z|2413; Harandar|N|To En'liahn
 
 ;Bloomtown
 T Har'alnor, Village of Twilight|QID|93776|M|31.44,64.97|Z|2413; Harandar|N|To Hannan.|;must wait till after finishing campaign
-A Light Disturbance|QID|92732|PRE|86898|M|31.41,64.91|Z|2413;Har'alnor Den|N|From Hannan.|RANK|2|
+A Light Disturbance|QID|92732|PRE|86898&86890&86956|M|31.41,64.91|Z|2413;Har'alnor Den|N|From Hannan.|RANK|2|
 T Light Disturbance|QID|92732|M|40.86,63.10|Z|2413; Harandar|N|To Luminescent Corpse.|
 A Light Stroll|QID|92736|PRE|92732|M|40.86,63.10|Z|2413; Harandar|N|From Luminescent Corpse.|
 C Light Stroll|QID|92736|M|40.84,63.96|Z|2413; Harandar|QO|1<1|I|N|Find First Clue.|
@@ -575,6 +576,7 @@ A Reticent Evil|QID|91381|PRE|91378&91379|M|44.12,66.42|Z|2413; Harandar|N|From 
 C Reticent Evil|QID|91381|M|45.71,66.81|Z|2413; Harandar|QO|1|H|N|Destroy Agericus Decanimatus.|
 C Reticent Evil|QID|91381|M|45.66,66.85|Z|2413; Harandar|QO|2|N|Slay Zombified Guardian.|
 T Reticent Evil|QID|91381|M|44.17,66.44|Z|2413; Harandar|N|To Ghikal.|
+
 T O.K. Bloomer|QID|92739|M|31.39,64.97|Z|2413; Harandar|N|To Hannan.|
 
 A Silvermoon Scouting Table|AVAILABLE|94871^86708^89402^91854^89193|PRE|94993|M|45.49,70.45|Z|2393; Silvermoon City|N| Click on the table to choose your next zone. The guide should switch automatically -  if it does not use the guide list to select.|
