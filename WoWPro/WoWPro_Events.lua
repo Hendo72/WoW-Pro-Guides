@@ -178,11 +178,15 @@ end
 
 -- Auto-Complete: Do we have a buff? --
 function WoWPro.AutoCompleteBuff(unit, ...)
-    return WoWPro.AutoComplete:AutoCompleteBuff(unit, ...)
+    if WoWPro.AutoComplete and WoWPro.AutoComplete.AutoCompleteBuff then
+        return WoWPro.AutoComplete:AutoCompleteBuff(unit, ...)
+    end
 end
 
 function WoWPro:AutoCompleteDeath(...)
-    return WoWPro.AutoComplete:AutoCompleteDeath(...)
+    if WoWPro.AutoComplete and WoWPro.AutoComplete.AutoCompleteDeath then
+        return WoWPro.AutoComplete:AutoCompleteDeath(...)
+    end
 end
 
 -- Update Item Tracking --
@@ -216,7 +220,9 @@ end
 
 -- Auto-Complete: Loot based --
 function WoWPro.AutoCompleteLoot()
-    return WoWPro.AutoComplete:AutoCompleteLoot()
+    if WoWPro.AutoComplete and WoWPro.AutoComplete.AutoCompleteLoot then
+        return WoWPro.AutoComplete:AutoCompleteLoot()
+    end
 end
 
 local LUNARFALL_MAPID
@@ -352,27 +358,37 @@ end
 
 -- Auto-Complete: Set hearth --
 function WoWPro:AutoCompleteSetHearth(...)
-    return WoWPro.AutoComplete:AutoCompleteSetHearth(...)
+    if WoWPro.AutoComplete and WoWPro.AutoComplete.AutoCompleteSetHearth then
+        return WoWPro.AutoComplete:AutoCompleteSetHearth(...)
+    end
 end
 
 -- Auto-Complete: Zone based --
 function WoWPro.AutoCompleteZone()
-    return WoWPro.AutoComplete:AutoCompleteZone()
+    if WoWPro.AutoComplete and WoWPro.AutoComplete.AutoCompleteZone then
+        return WoWPro.AutoComplete:AutoCompleteZone()
+    end
 end
 
 -- Auto-Complete: Criteria Change from RegisterBucketEvent(CRITERIA_UPDATE)
 function WoWPro.AutoCompleteCriteria()
-    return WoWPro.AutoComplete:AutoCompleteCriteria()
+    if WoWPro.AutoComplete and WoWPro.AutoComplete.AutoCompleteCriteria then
+        return WoWPro.AutoComplete:AutoCompleteCriteria()
+    end
 end
 
 -- Auto-Complete: Chest Loot, for the silly timeless isle chests
 function WoWPro.AutoCompleteChest()
-    return WoWPro.AutoComplete:AutoCompleteChest()
+    if WoWPro.AutoComplete and WoWPro.AutoComplete.AutoCompleteChest then
+        return WoWPro.AutoComplete:AutoCompleteChest()
+    end
 end
 
 -- Auto-Complete: Level based --
 function WoWPro:AutoCompleteLevel(...)
-    return WoWPro.AutoComplete:AutoCompleteLevel(...)
+    if WoWPro.AutoComplete and WoWPro.AutoComplete.AutoCompleteLevel then
+        return WoWPro.AutoComplete:AutoCompleteLevel(...)
+    end
 end
 
 WoWPro.InitLockdownEvents = {}
