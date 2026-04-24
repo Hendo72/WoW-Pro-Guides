@@ -12,7 +12,14 @@ WoWPro.AutoComplete.Version = WoWPro.Version
 
 function WoWPro.AutoComplete:OnEnable()
     WoWPro:dbp("|cff33ff33Enabled|r: AutoComplete Module")
+    self:InitializeEventHandlers()
+end
 
+function WoWPro.AutoComplete:OnDisable()
+    self.eventHandlers = nil
+end
+
+function WoWPro.AutoComplete:InitializeEventHandlers()
     self.eventHandlers = {
         UNIT_AURA = self.AutoCompleteBuff,
         ZONE_CHANGED = self.AutoCompleteZone,
@@ -26,8 +33,18 @@ function WoWPro.AutoComplete:OnEnable()
     }
 end
 
-function WoWPro.AutoComplete:OnDisable()
-    self.eventHandlers = nil
+function WoWPro.AutoComplete:RegisterEventHandlers()
+    -- Register autocomplete event handlers with the WoWPro event system.
+    if not self.eventHandlers then
+        self:InitializeEventHandlers()
+    end
+
+    for event, _ in pairs(self.eventHandlers) do
+        local ed = event
+        WoWPro.RegisterEventHandler(ed, function(event, ...)
+            return self:OnEvent(event, ...)
+        end)
+    end
 end
 
 function WoWPro.AutoComplete:OnEvent(event, ...)
