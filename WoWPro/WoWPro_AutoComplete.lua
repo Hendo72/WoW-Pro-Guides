@@ -10,6 +10,36 @@ WoWPro.AutoComplete = WoWPro:NewModule("AutoComplete")
 WoWPro:Embed(WoWPro.AutoComplete)
 WoWPro.AutoComplete.Version = WoWPro.Version
 
+function WoWPro.AutoComplete:OnEnable()
+    WoWPro:dbp("|cff33ff33Enabled|r: AutoComplete Module")
+    self:RegisterEventHandlers()
+end
+
+function WoWPro.AutoComplete:OnDisable()
+    if self.Events then
+        WoWPro:UnregisterEvents(self.Events)
+    end
+end
+
+function WoWPro.AutoComplete:RegisterEventHandlers()
+    self.Events = {
+        "UNIT_AURA",
+        "ZONE_CHANGED",
+        "ZONE_CHANGED_INDOORS",
+        "ZONE_CHANGED_NEW_AREA",
+        "CHAT_MSG_SYSTEM",
+        "QUEST_LOG_UPDATE",
+        "QUEST_TURNED_IN",
+        "QUEST_ACCEPTED",
+        "UI_INFO_MESSAGE",
+        "PLAYER_DEAD",
+        "PLAYER_UNGHOST",
+        "TAXIMAP_OPENED",
+        "PLAYER_CONTROL_LOST",
+    }
+    WoWPro:RegisterEvents(self.Events)
+end
+
 -- Autocomplete implementation methods are defined below.
 
 function WoWPro.AutoComplete:AutoCompleteGetFP(...)
