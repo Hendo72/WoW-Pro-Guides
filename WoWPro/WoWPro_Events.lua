@@ -111,7 +111,10 @@ end
 
 -- Auto-Complete: Get flight point --
 function WoWPro:AutoCompleteGetFP(...)
-    return WoWPro.AutoComplete:AutoCompleteGetFP(...)
+    local ac = WoWPro.AutoComplete
+    if ac and ac.AutoCompleteGetFP then
+        return ac:AutoCompleteGetFP(...)
+    end
 end
 
 function WoWPro:CheckAnimaPowers()
@@ -178,14 +181,16 @@ end
 
 -- Auto-Complete: Do we have a buff? --
 function WoWPro.AutoCompleteBuff(unit, ...)
-    if WoWPro.AutoComplete and WoWPro.AutoComplete.AutoCompleteBuff then
-        return WoWPro.AutoComplete:AutoCompleteBuff(unit, ...)
+    local ac = WoWPro.AutoComplete
+    if ac and ac.AutoCompleteBuff then
+        return ac:AutoCompleteBuff(unit, ...)
     end
 end
 
 function WoWPro:AutoCompleteDeath(...)
-    if WoWPro.AutoComplete and WoWPro.AutoComplete.AutoCompleteDeath then
-        return WoWPro.AutoComplete:AutoCompleteDeath(...)
+    local ac = WoWPro.AutoComplete
+    if ac and ac.AutoCompleteDeath then
+        return ac:AutoCompleteDeath(...)
     end
 end
 
@@ -220,8 +225,9 @@ end
 
 -- Auto-Complete: Loot based --
 function WoWPro.AutoCompleteLoot()
-    if WoWPro.AutoComplete and WoWPro.AutoComplete.AutoCompleteLoot then
-        return WoWPro.AutoComplete:AutoCompleteLoot()
+    local ac = WoWPro.AutoComplete
+    if ac and ac.AutoCompleteLoot then
+        return ac:AutoCompleteLoot()
     end
 end
 
