@@ -111,23 +111,7 @@ end
 
 -- Auto-Complete: Get flight point --
 function WoWPro:AutoCompleteGetFP(...)
-    local _event, _idx, msg = ...
-    -- ERR_NEWTAXIPATH = "New flight path discovered!";
-    WoWPro:dbp("AutoCompleteGetFP(%s,%s,%s): Start.", tostring(_event), tostring(_idx), msg)
-    if msg == _G.ERR_NEWTAXIPATH then
-         for i = 1,15 do
-             local index = WoWPro.rows[i].index
-             msg = ("AutoCompleteGetFP(%s): Step %s/%d [%s]?"):format(msg, tostring(WoWPro.action[index]), index, tostring(WoWPro.step[index]))
-             WoWPro:dbp(msg)
-             if WoWPro.rows[i]:IsVisible() and WoWPro.action[index] == "f" then
-                if not WoWProCharDB.Guide[WoWProDB.char.currentguide].completion[index] then
-                    WoWPro.CompleteStep(index, "AutoCompleteGetFP("..msg..")")
-                    return
-                end
-             end
-        end
-        WoWPro:print("Flightpoint discovered, but guide does not have an 'f' step active.")
-    end
+    return WoWPro.AutoComplete:AutoCompleteGetFP(...)
 end
 
 function WoWPro:CheckAnimaPowers()
@@ -194,24 +178,11 @@ end
 
 -- Auto-Complete: Do we have a buff? --
 function WoWPro.AutoCompleteBuff(unit, ...)
-    if unit ~= "player" then return end
-    for i = 1,15 do
-        local index = WoWPro.rows[i].index
-        if WoWPro.buff and WoWPro.buff[index] and  WoWPro:CheckPlayerForBuffs(WoWPro.buff[index]) then
-            -- Log only the usefull ones!
-            WoWPro:LogEvent("UNIT_AURA", unit, ...)
-            WoWPro.CompleteStep(index, "AutoCompleteBuff")
-        end
-    end
+    return WoWPro.AutoComplete:AutoCompleteBuff(unit, ...)
 end
 
 function WoWPro:AutoCompleteDeath(...)
-    --
-    local index = WoWPro.rows[1].index
-    local dead = _G.UnitIsDeadOrGhost("player")
-    if (WoWPro.action[index] == "d" and dead) or (WoWPro.action[index] == "s" and not dead)then
-        WoWPro.CompleteStep(index, "AutoCompleteDeath")
-    end
+    return WoWPro.AutoComplete:AutoCompleteDeath(...)
 end
 
 -- Update Item Tracking --
@@ -245,34 +216,7 @@ end
 
 -- Auto-Complete: Loot based --
 function WoWPro.AutoCompleteLoot()
-    if not WoWPro.GuideLoaded then return end
-    for i = 1, 1 + WoWPro:GetActiveStickyCount() do
-        local index = WoWPro.rows[i].index
-        local lootItems = WoWPro.lootitem[index]
-        if lootItems then
-            if WoWProDB.profile.track then
-                local track = WoWPro.GetLootTrackingInfo(lootItems)
-                WoWPro.rows[i].track:SetText(track:trim())
-                WoWPro:dbp("AutoCompleteLoot: Update tracking text to %s", track)
-            end
-            local allComplete = true
-            for itemID, qty in pairs(lootItems) do
-                local itemCount = _G.WoWPro.C_Item_GetItemCount(itemID)
-                if qty > 0 then
-                    if itemCount < qty then allComplete = false; break end
-                elseif qty < 0 then
-                    if itemCount >= -qty then allComplete = false; break end
-                end
-            end
-            if allComplete and not WoWProCharDB.Guide[WoWProDB.char.currentguide].completion[index] then
-                WoWPro:dbp("AutoCompleteLoot: Time to complete step.")
-                WoWPro.CompleteStep(index, "AutoCompleteLoot")
-            else
-                WoWPro:dbp("AutoCompleteLoot: Not enough yet!")
-            end
-        end
-    end
-    WoWPro:UpdateGuide("WoWPro.AutoCompleteLoot")
+    return WoWPro.AutoComplete:AutoCompleteLoot()
 end
 
 local LUNARFALL_MAPID
@@ -408,89 +352,27 @@ end
 
 -- Auto-Complete: Set hearth --
 function WoWPro:AutoCompleteSetHearth(...)
-    local msg = ...
-    if not ( _G.issecretvalue and _G.issecretvalue(msg) ) then
-        local _, _, loc = msg:find(L["(.*) is now your home."])
-        if loc then
-            WoWProCharDB.Guide.hearth = loc
-            for i = 1,15 do
-                local index = WoWPro.rows[i].index
-                if WoWPro.action[index] == "h" and WoWPro.step[index] == loc
-                and not WoWProCharDB.Guide[WoWProDB.char.currentguide].completion[index] then
-                    WoWPro.CompleteStep(index, "AutoCompleteSetHearth")
-                end
-            end
-        end
-    end
+    return WoWPro.AutoComplete:AutoCompleteSetHearth(...)
 end
 
 -- Auto-Complete: Zone based --
 function WoWPro.AutoCompleteZone()
-    local currentindex = WoWPro.rows[1+WoWPro:GetActiveStickyCount()].index
-    local action = WoWPro.action[currentindex] or "?"
-    local step = WoWPro.step[currentindex] or "?"
-    local targetzone = WoWPro.targetzone[currentindex] or "!"
-    local zonetext, subzonetext = _G.GetZoneText(), _G.GetSubZoneText():trim()
-    WoWPro:dbp("AutoCompleteZone: [%s] or [%s] .vs. %s [%s]/[%s]", zonetext, subzonetext, action, step, targetzone)
-    if action == "F" or action == "H" or action == "b" or action == "P" or action == "R" then
-        if not WoWProCharDB.Guide[WoWProDB.char.currentguide].completion[currentindex] then
-            if (step == zonetext) or (step == subzonetext) then
-                WoWPro.CompleteStep(currentindex,"AutoCompleteZone:"..step)
-                return true
-            end
-            if (targetzone == zonetext) or (targetzone == subzonetext) then
-                WoWPro.CompleteStep(currentindex,"AutoCompleteZone:"..targetzone)
-                return true
-            end
-            local _, _, mapId = WoWPro:GetPlayerZonePosition()
-            if (tonumber(targetzone) and tonumber(targetzone) == mapId) then
-                WoWPro.CompleteStep(currentindex,"AutoCompleteZone:"..targetzone)
-                return true
-            end
-        end
-    end
-    return false
+    return WoWPro.AutoComplete:AutoCompleteZone()
 end
 
 -- Auto-Complete: Criteria Change from RegisterBucketEvent(CRITERIA_UPDATE)
 function WoWPro.AutoCompleteCriteria()
-    if not WoWProDB.char.currentguide then return end
-
-    local qidx = WoWPro.rows[WoWPro:GetActiveStickyCount()+1].index
-    if WoWPro.QID[qidx] and WoWPro:IsQuestFlaggedCompleted(WoWPro.QID[qidx],true) then
-        WoWPro.CompleteStep(qidx,"AutoCompleteCriteria-Quest")
-    else
-        WoWPro:UpdateGuide("WoWPro.AutoCompleteCriteria?")
-    end
+    return WoWPro.AutoComplete:AutoCompleteCriteria()
 end
 
 -- Auto-Complete: Chest Loot, for the silly timeless isle chests
 function WoWPro.AutoCompleteChest()
-    if not WoWProDB.char.currentguide then return end
-
-    local zone = WoWPro.GetZoneText()
-    if zone == "Timeless Isle" then
-        local qidx = WoWPro.rows[WoWPro:GetActiveStickyCount()+1].index
-        if WoWPro.QID[qidx] and WoWPro:IsQuestFlaggedCompleted(WoWPro.QID[qidx],true) then
-            WoWPro.CompleteStep(qidx,"AutoCompleteChest")
-        end
-    end
+    return WoWPro.AutoComplete:AutoCompleteChest()
 end
 
 -- Auto-Complete: Level based --
 function WoWPro:AutoCompleteLevel(...)
-    local newlevel = ... or _G.UnitLevel("player")
-    if WoWProCharDB.Guide then
-        local GID = WoWProDB.char.currentguide
-        if not WoWProCharDB.Guide[GID] then return end
-        for i=1,WoWPro.stepcount do
-            if not WoWProCharDB.Guide[GID].completion[i]
-                and WoWPro.level[i]
-                and tonumber(WoWPro.level[i]) <= newlevel then
-                    WoWPro.CompleteStep(i,"AutoCompleteLevel")
-            end
-        end
-    end
+    return WoWPro.AutoComplete:AutoCompleteLevel(...)
 end
 
 WoWPro.InitLockdownEvents = {}
