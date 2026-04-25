@@ -9,7 +9,8 @@ f The Exodar|M|54.22,36.55|Z|1947; The Exodar|N|At Stephanos.|R|Human, Gnome, Dw
 A You Survived!|QID|9279|LEAD|9280|M|82.97,43.88|Z|1943; Azuremyst Isle|N|From Megelon.|R|Draenei|
 T You Survived!|QID|9279|M|80.42,45.89|Z|1943; Azuremyst Isle|N|To Proenitus.|
 A Replenishing the Healing Crystals|QID|9280^9369|M|80.42,45.89|Z|1943; Azuremyst Isle|N|From Proenitus.| ;Non-Draenei
-= Power Word: Fortitude|ACTIVE|9280|N|[color=FF0000]NOTE: [/color]As soon as you have 10 copper (or can earn from a vendor), go to Zalduun inside the building and learn Power Word: Fortitude.|SPELL|Power Word: Fortitude;1243|C|Priest|
+= Power Word: Fortitude|ACTIVE|9280^9369|N|[color=FF0000]NOTE: [/color]As soon as you have 10 copper (or can earn it from a vendor), go see Zalduun inside the building and learn Power Word: Fortitude.|SPELL|Power Word: Fortitude;1243|C|Priest|S|
+= Arcane Intellect|ACTIVE|9280^9369|N|[color=FF0000]NOTE: [/color]As soon as you have 10 copper (or can earn it from a vendor), go see Valaatu inside the building and learn Arcane Intellect.|SPELL|Arcane Intellect;1459|C|Mage|S|
 C Replenishing the Healing Crystals|QID|9280^9369|M|77.43,42.72|Z|1943; Azuremyst Isle|L|22889 8|ITEM|22889|N|Vale Moths.|T|Vale Moth|
 T Replenishing the Healing Crystals|QID|9280^9369|M|80.42,45.89|Z|1943; Azuremyst Isle|N|To Proenitus.|
 A Urgent Delivery!|QID|9409|PRE|9280^9369|M|80.42,45.89|Z|1943; Azuremyst Isle|N|From Proenitus.| ;Non-Draenei
@@ -27,7 +28,8 @@ A Priest Training|QID|9291|M|80.12,48.72|Z|1943; Azuremyst Isle|N|From Zalduun.|
 T Priest Training|QID|9291|M|PLAYER|CC|N|To Zalduun.|
 A Shaman Training|QID|9421|M|79.28,49.11|Z|1943; Azuremyst Isle|N|To Firmanvaar.|C|Shaman|
 T Shaman Training|QID|9421|M|79.28,49.11|Z|1943; Azuremyst Isle|N|To Firmanvaar.|
-= Level 2 Training|AVAILABLE|10302|PRE|9287^9288^9289^9290^9291^9421|M|PLAYER|CC|N|Do your level 2 training.\n[color=FF0000]NOTE: [/color]Manually check this step off to continue.|
+= Level 2 Training|AVAILABLE|10302|PRE|9287^9288^9289^9291^9421|M|PLAYER|CC|N|Do your level 2 training.\n[color=FF0000]NOTE: [/color]Manually check this step off to continue.|C|-Mage|
+= Arcane Intellect|AVAILABLE|10302|PRE|9290|N|Learn Arcane Intellect from Valaatu.|SPELL|Arcane Intellect;1459|C|Mage|
 A Botanist Taerix|QID|9371|PRE|9409|LEAD|10302|M|80.42,45.89|Z|1943; Azuremyst Isle|N|From Proenitus.|R|Human,Night Elf,Draenei|
 T Botanist Taerix|QID|9371|M|79.13,46.54|Z|1943; Azuremyst Isle|N|To Botanist Taerix around the corner near the Training dummies.|
 A Volatile Mutations|QID|10302|PRE|9280^9369|M|79.13,46.54|Z|1943; Azuremyst Isle|N|From Botanist Taerix, back outside.| ;Non-Draenei
@@ -200,6 +202,12 @@ T Nightstalker Clean Up, Isle 2...|QID|9456|M|47.12,50.61|Z|1943; Azuremyst Isle
 A Coming of Age|QID|9623|M|47.12,50.61|Z|1943; Azuremyst Isle|N|From Exarch Menelaous.|LVL|10| ;Non-Draenei
 = Level 10 Training|ACTIVE|9515|M|PLAYER|CC|N|Do your level 10 training.\n[color=FF0000]NOTE: [/color]Manually check this step off to continue.|LVL|10|IZ|Azure Watch|
 ; Level 10 Class Quests
+; Priest
+;
+; Mage
+;
+; Paladin
+;
 ; Warrior
 A Strength of One|QID|9582|M|50.02,50.52|Z|1943; Azuremyst Isle|N|From Ruada.|C|Warrior|LVL|10|
 ;
@@ -220,7 +228,7 @@ C Taming the Beast|QID|9593|M|36.07,41.44|Z|1943; Azuremyst Isle|N|Use the Tamin
 T Taming the Beast|QID|9593|M|24.19,54.34|Z|1943; Azuremyst Isle|N|To Huntress Kella Nightbow.|
 A Beast Training|QID|9675|PRE|9593|M|24.19,54.34|Z|1943; Azuremyst Isle|N|From Huntress Kella Nightbow.|C|Hunter|
 T Beast Training|QID|9675|M|44.25,86.62|Z|1947; The Exodar|N|To Ganaar.|
-
+;
 r Sell junk and repair|ACTIVE|9515|M|49.69,52.75|Z|1943; Azuremyst Isle|N|At Kioni.|
 R Odesyus' Landing|ACTIVE|9515|M|46.11,72.16|Z|1943; Azuremyst Isle|N|Head to Odesyus' Landing... again...|
 T Warlord Sriss'tiz|QID|9515|M|47.13,70.27|Z|1943; Azuremyst Isle|N|To Priestess Kyleen Il'dinare.|
@@ -282,17 +290,11 @@ T The Kurken's Hide|QID|9571|M|44.77,23.90|Z|1943; Azuremyst Isle|N|To Moordo.| 
 ; Shaman lv 10 quest cont.
 T Call of Fire|QID|9465|M|59.52,17.95|Z|1943; Azuremyst Isle|N|To Temper in Emberglade.|
 A Call of Fire|QID|9467|PRE|9465|M|59.52,17.95|Z|1943; Azuremyst Isle|N|From Temper.|C|Shaman|
-C Call of Fire|QID|9467|M|11.25,82.56|Z|1943; Azuremyst Isle|N|Kill the fire elemental that spawns when you click the Scarecrow.|
-T Call of Fire|QID|9467|M|59.52,17.95|Z|1943; Azuremyst Isle|N|To Temper.\n[color=FF0000]NOTE: [/color]Use the Orb of Returning.|U|24335|
-A Call of Fire|QID|9468|PRE|9467|M|59.52,17.95|Z|1943; Azuremyst Isle|N|From Temper.|C|Shaman|
-T Call of Fire|QID|9468|M|59.52,17.95|Z|1943; Azuremyst Isle|N|To Temper.|
 ;
 L Level 12|ACTIVE|9623|AVAILABLE|9616|M|PLAYER|CC|N|Grind until you're within 3 bubbles of level 12.\n[color=FF0000]NOTE: [/color]Now might be a good time to look for the Blood Elf Bandit.|LVL|11;-1290|
 L Level 12|ACTIVE|9623|M|PLAYER|CC|N|Grind until you're within 1.5 bubbles of level 12.|LVL|11;-660|
-T Warn Your People|QID|9622|M|47.13,50.61|Z|1943; Azuremyst Isle|N|To Exarch Menelaous in Azure Watch. \n[color=FF0000]NOTE: [/color]Run (or hearth if available) back.|U|6948|
-; Shaman lv 10 quest cont.
-T Call of Fire|QID|9468|M|48.07,50.48|Z|1943; Azuremyst Isle|N|To Tuluun.|
-A Call of Fire|QID|9461|PRE|9468|M|48.07,50.48|Z|1943; Azuremyst Isle|N|From Tuluun.|C|Shaman|
+T Warn Your People|QID|9622|M|47.13,50.61|Z|1943; Azuremyst Isle|N|To Exarch Menelaous in Azure Watch. \n[color=FF0000]NOTE: [/color]Run (or hearth if available) back.|U|6948|C|-Shaman|
+T Warn Your People|QID|9622|M|47.13,50.61|Z|1943; Azuremyst Isle|N|To Exarch Menelaous in Azure Watch. \n[color=FF0000]NOTE: [/color]Save your hearth for now and run back.|C|Shaman|
 ; Warrior lv 10 quest cont.
 T Strength of One|QID|9582|M|50.01,50.52|Z|1943; Azuremyst Isle|N|To Ruada.|
 A Behomat|QID|10350|PRE|9582|M|50.01,50.52|Z|1943; Azuremyst Isle|N|From Ruada.|C|Warrior|
@@ -312,8 +314,18 @@ A Redemption|QID|9598|M|38.37,82.54|Z|1947; The Exodar|N|From Jol.|C|Paladin|
 T Redemption|QID|9598|M|38.37,82.54|Z|1947; The Exodar|N|To Jol.|
 A Redemption|QID|9600|M|38.37,82.54|Z|1947; The Exodar|N|From Jol.|C|Paladin|
 ;
+; Shaman lv 10 quest cont.
+R Silvermyst Isle|ACTIVE|9467|M|11.45,81.85|Z|1943; Azuremyst Isle|N|Make your way south to Silvermyst Isle.|
+U Fireproof Satchel|ACTIVE|9467|M|11.45,81.85|Z|1943; Azuremyst Isle|N|Open the Fireproof Satchel to get the items you need for this quest.|U|24336|O|
+C Call of Fire|QID|9467|M|11.44,82.27|Z|1943; Azuremyst Isle|L|23688|ITEM|23688|N|Hauteur.\n[color=FF0000]NOTE: [/color]Clear the area and click on the Scarecrow in Moonwing Den to summon him.\n \nIf it's burning, you have to wait.|
+T Call of Fire|QID|9467|M|59.52,17.95|Z|1943; Azuremyst Isle|N|To Temper.\n[color=FF0000]NOTE: [/color]Use the Orb of Returning to portal to him.|U|24335|
+A Call of Fire|QID|9468|PRE|9467|M|59.52,17.95|Z|1943; Azuremyst Isle|N|From Temper.|C|Shaman|
+H Azure Watch|ACTIVE|9468|M|48.34,49.14|Z|1943; Azuremyst Isle|N|Hearth back to Azure Watch.|
+T Call of Fire|QID|9468|M|48.07,50.48|Z|1943; Azuremyst Isle|N|To Tuluun in Azure Watch.|
+A Call of Fire|QID|9461|PRE|9468|M|48.07,50.48|Z|1943; Azuremyst Isle|N|From Tuluun.|C|Shaman|
+;
 R Azure Watch|ACTIVE|9612|M|48.34,49.14|Z|1943; Azuremyst Isle|N|Head back to Azure Watch.| ; In case they have 'A Hearty Thanks' and haven't turned it in yet. - Hendo72
-R Kessel's Crossing|ACTIVE|9625|M|63.50,88.14|Z|1950; Bloodmyst Isle|N|Follow the road north to Kessel's Crossing on Bloodmyst Isle.\n[color=FF0000]NOTE: [/color]It's a bit of a long run.|
+R Kessel's Crossing|ACTIVE|9625|M|63.50,88.14|Z|1950; Bloodmyst Isle|N|Follow the road north around Stillpine Hold to Kessel's Crossing on Bloodmyst Isle.\n[color=FF0000]NOTE: [/color]It's a bit of a long run, but taking the west road is a little more of a direct route.|
 T Elekks Are Serious Business|QID|9625|M|63.04,87.90|Z|1950; Bloodmyst Isle|N|To Vorkhan the Elekk Herder.|
 ]]
 end)

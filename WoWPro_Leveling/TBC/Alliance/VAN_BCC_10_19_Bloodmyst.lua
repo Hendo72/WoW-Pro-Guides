@@ -10,7 +10,24 @@ R Bloodmyst Isle|ACTIVE|9625^28559|M|65.25,94.00|Z|1950;Bloodmyst Isle|N|Follow 
 T Elekks Are Serious Business|QID|9625|M|63.03,87.90|Z|1950;Bloodmyst Isle|N|To Vorkhan the Elekk Herder.|
 T Hero's Call: Bloodmyst Isle!|QID|28559|M|63.03,87.90|Z|1950;Bloodmyst Isle|N|To Vorkhan the Elekk Herder.|
 A Alien Predators|QID|9634|M|63.03,87.90|Z|1950;Bloodmyst Isle|N|From Vorkhan the Elekk Herder.| ;Non-Draenei
-A A Favorite Treat|QID|9624|M|63.4,88.8|Z|1950;Bloodmyst Isle|N|{coords}From Aonar.| ;Non-Draenei
+A A Favorite Treat|QID|9624|M|63.43,88.78|Z|1950;Bloodmyst Isle|N|From Aonar.| ;Non-Draenei
+C Redemption|QID|9600|M|65.29,77.54|Z|1950;Bloodmyst Isle|N|Target the Young Furbolg Shaman and use the Symbol of Life.\n[color=FF0000]NOTE: [/color]Do this before you accept Kessel's quest.|T|Young Furbolg Shaman|U|6866|
+A The Kessel Run|QID|9663|M|62.99,87.52|Z|1950;Bloodmyst Isle|N|From Kessel (manually accept it).\n[color=FF0000]NOTE: [/color]You have 15 minutes to hand in this quest.\nThe mount you're given can't be resummoned if you lose it.\nIt can be done without the mount, but it'll take substantially longer.|NA| ;Non-Draenei
+C The Kessel Run|QID|9663|QO|1|M|46.68,20.63|Z|1943;Azuremyst Isle|N|Talk to High Chief Stillpine outside Stillpine Hold.|CHAT|
+C The Kessel Run|QID|9663|QO|2|M|47.13,50.61|Z|1943;Azuremyst Isle|N|Talk to Exarch Menelaous in Azure Watch.\n[color=FF0000]NOTE: [/color]You cannot resummon the mount if you get dismounted; avoid situations that could dismount you.|CHAT|
+C The Kessel Run|QID|9663|QO|3|M|47.04,70.22|Z|1943 ;Azuremyst Isle|N|Talk to Admiral Odyseus in Odesyus' Landing.\n[color=FF0000]NOTE: [/color]You cannot resummon the mount if you get dismounted; avoid situations that could dismount you.|CHAT|
+; Shaman lv 10 quest cont.
+R The Exodar|ACTIVE|9663&9461|M|24.51,48.72|Z|1950;Bloodmyst Isle|N|Head northeast to the backdoor into The Exodar.\n[color=FF0000]NOTE: [/color]It leads directly into the Vault of Lights and you won't lose your mount.|
+T Call of Fire|QID|9461|M|32.87,54.48|Z|1947; The Exodar|N|To Prophet Velen on the upper tier in the Vault of Lights.|
+A Call of Fire|QID|9555|PRE|9461|M|32.87,54.48|Z|1947; The Exodar|N|From Prophet Velen.|
+T Call of Fire|QID|9555|M|29.76,33.27|Z|1947; The Exodar|N|To Farseer Nobundo on the upper tier in the Crystal Hall.|
+;
+; Paladin lv 12 quest completion
+R The Exodar|ACTIVE|9663&9600|M|24.51,48.72|Z|1950;Bloodmyst Isle|N|Head northeast to the backdoor into The Exodar.\n[color=FF0000]NOTE: [/color]It leads directly into the Vault of Lights and you won't lose your mount.|
+T Redemption|QID|9600|M|38.39,82.52|Z|1947;The Exodar|N|To Jol in the Vault of Lights.|
+;
+T The Kessel Run|QID|9663|M|62.99,87.52|Z|1950;Bloodmyst Isle|N|To Kessel at Kessel's Crossing.\n[color=FF0000]NOTE: [/color]The timer doesn't stop until you turn it in.|
+C A Favorite Treat|QID|9624|M|66.62,83.48|Z|1950;Bloodmyst Isle|L|23927 10|N|Loot them from the ground near the tree groves surrounding the Bristlelimb camps all over the island.|S|
 ; ** Irradiated Crystal Shards = I think it's better to have it here altogether. - Hendo72
 N Irradiated Crystal Shards|AVAILABLE|9641&9666|N|Throughout Bloodmyst Isle, mobs may drop Irradiated Crystal Shards. Save these, as you'll need 10 for a future quest from Vindicator Boros that grants reputation with Exodar and an item to boost your Intellect/Attack Power/Stamina (depending on which item you choose).\n[color=FF0000]NOTE: [/color]Manually check this step off to continue.|
 A Irradiated Crystal Shards|QID|9641|M|55.43,55.27|Z|1950;Bloodmyst Isle|L|23984 10|N|From Vindicator Boros.|LVL|13|IZ|Blood Watch|O| ;Non-Draenei
@@ -18,14 +35,11 @@ t Irradiated Crystal Shards|QID|9641|M|55.43,55.27|Z|1950;Bloodmyst Isle|N|To Vi
 a More Irradiated Crystal Shards|QID|9642|PRE|9641|M|55.43,55.27|Z|1950;Bloodmyst Isle|L|23984 10|N|From Vindicator Boros.|LVL|13|IZ|Blood Watch|O| ;Non-Draenei
 t More Irradiated Crystal Shards|QID|9642|M|55.43,55.27|Z|1950;Bloodmyst Isle|N|To Vindicator Boros.|
 ;
-C Redemption|QID|9600|M|65.30,77.56|Z|1950;Bloodmyst Isle|N|.|U|6866|R|Draenei|C|Paladin|
-A The Kessel Run|QID|9663|M|62.99,87.52|Z|1950;Bloodmyst Isle|N|From Kessel.\n[color=FF0000]NOTE: [/color]You have 15 minutes to hand in this quest.\nThe mount you're given can't be resummoned if you lose it.\nIt can be done without the mount, but it'll take substantially longer.| ;Non-Draenei
-C The Kessel Run|QID|9663|QO|1|M|46.7,20.8|Z|Azuremyst Isle|N|{coords}Warn High Chief Stillpine outside Stillpine Hold.\n[color=FF0000]NOTE: [/color]Do what you can to avoid losing your mount.|
-C The Kessel Run|QID|9663|QO|2|M|47.2,50.6|Z|Azuremyst Isle|N|{coords}Warn Exarch Menelaous in Azure Watch.\n[color=FF0000]NOTE: [/color]Do what you can to avoid losing your mount.|
-C The Kessel Run|QID|9663|QO|3|M|47.0,70.2|Z|Azuremyst Isle|N|{coords}Warn Admiral Odyseus at Odesyus' Landing.\n[color=FF0000]NOTE: [/color]Do what you can to avoid losing your mount.|
-T Redemption|QID|9600|M|38.39,82.52|Z|1947;The Exodar|N|From Jol.|
-T The Kessel Run|QID|9663|M|62.99,87.52|Z|1950;Bloodmyst Isle|N|To Kessel at Kessel's Crossing.|
 A Declaration of Power|QID|9666|PRE|9663|M|62.99,87.52|Z|1950;Bloodmyst Isle|N|From Kessel.| ;Non-Draenei
+R Blood Watch|AVAILABLE|9629|M|55.84,59.80|Z|1950;Bloodmyst Isle|N|Follow the road north into Blood Watch.|
+h Blood Watch|AVAILABLE|9629|M|55.84,59.80|Z|1950;Bloodmyst Isle|N|Speak with Caregiver Topher Loaal to set your hearthstone to Blood Watch.|
+A Beds, Bandages, and Beyond|QID|9603|M|55.84,59.80|Z|1950;Bloodmyst Isle|N|From Caregiver Topher Loaal.|R|Draenei|
+A WANTED: Deathclaw|QID|9646|M|55.23,59.11|Z|1950;Bloodmyst Isle|N|From the Wanted Board outside the Inn.| ;Non-Draenei
 A Catch and Release|QID|9629|M|53.25,57.75|Z|1950;Bloodmyst Isle|N|From Morae in Blood Watch.| ;Non-Draenei
 r Repair/Restock|AVAILABLE|9693|M|53.32,56.67|Z|1950;Bloodmyst Isle|N|Repair/Sell Junk at Beega.\n[color=FF0000]NOTE: [/color]Manually check this step off to continue.|
 A Learning from the Crystals|QID|9581|M|52.58,53.21|Z|1950;Bloodmyst Isle|N|From Harbinger Mikolaas.| ;Non-Draenei
@@ -33,43 +47,39 @@ A What Argus Means to Me|QID|9693|M|52.67,53.21|Z|1950;Bloodmyst Isle|N|From Exa
 T What Argus Means to Me|QID|9693|M|55.43,55.27|Z|1950;Bloodmyst Isle|N|To Vindicator Boros.|
 A Blood Watch|QID|9694|PRE|9693|M|55.43,55.27|Z|1950;Bloodmyst Isle|N|From Vindicator Boros.| ;Non-Draenei
 f Blood Watch|AVAILABLE|9648|M|57.69,53.88|Z|1950;Bloodmyst Isle|N|Get the Blood Watch flight path from Laando.|
-A Maatparm Mushroom Menagerie|QID|9648|M|56.42,56.82|Z|1950;Bloodmyst Isle|N|From Maatparm.| ;Non-Draenei
-A WANTED: Deathclaw|QID|9646|M|55.23,59.11|Z|1950;Bloodmyst Isle|N|From the Wanted Board outside the Inn.| ;Non-Draenei
-h Blood Watch|AVAILABLE|9648|M|55.84,59.80|Z|1950;Bloodmyst Isle|N|Set hearthstone to Blood Watch with Caregiver Topher Loaal.|IZ|Blood Watch|
 ; This section is specifically for Draenei
-A Beds, Bandages, and Beyond|QID|9603|M|55.84,59.80|Z|1950;Bloodmyst Isle|N|From Caregiver Topher Loaal.|R|Draenei|
-T Beds, Bandages, and Beyond|QID|9603|M|57.69,53.88|Z|1950;Bloodmyst Isle|N|To Laando (the Flight Master).|R|Draenei|
+T Beds, Bandages, and Beyond|QID|9603|M|57.69,53.88|Z|1950;Bloodmyst Isle|N|To Laando (the Flight Master).|
 A On the Wings of a Hippogryph|QID|9604|PRE|9603|M|57.69,53.88|Z|1950;Bloodmyst Isle|N|From Laando.|R|Draenei|
 F The Exodar|ACTIVE|9604|M|57.69,53.88|Z|1950;Bloodmyst Isle|N|Fly to the Exodar.|R|Draenei|
-T On the Wings of a Hippogryph|QID|9604|M|57.03,50.14|Z|1947;The Exodar|N|To Nurguni inside The Exodar.|R|Draenei|
+T On the Wings of a Hippogryph|QID|9604|M|57.03,50.14|Z|1947;The Exodar|N|To Nurguni inside The Exodar.|
 A Hippogryph Master Stephanos|QID|9605|PRE|9604|M|57.03,50.14|Z|1947;The Exodar|N|From Nurguni.|R|Draenei|
-r Housekeeping|AVAILABLE|9606|N|While in The Exodar, take a minute to visit the bank to pick up or drop off items, the Auction House, or any of the profession trainers before you leave.\n[color=FF0000]NOTE: [/color]Manually check this step off when you are done.|
-T Hippogryph Master Stephanos|QID|9605|M|68.44,63.67|Z|1947;The Exodar|N|To Hippogryph Master Stephanos standing outside The Exodar.|R|Draenei|
+r Housekeeping|AVAILABLE|9606|N|While in The Exodar, take a minute to visit the bank to pick up or drop off items, the Auction House, or any of the profession trainers before you leave.\n[color=FF0000]NOTE: [/color]Manually check this step off when you are done.|R|Draenei|IZ|1947;The Exodar|
+T Hippogryph Master Stephanos|QID|9605|M|68.44,63.67|Z|1947;The Exodar|N|To Hippogryph Master Stephanos standing outside The Exodar.|
 A Return to Topher Loaal|QID|9606|PRE|9605|M|68.44,63.67|Z|1947;The Exodar|N|From Stephanos.|R|Draenei|
 F Blood Watch|ACTIVE|9606|M|54.33,36.73|Z|1947;The Exodar|N|Fly back to Blood Watch.|R|Draenei|
-T Return to Topher Loaal|QID|9606|M|55.84,59.80|Z|1950;Bloodmyst Isle|N|To Caregiver Topher Loaal.|R|Draenei|
 ;
+A Maatparm Mushroom Menagerie|QID|9648|M|56.42,56.82|Z|1950;Bloodmyst Isle|N|From Maatparm.| ;Non-Draenei
+T Return to Topher Loaal|QID|9606|M|55.84,59.80|Z|1950;Bloodmyst Isle|N|To Caregiver Topher Loaal.|
 C Maatparm Mushroom Menagerie|QID|9648|M|60.64,61.28|Z|1950;Bloodmyst Isle|L|24040|N|Loot a Blood Mushroom.\n[color=FF0000]NOTE: [/color]They are found near the base of the trees and have a glowing yellowish-red top.|
 C Maatparm Mushroom Menagerie|QID|9648|M|63.75,62.90|Z|1950;Bloodmyst Isle|L|24041|ITEM|24041|N|Stinkhorn Strikers in the Blood River.|T|Stinkhorn Striker|
 C Maatparm Mushroom Menagerie|QID|9648|M|67.91,66.47|Z|1950;Bloodmyst Isle|L|24042|N|Loot a Ruinous Polyspore.\n[color=FF0000]NOTE: [/color]They are black/grey/tan in color and found on the ground near the walls of Wrathscale Lair.|
 C Declaration of Power|QID|9666|QO|1|M|68.86,68.09|Z|1950;Bloodmyst Isle|N|Kill Lord Xiz in Wrathscale Lair.\n[color=FF0000]NOTE: [/color]Clear any potential unwanted guests before starting.|
-C Declaration of Power|QID|9666|QO|2|M|PLAYER|CC|N|Plant the banner at the corpse of Lord Xiz.|U|24084|
-C A Favorite Treat|QID|9624|M|66.62,83.48|Z|1950;Bloodmyst Isle|N|Loot them from the ground near the tree groves surrounding the Bristlelimb Enclave.|S|
-A Saving Princess Stillpine|QID|9667|PRE|9559|M|68.28,80.88|Z|1950;Bloodmyst Isle|N|From Princess Stillpine.| ;Non-Draenei
+C Declaration of Power|QID|9666|M|PLAYER|CC|N|Plant the banner at the corpse of Lord Xiz.|U|24084|NC| ; QO|2| is not used because the Broker doesn't recognize it as one. - Hendo72
+A Saving Princess Stillpine|QID|9667|PRE|9559|M|68.28,80.88|Z|1950;Bloodmyst Isle|N|From Princess Stillpine inside the locked cage in Bristlelimb Enclave.\n[color=FF0000]NOTE: [/color]You may have to clear the area first.| ;Non-Draenei
 C Saving Princess Stillpine|QID|9667|M|64.41,76.64|Z|1950;Bloodmyst Isle|L|24099|ITEM|24099|N|High Chief Bristlelimb in the small camp to the northwest of you.\n[color=FF0000]NOTE: [/color]Killing Furbolgs will cause High Chief Bristlelimb to spawn and yell, 'Face the wrath of Bristlelimb!'.|T|High Chief Bristlelimb|
-C Saving Princess Stillpine|QID|9667|M|68.28,80.88|Z|1950;Bloodmyst Isle|N|Open Princess Stillpine's cage.\n[color=FF0000]NOTE: [/color]You may have to clear your way in to make it easier.|
+C Saving Princess Stillpine|QID|9667|M|68.28,80.88|Z|1950;Bloodmyst Isle|N|Open Princess Stillpine's cage.\n[color=FF0000]NOTE: [/color]You may have to clear your way in to make it easier.|NC|
 C Alien Predators|QID|9634|M|58.30,86.28|Z|1950;Bloodmyst Isle|N|Kill Bloodmyst Hatchlings.|S|
-C Learning from the Crystals|QID|9581|M|58.22,83.38|Z|1950;Bloodmyst Isle|N|Use your Crystal Mining Pick on the Impact Site Crystal (the all red one).|U|23875|
+C Learning from the Crystals|QID|9581|M|58.22,83.38|Z|1950;Bloodmyst Isle|L|23878|N|Use your Crystal Mining Pick on the Impact Site Crystal (the dark, red one).|U|23875|
+C A Favorite Treat|QID|9624|M|59.40,88.39|Z|1950;Bloodmyst Isle|L|23927 10|N|Finish picking up the Sand Pears at the base of the trees.|US|
 C Alien Predators|QID|9634|M|58.30,86.28|Z|1950;Bloodmyst Isle|N|Kill Bloodmyst Hatchlings.|T|Bloodmyst Hatchling|US|
-C A Favorite Treat|QID|9624|M|59.40,88.39|Z|1950;Bloodmyst Isle|N|Finish picking up the Sand Pears at the base of the trees.|US|
 T A Favorite Treat|QID|9624|M|63.43,88.78|Z|1950;Bloodmyst Isle|N|To Aonar.|
 T Alien Predators|QID|9634|M|63.05,87.92|Z|1950;Bloodmyst Isle|N|To Vorkhan the Elekk Herder.|
 T Declaration of Power|QID|9666|M|62.99,87.54|Z|1950;Bloodmyst Isle|N|To Kessel.|
 A Report to Exarch Admetius|QID|9668|PRE|9666|M|62.99,87.54|Z|1950;Bloodmyst Isle|N|From Kessel.| ;Non-Draenei
 C Catch and Release|QID|9629|M|52.09,92.86|Z|1950;Bloodmyst Isle|N|Use the Murloc Tagger on Blacksilt Scouts.\n[color=FF0000]NOTE: [/color]They disappear after few moments.|U|23995|S|
 l Red Crystal Pendant|AVAILABLE|9576|M|35.08,94.66|Z|1950;Bloodmyst Isle|L|23870|ITEM|23870|N|Cruelfin.\n[color=FF0000]NOTE: [/color]He patrols along Blacksilt Shore, spawning on the eastern side and walking west.|T|Cruelfin|
-A Cruelfin's Necklace|QID|9576|M|PLAYER|CC|N|From the Red Crystal Pendant.\n[color=FF0000]NOTE: [/color]The hotkey will not work right now.|U|23870|O| ;Non-Draenei
-C Catch and Release|QID|9629|M|52.09,92.86|Z|1950;Bloodmyst Isle|N|Finish up using the Murloc Tagger on Blacksilt Scouts.\n[color=FF0000]NOTE: [/color]They disappear after few moments.|U|23995|T|Blacksilt Scout|US|
+A Cruelfin's Necklace|QID|9576|M|PLAYER|CC|N|From the Red Crystal Pendant.\n[color=FF0000]NOTE: [/color]The hotkey may not work right now, but you can manually click on the button.|U|23870|O| ;Non-Draenei
+C Catch and Release|QID|9629|M|52.09,92.86|Z|1950;Bloodmyst Isle|N|Finish up using the Murloc Tagger on Blacksilt Scouts.\n[color=FF0000]NOTE: [/color]They disappear after few moments.|T|Blacksilt Scout|U|23995|US|
 C Maatparm Mushroom Menagerie|QID|9648|M|42.80,79.62|Z|1950;Bloodmyst Isle|L|24043|N|Collect a Fel Cone Fungus from amongst the other mushrooms in the woods to the north of Blacksilt Shore.\n[color=FF0000]NOTE: [/color]They are very noticeable compared to the rest of the mushrooms.|
 H Blood Watch|ACTIVE|9629|M|55.84,59.80|Z|1950;Bloodmyst Isle|N|Hearth or run back to Blood Watch.|
 T Cruelfin's Necklace|QID|9576|M|53.25,57.75|Z|1950;Bloodmyst Isle|N|To Morae.|
@@ -83,22 +93,28 @@ T Saving Princess Stillpine|QID|9667|M|55.15,55.99|Z|1950;Bloodmyst Isle|N|To St
 T Maatparm Mushroom Menagerie|QID|9648|M|56.42,56.82|Z|1950;Bloodmyst Isle|N|To Maatparm.|
 T The Missing Survey Team|QID|9620|M|61.23,48.38|Z|1950;Bloodmyst Isle|N|To the corpse of the Draenei Cartographer.\n[color=FF0000]NOTE: [/color]You may want to clear the area first.|
 A Salvaging the Data|QID|9628|PRE|9620|M|61.23,48.38|Z|1950;Bloodmyst Isle|N|From the corpse of the Draenei Cartographer.| ;Non-Draenei
-C Salvaging the Data|QID|9628|M|61.23,48.38|Z|1950;Bloodmyst Isle|L|23932|ITEM|23932|N|Nagas around the Ruins of Loreth'Aran.|
+C Salvaging the Data|QID|9628|M|61.23,48.38|Z|1950;Bloodmyst Isle|L|23932|ITEM|23932|N|Nagas around the Ruins of Loreth'Aran.\n[color=FF0000]NOTE: [/color]This may take a while.|
 C Victims of Corruption|QID|9574|M|80.55,61.55|Z|1950;Bloodmyst Isle|L|23869 6|ITEM|23869|N|Corrupted Treants.|S|
 C Blood Watch|QID|9694|M|48.14,46.66|Z|1950;Bloodmyst Isle|N|Kill Sunhawk Spies north of Blood Watch (west side of the road).|
-T Salvaging the Data|QID|9628|M|52.58,53.21|Z|1950;Bloodmyst Isle|N|To Harbringer Mikolaas in Blood Watch.|
+L Level 14|ACTIVE|9628|M|PLAYER|CC|N|Grind until you're within 3.5 bubbles of level 14.|LVL|13;-2025|
+T Salvaging the Data|QID|9628|M|52.58,53.21|Z|1950;Bloodmyst Isle|N|To Harbringer Mikolaas in Blood Watch.| ;975 exp
 A The Second Sample|QID|9584|PRE|9628|M|52.58,53.21|Z|1950;Bloodmyst Isle|N|From Harbringer Mikolaas.| ;Non-Draenei
-T Blood Watch|QID|9694|M|55.43,55.27|Z|1950;Bloodmyst Isle|N|To Vindicator Boros.|
+T Blood Watch|QID|9694|M|55.43,55.27|Z|1950;Bloodmyst Isle|N|To Vindicator Boros.| ;1050 exp
 A Intercepting the Message|QID|9779|PRE|9694|M|55.43,55.27|Z|1950;Bloodmyst Isle|N|From Vindicator Boros.| ;Non-Draenei
 A Know Thine Enemy|QID|9567|M|55.08,58.00|Z|1950;Bloodmyst Isle|N|From Vindicator Aalesia.| ;Non-Draenei
+F The Exodar|ACTIVE|9567|M|57.69,53.88|Z|1950;Bloodmyst Isle|N|Fly to The Exodar to do your level 14 training.|LVL|14|IZ|Blood Watch|
+= Level 14 Training|ACTIVE|9567|M|PLAYER|CC|N|Do your level 14 training. Ask one of the guards if you don't know where your trainer is.\n[color=FF0000]NOTE: [/color]Manually check this step off to continue.|LVL|14|IZ|1947;The Exodar|
+r Housekeeping|ACTIVE|9567|N|Before leaving The Exodar, take a minute to visit the bank to pick up or drop off items, the Auction House, or any of the profession trainers.\n[color=FF0000]NOTE: [/color]Manually check this step off when you are done.|IZ|1947;The Exodar|
+F Blood Watch|ACTIVE|9567|M|68.51,63.61|Z|1947;The Exodar|N|Fly back to Bloodmyst Isle.|IZ|1947;The Exodar|
 R Nazzivian|ACTIVE|9567|AVAILABLE|9594|M|45.60,75.98|Z|1950;Bloodmyst Isle|N|Follow the road southwest to Nazzivian.|
-N Tzerak|AVAILABLE|9594|M|38.41,82.02|Z|1950;Bloodmyst Isle|N|There's a rune on the ground just inside the SOUTHERN entrance to Nazzivian surrounded by Summoners. This is where Tzerak spawns and begins a 6 minute patrol; 2 minutes to the Monument and after waiting 2 minutes, returning to the rune to despawn.\nTzerak kills all of the Summoners when he spawns. So, if they're not there, he's either and will return shortly, or he's dead and you need to wait for them to respawn.|
-l Tzerak's Armor Plate|AVAILABLE|9594|M|38.41,82.02|Z|1950;Bloodmyst Isle|L|23900|ITEM|23900|N|Tzerak.|IZ|Nazzivian|
+N Tzerak|AVAILABLE|9594|M|38.41,82.02|Z|1950;Bloodmyst Isle|N|There's a rune on the ground just inside the SOUTHERN entrance to Nazzivian surrounded by Summoners. This is where Tzerak spawns and begins a 6 minute patrol; 2 minutes to the Monument and after waiting 2 minutes, returning to the rune to despawn.\nTzerak kills all of the Summoners when he spawns. So, if they're not there, he's either pathing and will return shortly, or he's dead and you need to wait for them to respawn and start the cycle again.\n[color=FF0000]NOTE: [/color]Manually check this step off to continue.|
+l Tzerak's Armor Plate|AVAILABLE|9594|M|38.41,82.02|Z|1950;Bloodmyst Isle|L|23900|ITEM|23900|N|Tzerak.\n[color=FF0000]NOTE: [/color]Skip this step if you're not interested.|IZ|Nazzivian|
 A Signs of the Legion|QID|9594|M|PLAYER|CC|N|From Tzerak's Armor Plate.|U|23900|O| ;Non-Draenei
 C Signs of the Legion|QID|9594|M|65.54,77.43|Z|1950;Bloodmyst Isle|N|Kill Satyrs and Felsworns.|S|
 C Know Thine Enemy|QID|9567|M|36.49,71.36|Z|1950;Bloodmyst Isle|L|23859|N|Loot the Nazzivus Monument Glyph.|
 C Signs of the Legion|QID|9594|M|35.54,77.43|Z|1950;Bloodmyst Isle|N|Finish killing Satyrs and Felsworns.|US|
 C Victims of Corruption|QID|9574|M|60.55,61.55|Z|1950;Bloodmyst Isle|L|23869 6|ITEM|23869|N|Corrupted Treants.|US|
+
 H Blood Watch|QID|9567|M|55.84,59.80|Z|1950;Bloodmyst Isle|N|Depending on how close you are, hearth to Blood Watch or run back.|
 T Know Thine Enemy|QID|9567|M|55.08,58.00|Z|1950;Bloodmyst Isle|N|To Vindicator Aalesia.|
 T Signs of the Legion|QID|9594|M|55.08,58.00|Z|1950;Bloodmyst Isle|N|To Vindicator Aalesia, after a brief dialog.|
@@ -106,6 +122,7 @@ A Containing the Threat|QID|9569|PRE|9567|M|55.08,58.00|Z|1950;Bloodmyst Isle|N|
 T Victims of Corruption|QID|9574|M|53.24,57.73|Z|1950;Bloodmyst Isle|N|To Morae.|
 A Searching for Galaen|QID|9578|M|53.25,57.75|Z|1950;Bloodmyst Isle|N|From Morae.| ;Non-Draenei
 r Repair/Restock|ACTIVE|9584|PRE|9574|M|53.32,56.67|Z|1950;Bloodmyst Isle|N|Repair/Sell Junk at Beega.\n[color=FF0000]NOTE: [/color]Manually check this step off to continue.|IZ|Blood Watch|
+A Newfound Allies|QID|9632|M|54.69,54.01|Z|1950;Bloodmyst Isle|N|From Anchorite Paetheus.\n[color=FF0000]NOTE: [/color]Accept this breadcrumb quest if you intend to do Darkshore next. Otherwise, decline the quest and skip this step to move on.|LVL|15|NA| ;Non-Draenei
 C Intercepting the Message|QID|9779|M|45.75,47.62|Z|1950;Bloodmyst Isle|L|24399|ITEM|24399|N|any Sunhawk mob.|S|
 C The Second Sample|QID|9584|M|45.75,47.62|Z|1950;Bloodmyst Isle|N|Clear the area and use the Crystal Mining Pick on the Altered Crystal Sample.|U|23876|
 C Intercepting the Message|QID|9779|M|45.75,47.62|Z|1950;Bloodmyst Isle|L|24399|ITEM|24399|N|any Sunhawk mob.|US|
@@ -269,9 +286,8 @@ H Blood Watch|QID|9740|M|55.04,59.33|Z|1950;Bloodmyst Isle|N|Hearth or run back 
 T The Sun Gate|QID|9740|M|55.54,55.42|Z|1950;Bloodmyst Isle|N|To Vindicator Aesom.|
 T Ending Their World|QID|9759|M|52.70,53.24|Z|1950;Bloodmyst Isle|N|This is one of the best quest turn-ins in WoW. Get ready to enjoy a bit of a show. Turn the quest into Exarch Admetius.|
 A The Unwritten Prophecy|QID|9762|PRE|9759|M|54.02,55.47|Z|1950;Bloodmyst Isle|N|From Prophet Velen. If Prophet Velen despawns before you accept the quest, go to The Exodar to get the quest.|R|Draenei|
-A Newfound Allies|QID|9632|M|54.69,54.01|Z|1950;Bloodmyst Isle|N|From Anchorite Paetheus.| ;Non-Draenei
 F The Exodar|QID|9632|M|57.68,53.89|Z|1950;Bloodmyst Isle|N|Fly to The Exodar.|
-;A Hero's Call: Ashenvale!|QID|28492|LEAD|13594|M|55.31,47.38|Z|1947;The Exodar|N|From the Hero's Call Board. Will not show up if your level is too high.| ;Non-Draenei
+A Hero's Call: Ashenvale!|QID|28492|LEAD|13594|M|55.31,47.38|Z|1947;The Exodar|N|From the Hero's Call Board in The Exodar.\n[color=FF0000]NOTE: [/color]Accept this breadcrumb quest if you intend to do Darkshore next. Otherwise, skip this step to move on.| ;Non-Draenei
 A The Way to Auberdine|QID|9633|M|24.18,54.33|Z|Azuremyst Isle|N|From Huntress Kella Nightbow.| ;Non-Draenei
 b Darkshore|AVAILABLE|65|M|20.10,54.15|Z|Azuremyst Isle|N|Take the boat at the end of the docks to Auberdine|
 T The Way to Auberdine|QID|9633|M|37.40,40.15|Z|Darkshore|N|To Thundris Windweaver.|
