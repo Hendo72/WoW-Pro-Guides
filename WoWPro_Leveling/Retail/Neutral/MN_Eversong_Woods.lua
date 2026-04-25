@@ -61,7 +61,7 @@ T Crafting Orders: Alchemy|QID|93724|M|46.99,52.01|Z|2393; Silvermoon City|N|To 
 
 C Silvermoon Negotiations|QID|86733|M|45.63,67.58|Z|2393; Silvermoon City|QO|1|NC|N|Head to the Sanctum of Light.|
 T Silvermoon Negotiations|QID|86733|M|45.35,70.31|Z|2393; Silvermoon City|N|To Lor'themar Theron.|
-A Diplomacy|QID|86734|PRE|86733|M|45.35,70.31|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
+A Diplomacy|QID|86734|PRE|86733|ACTIVE|-94871|M|45.35,70.31|Z|2393; Silvermoon City|N|From Lor'themar Theron.| ;This isn't available if we take the scouting map option for Eversong.
 C Diplomacy|QID|86734|M|45.35,70.31|Z|2393; Silvermoon City|QO|1|NC|N|Listen to the discussion.|
 T Diplomacy|QID|86734|M|45.35,70.31|Z|2393; Silvermoon City|N|To Lor'themar Theron.|
 A Paved in Ash|QID|86735^86736|PRE|86734|M|45.35,70.31|Z|2393; Silvermoon City|N|From Lor'themar Theron.|
@@ -70,7 +70,7 @@ C Paved in Ash|QID|86735^86736|M|50.79,65.18|Z|2393; Silvermoon City|QO|4|CHAT|N
 f Sanctum of Light|ACTIVE|86735|M|50.99,71.09|Z|2393; Silvermoon City|N|From Skymaster Skyies.|
 C Paved in Ash|QID|86735^86736|M|51.06,71.07|Z|2393; Silvermoon City|QO|3|CHAT|N|Speak with the Skymaster of Silvermoon.|
 C Paved in Ash|QID|86735^86736|M|52.65,65.34|Z|2393; Silvermoon City|QO|2|CHAT|N|Talk to Magistrix Narinth to check on the portal network.|
-A Murder Row: Rumors Abound|QID|90835|PRE|86734|M|55.90,63.79|Z|2393; Silvermoon City|N|From Avara.|RANK|2|
+A Murder Row: Rumors Abound|QID|90835|M|55.90,63.79|Z|2393; Silvermoon City|N|From Avara.|RANK|2| ;We don't need Diplomacy to pick this up!
 C Paved in Ash|QID|86735|M|60.05,70.16|Z|2393; Silvermoon City|QO|6|CHAT|N|Check in with Guard Captain Goldblade.|
 C Paved in Ash|QID|86736|M|69.11,67.51|Z|2393; Silvermoon City|QO|6|CHAT|N|Check in with Magistrix Nizara.|
 C Paved in Ash|QID|86735^86736|M|56.29,70.35|Z|2393; Silvermoon City|QO|1|CHAT|N|Talk to the innkeeper at Wayfarer's Rest.|
@@ -131,7 +131,7 @@ C Dogged Disturbances|QID|92728|M|35.16,58.81|Z|2393; Silvermoon City|QO|1|N|Sla
 T Dogged Disturbances|QID|92728|M|35.42,57.94|Z|2393; Silvermoon City|N|To Magistrix Zaedana.|
 A He Went Thataway|QID|92868|PRE|92728|M|35.42,57.94|Z|2393; Silvermoon City|N|From Magistrix Zaedana.|
 T Lost Lil' Strider|QID|94012|M|41.69,76.36|Z|2393; Silvermoon City|N|To Hawkrancher Saman.|
-A Pet Wranglin'|QID|93965|PRE|94012|M|41.69,76.36|Z|2393; Silvermoon City|N|From Hawkrancher Saman.|
+A Pet Wranglin'|QID|93965|PRE|94012|M|41.69,76.36|Z|2393; Silvermoon City|N|From Hawkrancher Saman.|;T step is currently on line 623, it should probably be before you leave the city in this section.
 T He Went Thataway|QID|92868|M|44.75,60.36|Z|2393; Silvermoon City|N|To Drathen.|
 A Fishy Dis-pondencies|QID|92869|PRE|92868|M|44.75,60.36|Z|2393; Silvermoon City|N|From Drathen.|
 C Fishy Dis-pondencies|QID|92869|M|45.27,58.93|Z|2393; Silvermoon City|QO|1|H|N|Return Displaced Sunwhisker.|
@@ -232,7 +232,7 @@ A What We're Owed|QID|89208|PRE|89207|M|53.13,33.06|Z|2393; Silvermoon City|N|Fr
 C What We're Owed|QID|89208|M|37.44,74.74|Z|2393; Silvermoon City|QO|1|NC|N|Inform Dawnblaze the job was done.|
 T What We're Owed|QID|89208|M|37.44,74.74|Z|2393; Silvermoon City|N|To Magister Dawnblaze.|
 
-;Runestone Rumbles
+;Runestone Rumbles - maybe could have some other steps (other quests) mixed in as a lot of traveling particularly between QO 3&4
 A Calling in the Cavalry|QID|92396|M|50.13,34.22|Z|2395; Eversong Woods|N|From Terel Bloodfate.|RANK|2|
 C Calling in the Cavalry|QID|92396|QO|1|M|50.11,34.28|Z|2395; Eversong Woods|H|N|Pick up the crate of supplies.|
 C Calling in the Cavalry|QID|92396|QO|2|M|39.30,56.72|Z|2395; Eversong Woods|EAB|N|Use the [color=33fff9] Extra Action Button [/color]while in the circle.|
@@ -370,7 +370,7 @@ C Strider Stampede|QID|91347|M|50.47,48.61|Z|2395; Eversong Woods|QO|4|H|N|Colle
 T Strider Stampede|QID|91347|M|50.44,48.56|Z|2395; Eversong Woods|N|To Ranger Valsarin.|
 T To the Central Tower|QID|91462|M|48.62,57.65|Z|2395; Eversong Woods|N|To Ranger Asterae.|
 A See a Mana 'bout a Wyrm|QID|91348|PRE|91347&91462|M|48.62,57.65|Z|2395; Eversong Woods|N|From Ranger Asterae.|RANK|2|
-C See a Mana 'bout a Wyrm|QID|91348|M|48.96,56.01|Z|2395; Eversong Woods|QO|1|NC|N|Assist Agitated Wyrms.|
+C See a Mana 'bout a Wyrm|QID|91348|M|48.96,56.01|Z|2395; Eversong Woods|QO|1|N|Assist Agitated Wyrms.|
 C See a Mana 'bout a Wyrm|QID|91348|M|48.65,57.61|Z|2395; Eversong Woods|QO|2|NC|N|Return to Ranger Astarae.|
 C See a Mana 'bout a Wyrm|QID|91348|M|48.65,57.61|Z|2395; Eversong Woods|QO|3|H|N|Finish collecting the Mysterious Blooms.|
 T See a Mana 'bout a Wyrm|QID|91348|M|48.62,57.64|Z|2395; Eversong Woods|N|To Ranger Asterae.|
@@ -392,6 +392,9 @@ C Appeal to the Void|QID|86623|QO|1|M|48.75,72.61|Z|2395; Eversong Woods|H|N|Com
 C Appeal to the Void|QID|86623|QO|2|M|46.81,71.63|Z|2395; Eversong Woods|H|N|Complete Western ritual.|
 
 ;oh look, shiney!  moved section to here because this is when I noticed I was close to it... and the burbling paint pot treasure lured me over
+
+= Train Fishing|AVAILABLE|91271|M|48.64,76.10|Z|2395; Eversong Woods|N|From Melandra. You will need to learn fishing for the next couple quests.|SPELL|Midnight Fishing;471008|
+
 A A Fish!|QID|91271|M|48.72,76.72|Z|2395; Eversong Woods|N|From Valdekar Solaar.|RANK|2|
 C A Fish!|QID|91271|QO|1|M|49.79,75.19|Z|2395; Eversong Woods|N|Fish in the dirty water node.|
 C A Fish!|QID|91271|QO|2|M|48.75,76.67|Z|2395; Eversong Woods|N|Show the fish to Valdekar.|
@@ -401,8 +404,8 @@ C A Fish!|QID|91271|QO|5|M|48.74,75.35|Z|2395; Eversong Woods|N|Fish in the dirt
 C A Fish!|QID|91271|QO|6|M|48.75,76.67|Z|2395; Eversong Woods|N|Show the fish to Valdekar.|
 C A Fish!|QID|91271|QO|7|M|48.68,75.96|Z|2395; Eversong Woods|N|Fish in the dirty water node.|
 T A Fish!|QID|91271|M|48.75,76.71|Z|2395; Eversong Woods|N|To Valdekar Solaar.|
-A Pesky Pests|QID|91090|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|From Kaliel Solaar.|RANK|2|
-A Secret Ingredients|QID|91328|M|48.75,76.71|Z|2395; Eversong Woods|N|From Valdekar Solaar.|RANK|2|
+A Pesky Pests|QID|91090|PRE|91271|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|From Kaliel Solaar.|RANK|2|
+A Secret Ingredients|QID|91328|PRE|91271|M|48.75,76.71|Z|2395; Eversong Woods|N|From Valdekar Solaar.|RANK|2|
 C Secret Ingredients|QID|91328|M|48.75,76.71|Z|2395; Eversong Woods|N|Collect the berries from the bushes.|S|H|
 C Pesky Pests|QID|91090|QO|1|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|Scare off the butterflys.|S|
 C Pesky Pests|QID|91090|QO|2|M|48.75,76.71|Z|2395; Eversong Woods|NC|N|Kill the grubs.|
@@ -539,7 +542,7 @@ C Suncrown Survivors aided|QID|86639|QO|1|M|54.60,58.17|Z|2395; Eversong Woods|H
 C What's Left|QID|86639|QO|3|M|54.64,60.93|Z|2395; Eversong Woods|CHAT|N|Rescue Magistrix Silanna.|
 C What's Left|QID|86639|QO|2|M|53.53,59.31|Z|2395; Eversong Woods|CHAT|N|Rescue Apprentice Erilia.|
 C What's Left|QID|86639|QO|5|M|54.84,57.85|Z|2395; Eversong Woods|CHAT|N|Rescue Trainee Solanin.|
-C What's Left|QID|86639|QO|4|M|55.83,57.48|Z|2395; Eversong Woods|CHAT|N|Rescue Outrunner Alarion.|
+C What's Left|QID|86639|QO|4|M|55.83,57.48|Z|2395; Eversong Woods|CHAT|N|Rescue Outrunner Alarion, who is on the platform above you.|
 C Choking Tendrils|QID|86638|M|54.28,60.44|Z|2395; Eversong Woods|QO|1|N|Keeep killing the Lightbloom creatures.|US|
 C Suncrown Survivors aided|QID|86639|M|54.60,58.17|Z|2395; Eversong Woods|QO|1|NC|N|Keep assisting the Suncrown Survivors.|US|
 T Choking Tendrils|QID|86638|M|53.56,54.69|Z|2395; Eversong Woods|N|To Arator.|
@@ -581,9 +584,9 @@ C Facing the Sun|QID|87399|M|50.98,76.61|Z|2395; Eversong Woods|N|Slay Encroachi
 T Facing the Sun|QID|87399|M|50.57,78.14|Z|2395; Eversong Woods|N|To Farstrider Sedina.|
 A Scattered in Sunbeams|QID|87400|PRE|87399|M|50.57,78.14|Z|2395; Eversong Woods|N|From Farstrider Sedi|RANK|2|
 A Gardener Mishap|QID|87401|M|50.51,78.13|Z|2395; Eversong Woods|N|From Harris Lightsbreath|RANK|2|
-C Scattered in Sunbeams|QID|87400|M|52.36,74.86;53.20,73.93;51.54,73.52|CN|Z|2395; Eversong Woods|N|Gather the researchers evidence.|S|
+C Scattered in Sunbeams|QID|87400|M|52.36,74.86;53.20,73.93;51.54,73.52|CN|Z|2395; Eversong Woods|N|Gather the researchers evidence.|S|H|
 C Gardener Mishap|QID|87401|M|52.43,75.84|Z|2395; Eversong Woods|N|Kill the robot and loot the humming core.|
-C Scattered in Sunbeams|QID|87400|M|52.36,74.86;53.20,73.93;51.54,73.52|CN|Z|2395; Eversong Woods|N|Gather the researchers evidence.|US|
+C Scattered in Sunbeams|QID|87400|M|52.36,74.86;53.20,73.93;51.54,73.52|CN|Z|2395; Eversong Woods|N|Gather the researchers evidence.|US|H|
 T Scattered in Sunbeams|QID|87400|M|50.57,78.14|Z|2395; Eversong Woods|N|To Farstrider Sedi.|
 T Gardener Mishap|QID|87401|M|50.51,78.13|Z|2395; Eversong Woods|N|To Harris Lightsbreath.|
 A The Light Provides|QID|87402|M|50.53,78.13|Z|2395; Eversong Woods|N|From Harris Lightsbreath.|RANK|2|
