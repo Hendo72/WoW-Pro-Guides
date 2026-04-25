@@ -10,34 +10,16 @@ WoWPro.AutoComplete = WoWPro:NewModule("AutoComplete")
 WoWPro:Embed(WoWPro.AutoComplete)
 WoWPro.AutoComplete.Version = WoWPro.Version
 
-function WoWPro.AutoComplete:OnEnable()
-    WoWPro:dbp("|cff33ff33Enabled|r: AutoComplete Module")
-    self:RegisterEventHandlers()
-end
-
-function WoWPro.AutoComplete:OnDisable()
-    if self.Events then
-        WoWPro:UnregisterEvents(self.Events)
+function WoWPro.AutoComplete:PLAYER_CONTROL_LOST_PUNTED(event, ...)
+    local qidx = WoWPro.rows[WoWPro:GetActiveStickyCount()+1].index
+    if (WoWPro.action[qidx] == "F" or WoWPro.action[qidx] == "b") then
+        if _G.UnitOnTaxi("player") then
+            WoWPro:dbp("PLAYER_CONTROL_LOST_PUNTED: UnitOnTaxi! calling CompleteStep")
+            WoWPro.CompleteStep(qidx, "Took a taxi")
+        else
+            WoWPro:dbp("PLAYER_CONTROL_LOST_PUNTED: not on taxi!")
+        end
     end
-end
-
-function WoWPro.AutoComplete:RegisterEventHandlers()
-    self.Events = {
-        "UNIT_AURA",
-        "ZONE_CHANGED",
-        "ZONE_CHANGED_INDOORS",
-        "ZONE_CHANGED_NEW_AREA",
-        "CHAT_MSG_SYSTEM",
-        "QUEST_LOG_UPDATE",
-        "QUEST_TURNED_IN",
-        "QUEST_ACCEPTED",
-        "UI_INFO_MESSAGE",
-        "PLAYER_DEAD",
-        "PLAYER_UNGHOST",
-        "TAXIMAP_OPENED",
-        "PLAYER_CONTROL_LOST",
-    }
-    WoWPro:RegisterEvents(self.Events)
 end
 
 -- Autocomplete implementation methods are defined below.

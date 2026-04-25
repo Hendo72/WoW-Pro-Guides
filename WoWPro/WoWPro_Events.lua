@@ -414,18 +414,80 @@ function WoWPro.RegisterModernEventHandler(event, handler)
     WoWPro[event] = handler
 end
 
-
 WoWPro.RegisterEventHandler("UNIT_AURA", function(event, ...)
     if not WoWPro.MaybeCombatLockdown() then
         WoWPro.AutoCompleteBuff(...)
     end
-    end)
+end)
 
 WoWPro.RegisterModernEventHandler("UNIT_AURA", function(event, ...)
     if not WoWPro.MaybeCombatLockdown() then
         WoWPro.AutoCompleteBuff(...)
     end
+end)
+
+WoWPro.RegisterEventHandler("CHAT_MSG_SYSTEM", function(event, ...)
+    WoWPro:AutoCompleteSetHearth(...)
+end)
+
+WoWPro.RegisterEventHandler("UI_INFO_MESSAGE", function(event, ...)
+    WoWPro:AutoCompleteGetFP(event, ...)
+    WoWPro:UpdateGuide(event)
+end)
+
+WoWPro.RegisterEventHandler("PLAYER_DEAD", function(event, ...)
+    WoWPro:AutoCompleteDeath()
+end)
+
+WoWPro.RegisterEventHandler("PLAYER_UNGHOST", function(event, ...)
+    WoWPro:AutoCompleteDeath()
+end)
+
+WoWPro.RegisterEventHandler("QUEST_TURNED_IN", function(event, ...)
+    local qid, exp, money = ...
+    WoWPro:dbp("%s(qid=%s,exp=%s,money=%s)", event, tostring(qid), tostring(exp), tostring(money))
+    WoWPro.CompletingQuest = true
+    local qidx = WoWPro.rows[WoWPro:GetActiveStickyCount()+1].index
+    if WoWPro.action[qidx] == "T" and not WoWPro.nocache[qidx] then
+        WoWProCharDB.completedQIDs[qid] = true
+    end
+    WoWPro:AutoCompleteQuestUpdate(qid)
+end)
+
+WoWPro.RegisterEventHandler("QUEST_ACCEPTED", function(event, ...)
+    local qlidx, qid = ...
+    WoWPro:dbp("%s(qidx=%s,qid=%s)", event, tostring(qlidx), tostring(qid))
+    local qidx = WoWPro.rows[WoWPro:GetActiveStickyCount()+1].index
+    local questtitle = _G.GetTitleText()
+    if WoWProCharDB.AutoAccept == true and
+       WoWPro.action[qidx] == "A" and
+       questtitle == WoWPro.step[qidx] then
+        WoWPro:AutoCompleteQuestUpdate(nil)
+    end
+end)
+
+WoWPro.RegisterEventHandler("TAXIMAP_OPENED", function(event, ...)
+    WoWPro:RecordTaxiLocations(...)
+    local qidx = WoWPro.rows[WoWPro:GetActiveStickyCount()+1].index
+    if (WoWPro.action[qidx] == "F" or WoWPro.action[qidx] == "b") then
+        if WoWProCharDB.AutoSelect == true then
+            WoWPro.TakeTaxi(WoWPro.step[qidx])
+        else
+            WoWPro:print("TAXIMAP_OPENED: Not trying to travel as AutoSelect is not active.")
+        end
+    end
+    WoWPro:UpdateGuide(event)
+end)
+
+WoWPro.RegisterEventHandler("PLAYER_CONTROL_LOST", function(event, ...)
+    _G.C_Timer.After(WoWProDB.global.QuestEngineDelay, function()
+        if WoWPro.AutoComplete and WoWPro.AutoComplete.PLAYER_CONTROL_LOST_PUNTED then
+            WoWPro.AutoComplete:PLAYER_CONTROL_LOST_PUNTED(event)
+        end
     end)
+end)
+
+
 -- Naughty People!
 WoWPro.RegisterEventHandler("ADDON_ACTION_FORBIDDEN", function(event, ...)
     -- Its has been logged by LogEvent, so just return
@@ -936,29 +998,6 @@ WoWPro.RegisterEventHandler("QUEST_COMPLETE", function(event, ...)
     end
     end)
 
-WoWPro.RegisterEventHandler("QUEST_TURNED_IN", function(event, ...)
-    local qid, exp, money = ...
-    WoWPro:dbp("%s(qid=%d,exp=%d,money=%d)",event,qid, exp, money)
-    WoWPro.CompletingQuest = true
-    local qidx = WoWPro.rows[WoWPro:GetActiveStickyCount()+1].index
-    if WoWPro.action[qidx] == "T" and not WoWPro.nocache[qidx] then
-        WoWProCharDB.completedQIDs[qid] = true
-    end
-    WoWPro:AutoCompleteQuestUpdate(qid)
-end)
-
-WoWPro.RegisterEventHandler("QUEST_ACCEPTED", function(event, ...)
-    local qlidx, qid = ...
-    WoWPro:dbp("%s(qidx=%d,qid=%d)",event,qlidx,qid)
-    local qidx = WoWPro.rows[WoWPro:GetActiveStickyCount()+1].index
-    local questtitle = _G.GetTitleText();
-    if WoWProCharDB.AutoTurnin == true and
-       WoWPro.action[qidx] == "A" and
-       questtitle == WoWPro.step[qidx] then
-        WoWPro:AutoCompleteQuestUpdate(nil)
-    end
-end)
-
 -- scan skill lines when they change
 WoWPro.RegisterEventHandler("SKILL_LINES_CHANGED", function(event, ...)
     WoWPro.UpdateTradeSkills(...)
@@ -970,41 +1009,6 @@ WoWPro.RegisterEventHandler("NEW_RECIPE_LEARNED", function(event, ...)
 end)
 
 -- Auto-Completion --
-WoWPro.RegisterEventHandler("TAXIMAP_OPENED", function(event, ...)
-    WoWPro:RecordTaxiLocations(...)
-    local qidx = WoWPro.rows[WoWPro:GetActiveStickyCount()+1].index
-    if (WoWPro.action[qidx] == "F" or WoWPro.action[qidx] == "b") then
-        if WoWProCharDB.AutoSelect == true then
-            WoWPro.TakeTaxi(WoWPro.step[qidx])
-        else
-            WoWPro:print("TAXIMAP_OPENED: Not trying to travel as AutoSelect is not active.")
-        end
-    end
-    WoWPro:UpdateGuide(event)
-end)
-
-WoWPro.RegisterEventHandler("PLAYER_CONTROL_LOST", function(event, ...)
-    _G.C_Timer.After(WoWProDB.global.QuestEngineDelay, function()
-        WoWPro.PLAYER_CONTROL_LOST_PUNTED(event)
-    end)
-end)
-
-function WoWPro.PLAYER_CONTROL_LOST_PUNTED(event, ...)
-    local qidx = WoWPro.rows[WoWPro:GetActiveStickyCount()+1].index
-    if (WoWPro.action[qidx] == "F" or WoWPro.action[qidx] == "b") then
-        if _G.UnitOnTaxi("player") then
-            WoWPro:dbp("PLAYER_CONTROL_LOST_PUNTED: UnitOnTaxi! calling CompleteStep")
-            WoWPro.CompleteStep(qidx,"Took a taxi")
-        else
-            WoWPro:dbp("PLAYER_CONTROL_LOST_PUNTED: not on taxi!")
-        end
-    end
-end
-
-WoWPro.RegisterEventHandler("CHAT_MSG_SYSTEM", function(event, ...)
-    WoWPro:AutoCompleteSetHearth(...)
-end)
-
 if WoWPro.RETAIL then
     WoWPro.RegisterEventHandler("QUEST_LOG_CRITERIA_UPDATE", function(event) end)
 end
@@ -1036,21 +1040,8 @@ WoWPro.RegisterEventHandler("QUEST_LOG_UPDATE", function(event, ...)
     end
 end)
 
-WoWPro.RegisterEventHandler("UI_INFO_MESSAGE", function(event, ...)
-    WoWPro:AutoCompleteGetFP(event, ...)
-    WoWPro:UpdateGuide(event)
-end)
-
 WoWPro.RegisterEventHandler("PLAYER_TARGET_CHANGED", function(event, ...)
     WoWPro.NpcCheck(...)
-end)
-
-WoWPro.RegisterEventHandler("PLAYER_DEAD", function(event, ...)
-    WoWPro:AutoCompleteDeath()
-end)
-
-WoWPro.RegisterEventHandler("PLAYER_UNGHOST", function(event, ...)
-    WoWPro:AutoCompleteDeath()
 end)
 
 if WoWPro.RETAIL then
