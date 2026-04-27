@@ -367,6 +367,17 @@ function WoWPro:AutoCompleteSetHearth(...)
     if WoWPro.AutoComplete and WoWPro.AutoComplete.AutoCompleteSetHearth then
         return WoWPro.AutoComplete:AutoCompleteSetHearth(...)
     end
+    if _G.C_Timer and _G.C_Timer.After then
+        WoWPro:Print("AutoCompleteSetHearth: module not ready yet, retrying shortly")
+        local args = {...}
+        _G.C_Timer.After(0.25, function()
+            if WoWPro.AutoComplete and WoWPro.AutoComplete.AutoCompleteSetHearth then
+                WoWPro.AutoComplete:AutoCompleteSetHearth(unpack(args))
+            else
+                WoWPro:Print("AutoCompleteSetHearth: still no module after retry")
+            end
+        end)
+    end
 end
 
 -- Auto-Complete: Zone based --
@@ -427,7 +438,9 @@ WoWPro.RegisterModernEventHandler("UNIT_AURA", function(event, ...)
 end)
 
 WoWPro.RegisterEventHandler("HEARTHSTONE_BOUND", function(event, ...)
-    WoWPro:AutoCompleteSetHearth()
+    WoWPro:Print("HEARTHSTONE_BOUND event received: %s", tostring(event))
+    WoWPro:Print("HEARTHSTONE_BOUND: WoWPro.AutoComplete = %s", tostring(WoWPro.AutoComplete ~= nil))
+    WoWPro:AutoCompleteSetHearth(...)
 end)
 
 WoWPro.RegisterEventHandler("UI_INFO_MESSAGE", function(event, ...)

@@ -188,15 +188,29 @@ function WoWPro.AutoComplete:AutoCompleteQuestUpdate(questComplete)
     end
 end
 
-function WoWPro.AutoComplete:AutoCompleteSetHearth(...)
-    local loc = _G.GetBindLocation()
+function WoWPro.AutoComplete:AutoCompleteSetHearth(loc, ...)
+    loc = loc or _G.GetBindLocation()
+    WoWPro:Print("AutoCompleteSetHearth: resolved location => %s", tostring(loc))
     if not loc then return end
+    local activeIndex = WoWPro.rows[WoWPro:GetActiveStickyCount()+1].index
+    local activeAction = WoWPro.action[activeIndex] or "?"
+    local activeStep = WoWPro.step[activeIndex] or "?"
+    WoWPro:Print("AutoCompleteSetHearth: active row %d action=%s step=[%s]", activeIndex, activeAction, activeStep)
+    local matched = false
     for i = 1,15 do
         local index = WoWPro.rows[i].index
-        if WoWPro.action[index] == "h" and WoWPro.step[index] == loc
-        and not WoWProCharDB.Guide[WoWProDB.char.currentguide].completion[index] then
-            WoWPro.CompleteStep(index, "AutoCompleteSetHearth")
+        if WoWPro.action[index] == "h" then
+            local completed = WoWProCharDB.Guide[WoWProDB.char.currentguide].completion[index]
+            WoWPro:Print("AutoCompleteSetHearth: checking row %d action=h step=[%s] complete=%s", index, tostring(WoWPro.step[index]), tostring(completed))
+            if WoWPro.step[index] == loc and not completed then
+                matched = true
+                WoWPro:Print("AutoCompleteSetHearth: completing h step %d for [%s]", index, tostring(loc))
+                WoWPro.CompleteStep(index, "AutoCompleteSetHearth")
+            end
         end
+    end
+    if not matched then
+        WoWPro:Print("AutoCompleteSetHearth: no matching active h step for bind location [%s]", tostring(loc))
     end
 end
 
