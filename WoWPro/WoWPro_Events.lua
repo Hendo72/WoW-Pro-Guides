@@ -426,8 +426,8 @@ WoWPro.RegisterModernEventHandler("UNIT_AURA", function(event, ...)
     end
 end)
 
-WoWPro.RegisterEventHandler("CHAT_MSG_SYSTEM", function(event, ...)
-    WoWPro:AutoCompleteSetHearth(...)
+WoWPro.RegisterEventHandler("HEARTHSTONE_BOUND", function(event, ...)
+    WoWPro:AutoCompleteSetHearth()
 end)
 
 WoWPro.RegisterEventHandler("UI_INFO_MESSAGE", function(event, ...)

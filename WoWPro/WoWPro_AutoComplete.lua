@@ -189,18 +189,13 @@ function WoWPro.AutoComplete:AutoCompleteQuestUpdate(questComplete)
 end
 
 function WoWPro.AutoComplete:AutoCompleteSetHearth(...)
-    local msg = ...
-    if not ( _G.issecretvalue and _G.issecretvalue(msg) ) then
-        local _, _, loc = msg:find(L["(.*) is now your home."])
-        if loc then
-            WoWProCharDB.Guide.hearth = loc
-            for i = 1,15 do
-                local index = WoWPro.rows[i].index
-                if WoWPro.action[index] == "h" and WoWPro.step[index] == loc
-                and not WoWProCharDB.Guide[WoWProDB.char.currentguide].completion[index] then
-                    WoWPro.CompleteStep(index, "AutoCompleteSetHearth")
-                end
-            end
+    local loc = _G.GetBindLocation()
+    if not loc then return end
+    for i = 1,15 do
+        local index = WoWPro.rows[i].index
+        if WoWPro.action[index] == "h" and WoWPro.step[index] == loc
+        and not WoWProCharDB.Guide[WoWProDB.char.currentguide].completion[index] then
+            WoWPro.CompleteStep(index, "AutoCompleteSetHearth")
         end
     end
 end
@@ -212,6 +207,11 @@ function WoWPro.AutoComplete:AutoCompleteZone()
     local targetzone = WoWPro.targetzone[currentindex] or "!"
     local zonetext, subzonetext = _G.GetZoneText(), _G.GetSubZoneText():trim()
     WoWPro:dbp("AutoCompleteZone: [%s] or [%s] .vs. %s [%s]/[%s]", zonetext, subzonetext, action, step, targetzone)
+    local hearthLocation = _G.GetBindLocation()
+    if action == "h" and hearthLocation and hearthLocation == step then
+        WoWPro.CompleteStep(currentindex, "Hearthstone already set")
+        return true
+    end
     if action == "F" or action == "H" or action == "b" or action == "P" or action == "R" then
         if not WoWProCharDB.Guide[WoWProDB.char.currentguide].completion[currentindex] then
             if (step == zonetext) or (step == subzonetext) then
