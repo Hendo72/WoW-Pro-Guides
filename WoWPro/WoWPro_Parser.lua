@@ -1205,11 +1205,13 @@ end
 
 -- Guide Load --
 function WoWPro:LoadGuideSteps()
+    WoWPro:Trace("LoadGuideSteps:ENTER")
     WoWPro:dbp("Signaled for LoadGuideSteps for %s",tostring(WoWProDB.char.currentguide))
     WoWPro:SendMessage("WoWPro_LoadGuideSteps")
 end
 
 function WoWPro.LoadGuideStepsReal()
+    WoWPro:Trace("LoadGuideStepsReal:ENTER")
     local GID = WoWProDB.char.currentguide
     local AutoSwitch = WoWPro.Guides[GID].AutoSwitch
 
@@ -1290,12 +1292,14 @@ end
 
 -- Guide Setup --
 function WoWPro:GuideSetup()
+    WoWPro:Trace("GuideSetup:ENTER")
     WoWPro:dbp("Signaled for GuideSetup for %s",tostring(WoWProDB.char.currentguide))
     WoWPro:SendMessage("WoWPro_GuideSetup")
 end
 
 
 function WoWPro.SetupGuideReal()
+    WoWPro:Trace("SetupGuideReal:ENTER")
     local GID = WoWProDB.char.currentguide
     local guideType = WoWPro.Guides[GID].guidetype
     local guide_nocache = WoWPro.Guides[GID].nocache
@@ -1331,6 +1335,9 @@ function WoWPro.SetupGuideReal()
     end
 
     -- Scrollbar Settings --
+    if not WoWPro.Scrollbar then
+        WoWPro:CreateFrames()
+    end
     WoWPro.Scrollbar:SetMinMaxValues(1, max(1, WoWPro.stepcount - WoWPro.ShownRows))
 
     WoWPro.GuideLoaded = true
@@ -1338,9 +1345,13 @@ function WoWPro.SetupGuideReal()
     WoWPro:AutoCompleteQuestUpdate(nil)
     WoWPro:UpdateGuide("WoWPro.SetupGuideReal(1)")
     -- Location, Location, Location
-    local currentindex = WoWPro.rows[1+WoWPro:GetActiveStickyCount()].index
-    if currentindex and WoWPro.AutoCompleteZone(currentindex) then
-        WoWPro:UpdateGuide("WoWPro.SetupGuideReal(2)")
-    end
-    WoWPro:SendMessage("WoWPro_PostLoadGuide")
+    local sticky = WoWPro:GetActiveStickyCount()
+    local row = WoWPro.rows[1 + sticky]
+
+    if row and row.index then
+        local currentindex = row.index
+        if currentindex and WoWPro.AutoCompleteZone(currentindex) then
+            WoWPro:UpdateGuide("WoWPro.SetupGuideReal(2)")
+        end
+    end    WoWPro:SendMessage("WoWPro_PostLoadGuide")
 end
