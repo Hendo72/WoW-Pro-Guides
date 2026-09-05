@@ -63,7 +63,13 @@ local SetupTargetButton
 local ApplyRowSizing
 local ApplyMainFrameLayout
 
-function WoWPro:RowUpdate(offset)
+function WoWPro:RowUpdate(i)
+    WoWPro:Trace("RowUpdate:ENTER")
+    if not WoWPro.rows or not WoWPro.rows[1] then
+        print("RowUpdate: Rows not created yet")
+        return false
+    end
+
     WoWPro.RowDropdownMenu = {}
     local module = self
     local GID = WoWProDB.char.currentguide
@@ -165,7 +171,9 @@ function WoWPro:RowUpdate(offset)
         else
             if not InCombatLockdown() then
                 currentRow.jumpbutton:Hide()
-                currentRow.jumpbuttonSecured:Hide()
+                if currentRow.jumpbuttonSecured then
+                    currentRow.jumpbuttonSecured:Hide()
+                end
             end
         end
 
@@ -182,6 +190,23 @@ function WoWPro:RowUpdate(offset)
         -- Target button
         SetupTargetButton(currentRow, target, module)
 
+        if not row then return false end -- Ensure row exists before assigning elements
+        -- Assign elements to the row for layout purposes
+        row.Elements = {
+            Order = {
+                row.check,
+                row.iconTexture,
+                row.step,
+                row.note,
+                row.track,
+                row.itembutton,
+                row.targetbutton,
+                row.jumpbutton,
+                row.eabutton,
+            }
+        }
+
+        WoWPro:RowLayout(currentRow)
         -- Save row
         WoWPro.rows[i] = currentRow
     end
@@ -190,7 +215,10 @@ function WoWPro:RowUpdate(offset)
     HideRemainingRows(#stepList + 1)
     -- Update current index
     WoWPro.CurrentIndex = WoWPro.rows[1 + stickyBoundary].index
-
+    -- Force GuideFrame to expand
+    if WoWPro.GuideFrame:GetHeight() < 50 then
+        WoWPro.GuideFrame:SetHeight(#WoWPro.rows * 25)
+    end
     -- Layout updates
     ApplyRowSizing()
     ApplyMainFrameLayout()
@@ -1004,9 +1032,13 @@ SetupTargetButton = function(currentRow, target, module)
     -- Allow module override
     if WoWPro[module:GetName()].RowUpdateTarget then
         WoWPro[module:GetName()]:RowUpdateTarget(currentRow)
-        macroText = currentRow.targetbutton:GetAttribute("macrotext") or macroText
+        if currentRow.targetbutton then
+            macroText = currentRow.targetbutton:GetAttribute("macrotext") or macroText
+        end
     else
-        currentRow.targetbutton:SetAttribute("macrotext", macroText)
+        if currentRow.targetbutton then
+            currentRow.targetbutton:SetAttribute("macrotext", macroText)
+        end
     end
 
     WoWPro:dbp("Target text set to: %s", macroText)
@@ -1075,11 +1107,14 @@ end
 
 -- Helper: Apply main frame layout (anchors, scroll, sticky header)
 ApplyMainFrameLayout = function()
-    -- MainFrameLayout adjusts the entire guide frame layout.
     if not InCombatLockdown() then
+        WoWPro:GuideWindowLayout()
+        print("GF height after compute:", WoWPro.GuideFrame:GetHeight())
+
         WoWPro.MainFrameLayout()
     end
 end
+
 
 -- Helper: Update RowLimit based on visible steps
 ComputeRowLimit = function(stepList)
