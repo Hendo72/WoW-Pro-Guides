@@ -2106,6 +2106,8 @@ function WoWPro.UpdateGuideReal(From)
         end
     end
     runUpdate()
+    WoWPro:MainFrameStackOffset()
+    WoWPro:UpdateBars()
     WoWPro.UpdateGuideRealInProgress = false
 end
 
