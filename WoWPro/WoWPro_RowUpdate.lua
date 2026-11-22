@@ -495,7 +495,7 @@ end
 -- Helper: Bind keys to a visible item button (only once per RowUpdate pass)
 local SetupItemKeybind = function(i, currentRow)
     -- Only bind if button is visible and not in combat
-    if currentRow.itembutton:IsVisible() and not InCombatLockdown() then
+    if currentRow.itembutton:IsShown() and not InCombatLockdown() then
         WoWPro.BindKeysToButton(i)
         return true
     end
@@ -670,7 +670,7 @@ end
 -- Pet Switch Button Helpers
 -- Helper: Bind keys to pet-switch button (only once per RowUpdate pass)
 local SetupPetSwitchKeybind = function(i, currentRow)
-    if currentRow.itembutton:IsVisible() and not InCombatLockdown() then
+    if currentRow.itembutton:IsShown() and not InCombatLockdown() then
         local key1, key2 = GetBindingKey("CLICK WoWPro_FauxPetSwitchButton:LeftButton")
 
         -- Bind primary key
@@ -695,23 +695,21 @@ local function SetupPetSwitchSecuredOverlay(currentRow, switch, k)
         return
     end
 
-    if currentRow.itembutton:IsVisible() and currentRow.itembutton:IsShown() then
-        local secured = currentRow.itembuttonSecured
-        secured:Show()
+    local secured = currentRow.itembuttonSecured
+    secured:Show()
 
-        -- Secured attribute for pet switching
-        secured:SetAttribute("type1", nil)
-        secured:SetAttribute("item1", nil)
-        secured:SetAttribute("type", "SwitchPet")
-        secured.SwitchPet = function()
-            C_PetBattles.ChangePet(switch)
-            WoWPro.CompleteStep(k, "Clicked pet switch")
-        end
-
-        secured:ClearAllPoints()
-        secured:SetPoint("BOTTOMLEFT", currentRow.itembutton, "BOTTOMLEFT", 0, 0)
-        secured:SetFrameLevel(currentRow.itembutton:GetFrameLevel() + 1)
+    -- Secured attribute for pet switching
+    secured:SetAttribute("type1", nil)
+    secured:SetAttribute("item1", nil)
+    secured:SetAttribute("type", "SwitchPet")
+    secured.SwitchPet = function()
+        C_PetBattles.ChangePet(switch)
+        WoWPro.CompleteStep(k, "Clicked pet switch")
     end
+
+    secured:ClearAllPoints()
+    secured:SetPoint("BOTTOMLEFT", currentRow.itembutton, "BOTTOMLEFT", 0, 0)
+    secured:SetFrameLevel(currentRow.itembutton:GetFrameLevel() + 1)
 end
 
 -- Helper: Setup pet-switch button (WoWPro.switch[k] > 0)
@@ -843,7 +841,7 @@ end
 -- Jump Button Helpers
 -- Helper: Bind keys to jump button (only once per RowUpdate pass)
 local function SetupJumpKeybind(i, currentRow)
-    if currentRow.jumpbutton:IsVisible() and not InCombatLockdown() then
+    if currentRow.jumpbutton:IsShown() and not InCombatLockdown() then
         local key1, key2 = GetBindingKey("CLICK WoWPro_FauxJumpButton:LeftButton")
 
         -- Bind primary key
@@ -868,13 +866,11 @@ local function SetupJumpSecuredOverlay(currentRow)
         return
     end
 
-    if currentRow.jumpbutton:IsVisible() and currentRow.jumpbutton:IsShown() then
-        local secured = currentRow.jumpbuttonSecured
-        secured:Show()
-        secured:ClearAllPoints()
-        secured:SetPoint("BOTTOMLEFT", currentRow.jumpbutton, "BOTTOMLEFT", 0, 0)
-        secured:SetFrameLevel(currentRow.jumpbutton:GetFrameLevel() + 1)
-    end
+    local secured = currentRow.jumpbuttonSecured
+    secured:Show()
+    secured:ClearAllPoints()
+    secured:SetPoint("BOTTOMLEFT", currentRow.jumpbutton, "BOTTOMLEFT", 0, 0)
+    secured:SetFrameLevel(currentRow.jumpbutton:GetFrameLevel() + 1)
 end
 
 -- Helper: Setup jump button (guide jump)
@@ -915,7 +911,7 @@ end
 -- Extra Action Button (EA Button) Helpers
 -- Helper: Bind keys to EA button (only once per RowUpdate pass)
 local function SetupEAKeybind(i, currentRow)
-    if currentRow.eabutton:IsVisible() and not InCombatLockdown() then
+    if currentRow.eabutton:IsShown() and not InCombatLockdown() then
         local key1, key2 = GetBindingKey("CLICK WoWPro_FauxEAButton:LeftButton")
 
         -- Bind primary key
@@ -940,17 +936,15 @@ local function SetupEASecuredOverlay(currentRow, macroText)
         return
     end
 
-    if currentRow.eabutton:IsVisible() and currentRow.eabutton:IsShown() then
-        local secured = currentRow.eabuttonSecured
-        secured:Show()
+    local secured = currentRow.eabuttonSecured
+    secured:Show()
 
-        -- Mirror macrotext
-        secured:SetAttribute("macrotext", macroText)
+    -- Mirror macrotext
+    secured:SetAttribute("macrotext", macroText)
 
-        secured:ClearAllPoints()
-        secured:SetPoint("BOTTOMLEFT", currentRow.eabutton, "BOTTOMLEFT", 0, 0)
-        secured:SetFrameLevel(currentRow.eabutton:GetFrameLevel() + 1)
-    end
+    secured:ClearAllPoints()
+    secured:SetPoint("BOTTOMLEFT", currentRow.eabutton, "BOTTOMLEFT", 0, 0)
+    secured:SetFrameLevel(currentRow.eabutton:GetFrameLevel() + 1)
 end
 
 -- Helper: Track EA icon + visibility changes
@@ -1056,22 +1050,20 @@ local function SetupTargetSecuredOverlay(currentRow, macroText)
         return
     end
 
-    if currentRow.targetbutton:IsVisible() and currentRow.targetbutton:IsShown() then
-        local secured = currentRow.targetbuttonSecured
-        secured:Show()
-        secured:SetAttribute("macrotext", macroText)
+    local secured = currentRow.targetbuttonSecured
+    secured:Show()
+    secured:SetAttribute("macrotext", macroText)
 
-        -- Overlay secured button directly over visible icon
-        secured:ClearAllPoints()
-        secured:SetPoint("BOTTOMLEFT", currentRow.targetbutton, "BOTTOMLEFT", 0, 0)
-        secured:SetFrameStrata("HIGH")
-        secured:SetFrameLevel(currentRow.targetbutton:GetFrameLevel() + 1)
-    end
+    -- Overlay secured button directly over visible icon
+    secured:ClearAllPoints()
+    secured:SetPoint("BOTTOMLEFT", currentRow.targetbutton, "BOTTOMLEFT", 0, 0)
+    secured:SetFrameStrata("HIGH")
+    secured:SetFrameLevel(currentRow.targetbutton:GetFrameLevel() + 1)
 end
 
 -- Helper: Bind keys to target button (only once per RowUpdate pass)
 local function SetupTargetKeybind(i, currentRow)
-    if currentRow.targetbutton:IsVisible() then
+    if currentRow.targetbutton:IsShown() then
         local key1, key2 = GetBindingKey("CLICK WoWPro_FauxTargetButton:LeftButton")
 
         if key1 and not InCombatLockdown() then

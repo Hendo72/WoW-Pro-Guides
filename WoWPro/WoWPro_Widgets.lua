@@ -257,7 +257,7 @@ function WoWPro:CreateJumpButtonSecured(id)
     jumpbutton:SetHeight(24)
     jumpbutton:SetWidth(24)
     jumpbutton:Hide()
-    jumpbutton:RegisterForClicks("AnyDown", "AnyUp")
+    jumpbutton:RegisterForClicks("AnyUp")
     return jumpbutton
 end
 
