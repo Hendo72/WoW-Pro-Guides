@@ -313,7 +313,8 @@ end
 
 -- Rows outside the guide frame are still shown, and their flyout buttons (parented to MainFrame) would stay visible.
 -- Alpha and mouse are used instead of Show/Hide, since other code shows these buttons and secure overlays can't be hidden in combat.
-local FLYOUT_KEYS = { "itembutton", "targetbutton", "jumpbutton", "eabutton", "itembuttonSecured", "targetbuttonSecured", "eabuttonSecured" }
+local FLYOUT_VISUAL_KEYS = { "itembutton", "targetbutton", "jumpbutton", "eabutton" }
+local FLYOUT_SECURE_KEYS = { "itembuttonSecured", "targetbuttonSecured", "jumpbuttonSecured", "eabuttonSecured" }
 
 function WoWPro:UpdateFlyoutClip()
     local GF = WoWPro.GuideFrame
@@ -328,7 +329,14 @@ function WoWPro:UpdateFlyoutClip()
         local titleBottom = rowTop and titleHeight and rowTop - titleHeight
         local inView = row:IsShown() and titleBottom ~= nil
             and titleBottom >= contentBottom
-        for _, key in ipairs(FLYOUT_KEYS) do
+        for _, key in ipairs(FLYOUT_VISUAL_KEYS) do
+            local b = row[key]
+            if b then
+                b:SetAlpha(inView and 1 or 0)
+                b:EnableMouse(false)
+            end
+        end
+        for _, key in ipairs(FLYOUT_SECURE_KEYS) do
             local b = row[key]
             if b then
                 b:SetAlpha(inView and 1 or 0)
@@ -1820,6 +1828,7 @@ function WoWPro:CreateRow(index)
         row.looticons[iconIndex] = {frame = lootFrame, icon = lootIcon}
     end
     row.jumpbutton, row.jumpicon = WoWPro:CreateJumpButton(WoWPro.MainFrame, index, row)
+    row.jumpbuttonSecured = WoWPro:CreateJumpButtonSecured(index)
     row.eabutton, row.eaicon, row.eacooldown = WoWPro:CreateEAButton(WoWPro.MainFrame, index, row)
     row.eabuttonSecured = WoWPro:CreateEAButtonSecured(index)
 

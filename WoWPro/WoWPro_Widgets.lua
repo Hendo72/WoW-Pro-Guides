@@ -141,10 +141,11 @@ end
 function WoWPro:CreateItemButton(parent, id, positionParent)
     positionParent = positionParent or parent
     local itembutton = _G.CreateFrame("Button", "WoWPro_itembutton"..id, parent, "InsecureActionButtonTemplate")
-    itembutton:SetAttribute("type", "item")
+    itembutton.actionOnClick = itembutton:GetScript("OnClick")
     itembutton:SetFrameStrata("LOW")
     itembutton:SetHeight(32)
     itembutton:SetWidth(32)
+    itembutton:EnableMouse(false)
     WoWPro:PositionFlyoutButton(itembutton, positionParent)
 
     local itemcooldown = _G.CreateFrame("Cooldown", nil, itembutton, "CooldownFrameTemplate")
@@ -168,6 +169,7 @@ function WoWPro:CreateJumpButton(parent, id, positionParent)
     jumpbutton:SetFrameStrata("LOW")
     jumpbutton:SetHeight(24)
     jumpbutton:SetWidth(24)
+    jumpbutton:EnableMouse(false)
     WoWPro:PositionFlyoutButton(jumpbutton, positionParent)
 
     local jumpicon = jumpbutton:CreateTexture(nil, "ARTWORK")
@@ -192,6 +194,7 @@ function WoWPro:CreateTargetButton(parent, id, positionParent)
     targetbutton:SetFrameStrata("LOW")
     targetbutton:SetHeight(32)
     targetbutton:SetWidth(32)
+    targetbutton:EnableMouse(false)
     targetbutton.Position = function (use_active)
         WoWPro:PositionFlyoutButton(targetbutton, positionParent, use_active)
     end
@@ -220,6 +223,7 @@ function WoWPro:CreateEAButton(parent, id, positionParent)
     eabutton:SetFrameStrata("LOW")
     eabutton:SetHeight(32)
     eabutton:SetWidth(32)
+    eabutton:EnableMouse(false)
     WoWPro:PositionFlyoutButton(eabutton, positionParent)
 
     local cooldown = _G.CreateFrame("Cooldown", nil, eabutton, "CooldownFrameTemplate")
@@ -245,6 +249,16 @@ function WoWPro:CreateEAButtonSecured(id)
     eabutton:Hide()
 	eabutton:RegisterForClicks("AnyDown", "AnyUp")
     return eabutton
+end
+
+function WoWPro:CreateJumpButtonSecured(id)
+    local jumpbutton = _G.CreateFrame("Button", "WoWPro_jumpbuttonSecure"..id, _G.UIParent, "SecureActionButtonTemplate")
+    jumpbutton:SetFrameStrata("HIGH")
+    jumpbutton:SetHeight(24)
+    jumpbutton:SetWidth(24)
+    jumpbutton:Hide()
+    jumpbutton:RegisterForClicks("AnyDown", "AnyUp")
+    return jumpbutton
 end
 
 function WoWPro:CreateTargetButtonSecured(id)

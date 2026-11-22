@@ -508,15 +508,13 @@ local function SetupItemSecuredOverlay(currentRow, attributeType, attributeValue
         return
     end
 
-    if currentRow.itembutton:IsVisible() and currentRow.itembutton:IsShown() then
-        local secured = currentRow.itembuttonSecured
-        secured:Show()
-        secured:SetAttribute("type1", attributeType)
-        secured:SetAttribute("item1", attributeValue)
-        secured:ClearAllPoints()
-        secured:SetPoint("BOTTOMLEFT", currentRow.itembutton, "BOTTOMLEFT", 0, 0)
-        secured:SetFrameLevel(currentRow.itembutton:GetFrameLevel() + 1)
-    end
+    local secured = currentRow.itembuttonSecured
+    secured:Show()
+    secured:SetAttribute("type1", attributeType)
+    secured:SetAttribute("item1", attributeValue)
+    secured:ClearAllPoints()
+    secured:SetPoint("BOTTOMLEFT", currentRow.itembutton, "BOTTOMLEFT", 0, 0)
+    secured:SetFrameLevel(currentRow.itembutton:GetFrameLevel() + 1)
 end
 
 -- Helper: Setup trash-item button (action "*")
@@ -535,8 +533,17 @@ local SetupTrashItemButton = function(currentRow, use, k)
         WoWPro.TrashItem(use, k)
     end)
 
-    -- Secured overlay
-    SetupItemSecuredOverlay(currentRow, "click1", "clickbutton")
+    local secured = currentRow.itembuttonSecured
+    secured:Show()
+    secured:SetAttribute("type1", nil)
+    secured:SetAttribute("item1", nil)
+    secured:SetAttribute("type", "TrashItem")
+    secured.TrashItem = function()
+        WoWPro.TrashItem(use, k)
+    end
+    secured:ClearAllPoints()
+    secured:SetPoint("BOTTOMLEFT", currentRow.itembutton, "BOTTOMLEFT", 0, 0)
+    secured:SetFrameLevel(currentRow.itembutton:GetFrameLevel() + 1)
 end
 
 -- Helper: Track cooldown + icon changes for item-use button
@@ -649,8 +656,9 @@ local SetupUseItemButton = function(currentRow, use, k)
     currentRow.itemcooldown.ActiveItem = nil
 
     -- Setup secure item-use
-    currentRow.itembutton:SetAttribute("type1", "item")
-    currentRow.itembutton:SetAttribute("item1", "item:" .. itemID)
+    currentRow.itembutton:SetAttribute("type", nil)
+    currentRow.itembutton:SetAttribute("type1", nil)
+    currentRow.itembutton:SetScript("OnClick", currentRow.itembutton.actionOnClick)
 
     -- Cooldown + icon tracking
     SetupItemCooldown(currentRow, itemID)
@@ -692,6 +700,8 @@ local function SetupPetSwitchSecuredOverlay(currentRow, switch, k)
         secured:Show()
 
         -- Secured attribute for pet switching
+        secured:SetAttribute("type1", nil)
+        secured:SetAttribute("item1", nil)
         secured:SetAttribute("type", "SwitchPet")
         secured.SwitchPet = function()
             C_PetBattles.ChangePet(switch)
@@ -838,12 +848,12 @@ local function SetupJumpKeybind(i, currentRow)
 
         -- Bind primary key
         if key1 then
-            SetOverrideBindingClick(WoWPro.MainFrame, false, key1, "WoWPro_jumpbutton"..i, "LeftButton")
+            SetOverrideBindingClick(WoWPro.MainFrame, false, key1, "WoWPro_jumpbuttonSecure"..i, "LeftButton")
         end
 
         -- Bind secondary key
         if key2 then
-            SetOverrideBindingClick(WoWPro.MainFrame, false, key2, "WoWPro_jumpbutton"..i, "LeftButton")
+            SetOverrideBindingClick(WoWPro.MainFrame, false, key2, "WoWPro_jumpbuttonSecure"..i, "LeftButton")
         end
 
         return (key1 or key2) ~= nil
@@ -860,15 +870,7 @@ local function SetupJumpSecuredOverlay(currentRow)
 
     if currentRow.jumpbutton:IsVisible() and currentRow.jumpbutton:IsShown() then
         local secured = currentRow.jumpbuttonSecured
-        if not secured then
-            return
-        end
         secured:Show()
-
-        -- Mirror main button click
-        secured:SetAttribute("type", "click")
-        secured:SetAttribute("clickbutton", currentRow.jumpbutton)
-
         secured:ClearAllPoints()
         secured:SetPoint("BOTTOMLEFT", currentRow.jumpbutton, "BOTTOMLEFT", 0, 0)
         secured:SetFrameLevel(currentRow.jumpbutton:GetFrameLevel() + 1)
@@ -887,19 +889,21 @@ local SetupJumpButton = function(currentRow, jumpTag, i)
         currentRow.jumpbutton:Show()
     end
 
-    -- Main click handler
-    currentRow.jumpbutton:SetScript("OnClick", function()
-        WoWPro:dbp("WoWPro.CompleteStep: jumping from %s to %s.",
-            WoWProDB.char.currentguide, newguide)
+    if not InCombatLockdown() then
+        local jump = function()
+            WoWPro:dbp("WoWPro.CompleteStep: jumping from %s to %s.",
+                WoWProDB.char.currentguide, newguide)
 
-        -- Chromie Time selection (Retail only)
-        if ctID and WoWPro.RETAIL then
-            C_ChromieTime.SelectChromieTimeOption(ctID)
+            -- Chromie Time selection (Retail only)
+            if ctID and WoWPro.RETAIL then
+                C_ChromieTime.SelectChromieTimeOption(ctID)
+            end
+
+            -- Load new guide
+            WoWPro:LoadGuide(newguide)
         end
-
-        -- Load new guide
-        WoWPro:LoadGuide(newguide)
-    end)
+        currentRow.jumpbuttonSecured:SetScript("OnClick", jump)
+    end
 
     -- Secured overlay
     SetupJumpSecuredOverlay(currentRow)
